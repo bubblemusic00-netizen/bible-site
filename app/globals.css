@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf7ed;
+  --foreground: #27231d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
+}
+
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+[data-page-shell] {
+  width: 100% !important;
+  max-width: min(80rem, 100vw) !important;
+}
+
+[data-page-shell] > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+h1,
+h2,
+h3,
+p,
+blockquote,
+li,
+span {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 639px) {
+  [data-page-shell] {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  [data-page-shell] > div {
+    width: calc(100vw - 2rem) !important;
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  [data-page-shell] :where(section, article) {
+    width: calc(100vw - 2rem) !important;
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  [data-page-shell] :where(div) {
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  [data-page-shell] :where(p, blockquote, h1, h2, h3, span) {
+    max-width: calc(100vw - 4rem) !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #d7b56d;
+  color: #241f19;
+}
