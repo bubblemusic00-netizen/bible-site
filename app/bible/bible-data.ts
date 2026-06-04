@@ -360,21 +360,43 @@ export const john1: BibleChapter = {
   ],
 };
 
-export const bibleChapters = {
-  genesis: {
-    1: genesis1,
-  },
-  john: {
-    1: john1,
-  },
-} as const;
+export const availableBibleChapters: BibleChapter[] = [genesis1, john1];
 
-export const availableBibleChapterParams = Object.values(bibleChapters).flatMap(
-  (bookChapters) =>
-    Object.values(bookChapters).map((chapter) => ({
-      book: chapter.bookSlug,
-      chapter: String(chapter.chapter),
-    })),
+export type SupportedBibleChapter = {
+  bookSlug: string;
+  book: string;
+  chapter: number;
+  title: string;
+  href: string;
+  translation: string;
+};
+
+function chapterLookupKey(bookSlug: string, chapter: number) {
+  return `${bookSlug}:${chapter}`;
+}
+
+const bibleChapterLookup = new Map<string, BibleChapter>(
+  availableBibleChapters.map((chapter) => [
+    chapterLookupKey(chapter.bookSlug, chapter.chapter),
+    chapter,
+  ]),
+);
+
+export const supportedBibleChapters: SupportedBibleChapter[] =
+  availableBibleChapters.map((chapter) => ({
+    bookSlug: chapter.bookSlug,
+    book: chapter.book,
+    chapter: chapter.chapter,
+    title: `${chapter.book} ${chapter.chapter}`,
+    href: `/bible/${chapter.bookSlug}/${chapter.chapter}`,
+    translation: chapter.translation,
+  }));
+
+export const availableBibleChapterParams = supportedBibleChapters.map(
+  (chapter) => ({
+    book: chapter.bookSlug,
+    chapter: String(chapter.chapter),
+  }),
 );
 
 export const bibleBooks = {
@@ -469,7 +491,10 @@ export function getBibleBook(slug: string) {
 export function getBibleChapter(bookSlug: string, chapter: string | number) {
   const chapterNumber =
     typeof chapter === "number" ? chapter : Number.parseInt(chapter, 10);
-  const chapters = bibleChapters[bookSlug as keyof typeof bibleChapters];
 
-  return chapters?.[chapterNumber as keyof typeof chapters];
+  if (!Number.isFinite(chapterNumber)) {
+    return undefined;
+  }
+
+  return bibleChapterLookup.get(chapterLookupKey(bookSlug, chapterNumber));
 }

@@ -4,22 +4,21 @@ import {
   Home,
   Leaf,
   Shield,
-  Sparkles,
   Sun,
   Users,
 } from "lucide-react";
 import { CardLink, PageIntro, PageShell } from "../components/site-ui";
-import { needKeys, needs, type NeedKey } from "./needs";
+import { faithPathSlugs, faithPaths, type FaithPathSlug } from "@/lib/faith-paths";
 
-const needIcons: Record<NeedKey, typeof Leaf> = {
+const pathIcons: Record<FaithPathSlug, typeof Leaf> = {
   peace: Leaf,
   strength: Shield,
   guidance: Compass,
-  hope: Sparkles,
-  forgiveness: Heart,
   gratitude: Sun,
-  family: Users,
+  healing: Heart,
+  forgiveness: Heart,
   anxiety: Home,
+  family: Users,
 };
 
 export default function StartPage() {
@@ -28,28 +27,30 @@ export default function StartPage() {
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
         <PageIntro
           icon={Leaf}
-          eyebrow="Start here"
+          eyebrow="Faith Path Finder"
           title="What do you need today?"
-          subtitle="Choose a quiet starting point for Scripture, prayer, and reflection."
+          subtitle="Choose the intention you want to bring into prayer, scripture, and daily faith."
         />
         <p className="max-w-xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 text-base leading-7 text-[#625b51] shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
-          Start with what you are actually carrying. Each path gives one pause,
-          one prayer, one reflection question, and a clear next step.
+          Start with what you are actually carrying. Each path gives you a
+          simple way to pray, read, and carry your intention with honesty and
+          care.
         </p>
       </div>
 
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {needKeys.map((key) => {
-          const need = needs[key];
+        {faithPathSlugs.map((slug) => {
+          const path = faithPaths[slug];
+          const Icon = pathIcons[slug];
 
           return (
             <CardLink
-              key={key}
-              href={`/start/${key}`}
-              icon={needIcons[key]}
-              title={need.title}
-              description={need.cardDescription}
-              cta="Begin here"
+              key={path.slug}
+              href={`/start/${path.slug}`}
+              icon={Icon}
+              title={path.title}
+              description={path.description}
+              cta="Choose this path"
             />
           );
         })}

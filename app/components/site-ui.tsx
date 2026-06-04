@@ -3,15 +3,24 @@ import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 import { ArrowLeft, ArrowRight, Cross } from "lucide-react";
 
-type NavKey = "home" | "start" | "plans" | "bible" | "prayer" | "jewelry";
+type NavKey =
+  | "home"
+  | "start"
+  | "plans"
+  | "bible"
+  | "prayer"
+  | "verse"
+  | "jewelry"
+  | "about";
 
 const navItems: Array<{ key: NavKey; label: string; href: string }> = [
   { key: "home", label: "Home", href: "/" },
   { key: "start", label: "Start", href: "/start" },
-  { key: "plans", label: "Plans", href: "/plans" },
   { key: "bible", label: "Bible", href: "/bible" },
   { key: "prayer", label: "Prayer", href: "/prayer" },
-  { key: "jewelry", label: "Jewelry", href: "/jewelry" },
+  { key: "verse", label: "Verse", href: "/verse-of-the-day" },
+  { key: "jewelry", label: "Faith Symbols", href: "/jewelry" },
+  { key: "about", label: "About", href: "/about" },
 ];
 
 export function SiteHeader({ active }: { active?: NavKey }) {
@@ -27,7 +36,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-4 text-sm font-semibold text-[#6b6257] sm:flex lg:gap-6">
+        <div className="hidden items-center gap-1 text-sm font-semibold text-[#6b6257] lg:flex xl:gap-3">
           {navItems.map((item) => (
             <Link
               key={item.key}
@@ -43,7 +52,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
           ))}
         </div>
       </nav>
-      <div className="mx-auto max-w-7xl overflow-x-auto px-5 pb-3 sm:hidden">
+      <div className="mx-auto max-w-7xl overflow-x-auto px-5 pb-3 lg:hidden">
         <div className="flex min-w-max items-center gap-2 text-sm font-semibold text-[#6b6257]">
           {navItems.map((item) => (
             <Link
@@ -72,11 +81,11 @@ export function PageShell({
   children: ReactNode;
 }) {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden bg-[#fbf7ed] text-[#27231d]">
+    <main className="flex min-h-screen w-full flex-col overflow-x-hidden bg-[#fbf7ed] text-[#27231d]">
       <SiteHeader active={active} />
       <section
         data-page-shell
-        className="relative mx-auto w-full min-w-0 max-w-7xl overflow-x-hidden px-4 py-10 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-64 before:bg-[radial-gradient(ellipse_at_top_left,rgba(192,143,62,0.11),transparent_62%)] sm:px-8 sm:before:inset-x-8 lg:py-14"
+        className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 overflow-x-hidden px-4 py-10 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-64 before:bg-[radial-gradient(ellipse_at_top_left,rgba(192,143,62,0.11),transparent_62%)] sm:px-8 sm:before:inset-x-8 lg:py-14"
       >
         <div
           className="relative min-w-0"
@@ -85,7 +94,57 @@ export function PageShell({
           {children}
         </div>
       </section>
+      <SiteFooter />
     </main>
+  );
+}
+
+export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const isDark = tone === "dark";
+
+  return (
+    <footer
+      className={
+        isDark
+          ? "mt-7 max-w-5xl text-[#fff8e8]/82"
+          : "border-t border-[#dfd2bb] bg-[#f7f0e3] text-[#625b51]"
+      }
+    >
+      <div
+        className={
+          isDark
+            ? "flex flex-col gap-3"
+            : "mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 sm:px-8 lg:flex-row lg:items-center lg:justify-between"
+        }
+      >
+        <p className={isDark ? "text-xs leading-5" : "max-w-2xl text-sm leading-6"}>
+          This site is an independent Christian resource and is not affiliated
+          with any Bible publisher or church.
+        </p>
+        <nav
+          aria-label="Footer navigation"
+          className={
+            isDark
+              ? "flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold"
+              : "flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#355242]"
+          }
+        >
+          {navItems.map((item) => (
+            <Link
+              key={item.key}
+              href={item.href}
+              className={
+                isDark
+                  ? "transition hover:text-[#fffaf0]"
+                  : "transition hover:text-[#204636]"
+              }
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </footer>
   );
 }
 
@@ -207,14 +266,6 @@ export function StatusNote({ children }: { children: ReactNode }) {
       className="max-w-full break-words rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] px-4 py-3 text-sm font-semibold leading-6 text-[#2f5140]"
       style={{ width: "min(100%, calc(100vw - 2rem))" }}
     >
-      {children}
-    </p>
-  );
-}
-
-export function SiteDisclaimer({ children }: { children: ReactNode }) {
-  return (
-    <p className="mt-7 max-w-3xl text-xs leading-5 text-[#fff8e8]/80">
       {children}
     </p>
   );

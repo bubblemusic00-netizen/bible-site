@@ -50,16 +50,16 @@ export default async function BibleChapterPage({
         icon={BookOpenText}
         eyebrow="Bible reader"
         title={chapterData.book}
-        subtitle={`Chapter ${chapterData.chapter} · ${chapterData.translation}`}
+        subtitle={`Chapter ${chapterData.chapter} - ${chapterData.translation}`}
       />
 
-      <div className="mt-8 max-w-3xl">
+      <div className="mt-8 w-full max-w-[860px]">
         <StatusNote>
-          Bible text on this page is from the World English Bible.
+          Scripture text from the World English Bible (WEB), public domain.
         </StatusNote>
       </div>
 
-      <article className="mt-6 max-w-3xl overflow-hidden rounded-lg border border-[#d9c59d] bg-[#fffaf1] p-5 shadow-[0_24px_60px_rgba(71,55,35,0.08)] sm:p-9">
+      <article className="mt-6 w-full max-w-[860px] rounded-lg border border-[#d9c59d] bg-[#fffaf1] p-5 shadow-[0_24px_60px_rgba(71,55,35,0.08)] sm:p-9">
         <div className="border-b border-[#e2d2b6] pb-6">
           <p className="text-sm font-semibold uppercase text-[#9a6a24]">
             {chapterData.book} {chapterData.chapter}
@@ -76,15 +76,12 @@ export default async function BibleChapterPage({
           {chapterData.verses.map((verse) => (
             <p
               key={verse.number}
-              className="grid grid-cols-[1.9rem_minmax(0,1fr)] gap-3 text-[1.02rem] leading-8 text-[#302b24] sm:grid-cols-[2.5rem_minmax(0,1fr)] sm:text-lg sm:leading-9"
+              className="grid w-full min-w-0 grid-cols-[1.9rem_minmax(0,1fr)] gap-3 text-[1.02rem] leading-8 text-[#302b24] sm:grid-cols-[2.5rem_minmax(0,1fr)] sm:text-lg sm:leading-9"
             >
               <span className="pt-1 text-sm font-semibold leading-6 text-[#9a6a24]">
                 {verse.number}
               </span>
-              <span
-                className="block min-w-0"
-                style={{ width: "calc(100vw - 5.5rem)" }}
-              >
+              <span className="block min-w-0 whitespace-normal break-words">
                 {verse.text}
               </span>
             </p>

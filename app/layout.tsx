@@ -16,7 +16,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Hope Bible | Free Christian Bible and Prayer",
   description:
-    "A calm Christian Bible website for Scripture, prayer, guided reflection, and reading plans.",
+    "A calm Christian Bible website for Scripture, prayer, Faith Paths, guided reflection, and symbolic faith reminders.",
 };
 
 export const viewport: Viewport = {

@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hope Bible
 
-## Getting Started
+Hope Bible is a free Christian Bible and prayer website built around a simple Faith Path journey:
 
-First, run the development server:
+Home -> Start -> Faith Path -> Pray -> Read -> Carry
+
+The MVP is designed to feel calm, premium, respectful, and honest. It helps visitors choose what they need today, begin with prayer, continue with Scripture, and explore future symbolic faith reminders.
+
+## Current MVP Features
+
+- Faith Path Finder with 8 intentions: Peace, Strength, Guidance, Gratitude, Healing, Forgiveness, Anxiety, and Family
+- Path-specific prayer pages with short WEB Scripture moments, reflections, prayer starters, and next steps
+- Scripture Path pages connected to the same intentions
+- Local Bible reader pages for Genesis 1 and John 1 using World English Bible text
+- Verse of the Day page using World English Bible text
+- Faith Symbols preview pages for future symbolic Christian jewelry, with no products for sale yet
+- About page with trust principles and independent-resource disclosure
+- Local browser-only continuation card using `localStorage`
+
+## Tech Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- ESLint
+- Local data only
+- No database, authentication, external Bible API, payments, checkout, Shopify, or product inventory
+
+## Local Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Useful checks:
 
-## Learn More
+```bash
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Current Routes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/`
+- `/start`
+- `/start/[path]`
+- `/prayer`
+- `/prayer/[path]`
+- `/bible`
+- `/bible/[book]`
+- `/bible/[book]/[chapter]`
+- `/bible/path/[path]`
+- `/jewelry`
+- `/jewelry/[intention]`
+- `/verse-of-the-day`
+- `/about`
+- `/plans`
+- `/plans/peace`
+- `/plans/peace/day-1`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Supported real Bible reader chapters:
 
-## Deploy on Vercel
+- `/bible/genesis/1`
+- `/bible/john/1`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Content Rules
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Use World English Bible (WEB) only for Bible text unless a future translation is explicitly reviewed and permitted.
+- Keep WEB attribution visible wherever actual Scripture text appears.
+- Do not add NIV, ESV, NLT, NKJV, or other copyrighted Bible translations without permission.
+- Do not make guaranteed healing, protection, blessing, prosperity, or miracle claims.
+- Do not use fear-based selling, fake urgency, fake testimonials, or fake reviews.
+- Faith symbols and jewelry are symbolic reminders only for now.
+- Do not add real products, prices, checkout, supplier claims, or inventory until the commerce layer is intentionally designed.
+
+## Deployment Notes
+
+The project is ready for a standard Vercel import once pushed to a GitHub repository.
+
+Recommended Vercel settings:
+
+- Framework preset: Next.js
+- Build command: `npm run build`
+- Install command: `npm install`
+- Output directory: managed by Next.js/Vercel
+
+Before deployment, run:
+
+```bash
+npm run lint
+npm run build
+```

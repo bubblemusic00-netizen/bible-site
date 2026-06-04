@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, BookOpenText, Leaf, Sparkles } from "lucide-react";
 import { PageIntro, PageShell } from "../components/site-ui";
+import { supportedBibleChapters } from "./bible-data";
+import { scripturePathCards } from "./scripture-paths";
 
 const oldTestamentBooks = [
   { name: "Genesis", href: "/bible/genesis", status: "Available now" },
@@ -70,6 +72,85 @@ export default function BiblePage() {
           icon="sparkles"
         />
       </div>
+
+      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+              Supported chapters
+            </p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+              Ready to read now
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-6 text-[#625b51]">
+            These local reader pages currently include World English Bible text.
+          </p>
+        </div>
+
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {supportedBibleChapters.map((chapter) => (
+            <Link
+              key={`${chapter.bookSlug}-${chapter.chapter}`}
+              href={chapter.href}
+              className="group flex min-h-20 items-center justify-between gap-4 rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] px-4 py-4 transition hover:border-[#c49c52] hover:bg-[#fffaf1]"
+            >
+              <div className="min-w-0">
+                <p className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                  {chapter.title}
+                </p>
+                <p className="mt-1 text-sm leading-6 text-[#625b51]">
+                  {chapter.translation}
+                </p>
+              </div>
+              <ArrowRight
+                size={17}
+                className="shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+              />
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+              Scripture for what you need today
+            </p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+              Continue a Faith Path
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-6 text-[#625b51]">
+            Short Scripture moments connected to prayer, reflection, and daily
+            remembrance.
+          </p>
+        </div>
+
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {scripturePathCards.map((path) => (
+            <Link
+              key={path.slug}
+              href={path.href}
+              className="group rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] p-4 transition hover:border-[#c49c52] hover:bg-[#fffaf1]"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <p className="font-serif text-xl font-semibold leading-tight text-[#241f19]">
+                  {path.title}
+                </p>
+                <ArrowRight
+                  size={16}
+                  className="shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+                />
+              </div>
+              <p className="mt-3 text-sm leading-6 text-[#625b51]">
+                {path.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">

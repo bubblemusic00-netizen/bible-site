@@ -3,14 +3,14 @@ import Link from "next/link";
 import {
   ArrowRight,
   BookOpenText,
-  CalendarDays,
   Cross,
   Gem,
   Heart,
-  Leaf,
   Sparkles,
 } from "lucide-react";
-import { PrimaryButton, SiteDisclaimer, SiteHeader } from "./components/site-ui";
+import { faithPathShortList } from "@/lib/faith-paths";
+import { ContinueFaithPath } from "./components/ContinueFaithPath";
+import { SiteFooter, SiteHeader } from "./components/site-ui";
 
 const actions = [
   {
@@ -20,26 +20,14 @@ const actions = [
     icon: BookOpenText,
   },
   {
-    title: "Pray",
-    description: "Bring the day honestly before God.",
-    href: "/prayer",
-    icon: Heart,
-  },
-  {
     title: "Verse of the Day",
     description: "Receive a short Scripture moment.",
     href: "/verse-of-the-day",
     icon: Sparkles,
   },
   {
-    title: "Reading Plans",
-    description: "Start a guided daily path.",
-    href: "/plans",
-    icon: CalendarDays,
-  },
-  {
-    title: "Faith Reminders",
-    description: "Future Christian items.",
+    title: "Faith Symbols",
+    description: "Explore future reminders of faith.",
     href: "/jewelry",
     icon: Gem,
   },
@@ -68,23 +56,36 @@ export default function Home() {
               Free Christian Bible and prayer
             </p>
             <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-[1.02] text-[#fffaf0] sm:text-5xl lg:text-6xl">
-              Come into quiet hope.
+              What do you need today?
             </h1>
             <p className="mt-5 max-w-[calc(100vw-2.5rem)] text-base leading-7 text-[#eee8dc] sm:max-w-2xl sm:text-lg sm:leading-8">
-              A calm place to meet Jesus in Scripture, prayer, and faith.
+              A quiet place to read, pray, reflect, and carry faith into your day.
             </p>
-            <p className="mt-4 max-w-[calc(100vw-2.5rem)] border-l border-[#c99b4a] pl-4 text-sm font-medium leading-6 text-[#fff4df] sm:max-w-xl sm:text-base">
-              Grace for today. Hope for the next step.
-            </p>
-            <div className="mt-6">
-              <PrimaryButton href="/start">
-                <Leaf size={16} strokeWidth={1.8} />
-                What do you need today?
-              </PrimaryButton>
-            </div>
+
+            <Link
+              href="/start"
+              className="group mt-7 block max-w-xl rounded-lg border border-[#f4dfb5]/75 bg-[#fff8eb]/96 p-5 text-[#241f19] shadow-[0_22px_54px_rgba(25,20,14,0.26)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0] hover:shadow-[0_26px_62px_rgba(25,20,14,0.32)] sm:p-6"
+            >
+              <span className="flex items-start justify-between gap-4">
+                <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#284737] text-[#fffaf0] shadow-[0_12px_26px_rgba(40,71,55,0.22)]">
+                  <Heart size={22} strokeWidth={1.8} />
+                </span>
+                <ArrowRight
+                  size={18}
+                  className="mt-2 shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+                />
+              </span>
+              <span className="mt-5 block font-serif text-3xl font-semibold leading-tight">
+                Find Your Faith Path
+              </span>
+              <span className="mt-3 block text-sm font-medium leading-6 text-[#625b51] sm:text-base">
+                Start with {faithPathShortList}.
+              </span>
+            </Link>
+            <ContinueFaithPath />
           </div>
 
-          <div className="mt-6 grid w-full grid-cols-1 gap-3 sm:mt-7 sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-5">
+          <div className="mt-5 grid w-full grid-cols-1 gap-3 sm:mt-6 sm:grid-cols-3 lg:max-w-4xl">
             {actions.map((action) => {
               const Icon = action.icon;
 
@@ -115,10 +116,7 @@ export default function Home() {
             })}
           </div>
 
-          <SiteDisclaimer>
-            Hope Bible is an independent free Christian resource in development.
-            No purchases, accounts, or payments are available here yet.
-          </SiteDisclaimer>
+          <SiteFooter tone="dark" />
         </div>
       </section>
     </main>
