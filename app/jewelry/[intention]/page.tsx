@@ -174,7 +174,7 @@ export default async function JewelryIntentionPage({
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <BackButton href="/jewelry" label="Back to Faith Symbols" />
         <SecondaryButton href={startPath.startRoute}>
-          Start path
+          Faith Quiz
         </SecondaryButton>
         <SecondaryButton href="/bible">Read the Bible</SecondaryButton>
         <SecondaryButton href={startPath.prayerRoute}>

@@ -78,7 +78,7 @@ export function ContinueFaithPath() {
   return (
     <Link
       href={faithPath.startRoute}
-      className="group mt-3 block max-w-xl rounded-lg border border-[#f4dfb5]/55 bg-[#fff8eb]/90 p-4 text-[#241f19] shadow-[0_14px_34px_rgba(25,20,14,0.18)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0] hover:shadow-[0_18px_42px_rgba(25,20,14,0.24)]"
+      className="group mb-8 block max-w-xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-4 text-[#241f19] shadow-[0_14px_34px_rgba(71,55,35,0.075)] transition hover:-translate-y-0.5 hover:bg-[#fffdf7] hover:shadow-[0_18px_42px_rgba(71,55,35,0.11)]"
     >
       <span className="flex items-start justify-between gap-4">
         <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
@@ -93,7 +93,7 @@ export function ContinueFaithPath() {
         Continue your {faithPaths[pathSlug].title} path
       </span>
       <span className="mt-2 block text-sm leading-6 text-[#625b51]">
-        Return to prayer, scripture, and a symbolic reminder for this intention.
+        Return to prayer, Scripture, and an optional reminder for this intention.
       </span>
       <span className="mt-3 block text-sm font-semibold text-[#254737]">
         Continue path

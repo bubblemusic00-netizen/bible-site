@@ -12,7 +12,7 @@ const steps: Array<{
 }> = [
   {
     key: "start",
-    label: "Start",
+    label: "Quiz",
     getHref: (path) => path.startRoute,
     icon: Leaf,
   },

@@ -18,7 +18,7 @@ const navItems: Array<{ key: NavKey; label: string; href: string }> = [
   { key: "home", label: "Home", href: "/" },
   { key: "bible", label: "Bible", href: "/bible" },
   { key: "prayer", label: "Prayer", href: "/prayer" },
-  { key: "start", label: "Start", href: "/start" },
+  { key: "start", label: "Faith Quiz", href: "/start" },
   { key: "jewelry", label: "Faith Symbols", href: "/jewelry" },
   { key: "about", label: "About", href: "/about" },
 ];

@@ -62,13 +62,13 @@ export default async function StartPathPage({
       <PageShell active="start">
         <PageIntro
           icon={Leaf}
-          eyebrow="Faith Path Finder"
+          eyebrow="Faith Quiz"
           title="Faith path coming soon"
           subtitle="This intention is not available yet, but you can still begin with prayer or choose another path."
         />
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <BackButton href="/start" label="Back to Start" />
+          <BackButton href="/start" label="Back to Faith Quiz" />
           <SecondaryButton href="/prayer">Prayer Guide</SecondaryButton>
         </div>
       </PageShell>
@@ -84,7 +84,7 @@ export default async function StartPathPage({
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
         <PageIntro
           icon={Leaf}
-          eyebrow="Your Faith Path"
+          eyebrow="Faith Quiz Result"
           title={`${faithPath.title} Faith Path`}
           subtitle={faithPath.pastoralIntro}
         />
@@ -177,7 +177,7 @@ export default async function StartPathPage({
       </section>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <BackButton href="/start" label="Back to Start" />
+        <BackButton href="/start" label="Back to Faith Quiz" />
         <SecondaryButton href="/bible">Read the Bible</SecondaryButton>
         <SecondaryButton href={faithPath.prayerRoute}>Prayer Guide</SecondaryButton>
         <SecondaryButton href={faithPath.jewelryRoute}>

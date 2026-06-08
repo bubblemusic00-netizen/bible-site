@@ -19,9 +19,9 @@ import {
 import { PageIntro, PageShell, StatusNote } from "../components/site-ui";
 
 export const metadata: Metadata = {
-  title: "Start Your Faith Path | Scripture and Prayer Guidance",
+  title: "Faith Quiz | Find Your Faith Path",
   description:
-    "Choose a guided Faith Path for peace, strength, protection, hope, guidance, or gratitude, then continue with Scripture, prayer, reflection, and an optional faith reminder.",
+    "Take a simple Faith Quiz for peace, strength, protection, hope, guidance, or gratitude, then receive Scripture, prayer, reflection, and an optional faith reminder.",
 };
 
 const pathIcons: Record<StartFaithPathSlug, typeof Leaf> = {
@@ -39,24 +39,42 @@ const pathIcons: Record<StartFaithPathSlug, typeof Leaf> = {
 
 const flowSteps = [
   {
-    title: "Choose what you need",
-    description: "Start with the real need or intention you are carrying today.",
+    title: "Step 1: What do you need today?",
+    description: "Choose the intention that best names what you are carrying.",
     icon: Heart,
   },
   {
-    title: "Receive Scripture and prayer",
-    description: "Move into a short Bible reference and a prayer for the moment.",
+    title: "Step 2: Receive your path",
+    description: "Get a short Scripture reference and prayer for the moment.",
     icon: BookOpenText,
   },
   {
-    title: "Reflect honestly",
-    description: "Use one prompt to name what is true without pressure.",
+    title: "Step 3: Read, pray, reflect",
+    description: "Use one prompt and one small next step without pressure.",
     icon: Leaf,
   },
   {
-    title: "Optional faith symbol reminder",
-    description: "Symbols can remind you to pray; they are never guarantees.",
+    title: "Carry an optional reminder",
+    description: "Faith symbols can remind you to pray; they are never guarantees.",
     icon: Gem,
+  },
+];
+
+const beginOptions = [
+  {
+    title: "Scripture",
+    description: "Begin with a Bible reference and short context.",
+    icon: BookOpenText,
+  },
+  {
+    title: "Prayer",
+    description: "Begin with honest words for the moment.",
+    icon: Heart,
+  },
+  {
+    title: "Reflection",
+    description: "Begin by naming what you are carrying.",
+    icon: Leaf,
   },
 ];
 
@@ -66,12 +84,12 @@ export default function StartPage() {
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
         <PageIntro
           icon={Leaf}
-          eyebrow="Faith Path Finder"
-          title="Start Your Faith Path"
-          subtitle="Choose what you need today, and we will guide you toward Scripture, prayer, and a simple reflection."
+          eyebrow="Faith Quiz"
+          title="Find Your Faith Path"
+          subtitle="Answer a few simple questions and receive Scripture, prayer, reflection, and an optional faith-symbol reminder."
         />
         <StatusNote>
-          Faith Paths are content-first and free. Optional faith symbols are
+          This Faith Quiz is content-first and free. Optional faith symbols are
           reminders of prayer and Scripture, not promises of protection,
           healing, blessing, or spiritual results.
         </StatusNote>
@@ -79,10 +97,10 @@ export default function StartPage() {
 
       <section className="mt-9 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-6">
         <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-          How it works
+          How the Faith Quiz works
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-          A simple four-step guide
+          Three simple steps, one careful path.
         </h2>
         <div className="mt-6 grid gap-3 md:grid-cols-4">
           {flowSteps.map((step, index) => {
@@ -108,13 +126,52 @@ export default function StartPage() {
         </div>
       </section>
 
+      <section className="mt-10 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
+        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+              A quick first question
+            </p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+              How would you like to begin?
+            </h2>
+            <p className="mt-3 text-base leading-7 text-[#625b51]">
+              You can start with Scripture, prayer, or reflection. The full path
+              will still include all three.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {beginOptions.map((option) => {
+              const Icon = option.icon;
+
+              return (
+                <div
+                  key={option.title}
+                  className="rounded-lg border border-[#d8ddcf] bg-[#fbf7ed] p-4"
+                >
+                  <span className="grid size-10 place-items-center rounded-full bg-[#fffaf1] text-[#254737]">
+                    <Icon size={19} strokeWidth={1.8} />
+                  </span>
+                  <h3 className="mt-4 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                    {option.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-[#625b51]">
+                    {option.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <section className="mt-10">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-            Step 1
+            Step 1: What do you need today?
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-            Choose what you need today
+            Choose the intention that fits this season.
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
             Each path begins with a careful intention, then points toward
@@ -153,7 +210,7 @@ export default function StartPage() {
                   {path.carefulLine}
                 </p>
                 <p className="mt-5 text-sm font-semibold text-[#254737]">
-                  Begin this path
+                  Choose this path
                 </p>
               </Link>
             );
@@ -165,10 +222,10 @@ export default function StartPage() {
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#e9c985]">
-              Content first
+              Step 2 and 3
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-              The path leads to prayer and Scripture before anything else.
+              Receive your path, then read, pray, reflect, and carry a reminder.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
               Faith symbols may be mentioned as optional reminders near the end

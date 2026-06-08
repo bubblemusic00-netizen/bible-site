@@ -140,9 +140,15 @@ export default function JewelryPage() {
             to remember prayer and Scripture. These symbols are not charms,
             luck items, miracle objects, or sources of spiritual power.
           </p>
+          <p className="mt-3 text-base leading-7 text-[#625b51]">
+            For some people, a small symbol helps connect ordinary moments back
+            to what they are praying through: peace before a hard conversation,
+            strength during a tiring day, guidance before a decision, or
+            gratitude when they need to notice grace.
+          </p>
         </div>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <SecondaryButton href="/start">Start a Faith Path</SecondaryButton>
+          <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
           <SecondaryButton href="/bible">Read the Bible</SecondaryButton>
           <SecondaryButton href="/prayer">Prayer Guide</SecondaryButton>
         </div>
@@ -222,8 +228,8 @@ export default function JewelryPage() {
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               If a symbol is meaningful to you, let it point back to the free
-              Faith Path: Scripture, prayer, reflection, and one careful next
-              step.
+              Faith Quiz result: Scripture, prayer, reflection, and one careful
+              next step.
             </p>
           </div>
 

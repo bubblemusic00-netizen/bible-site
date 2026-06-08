@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     absolute: "Hope Bible | Free Bible Reading, Prayer, and Christian Guidance",
   },
   description:
-    "Hope Bible is a free Christian faith-inspired platform for Bible reading, prayer guidance, Faith Paths, and meaningful faith reminders.",
+    "Hope Bible offers a free Faith Quiz with Bible reading, prayer guidance, reflection, and meaningful faith reminders.",
 };
 
 const actionItems = [
@@ -42,11 +42,11 @@ const actionItems = [
     icon: Heart,
   },
   {
-    title: "Start a Faith Path",
+    title: "Take the Faith Quiz",
     description:
-      "Choose what you are carrying today, then continue through prayer, Scripture, and reflection.",
+      "Answer a few simple prompts, then continue through prayer, Scripture, and reflection.",
     href: "/start",
-    cta: "Start Your Path",
+    cta: "Take the Quiz",
     icon: Leaf,
   },
   {
@@ -123,19 +123,19 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(25,28,22,0.92),rgba(44,61,48,0.72)_48%,rgba(255,246,225,0.18)),linear-gradient(0deg,rgba(24,20,16,0.68),rgba(24,20,16,0.1)_46%,rgba(24,20,16,0.34))]" />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-8 sm:py-16 lg:min-h-[720px] lg:grid-cols-[1.05fr_0.75fr] lg:items-center lg:py-20">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-8 px-4 py-11 sm:px-8 sm:py-14 lg:min-h-[640px] lg:grid-cols-[1.08fr_0.72fr] lg:items-center lg:py-16">
           <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 rounded-full border border-[#e7d0a4]/70 bg-[#fffaf0]/94 px-4 py-2 text-sm font-semibold text-[#76521d] shadow-[0_12px_30px_rgba(35,28,20,0.18)]">
               <Cross size={16} strokeWidth={1.8} />
-              Free Christian Bible and prayer guidance
+              Free Faith Quiz, Bible, and prayer guidance
             </p>
             <h1 className="mt-5 max-w-4xl font-serif text-4xl font-semibold leading-[1.02] text-[#fffaf0] sm:text-5xl lg:text-6xl">
               Free Bible Reading, Prayer, and Christian Faith Guidance
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-[#f1eadf] sm:text-lg sm:leading-8">
-              Hope Bible helps you read Scripture, begin honest prayer, and
-              follow a simple Faith Path. Faith symbols are optional reminders,
-              not the heart of the site and never spiritual guarantees.
+              Take a simple Faith Quiz and receive a guided path with Scripture,
+              prayer, reflection, and an optional faith-symbol reminder. Free
+              guidance comes first; symbols are reminders, not guarantees.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -143,7 +143,7 @@ export default function Home() {
                 href="/start"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-6 py-3 text-sm font-semibold text-[#244336] shadow-[0_18px_44px_rgba(25,20,14,0.22)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
               >
-                Start Your Faith Path
+                Take the Faith Quiz
                 <ArrowRight size={17} strokeWidth={1.8} />
               </Link>
               <Link
@@ -161,21 +161,20 @@ export default function Home() {
                 <ArrowRight size={15} strokeWidth={1.8} />
               </Link>
             </div>
-            <ContinueFaithPath />
           </div>
 
-          <aside className="rounded-lg border border-[#f4dfb5]/52 bg-[#fff8eb]/94 p-5 text-[#241f19] shadow-[0_24px_70px_rgba(20,16,12,0.28)] sm:p-6">
+          <aside className="rounded-lg border border-[#f4dfb5]/45 bg-[#fff8eb]/88 p-5 text-[#241f19] shadow-[0_18px_46px_rgba(20,16,12,0.18)] sm:p-6">
             <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-              A simple path
+              Your quiz result includes
             </p>
-            <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight">
-              Start with what you need today.
+            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight sm:text-3xl">
+              A simple path for what you need today.
             </h2>
             <div className="mt-5 grid gap-4">
               {[
-                ["Pray", "Begin with an honest prayer starter."],
-                ["Read", "Continue with Scripture for reflection."],
-                ["Carry", "Let symbols remain optional reminders."],
+                ["Scripture", "A short Bible reference for reflection."],
+                ["Prayer", "A careful prayer starter for the moment."],
+                ["Reminder", "An optional symbol cue, never a guarantee."],
               ].map(([title, description], index) => (
                 <div key={title} className="grid grid-cols-[2.25rem_1fr] gap-3">
                   <span className="grid size-9 place-items-center rounded-full bg-[#284737] text-sm font-semibold text-[#fffaf0]">
@@ -195,6 +194,8 @@ export default function Home() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-8 lg:py-16">
+        <ContinueFaithPath />
+
         <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
           <div>
             <p className="text-sm font-semibold uppercase text-[#9a6a24]">
@@ -243,7 +244,7 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:py-16">
           <div className="lg:sticky lg:top-8">
             <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-              Start with what you need today
+              Begin with what you need today
             </p>
             <h2 className="mt-3 max-w-xl font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl lg:text-5xl">
               Choose an intention for prayer and Scripture.

@@ -15,16 +15,16 @@ export default function ContactPage() {
       eyebrow="Contact"
       title="Contact"
       subtitle="A simple contact page prepared for questions about this independent Christian resource."
-      note="TODO before launch: add a real public email address or contact form. Do not launch with this TODO as the only contact method."
+      note="A contact address will be added before public commerce launch. Until then, this page keeps the boundary clear without inventing a fake email."
       updated="June 8, 2026"
       sections={[
         {
           title: "General questions",
-          body: "Use this page for questions about Hope Bible, Scripture attribution, prayer content, faith-symbol language, legal pages, or future shop policies. A real contact method still needs to be added before launch.",
+          body: "This page is reserved for questions about Hope Bible, Scripture attribution, prayer content, faith-symbol language, legal pages, or future shop policies.",
         },
         {
-          title: "Contact method TODO",
-          body: "Replace this placeholder with a real support email or form destination before public launch. No fake email has been added.",
+          title: "Contact method",
+          body: "A real support email or contact form will be added before public commerce launch. No placeholder email has been invented.",
         },
         {
           title: "Pastoral or urgent needs",
