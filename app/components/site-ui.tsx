@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 import { ArrowLeft, ArrowRight, Cross } from "lucide-react";
+import { MobileSiteMenu } from "./MobileSiteMenu";
 
 type NavKey =
   | "home"
@@ -15,18 +16,32 @@ type NavKey =
 
 const navItems: Array<{ key: NavKey; label: string; href: string }> = [
   { key: "home", label: "Home", href: "/" },
-  { key: "start", label: "Start", href: "/start" },
   { key: "bible", label: "Bible", href: "/bible" },
   { key: "prayer", label: "Prayer", href: "/prayer" },
-  { key: "verse", label: "Verse", href: "/verse-of-the-day" },
+  { key: "start", label: "Start", href: "/start" },
   { key: "jewelry", label: "Faith Symbols", href: "/jewelry" },
   { key: "about", label: "About", href: "/about" },
+];
+
+const footerResourceLinks = [
+  ...navItems,
+  { key: "verse", label: "Verse", href: "/verse-of-the-day" },
+  { key: "plans", label: "Plans", href: "/plans" },
+];
+
+const legalLinks = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+  { label: "Contact", href: "/contact" },
+  { label: "Disclosures", href: "/disclosures" },
+  { label: "Shipping", href: "/shipping" },
+  { label: "Returns", href: "/returns" },
 ];
 
 export function SiteHeader({ active }: { active?: NavKey }) {
   return (
     <header className="z-50 border-b border-[#dfd2bb] bg-[#fbf7ed]/92 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Hope Bible home">
           <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#204636] text-[#fff8e8] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_10px_24px_rgba(32,70,54,0.16)]">
             <Cross size={20} strokeWidth={1.8} />
@@ -51,24 +66,9 @@ export function SiteHeader({ active }: { active?: NavKey }) {
             </Link>
           ))}
         </div>
+
+        <MobileSiteMenu items={navItems} active={active} />
       </nav>
-      <div className="mx-auto max-w-7xl overflow-x-auto px-5 pb-3 lg:hidden">
-        <div className="flex min-w-max items-center gap-2 text-sm font-semibold text-[#6b6257]">
-          {navItems.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              className={
-                active === item.key
-                  ? "rounded-full bg-[#efe5d3] px-3 py-2 text-[#254737]"
-                  : "rounded-full border border-[#eadfcf] bg-[#fffaf0]/70 px-3 py-2 transition hover:bg-[#f3eadb] hover:text-[#254737]"
-              }
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </div>
     </header>
   );
 }
@@ -81,18 +81,13 @@ export function PageShell({
   children: ReactNode;
 }) {
   return (
-    <main className="flex min-h-screen w-full flex-col overflow-x-hidden bg-[#fbf7ed] text-[#27231d]">
+    <main className="flex min-h-screen w-full flex-col bg-[#fbf7ed] text-[#27231d]">
       <SiteHeader active={active} />
       <section
         data-page-shell
-        className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 overflow-x-hidden px-4 py-10 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-64 before:bg-[radial-gradient(ellipse_at_top_left,rgba(192,143,62,0.11),transparent_62%)] sm:px-8 sm:before:inset-x-8 lg:py-14"
+        className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 px-4 py-10 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-64 before:bg-[radial-gradient(ellipse_at_top_left,rgba(192,143,62,0.11),transparent_62%)] sm:px-8 sm:before:inset-x-8 lg:py-14"
       >
-        <div
-          className="relative min-w-0"
-          style={{ width: "min(100%, calc(100vw - 2rem))" }}
-        >
-          {children}
-        </div>
+        <div className="relative w-full min-w-0">{children}</div>
       </section>
       <SiteFooter />
     </main>
@@ -114,22 +109,54 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
         className={
           isDark
             ? "flex flex-col gap-3"
-            : "mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 sm:px-8 lg:flex-row lg:items-center lg:justify-between"
+            : "mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:px-8 lg:grid-cols-[1.2fr_0.9fr_0.9fr]"
         }
       >
-        <p className={isDark ? "text-xs leading-5" : "max-w-2xl text-sm leading-6"}>
-          This site is an independent Christian resource and is not affiliated
-          with any Bible publisher or church.
-        </p>
+        <div className="min-w-0">
+          <p
+            className={
+              isDark
+                ? "text-xs leading-5"
+                : "max-w-2xl text-sm font-semibold leading-6 text-[#24362c]"
+            }
+          >
+            Hope Bible is an independent Christian faith-inspired resource for
+            Scripture, prayer, and reflection.
+          </p>
+          {!isDark ? (
+            <div className="mt-3 grid gap-2 text-sm leading-6 text-[#625b51]">
+              <p>
+                This site is not an official church, ministry, denomination,
+                Bible publisher, or religious authority.
+              </p>
+              <p>
+                Faith symbols are optional reminders of prayer and Scripture,
+                not guarantees, charms, or sources of spiritual power.
+              </p>
+            </div>
+          ) : null}
+        </div>
         <nav
-          aria-label="Footer navigation"
+          aria-label="Footer resource navigation"
           className={
             isDark
               ? "flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold"
-              : "flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#355242]"
+              : "min-w-0"
           }
         >
-          {navItems.map((item) => (
+          {!isDark ? (
+            <h2 className="text-sm font-semibold uppercase text-[#7b561b]">
+              Explore
+            </h2>
+          ) : null}
+          <div
+            className={
+              isDark
+                ? "flex flex-wrap gap-x-4 gap-y-2"
+                : "mt-3 grid grid-cols-2 gap-x-5 gap-y-2 text-sm font-semibold text-[#355242]"
+            }
+          >
+          {footerResourceLinks.map((item) => (
             <Link
               key={item.key}
               href={item.href}
@@ -142,7 +169,29 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               {item.label}
             </Link>
           ))}
+          </div>
         </nav>
+        {!isDark ? (
+          <nav
+            aria-label="Footer legal navigation"
+            className="min-w-0"
+          >
+            <h2 className="text-sm font-semibold uppercase text-[#7b561b]">
+              Trust and Policies
+            </h2>
+            <div className="mt-3 grid grid-cols-2 gap-x-5 gap-y-2 text-sm font-semibold text-[#7b561b]">
+            {legalLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="transition hover:text-[#204636]"
+              >
+                {item.label}
+              </Link>
+            ))}
+            </div>
+          </nav>
+        ) : null}
       </div>
     </footer>
   );
@@ -160,10 +209,7 @@ export function PageIntro({
   subtitle: string;
 }) {
   return (
-    <div
-      className="max-w-3xl"
-      style={{ width: "min(48rem, calc(100vw - 2rem))" }}
-    >
+    <div className="w-full max-w-3xl">
       <p className="inline-flex items-center gap-2 rounded-full border border-[#d5bd8d] bg-[#fffaf0] px-4 py-2 text-sm font-semibold text-[#7b561b] shadow-[0_8px_18px_rgba(81,59,31,0.05)]">
         <Icon size={16} strokeWidth={1.8} />
         {eyebrow}
@@ -262,10 +308,7 @@ export function BackButton({ href, label }: { href: string; label: string }) {
 
 export function StatusNote({ children }: { children: ReactNode }) {
   return (
-    <p
-      className="max-w-full break-words rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] px-4 py-3 text-sm font-semibold leading-6 text-[#2f5140]"
-      style={{ width: "min(100%, calc(100vw - 2rem))" }}
-    >
+    <p className="w-full max-w-full break-words rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] px-4 py-3 text-sm font-semibold leading-6 text-[#2f5140]">
       {children}
     </p>
   );

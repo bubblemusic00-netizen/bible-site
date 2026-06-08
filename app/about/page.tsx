@@ -9,9 +9,9 @@ import {
 } from "../components/site-ui";
 
 export const metadata: Metadata = {
-  title: "About Hope Bible | Independent Christian Resource",
+  title: "About",
   description:
-    "Learn about Hope Bible, an independent Christian resource for Scripture, prayer, reflection, and symbolic faith reminders.",
+    "Learn about Hope Bible, an independent Christian faith-inspired platform for Bible wisdom, prayer, reflection, and meaningful Christian symbols.",
 };
 
 const principles = [
@@ -38,7 +38,12 @@ const principles = [
   {
     title: "Independent Christian resource",
     description:
-      "Hope Bible is not affiliated with any Bible publisher, church, denomination, or retail platform.",
+      "Hope Bible is not affiliated with any Bible publisher, church, denomination, ministry, or retail platform.",
+  },
+  {
+    title: "Reflection, not authority",
+    description:
+      "Content is offered for personal reflection and general guidance, not as professional counseling or official religious authority.",
   },
 ];
 
@@ -49,12 +54,12 @@ export default function AboutPage() {
         <PageIntro
           icon={ShieldCheck}
           eyebrow="About Hope Bible"
-          title="A quiet Christian resource for daily faith."
-          subtitle="Hope Bible exists to help visitors read, pray, reflect, and carry faith into ordinary life with honesty and care."
+          title="An independent Christian faith-inspired platform."
+          subtitle="Hope Bible helps visitors explore Bible wisdom, prayer, reflection, and meaningful Christian symbols with honesty, care, and respect."
         />
         <StatusNote>
-          This site is independent and is not affiliated with any Bible
-          publisher or church.
+          This site is independent and is not an official church, ministry,
+          denomination, Bible publisher, or religious authority.
         </StatusNote>
       </div>
 
@@ -68,13 +73,15 @@ export default function AboutPage() {
               Why this exists
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
-              Start with what you need today.
+              Built for reflection, not pressure.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               The Faith Path system helps a person choose a simple spiritual
               direction, then continue through prayer, Scripture, reflection,
               and a future symbolic reminder. It is meant to feel calm,
-              respectful, and useful without pretending faith is a formula.
+              respectful, and useful without pretending faith is a formula or
+              replacing the care of a church, pastor, counselor, doctor, or
+              trusted professional.
             </p>
           </div>
         </div>
@@ -90,7 +97,8 @@ export default function AboutPage() {
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
             Hope Bible is being built as a free Christian place to read the
-            Bible, begin a prayer, and take one grounded step of faith.
+            Bible, begin a prayer, consider a reflection, and take one grounded
+            step of faith.
           </p>
         </article>
 
@@ -105,6 +113,7 @@ export default function AboutPage() {
             Christian jewelry or faith symbols may be added later as tasteful
             reminders of prayer and belief. They will not be presented as
             magical objects or guarantees of blessing, protection, or healing.
+            Free guidance will remain separate from any future optional shop.
           </p>
         </article>
       </section>

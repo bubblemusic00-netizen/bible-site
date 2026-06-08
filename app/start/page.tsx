@@ -1,25 +1,64 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import {
+  ArrowRight,
+  BookOpenText,
   Compass,
+  Gem,
   Heart,
-  Home,
   Leaf,
   Shield,
+  Sparkles,
   Sun,
-  Users,
 } from "lucide-react";
-import { CardLink, PageIntro, PageShell } from "../components/site-ui";
-import { faithPathSlugs, faithPaths, type FaithPathSlug } from "@/lib/faith-paths";
+import {
+  featuredStartFaithPathSlugs,
+  startFaithPaths,
+  type StartFaithPathSlug,
+} from "@/lib/faith-paths";
+import { PageIntro, PageShell, StatusNote } from "../components/site-ui";
 
-const pathIcons: Record<FaithPathSlug, typeof Leaf> = {
+export const metadata: Metadata = {
+  title: "Start Your Faith Path | Scripture and Prayer Guidance",
+  description:
+    "Choose a guided Faith Path for peace, strength, protection, hope, guidance, or gratitude, then continue with Scripture, prayer, reflection, and an optional faith reminder.",
+};
+
+const pathIcons: Record<StartFaithPathSlug, typeof Leaf> = {
   peace: Leaf,
   strength: Shield,
+  protection: Shield,
+  hope: Sparkles,
   guidance: Compass,
   gratitude: Sun,
   healing: Heart,
   forgiveness: Heart,
-  anxiety: Home,
-  family: Users,
+  anxiety: Leaf,
+  family: Heart,
 };
+
+const flowSteps = [
+  {
+    title: "Choose what you need",
+    description: "Start with the real need or intention you are carrying today.",
+    icon: Heart,
+  },
+  {
+    title: "Receive Scripture and prayer",
+    description: "Move into a short Bible reference and a prayer for the moment.",
+    icon: BookOpenText,
+  },
+  {
+    title: "Reflect honestly",
+    description: "Use one prompt to name what is true without pressure.",
+    icon: Leaf,
+  },
+  {
+    title: "Optional faith symbol reminder",
+    description: "Symbols can remind you to pray; they are never guarantees.",
+    icon: Gem,
+  },
+];
 
 export default function StartPage() {
   return (
@@ -28,32 +67,123 @@ export default function StartPage() {
         <PageIntro
           icon={Leaf}
           eyebrow="Faith Path Finder"
-          title="What do you need today?"
-          subtitle="Choose the intention you want to bring into prayer, scripture, and daily faith."
+          title="Start Your Faith Path"
+          subtitle="Choose what you need today, and we will guide you toward Scripture, prayer, and a simple reflection."
         />
-        <p className="max-w-xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 text-base leading-7 text-[#625b51] shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
-          Start with what you are actually carrying. Each path gives you a
-          simple way to pray, read, and carry your intention with honesty and
-          care.
-        </p>
+        <StatusNote>
+          Faith Paths are content-first and free. Optional faith symbols are
+          reminders of prayer and Scripture, not promises of protection,
+          healing, blessing, or spiritual results.
+        </StatusNote>
       </div>
 
-      <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {faithPathSlugs.map((slug) => {
-          const path = faithPaths[slug];
-          const Icon = pathIcons[slug];
+      <section className="mt-9 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-6">
+        <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+          How it works
+        </p>
+        <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+          A simple four-step guide
+        </h2>
+        <div className="mt-6 grid gap-3 md:grid-cols-4">
+          {flowSteps.map((step, index) => {
+            const Icon = step.icon;
 
-          return (
-            <CardLink
-              key={path.slug}
-              href={`/start/${path.slug}`}
-              icon={Icon}
-              title={path.title}
-              description={path.description}
-              cta="Choose this path"
-            />
-          );
-        })}
+            return (
+              <article key={step.title} className="rounded-lg bg-[#fbf7ed] p-4">
+                <div className="flex items-center gap-3">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#284737] text-sm font-semibold text-[#fffaf0]">
+                    {index + 1}
+                  </span>
+                  <Icon className="size-5 text-[#254737]" strokeWidth={1.8} />
+                </div>
+                <h3 className="mt-4 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#625b51]">
+                  {step.description}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            Step 1
+          </p>
+          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+            Choose what you need today
+          </h2>
+          <p className="mt-3 text-base leading-7 text-[#625b51]">
+            Each path begins with a careful intention, then points toward
+            Scripture, prayer, reflection, and a small next step. Nothing here
+            promises a miracle or a guaranteed outcome.
+          </p>
+        </div>
+
+        <div className="mt-6 grid gap-4 lg:grid-cols-3">
+          {featuredStartFaithPathSlugs.map((slug) => {
+            const path = startFaithPaths[slug];
+            const Icon = pathIcons[slug];
+
+            return (
+              <Link
+                key={path.slug}
+                href={path.startRoute}
+                className="group rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] transition hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_22px_48px_rgba(71,55,35,0.085)] sm:p-6"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+                    <Icon size={20} strokeWidth={1.8} />
+                  </span>
+                  <ArrowRight
+                    size={17}
+                    className="mt-1 shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+                  />
+                </div>
+                <h3 className="mt-5 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+                  {path.title}
+                </h3>
+                <p className="mt-3 text-base leading-7 text-[#625b51]">
+                  {path.description}
+                </p>
+                <p className="mt-4 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-3 text-sm font-semibold leading-6 text-[#2f5140]">
+                  {path.carefulLine}
+                </p>
+                <p className="mt-5 text-sm font-semibold text-[#254737]">
+                  Begin this path
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="mt-10 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+        <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase text-[#e9c985]">
+              Content first
+            </p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+              The path leads to prayer and Scripture before anything else.
+            </h2>
+            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+              Faith symbols may be mentioned as optional reminders near the end
+              of a path, but the main purpose is guidance for reading, prayer,
+              reflection, and a faithful next step.
+            </p>
+          </div>
+          <Link
+            href="/bible"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
+          >
+            Read the Bible
+            <BookOpenText size={16} strokeWidth={1.8} />
+          </Link>
+        </div>
       </section>
     </PageShell>
   );

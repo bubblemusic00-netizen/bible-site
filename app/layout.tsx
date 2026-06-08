@@ -14,9 +14,38 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Hope Bible | Free Christian Bible and Prayer",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
+  title: {
+    default: "Hope Bible | Free Bible Reading and Prayer Guidance",
+    template: "%s | Hope Bible",
+  },
   description:
-    "A calm Christian Bible website for Scripture, prayer, Faith Paths, guided reflection, and symbolic faith reminders.",
+    "Free Bible reading, prayer guidance, and Christian faith reflections for Scripture, prayer, and meaningful faith reminders.",
+  applicationName: "Hope Bible",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Hope Bible | Free Bible Reading and Prayer Guidance",
+    description:
+      "Free Bible reading, prayer guidance, and Christian faith reflections for Scripture, prayer, and meaningful faith reminders.",
+    url: "/",
+    siteName: "Hope Bible",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Hope Bible | Free Bible Reading and Prayer Guidance",
+    description:
+      "Free Bible reading, prayer guidance, and Christian faith reflections.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export const viewport: Viewport = {
