@@ -149,7 +149,7 @@ export default async function StartPathPage({
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
               {faithPath.symbolReminder} A symbol should never be treated as a
-              source of power, luck, guaranteed protection, healing, or
+              source of power, luck, promised protection, healing, or
               spiritual results.
             </p>
           </div>

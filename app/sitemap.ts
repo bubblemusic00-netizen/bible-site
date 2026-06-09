@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { startFaithPathSlugs } from "@/lib/faith-paths";
 import { supportedBibleChapters } from "./bible/bible-data";
 import { jewelryIntentionKeys } from "./jewelry/intentions";
+import { prayerPathKeys } from "./prayer/prayer-paths";
 
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
@@ -35,6 +36,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.74,
   }));
 
+  const prayerRoutes = prayerPathKeys.map((slug) => ({
+    path: `/prayer/${slug}`,
+    priority: 0.73,
+  }));
+
   const symbolRoutes = jewelryIntentionKeys.map((slug) => ({
     path: `/jewelry/${slug}`,
     priority: 0.64,
@@ -43,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...coreRoutes,
     ...bibleReadingRoutes,
+    ...prayerRoutes,
     ...startRoutes,
     ...symbolRoutes,
   ].map((route) => ({

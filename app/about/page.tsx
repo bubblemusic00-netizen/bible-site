@@ -23,7 +23,7 @@ const principles = [
   {
     title: "No fake miracle claims",
     description:
-      "Prayer and reflection are offered with humility, without promises of guaranteed outcomes.",
+      "Prayer and reflection are offered with humility, without promises of certain outcomes.",
   },
   {
     title: "No pressure-based selling",

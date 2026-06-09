@@ -1,5 +1,4 @@
 import { faithPathSlugs, faithPaths, type FaithPathSlug } from "@/lib/faith-paths";
-import { prayerPaths } from "../prayer/prayer-paths";
 
 type ScripturePathContent = {
   title: string;
@@ -67,6 +66,83 @@ const scripturePathContent = {
   },
 } as const satisfies Record<FaithPathSlug, ScripturePathContent>;
 
+const scripturePathMeta = {
+  peace: {
+    intention: "peace",
+    verse: {
+      reference: "Psalm 23:1",
+      text: "Yahweh is my shepherd: I shall lack nothing.",
+      translation: "World English Bible",
+    },
+  },
+  strength: {
+    intention: "strength",
+    verse: {
+      reference: "Isaiah 40:31",
+      text: "But those who wait for Yahweh will renew their strength.",
+      translation: "World English Bible",
+    },
+  },
+  guidance: {
+    intention: "wisdom",
+    verse: {
+      reference: "Proverbs 3:5",
+      text: "Trust in Yahweh with all your heart, and don't lean on your own understanding.",
+      translation: "World English Bible",
+    },
+  },
+  gratitude: {
+    intention: "gratitude",
+    verse: {
+      reference: "Genesis 1:31",
+      text: "God saw everything that he had made, and, behold, it was very good.",
+      translation: "World English Bible",
+    },
+  },
+  healing: {
+    intention: "care",
+    verse: {
+      reference: "Isaiah 40:29",
+      text: "He gives power to the weak. He increases the strength of him who has no might.",
+      translation: "World English Bible",
+    },
+  },
+  forgiveness: {
+    intention: "mercy",
+    verse: {
+      reference: "1 Corinthians 13:4",
+      text: "Love is patient and is kind; love doesn't envy.",
+      translation: "World English Bible",
+    },
+  },
+  anxiety: {
+    intention: "steadiness",
+    verse: {
+      reference: "Philippians 4:6",
+      text: "In nothing be anxious, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God.",
+      translation: "World English Bible",
+    },
+  },
+  family: {
+    intention: "love",
+    verse: {
+      reference: "1 Corinthians 13:7",
+      text: "Bears all things, believes all things, hopes all things, and endures all things.",
+      translation: "World English Bible",
+    },
+  },
+} as const satisfies Record<
+  FaithPathSlug,
+  {
+    intention: string;
+    verse: {
+      reference: string;
+      text: string;
+      translation: "World English Bible";
+    };
+  }
+>;
+
 export type ScripturePath = ScripturePathContent & {
   slug: FaithPathSlug;
   intention: string;
@@ -91,17 +167,17 @@ export const scripturePathCards = scripturePathKeys.map((key) => ({
 export function getScripturePath(slug: string): ScripturePath | undefined {
   const key = slug as FaithPathSlug;
   const faithPath = faithPaths[key];
-  const prayerPath = prayerPaths[key];
+  const pathMeta = scripturePathMeta[key];
   const content = scripturePathContent[key];
 
-  if (!faithPath || !prayerPath || !content) {
+  if (!faithPath || !pathMeta || !content) {
     return undefined;
   }
 
   return {
     slug: key,
-    intention: prayerPath.intention,
-    verse: prayerPath.verse,
+    intention: pathMeta.intention,
+    verse: pathMeta.verse,
     prayerHref: faithPath.prayerRoute,
     jewelryHref: faithPath.jewelryRoute,
     ...content,

@@ -55,7 +55,7 @@ export const faithPaths = {
     finderIntro:
       "This is a careful place to bring pain before God. This path offers comfort, prayer, and hope without pretending the ache is simple.",
     startRoute: "/start/healing",
-    prayerRoute: "/prayer/healing",
+    prayerRoute: "/prayer/hope",
     scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/healing",
   },
@@ -91,7 +91,7 @@ export const faithPaths = {
     finderIntro:
       "Bring the people closest to you into a quiet moment of prayer. This path helps you hold family with love, patience, and faith.",
     startRoute: "/start/family",
-    prayerRoute: "/prayer/family",
+    prayerRoute: "/prayer/guidance",
     scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/family",
   },
@@ -185,7 +185,7 @@ export const startFaithPaths = {
     symbolReminder:
       "A Christian symbol may remind some people to pray and seek wisdom, but it should never be treated as a source of protection or power.",
     startRoute: "/start/protection",
-    prayerRoute: "/prayer/strength",
+    prayerRoute: "/prayer/protection",
     scriptureRoute: "/bible/psalms/91",
     jewelryRoute: "/jewelry/strength",
   },
@@ -195,7 +195,7 @@ export const startFaithPaths = {
     title: "Hope",
     description: "For seasons of pain, waiting, or longing for renewed courage.",
     carefulLine:
-      "This path offers comfort and reflection; it does not promise instant healing or guaranteed outcomes.",
+      "This path offers comfort and reflection; it does not promise instant healing or certain outcomes.",
     pastoralIntro:
       "Begin here when your heart feels heavy and you need a gentle place to bring pain before God. This path offers Scripture, prayer, reflection, and a small next step toward hope.",
     scriptureReference: "Romans 8",
@@ -210,7 +210,7 @@ export const startFaithPaths = {
     symbolReminder:
       "A symbol of hope may help some people remember prayer and Scripture during a difficult season, without making healing claims.",
     startRoute: "/start/hope",
-    prayerRoute: "/prayer/healing",
+    prayerRoute: "/prayer/hope",
     scriptureRoute: "/bible/romans/8",
     jewelryRoute: "/jewelry/healing",
   },
@@ -283,7 +283,7 @@ export const startFaithPaths = {
     symbolReminder:
       "A symbol connected to healing may be a reminder to pray and seek care, not a promise of healing.",
     startRoute: "/start/healing",
-    prayerRoute: "/prayer/healing",
+    prayerRoute: "/prayer/hope",
     scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/healing",
   },
@@ -353,7 +353,7 @@ export const startFaithPaths = {
     symbolReminder:
       "A symbol connected to family may remind some people to pray for loved ones and practice patient love.",
     startRoute: "/start/family",
-    prayerRoute: "/prayer/family",
+    prayerRoute: "/prayer/guidance",
     scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/family",
   },

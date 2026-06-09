@@ -31,7 +31,7 @@ export default function TermsPage() {
           body: "Hope Bible is independent. It is not an official church, ministry, denomination, Bible publisher, or religious authority. Visitors are responsible for reading Scripture in context and seeking trusted local guidance when needed.",
         },
         {
-          title: "No guaranteed outcomes",
+          title: "No promised outcomes",
           body: "Prayer, Scripture reflection, and faith symbols should not be treated as formulas, guarantees, charms, or promises of specific outcomes. Visitors remain responsible for their own decisions, actions, and care.",
         },
       ]}

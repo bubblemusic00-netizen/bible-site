@@ -176,7 +176,7 @@ export default function StartPage() {
           <p className="mt-3 text-base leading-7 text-[#625b51]">
             Each path begins with a careful intention, then points toward
             Scripture, prayer, reflection, and a small next step. Nothing here
-            promises a miracle or a guaranteed outcome.
+            promises a miracle or a certain outcome.
           </p>
         </div>
 
