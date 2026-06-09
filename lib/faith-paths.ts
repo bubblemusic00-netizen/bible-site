@@ -23,6 +23,18 @@ export const faithPaths = {
     scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/strength",
   },
+  protection: {
+    slug: "protection",
+    title: "Protection",
+    shortLabel: "Protection",
+    description: "Pray for God's care, wisdom, courage, and safe support.",
+    finderIntro:
+      "When you feel vulnerable or uncertain, this path helps you pray for God's care and choose wise support without treating faith as a charm.",
+    startRoute: "/start/protection",
+    prayerRoute: "/prayer/protection",
+    scriptureRoute: "/bible/psalms/91",
+    jewelryRoute: "/jewelry/protection",
+  },
   guidance: {
     slug: "guidance",
     title: "Guidance",
@@ -58,6 +70,18 @@ export const faithPaths = {
     prayerRoute: "/prayer/hope",
     scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/healing",
+  },
+  hope: {
+    slug: "hope",
+    title: "Hope",
+    shortLabel: "Hope",
+    description: "Bring heaviness, waiting, or longing before God.",
+    finderIntro:
+      "When your heart feels heavy, this path offers Scripture, prayer, reflection, and a small next step toward hope without promising quick answers.",
+    startRoute: "/start/hope",
+    prayerRoute: "/prayer/hope",
+    scriptureRoute: "/bible/romans/8",
+    jewelryRoute: "/jewelry/hope",
   },
   forgiveness: {
     slug: "forgiveness",
@@ -166,7 +190,7 @@ export const startFaithPaths = {
   },
   protection: {
     slug: "protection",
-    linkedFaithPathSlug: "strength",
+    linkedFaithPathSlug: "protection",
     title: "Protection",
     description: "For moments when you want courage, wisdom, and safe support.",
     carefulLine:
@@ -187,11 +211,11 @@ export const startFaithPaths = {
     startRoute: "/start/protection",
     prayerRoute: "/prayer/protection",
     scriptureRoute: "/bible/psalms/91",
-    jewelryRoute: "/jewelry/strength",
+    jewelryRoute: "/jewelry/protection",
   },
   hope: {
     slug: "hope",
-    linkedFaithPathSlug: "healing",
+    linkedFaithPathSlug: "hope",
     title: "Hope",
     description: "For seasons of pain, waiting, or longing for renewed courage.",
     carefulLine:
@@ -212,7 +236,7 @@ export const startFaithPaths = {
     startRoute: "/start/hope",
     prayerRoute: "/prayer/hope",
     scriptureRoute: "/bible/romans/8",
-    jewelryRoute: "/jewelry/healing",
+    jewelryRoute: "/jewelry/hope",
   },
   guidance: {
     slug: "guidance",

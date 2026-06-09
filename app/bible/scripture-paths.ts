@@ -22,6 +22,14 @@ const scripturePathContent = {
       "Strength in Scripture is not only force. It can be endurance, patience, humility, and courage for what is actually in front of you.",
     nextStep: "Choose one faithful action you can take today without rushing.",
   },
+  protection: {
+    title: "Scripture for Protection",
+    intro: "Receive Scripture as a place of refuge, trust, and wise prayer.",
+    reflection:
+      "Protection language in Scripture should be received as prayerful trust, not as a formula. Let it lead you toward courage, wisdom, and safe support.",
+    nextStep:
+      "Name one wise protective action, such as asking for help, slowing down, or setting a careful boundary.",
+  },
   guidance: {
     title: "Scripture for Guidance",
     intro: "Let Scripture slow the moment before a decision.",
@@ -42,6 +50,14 @@ const scripturePathContent = {
     reflection:
       "This path is a comfort, not a medical promise. Let the verse remind you that God is near while you seek wise care and support.",
     nextStep: "Name what hurts, then choose one safe source of support to reach toward.",
+  },
+  hope: {
+    title: "Scripture for Hope",
+    intro: "Let Scripture hold heaviness, waiting, and hope together.",
+    reflection:
+      "Hope does not require pretending pain is small. Let this reading help you name longing before God and look for one faithful step.",
+    nextStep:
+      "Name one ache honestly, then choose one gentle practice that helps you stay grounded today.",
   },
   forgiveness: {
     title: "Scripture for Forgiveness",
@@ -83,6 +99,14 @@ const scripturePathMeta = {
       translation: "World English Bible",
     },
   },
+  protection: {
+    intention: "protection",
+    verse: {
+      reference: "Psalm 91:2",
+      text: "I will say of Yahweh, \"He is my refuge and my fortress; my God, in whom I trust.\"",
+      translation: "World English Bible",
+    },
+  },
   guidance: {
     intention: "wisdom",
     verse: {
@@ -104,6 +128,14 @@ const scripturePathMeta = {
     verse: {
       reference: "Isaiah 40:29",
       text: "He gives power to the weak. He increases the strength of him who has no might.",
+      translation: "World English Bible",
+    },
+  },
+  hope: {
+    intention: "hope",
+    verse: {
+      reference: "Romans 8:25",
+      text: "But if we hope for that which we don't see, we wait for it with patience.",
       translation: "World English Bible",
     },
   },

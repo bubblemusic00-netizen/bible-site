@@ -80,10 +80,10 @@ export default async function StartPathPage({
 
       <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-6">
         <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-          Begin here
+          Full Faith Quiz result
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-          A guided path for today
+          Scripture, prayer, reflection, and one careful next step.
         </h2>
         <div className="mt-6 grid gap-3 md:grid-cols-4">
           {[
