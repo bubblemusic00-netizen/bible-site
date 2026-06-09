@@ -3,9 +3,9 @@ import { ScrollText } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
-  title: "Terms of Use",
+  title: "Terms of Use | Hope Bible",
   description:
-    "Terms of Use for Hope Bible, an independent Christian Bible, prayer, and faith reflection resource.",
+    "Terms of Use for Hope Bible, an independent Christian Bible, prayer, faith reflection, and faith-symbol education resource.",
 };
 
 export default function TermsPage() {
@@ -14,9 +14,9 @@ export default function TermsPage() {
       icon={ScrollText}
       eyebrow="Terms"
       title="Terms of Use"
-      subtitle="Plain-language terms for using this free Bible, prayer, and reflection resource."
-      note="This is a launch-readiness draft and should be reviewed before public launch, especially before adding accounts, forms, payments, or commerce."
-      updated="June 8, 2026"
+      subtitle="Plain-language terms for using this free Bible, prayer, reflection, and faith-symbol education resource."
+      note="Hope Bible is currently a free guidance-first website. If an optional shop is added later, product-specific terms and policies will be provided before public launch."
+      updated="June 9, 2026"
       sections={[
         {
           title: "Informational purpose",
@@ -33,6 +33,10 @@ export default function TermsPage() {
         {
           title: "No promised outcomes",
           body: "Prayer, Scripture reflection, and faith symbols should not be treated as formulas, guarantees, charms, or promises of specific outcomes. Visitors remain responsible for their own decisions, actions, and care.",
+        },
+        {
+          title: "Future shop terms",
+          body: "If an optional shop is introduced later, product descriptions, support contact information, shipping details, return/refund terms, and any relevant fulfillment relationships will be stated in the applicable shop policies before purchase.",
         },
       ]}
     />

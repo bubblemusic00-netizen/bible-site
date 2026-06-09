@@ -161,8 +161,8 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               href={item.href}
               className={
                 isDark
-                  ? "transition hover:text-[#fffaf0]"
-                  : "transition hover:text-[#204636]"
+                  ? "inline-flex min-h-10 items-center transition hover:text-[#fffaf0]"
+                  : "inline-flex min-h-10 items-center transition hover:text-[#204636]"
               }
             >
               {item.label}
@@ -183,7 +183,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="transition hover:text-[#204636]"
+                className="inline-flex min-h-10 items-center transition hover:text-[#204636]"
               >
                 {item.label}
               </Link>

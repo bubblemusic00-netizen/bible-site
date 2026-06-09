@@ -98,6 +98,11 @@ export default async function JewelryIntentionPage({
           <p className="mt-3 text-base leading-7 text-[#625b51]">
             {details.represents}
           </p>
+          <p className="mt-3 text-base leading-7 text-[#625b51]">
+            In ordinary moments, this kind of reminder can gently point back to
+            prayer, Scripture, and one faithful next step. The meaning belongs
+            to faith and practice, not to the object itself.
+          </p>
         </div>
       </section>
 
@@ -165,7 +170,9 @@ export default async function JewelryIntentionPage({
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               A symbol can be meaningful as a reminder, but the Scripture,
               prayer, and reflection guidance stands on its own and does not
-              depend on buying anything.
+              depend on buying anything. If an optional shop is added later,
+              support and purchase policies will be explained clearly before
+              that experience goes live.
             </p>
           </div>
           <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />
@@ -215,7 +222,7 @@ function InfoPanel({
       <p className="mt-3 text-sm leading-6 text-[#625b51]">{body}</p>
       <Link
         href={href}
-        className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#9a6a24]"
       >
         {cta}
         <ArrowRight size={15} strokeWidth={1.8} />

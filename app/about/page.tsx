@@ -28,7 +28,7 @@ const principles = [
   {
     title: "No pressure-based selling",
     description:
-      "The site is being built as a spiritual resource first, without fear tactics, fake urgency, or fake reviews.",
+      "The site is being built as a spiritual resource first, without fear tactics, manufactured urgency, or invented social proof.",
   },
   {
     title: "Faith symbols as reminders",
@@ -116,6 +116,26 @@ export default function AboutPage() {
             not depend on buying anything.
           </p>
         </article>
+      </section>
+
+      <section className="mt-6 max-w-5xl rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
+        <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+              Support readiness
+            </p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+              Prepared for trust before commerce.
+            </h2>
+            <p className="mt-3 text-base leading-7 text-[#625b51]">
+              If Hope Bible later adds an optional shop for simple faith
+              reminders, support, shipping, returns, privacy, and disclosures
+              will be explained before purchase. The free Scripture, prayer,
+              and reflection guidance will remain separate from any purchase.
+            </p>
+          </div>
+          <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />
+        </div>
       </section>
 
       <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">

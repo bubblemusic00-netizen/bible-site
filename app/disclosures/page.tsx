@@ -3,9 +3,9 @@ import { BadgeInfo } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
-  title: "Disclosures",
+  title: "Disclosures | Hope Bible",
   description:
-    "Disclosures for Hope Bible, including independent-resource status and clear faith-symbol boundaries.",
+    "Disclosures for Hope Bible, including independent-resource status, future commerce boundaries, and clear faith-symbol language.",
 };
 
 export default function DisclosuresPage() {
@@ -14,25 +14,25 @@ export default function DisclosuresPage() {
       icon={BadgeInfo}
       eyebrow="Disclosures"
       title="Disclosures"
-      subtitle="Clear boundaries for an independent Christian faith-inspired resource."
-      note="Hope Bible is independent and does not currently sell products, run checkout, display product inventory, or publish affiliate offers."
-      updated="June 8, 2026"
+      subtitle="Clear boundaries for a free, independent Christian faith-inspired resource."
+      note="Hope Bible currently provides Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education as free content. Any optional shop added later will be separate from the guidance content."
+      updated="June 9, 2026"
       sections={[
         {
           title: "Independent resource",
           body: "Hope Bible is an independent Christian faith-inspired resource. It is not affiliated with an official church, ministry, denomination, Bible publisher, retail platform, or religious authority.",
         },
         {
-          title: "No commerce on this site",
-          body: "Hope Bible currently provides free Bible, prayer, reflection, and faith-symbol education. It does not currently offer checkout, prices, product inventory, affiliate offers, or paid recommendations.",
+          title: "Free content first",
+          body: "Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education do not require a purchase. The core guidance content is intended to remain available without buying anything.",
         },
         {
-          title: "Purchases are optional",
-          body: "The free Bible, prayer, and reflection guidance does not require a purchase. Faith symbols are discussed as reminders and teaching aids, not as products on this site.",
+          title: "Future optional shop",
+          body: "If an optional shop is added later, product pages and policies will state relevant purchase, shipping, return, support, and fulfillment details before an order is placed. Any supplier, affiliate, or third-party fulfillment relationships will be disclosed when applicable.",
         },
         {
-          title: "No object-based claims",
-          body: "Christian symbols are not presented as miracle objects, protection charms, healing tools, sources of spiritual power, luck items, or guarantees of blessing or outcomes.",
+          title: "Faith reminders, not guarantees",
+          body: "Christian symbols are discussed as reminders of Scripture, prayer, and faith. They are not presented as miracle objects, protection charms, healing tools, sources of spiritual power, luck items, or promises of blessing, healing, protection, or specific outcomes.",
         },
       ]}
     />

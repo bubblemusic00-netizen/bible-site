@@ -11,7 +11,12 @@ import {
   Heart,
   Leaf,
 } from "lucide-react";
-import { PageIntro, PageShell, SecondaryButton, StatusNote } from "../components/site-ui";
+import {
+  PageIntro,
+  PageShell,
+  SecondaryButton,
+  StatusNote,
+} from "../components/site-ui";
 import { jewelryIntentions } from "./intentions";
 
 export const metadata: Metadata = {
@@ -154,6 +159,32 @@ export default function JewelryPage() {
         </div>
       </section>
 
+      <section className="mt-8 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
+        <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+          <div>
+            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+              Why this can matter
+            </p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+              Small reminders can meet ordinary moments.
+            </h2>
+          </div>
+          <div className="space-y-3 text-base leading-7 text-[#625b51]">
+            <p>
+              A symbol does not carry spiritual power, but it can help a person
+              remember what they are trying to practice: patience in a tense
+              conversation, prayer before a decision, gratitude during a normal
+              day, or hope when life feels heavy.
+            </p>
+            <p>
+              If Hope Bible later offers optional faith reminders through a
+              separate shop, the free Scripture, prayer, and reflection guidance
+              will remain available without purchase.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="mt-10">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-[#9a6a24]">
@@ -206,7 +237,7 @@ export default function JewelryPage() {
                 </div>
                 <Link
                   href={symbol.href}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+                  className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#9a6a24]"
                 >
                   Open related Faith Path
                   <ArrowRight size={15} strokeWidth={1.8} />
@@ -322,7 +353,8 @@ export default function JewelryPage() {
         <StatusNote>
           Faith symbols are reminders of prayer, Scripture, and belief. They
           are not guarantees of protection, healing, blessing, luck, or
-          spiritual results.
+          spiritual results. Any future shop experience would be optional and
+          separate from the free guidance.
         </StatusNote>
       </div>
     </PageShell>
