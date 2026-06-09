@@ -26,7 +26,6 @@ const navItems: Array<{ key: NavKey; label: string; href: string }> = [
 const footerResourceLinks = [
   ...navItems,
   { key: "verse", label: "Verse", href: "/verse-of-the-day" },
-  { key: "plans", label: "Plans", href: "/plans" },
 ];
 
 const legalLinks = [

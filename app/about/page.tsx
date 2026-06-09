@@ -31,9 +31,9 @@ const principles = [
       "The site is being built as a spiritual resource first, without fear tactics, fake urgency, or fake reviews.",
   },
   {
-    title: "Symbolic jewelry only",
+    title: "Faith symbols as reminders",
     description:
-      "Future faith symbols would be reminders of belief, not sources of protection, healing, blessing, or power.",
+      "Faith symbols are discussed as reminders of belief, not sources of protection, healing, blessing, or power.",
   },
   {
     title: "Independent Christian resource",
@@ -78,7 +78,7 @@ export default function AboutPage() {
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               The Faith Path system helps a person choose a simple spiritual
               direction, then continue through prayer, Scripture, reflection,
-              and a future symbolic reminder. It is meant to feel calm,
+              and an optional symbolic reminder. It is meant to feel calm,
               respectful, and useful without pretending faith is a formula or
               replacing the care of a church, pastor, counselor, doctor, or
               trusted professional.
@@ -107,13 +107,13 @@ export default function AboutPage() {
             <Gem size={20} strokeWidth={1.8} />
           </span>
           <h2 className="mt-5 font-serif text-3xl font-semibold text-[#241f19]">
-            Faith symbols later
+            Faith symbols with clear boundaries
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
-            Christian jewelry or faith symbols may be added later as tasteful
-            reminders of prayer and belief. They will not be presented as
-            magical objects or guarantees of blessing, protection, or healing.
-            Free guidance will remain separate from any future optional shop.
+            Christian faith symbols are explained as tasteful reminders of
+            prayer and belief. They are not presented as magical objects or
+            guarantees of blessing, protection, or healing. Free guidance does
+            not depend on buying anything.
           </p>
         </article>
       </section>

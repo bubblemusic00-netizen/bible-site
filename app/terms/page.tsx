@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ScrollText } from "lucide-react";
-import { LegalPlaceholderPage } from "../components/LegalPlaceholderPage";
+import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPlaceholderPage
+    <LegalInfoPage
       icon={ScrollText}
       eyebrow="Terms"
       title="Terms of Use"

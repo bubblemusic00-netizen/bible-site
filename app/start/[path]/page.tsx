@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import {
   ArrowRight,
   BookOpenText,
@@ -58,21 +59,7 @@ export default async function StartPathPage({
   const faithPath = getStartFaithPathBySlug(path);
 
   if (!faithPath) {
-    return (
-      <PageShell active="start">
-        <PageIntro
-          icon={Leaf}
-          eyebrow="Faith Quiz"
-          title="Faith path coming soon"
-          subtitle="This intention is not available yet, but you can still begin with prayer or choose another path."
-        />
-
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <BackButton href="/start" label="Back to Faith Quiz" />
-          <SecondaryButton href="/prayer">Prayer Guide</SecondaryButton>
-        </div>
-      </PageShell>
-    );
+    redirect("/start");
   }
 
   const linkedFaithPathSlug = faithPath.linkedFaithPathSlug as FaithPathSlug;

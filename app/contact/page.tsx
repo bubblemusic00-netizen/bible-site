@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Mail } from "lucide-react";
-import { LegalPlaceholderPage } from "../components/LegalPlaceholderPage";
+import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <LegalPlaceholderPage
+    <LegalInfoPage
       icon={Mail}
       eyebrow="Contact"
       title="Contact"
@@ -20,11 +20,11 @@ export default function ContactPage() {
       sections={[
         {
           title: "General questions",
-          body: "This page is reserved for questions about Hope Bible, Scripture attribution, prayer content, faith-symbol language, legal pages, or future shop policies.",
+          body: "This page is reserved for questions about Hope Bible, Scripture attribution, prayer content, faith-symbol language, legal pages, or commerce policies.",
         },
         {
           title: "Contact method",
-          body: "A real support email or contact form will be added before public commerce launch. No placeholder email has been invented.",
+          body: "A real support email or contact form is required before public commerce launch. No fake email has been invented.",
         },
         {
           title: "Pastoral or urgent needs",
@@ -32,7 +32,7 @@ export default function ContactPage() {
         },
         {
           title: "Policy questions",
-          body: "Before any future shop goes live, this page should clearly support privacy, disclosure, shipping, return, and order-support questions.",
+          body: "Before public commerce launch, this page should clearly support privacy, disclosure, shipping, return, and order-support questions.",
         },
       ]}
     />

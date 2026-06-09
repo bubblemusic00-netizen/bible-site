@@ -6,7 +6,7 @@ import {
 export type JewelryIntention = {
   slug: StartFaithPathSlug;
   pageTitle: string;
-  futureDirection: string;
+  reminderDirection: string;
   intro: string;
   represents: string;
   relatedTheme: string;
@@ -20,7 +20,7 @@ export const jewelryIntentions = {
   peace: {
     slug: "peace",
     pageTitle: "Faith Symbol Reminder for Peace",
-    futureDirection: "A quiet reminder to pause and pray for peace.",
+    reminderDirection: "A quiet reminder to pause and pray for peace.",
     intro:
       "Peace reminders can point the heart back toward prayer, Scripture, and a slower pace when the day feels unsettled.",
     represents:
@@ -37,7 +37,7 @@ export const jewelryIntentions = {
   strength: {
     slug: "strength",
     pageTitle: "Christian Symbol Reminder for Strength",
-    futureDirection: "A simple reminder of courage and endurance.",
+    reminderDirection: "A simple reminder of courage and endurance.",
     intro:
       "Strength reminders can help someone remember to take the next faithful step with patience, humility, and prayer.",
     represents:
@@ -54,7 +54,7 @@ export const jewelryIntentions = {
   protection: {
     slug: "protection",
     pageTitle: "Faith Symbol Reminder for Protection",
-    futureDirection: "A careful reminder to pray, seek wisdom, and move toward safe support.",
+    reminderDirection: "A careful reminder to pray, seek wisdom, and move toward safe support.",
     intro:
       "Protection reminders can point someone toward prayer, wise choices, and trusted help without treating an object as spiritual protection.",
     represents:
@@ -71,7 +71,7 @@ export const jewelryIntentions = {
   hope: {
     slug: "hope",
     pageTitle: "Christian Symbol Reminder for Hope",
-    futureDirection: "A tender reminder to hold onto hope with prayer and care.",
+    reminderDirection: "A tender reminder to hold onto hope with prayer and care.",
     intro:
       "Hope reminders can help someone remember Scripture, prayer, community, and patient care during a hard or waiting season.",
     represents:
@@ -88,7 +88,7 @@ export const jewelryIntentions = {
   guidance: {
     slug: "guidance",
     pageTitle: "Faith Symbol Reminder for Guidance",
-    futureDirection: "A thoughtful reminder to pause before decisions.",
+    reminderDirection: "A thoughtful reminder to pause before decisions.",
     intro:
       "Guidance reminders can help someone slow down, ask for wisdom, and move with care before choosing.",
     represents:
@@ -105,7 +105,7 @@ export const jewelryIntentions = {
   gratitude: {
     slug: "gratitude",
     pageTitle: "Christian Symbol Reminder for Gratitude",
-    futureDirection: "A warm reminder to notice grace and give thanks.",
+    reminderDirection: "A warm reminder to notice grace and give thanks.",
     intro:
       "Gratitude reminders can help someone notice gifts, name grace, and give thanks in ordinary moments.",
     represents:
@@ -122,7 +122,7 @@ export const jewelryIntentions = {
   healing: {
     slug: "healing",
     pageTitle: "Faith Symbol Reminder for Hope and Healing",
-    futureDirection: "A tender reminder of hope while seeking wise care.",
+    reminderDirection: "A tender reminder of hope while seeking wise care.",
     intro:
       "Hope and healing reminders can help someone remember prayer, support, and God's nearness in painful seasons.",
     represents:
@@ -139,7 +139,7 @@ export const jewelryIntentions = {
   forgiveness: {
     slug: "forgiveness",
     pageTitle: "Christian Symbol Reminder for Forgiveness",
-    futureDirection: "A simple reminder of grace received and extended.",
+    reminderDirection: "A simple reminder of grace received and extended.",
     intro:
       "Forgiveness reminders can help someone remember mercy, truth, humility, and careful repair.",
     represents:
@@ -156,7 +156,7 @@ export const jewelryIntentions = {
   anxiety: {
     slug: "anxiety",
     pageTitle: "Faith Symbol Reminder for Steadiness",
-    futureDirection: "A quiet reminder to pause, pray, and take one small step.",
+    reminderDirection: "A quiet reminder to pause, pray, and take one small step.",
     intro:
       "Steadiness reminders can help someone slow down, pray honestly, and move through the day one small step at a time.",
     represents:
@@ -173,7 +173,7 @@ export const jewelryIntentions = {
   family: {
     slug: "family",
     pageTitle: "Christian Symbol Reminder for Family",
-    futureDirection: "A meaningful reminder to pray for loved ones.",
+    reminderDirection: "A meaningful reminder to pray for loved ones.",
     intro:
       "Family reminders can help someone carry a quiet cue to pray for loved ones and practice patient love.",
     represents:

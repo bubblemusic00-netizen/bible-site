@@ -1,38 +1,38 @@
 import type { Metadata } from "next";
 import { RotateCcw } from "lucide-react";
-import { LegalPlaceholderPage } from "../components/LegalPlaceholderPage";
+import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
   title: "Returns Policy",
   description:
-    "Returns Policy for Hope Bible before any future optional shop or product sales are added.",
+    "Returns Policy for Hope Bible while the site provides free Bible, prayer, and faith guidance without product sales.",
 };
 
 export default function ReturnsPage() {
   return (
-    <LegalPlaceholderPage
+    <LegalInfoPage
       icon={RotateCcw}
       eyebrow="Returns"
       title="Returns Policy"
-      subtitle="Prepared for a possible future shop, with no products for sale yet."
+      subtitle="Hope Bible does not currently sell products, so there are no active returns or exchanges."
       note="There are currently no purchases, returns, exchanges, refunds, or product warranties on Hope Bible."
       updated="June 8, 2026"
       sections={[
         {
-          title: "No sales yet",
-          body: "Because Hope Bible does not currently sell products, there are no active return, exchange, refund, or warranty terms. This page is prepared for future readiness.",
+          title: "No sales",
+          body: "Because Hope Bible does not currently sell products, there are no active return, exchange, refund, or warranty terms.",
         },
         {
-          title: "Details before purchase",
-          body: "If a shop is added later, the return policy should be clearly available before purchase and should explain eligibility, item condition, refund handling, exchanges, damaged items, and support steps.",
+          title: "Free guidance",
+          body: "Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education are free site content and are not tied to a purchase.",
         },
         {
-          title: "No return window yet",
-          body: "No exact return window has been invented because the future shop, fulfillment model, and product rules are not finalized.",
+          title: "Commerce boundary",
+          body: "If commerce is introduced, return eligibility, item condition, refund handling, exchanges, damaged items, and support steps should be clearly published before checkout is available.",
         },
         {
-          title: "Optional shop separation",
-          body: "Any future purchase policy should remain separate from the free Bible, prayer, and reflection guidance, which should not depend on buying anything.",
+          title: "No purchase requirement",
+          body: "The free Bible, prayer, and reflection guidance does not depend on buying anything.",
         },
       ]}
     />

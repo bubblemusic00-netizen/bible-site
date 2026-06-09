@@ -13,19 +13,20 @@ export default function NotFound() {
       <PageIntro
         icon={Compass}
         eyebrow="Page not found"
-        title="This path is not available yet."
-        subtitle="You can return to a quiet starting point or continue with Scripture and prayer."
+        title="We could not find that page."
+        subtitle="Return to a finished starting point for Scripture, prayer, or the Faith Quiz."
       />
 
       <div className="mt-8 max-w-3xl">
         <StatusNote>
-          Some parts of Hope Bible are still being built. No purchases,
-          accounts, or checkout are available here.
+          Hope Bible is focused on free Scripture, prayer, reflection, and
+          faith-symbol education. No purchases, accounts, or checkout are
+          available here.
         </StatusNote>
       </div>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <PrimaryButton href="/start">Find what you need today</PrimaryButton>
+        <PrimaryButton href="/start">Take the Faith Quiz</PrimaryButton>
         <SecondaryButton href="/bible">Read the Bible</SecondaryButton>
         <SecondaryButton href="/prayer">Prayer Guide</SecondaryButton>
       </div>

@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { redirect } from "next/navigation";
 import { FaithJourneyNav } from "@/app/components/FaithJourneyNav";
 import { getFaithPathBySlug } from "@/lib/faith-paths";
 import {
@@ -24,7 +25,7 @@ export default async function PrayerPathPage({
   const faithPath = getFaithPathBySlug(path);
 
   if (!details || !faithPath) {
-    return <PrayerPathComingSoon />;
+    redirect("/prayer");
   }
 
   return (
@@ -87,9 +88,9 @@ export default async function PrayerPathPage({
           Carry this intention
         </h2>
         <p className="mt-3 text-base leading-7 text-[#625b51]">
-          Later, faith symbols and Christian jewelry connected to {details.intention}
-          may be added as simple reminders. They will be reminders of faith, not
-          sources of protection, blessing, healing, or spiritual power.
+          Faith symbols connected to {details.intention} can serve as simple
+          reminders of prayer and Scripture. They are not sources of protection,
+          blessing, healing, or spiritual power.
         </p>
         <div className="mt-5 rounded-lg border border-[#d8c5a3] bg-[#fffaf0] p-4">
           <p className="text-sm font-semibold uppercase text-[#9a6a24]">
@@ -120,36 +121,6 @@ export default async function PrayerPathPage({
         <SecondaryButton href={faithPath.jewelryRoute}>
           Explore faith symbols for this intention
         </SecondaryButton>
-      </div>
-    </PageShell>
-  );
-}
-
-function PrayerPathComingSoon() {
-  return (
-    <PageShell active="prayer">
-      <PageIntro
-        icon={Heart}
-        eyebrow="Prayer path"
-        title="Prayer path coming soon"
-        subtitle="This prayer path is not available yet, but you can return to the main prayer page."
-      />
-
-      <section className="mt-8 max-w-3xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <h2 className="font-serif text-3xl font-semibold text-[#241f19]">
-          Choose another starting point
-        </h2>
-        <p className="mt-3 text-base leading-7 text-[#625b51]">
-          No Scripture or prayer text is included for this path yet.
-        </p>
-        <div className="mt-6">
-          <StatusNote>Prayer path coming soon.</StatusNote>
-        </div>
-      </section>
-
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <BackButton href="/prayer" label="Back to Prayer" />
-        <SecondaryButton href="/bible">Read the Bible</SecondaryButton>
       </div>
     </PageShell>
   );

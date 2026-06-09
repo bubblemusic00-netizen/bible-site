@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ShieldCheck } from "lucide-react";
-import { LegalPlaceholderPage } from "../components/LegalPlaceholderPage";
+import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalPlaceholderPage
+    <LegalInfoPage
       icon={ShieldCheck}
       eyebrow="Privacy"
       title="Privacy Policy"
-      subtitle="How this independent Christian resource handles privacy before launch and before any future shop is added."
-      note="This is a conservative launch draft. Replace TODO contact details and review it before adding analytics, forms, accounts, payments, Shopify, or other third-party tools."
+      subtitle="How this independent Christian resource handles privacy for the current free website."
+      note="Hope Bible currently provides free Bible reading, prayer, reflection, and faith-symbol education without accounts, checkout, or payment processing."
       updated="June 8, 2026"
       sections={[
         {
@@ -24,15 +24,15 @@ export default function PrivacyPage() {
         },
         {
           title: "Contact forms",
-          body: "A public contact method has not been added yet. If a contact form or email intake is added, information sent through that channel should be used only to respond to the request, manage the site, or address policy and support questions.",
+          body: "When a visitor sends a message through an approved contact method, that information should be used only to respond to the request, manage the site, or address policy and support questions.",
         },
         {
           title: "Cookies and analytics",
-          body: "The site does not currently describe any active analytics, advertising pixels, or marketing cookies. If analytics or cookies are added later, this page should explain what tools are used, what they collect, and how visitors can manage choices where applicable.",
+          body: "The site does not currently describe any active advertising pixels or marketing cookies. Basic hosting logs may be processed by the platform that serves the site so pages can load and remain secure.",
         },
         {
-          title: "Future shop privacy",
-          body: "If an optional Shopify or partner checkout is added later, that checkout may have separate privacy practices for orders, payments, shipping, fraud prevention, and customer support. Those details should be shown clearly before any purchase is available.",
+          title: "Commerce boundary",
+          body: "Hope Bible does not currently collect order, payment, shipping, or customer account information because there is no public commerce experience on the site.",
         },
       ]}
     />

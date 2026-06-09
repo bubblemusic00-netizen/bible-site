@@ -298,7 +298,7 @@ export default function PrayerPage() {
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
               Prayer can begin with your need, continue with Bible reading, and
-              become a small daily practice. Future faith symbols are optional
+              become a small daily practice. Faith symbols are optional
               reminders of prayer and Scripture, not promises or guarantees.
             </p>
           </div>

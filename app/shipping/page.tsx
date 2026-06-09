@@ -1,38 +1,38 @@
 import type { Metadata } from "next";
 import { PackageCheck } from "lucide-react";
-import { LegalPlaceholderPage } from "../components/LegalPlaceholderPage";
+import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
   title: "Shipping Policy",
   description:
-    "Shipping Policy for Hope Bible before any future optional shop or product sales are added.",
+    "Shipping Policy for Hope Bible while the site provides free Bible, prayer, and faith guidance without product sales.",
 };
 
 export default function ShippingPage() {
   return (
-    <LegalPlaceholderPage
+    <LegalInfoPage
       icon={PackageCheck}
       eyebrow="Shipping"
       title="Shipping Policy"
-      subtitle="Prepared for a possible future shop, with no products for sale yet."
+      subtitle="Hope Bible does not currently sell or ship products."
       note="There is currently no checkout, product inventory, shipping provider, or order fulfillment on Hope Bible."
       updated="June 8, 2026"
       sections={[
         {
-          title: "No orders yet",
-          body: "Hope Bible does not currently sell or ship products. This page exists so a clear shipping policy can be completed before any future optional shop goes live.",
+          title: "No orders",
+          body: "Hope Bible does not currently sell products, collect shipping addresses, or ship physical goods.",
         },
         {
-          title: "Details before purchase",
-          body: "If products are offered later, shipping regions, costs, processing expectations, carrier estimates, tracking, delays, lost packages, and support contact details should be provided before purchase.",
+          title: "Free guidance",
+          body: "Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education are available as site content and do not require shipping.",
         },
         {
-          title: "Partner fulfillment",
-          body: "If future products are fulfilled by Shopify, a supplier, or another partner, that relationship and any relevant shipping responsibilities should be disclosed when the shop is live.",
+          title: "Commerce boundary",
+          body: "If commerce is introduced, shipping regions, costs, timing, tracking, fulfillment responsibilities, and support details should be clearly published before checkout is available.",
         },
         {
-          title: "No invented timelines",
-          body: "No shipping speeds, delivery windows, or carrier promises are listed yet because no fulfillment setup has been finalized.",
+          title: "No shipping claims",
+          body: "Because there is no public commerce experience, Hope Bible does not make shipping speed, delivery window, carrier, or fulfillment promises.",
         },
       ]}
     />

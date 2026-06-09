@@ -122,8 +122,8 @@ export default function JewelryPage() {
         />
         <StatusNote>
           The free Bible and prayer guidance remains the heart of Hope Bible.
-          Any future shop will be optional and separate from the guidance
-          content.
+          Faith symbols are explained as optional reminders, separate from the
+          guidance content and never presented as guarantees.
         </StatusNote>
       </div>
 
@@ -282,7 +282,7 @@ export default function JewelryPage() {
                 {intention.relatedTheme}
               </h3>
               <p className="mt-2 text-sm leading-6 text-[#625b51]">
-                {intention.futureDirection}
+                {intention.reminderDirection}
               </p>
               <p className="mt-5 text-sm font-semibold text-[#254737]">
                 Learn more
@@ -296,15 +296,16 @@ export default function JewelryPage() {
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#e9c985]">
-              Future shop
+              Clear boundaries
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-              Optional faith reminders may come later.
+              Faith reminders are never spiritual guarantees.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
-              A separate optional shop may later offer simple Christian faith
-              reminders. The guidance content is free and does not depend on
-              buying anything.
+              Hope Bible treats Christian symbols as teaching aids and memory
+              cues. They can remind someone to pray, read Scripture, and walk
+              with care, but they do not create protection, healing, blessing,
+              luck, or spiritual results.
             </p>
           </div>
           <Link

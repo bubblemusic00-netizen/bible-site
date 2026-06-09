@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import {
   ArrowRight,
   BookOpenText,
@@ -46,7 +47,7 @@ export async function generateMetadata({
 
   return {
     title: details.pageTitle,
-    description: `${details.futureDirection} Learn how Christian symbols can serve as reminders of Scripture and prayer, not guarantees or charms.`,
+    description: `${details.reminderDirection} Learn how Christian symbols can serve as reminders of Scripture and prayer, not guarantees or charms.`,
   };
 }
 
@@ -63,7 +64,7 @@ export default async function JewelryIntentionPage({
     : undefined;
 
   if (!details || !startPath) {
-    return <IntentionComingSoon />;
+    redirect("/jewelry");
   }
 
   return (
@@ -92,7 +93,7 @@ export default async function JewelryIntentionPage({
             Symbol reminder explanation
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-            {details.futureDirection}
+            {details.reminderDirection}
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
             {details.represents}
@@ -156,15 +157,15 @@ export default async function JewelryIntentionPage({
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-              Future optional reminders
+              Optional faith reminders
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              A future shop may be separate from the free guidance.
+              Guidance stays free and content-first.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
-              Hope Bible may later offer simple optional faith reminders in a
-              separate shop. The Scripture, prayer, and reflection guidance is
-              free and does not depend on buying anything.
+              A symbol can be meaningful as a reminder, but the Scripture,
+              prayer, and reflection guidance stands on its own and does not
+              depend on buying anything.
             </p>
           </div>
           <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />
@@ -220,39 +221,5 @@ function InfoPanel({
         <ArrowRight size={15} strokeWidth={1.8} />
       </Link>
     </section>
-  );
-}
-
-function IntentionComingSoon() {
-  return (
-    <PageShell active="jewelry">
-      <PageIntro
-        icon={Gem}
-        eyebrow="Faith reminder"
-        title="Intention coming soon"
-        subtitle="This faith reminder intention is not available yet."
-      />
-
-      <section className="mt-8 max-w-3xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <h2 className="font-serif text-3xl font-semibold text-[#241f19]">
-          Choose another intention
-        </h2>
-        <p className="mt-3 text-base leading-7 text-[#625b51]">
-          No products, prices, or checkout are included here. Faith symbols are
-          explained only as reminders of prayer, Scripture, and belief.
-        </p>
-        <div className="mt-6">
-          <StatusNote>
-            Symbols are reminders, not guarantees of protection, healing,
-            blessing, luck, or spiritual results.
-          </StatusNote>
-        </div>
-      </section>
-
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <BackButton href="/jewelry" label="Back to Faith Symbols" />
-        <SecondaryButton href="/prayer">Prayer Guide</SecondaryButton>
-      </div>
-    </PageShell>
   );
 }

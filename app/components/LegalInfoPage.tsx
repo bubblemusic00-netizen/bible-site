@@ -7,7 +7,7 @@ type LegalSection = {
   body: ReactNode;
 };
 
-export function LegalPlaceholderPage({
+export function LegalInfoPage({
   icon: Icon,
   eyebrow,
   title,

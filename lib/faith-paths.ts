@@ -8,7 +8,7 @@ export const faithPaths = {
       "Begin with a quieter pace. This path helps you bring a restless heart into prayer, Scripture, and a simple reminder of faith.",
     startRoute: "/start/peace",
     prayerRoute: "/prayer/peace",
-    scriptureRoute: "/bible/path/peace",
+    scriptureRoute: "/bible/psalms/23",
     jewelryRoute: "/jewelry/peace",
   },
   strength: {
@@ -20,7 +20,7 @@ export const faithPaths = {
       "You do not have to carry the whole road at once. This path helps you ask for strength for the next faithful step.",
     startRoute: "/start/strength",
     prayerRoute: "/prayer/strength",
-    scriptureRoute: "/bible/path/strength",
+    scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/strength",
   },
   guidance: {
@@ -32,7 +32,7 @@ export const faithPaths = {
       "When the next step feels unclear, this path gives you space to pause, ask for wisdom, and move with care.",
     startRoute: "/start/guidance",
     prayerRoute: "/prayer/guidance",
-    scriptureRoute: "/bible/path/guidance",
+    scriptureRoute: "/bible/proverbs/3",
     jewelryRoute: "/jewelry/guidance",
   },
   gratitude: {
@@ -44,7 +44,7 @@ export const faithPaths = {
       "Gratitude can gently reorder the heart. This path helps you notice grace and respond with prayerful thanks.",
     startRoute: "/start/gratitude",
     prayerRoute: "/prayer/gratitude",
-    scriptureRoute: "/bible/path/gratitude",
+    scriptureRoute: "/bible/genesis/1",
     jewelryRoute: "/jewelry/gratitude",
   },
   healing: {
@@ -56,7 +56,7 @@ export const faithPaths = {
       "This is a careful place to bring pain before God. This path offers comfort, prayer, and hope without pretending the ache is simple.",
     startRoute: "/start/healing",
     prayerRoute: "/prayer/healing",
-    scriptureRoute: "/bible/path/healing",
+    scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/healing",
   },
   forgiveness: {
@@ -68,7 +68,7 @@ export const faithPaths = {
       "Forgiveness often begins with honesty. This path helps you turn toward mercy, repair, and grace with courage.",
     startRoute: "/start/forgiveness",
     prayerRoute: "/prayer/forgiveness",
-    scriptureRoute: "/bible/path/forgiveness",
+    scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/forgiveness",
   },
   anxiety: {
@@ -80,7 +80,7 @@ export const faithPaths = {
       "When anxious thoughts press in, begin small. This path helps you slow down, pray honestly, and take one grounded step.",
     startRoute: "/start/anxiety",
     prayerRoute: "/prayer/anxiety",
-    scriptureRoute: "/bible/path/anxiety",
+    scriptureRoute: "/bible/philippians/4",
     jewelryRoute: "/jewelry/anxiety",
   },
   family: {
@@ -92,7 +92,7 @@ export const faithPaths = {
       "Bring the people closest to you into a quiet moment of prayer. This path helps you hold family with love, patience, and faith.",
     startRoute: "/start/family",
     prayerRoute: "/prayer/family",
-    scriptureRoute: "/bible/path/family",
+    scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/family",
   },
 } as const;
@@ -123,9 +123,9 @@ export const startFaithPaths = {
       "This path offers Scripture and prayer for peace; it does not promise that every pressure will disappear.",
     pastoralIntro:
       "Begin here when your thoughts feel noisy or your heart feels unsettled. This path helps you pause, read Scripture, pray honestly, and take one small peaceful step.",
-    scriptureReference: "John 14:27",
+    scriptureReference: "Psalm 23",
     scriptureContext:
-      "Jesus speaks peace to troubled hearts. Read slowly and notice that peace is received before every problem is solved.",
+      "Psalm 23 gives peaceful language for God's shepherd-like care. Read it slowly as comfort, not as pressure to feel settled instantly.",
     prayer:
       "Lord Jesus, meet me in this moment. Help me receive Your peace, release what I cannot control, and walk through today with trust.",
     reflectionPrompt:
@@ -136,7 +136,7 @@ export const startFaithPaths = {
       "A Christian symbol of peace may help some people remember to pause, pray, and return to Scripture during the day.",
     startRoute: "/start/peace",
     prayerRoute: "/prayer/peace",
-    scriptureRoute: "/bible/path/peace",
+    scriptureRoute: "/bible/psalms/23",
     jewelryRoute: "/jewelry/peace",
   },
   strength: {
@@ -148,9 +148,9 @@ export const startFaithPaths = {
       "This path asks for strength and endurance without pretending faith removes every burden.",
     pastoralIntro:
       "Begin here when you feel worn down or stretched thin. This path helps you ask for courage, patience, and enough strength for what is actually in front of you.",
-    scriptureReference: "Psalm 29:11",
+    scriptureReference: "Isaiah 40",
     scriptureContext:
-      "This passage connects God's strength with peace. Let it shape a prayer for endurance, not self-pressure.",
+      "Isaiah 40 speaks comfort to weary people and points toward renewed strength while waiting on God.",
     prayer:
       "Lord, strengthen me for what is in front of me. Give me patience, courage, humility, and steadiness for the next faithful step.",
     reflectionPrompt:
@@ -161,7 +161,7 @@ export const startFaithPaths = {
       "A symbol of strength may serve as a reminder to pray for courage and depend on God through hard days.",
     startRoute: "/start/strength",
     prayerRoute: "/prayer/strength",
-    scriptureRoute: "/bible/path/strength",
+    scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/strength",
   },
   protection: {
@@ -173,9 +173,9 @@ export const startFaithPaths = {
       "This path is a prayer for God's care and wisdom, not a guarantee that an object or ritual can protect you.",
     pastoralIntro:
       "Begin here when you feel vulnerable or concerned. This path helps you pray for God's care, seek wisdom, and move toward wise support without fear-based promises.",
-    scriptureReference: "Psalm 121",
+    scriptureReference: "Psalm 91",
     scriptureContext:
-      "Psalm 121 is often read as a prayer of trust. Let it lead you toward courage, watchfulness, and wise help.",
+      "Psalm 91 is often read as a prayer of refuge and trust. Receive it carefully as prayer, not as a guarantee or formula.",
     prayer:
       "Lord, care for me with mercy and wisdom. Give me courage, guide my choices, and help me reach toward safe support where it is needed.",
     reflectionPrompt:
@@ -186,7 +186,7 @@ export const startFaithPaths = {
       "A Christian symbol may remind some people to pray and seek wisdom, but it should never be treated as a source of protection or power.",
     startRoute: "/start/protection",
     prayerRoute: "/prayer/strength",
-    scriptureRoute: "/bible/path/strength",
+    scriptureRoute: "/bible/psalms/91",
     jewelryRoute: "/jewelry/strength",
   },
   hope: {
@@ -198,9 +198,9 @@ export const startFaithPaths = {
       "This path offers comfort and reflection; it does not promise instant healing or guaranteed outcomes.",
     pastoralIntro:
       "Begin here when your heart feels heavy and you need a gentle place to bring pain before God. This path offers Scripture, prayer, reflection, and a small next step toward hope.",
-    scriptureReference: "Psalm 34:18",
+    scriptureReference: "Romans 8",
     scriptureContext:
-      "This passage speaks of God's nearness to the brokenhearted. Read it as comfort while also seeking wise care when needed.",
+      "Romans 8 holds weakness, waiting, hope, and God's love together. Read it when hope needs deep roots.",
     prayer:
       "Lord, be near to what hurts. Hold me with mercy, renew my hope, and guide me toward wise care, community, and patience.",
     reflectionPrompt:
@@ -211,7 +211,7 @@ export const startFaithPaths = {
       "A symbol of hope may help some people remember prayer and Scripture during a difficult season, without making healing claims.",
     startRoute: "/start/hope",
     prayerRoute: "/prayer/healing",
-    scriptureRoute: "/bible/path/healing",
+    scriptureRoute: "/bible/romans/8",
     jewelryRoute: "/jewelry/healing",
   },
   guidance: {
@@ -223,9 +223,9 @@ export const startFaithPaths = {
       "This path helps you ask for wisdom without forcing instant certainty.",
     pastoralIntro:
       "Begin here when the next step feels unclear. This path helps you slow down, ask God for wisdom, reflect honestly, and move with care.",
-    scriptureReference: "James 1:5",
+    scriptureReference: "Proverbs 3",
     scriptureContext:
-      "James invites those who lack wisdom to ask God. Let the passage make room for prayer before action.",
+      "Proverbs 3 invites trust, humility, and wisdom before action. Let it slow the moment before a decision.",
     prayer:
       "Father, give me wisdom. Quiet the noise around this decision and help me recognize what is honest, loving, and faithful.",
     reflectionPrompt:
@@ -236,7 +236,7 @@ export const startFaithPaths = {
       "A symbol of guidance may remind some people to pause, pray, and seek wisdom before choosing.",
     startRoute: "/start/guidance",
     prayerRoute: "/prayer/guidance",
-    scriptureRoute: "/bible/path/guidance",
+    scriptureRoute: "/bible/proverbs/3",
     jewelryRoute: "/jewelry/guidance",
   },
   gratitude: {
@@ -248,9 +248,9 @@ export const startFaithPaths = {
       "This path practices thankfulness without denying grief, difficulty, or unanswered questions.",
     pastoralIntro:
       "Begin here when you want your attention to return to grace. Gratitude can be gentle and honest, even when not everything is easy.",
-    scriptureReference: "1 Thessalonians 5:18",
+    scriptureReference: "Genesis 1",
     scriptureContext:
-      "This verse invites thankfulness in every circumstance, not denial that hard things are hard.",
+      "Genesis 1 begins with creation and the goodness of what God makes. Let it guide gratitude for ordinary gifts.",
     prayer:
       "Lord, open my eyes to Your gifts. Teach me to receive today with humility, honesty, and thanks.",
     reflectionPrompt:
@@ -261,7 +261,7 @@ export const startFaithPaths = {
       "A symbol of gratitude may help some people remember to notice grace and give thanks in ordinary moments.",
     startRoute: "/start/gratitude",
     prayerRoute: "/prayer/gratitude",
-    scriptureRoute: "/bible/path/gratitude",
+    scriptureRoute: "/bible/genesis/1",
     jewelryRoute: "/jewelry/gratitude",
   },
   healing: {
@@ -273,9 +273,9 @@ export const startFaithPaths = {
       "This path offers prayerful comfort and does not replace medical care, counseling, or trusted support.",
     pastoralIntro:
       "Begin here when something hurts and you need mercy, support, and a quiet place to pray.",
-    scriptureReference: "Psalm 34:18",
+    scriptureReference: "Isaiah 40",
     scriptureContext:
-      "This passage speaks comfort to a crushed spirit while leaving room for wise care and community.",
+      "Isaiah 40 speaks comfort to weary people while leaving room for wise care and community.",
     prayer:
       "Lord, be near to what hurts. Hold me with mercy, guide me toward wise care, and help me not feel alone in this.",
     reflectionPrompt: "What hurt do I need to bring into prayer with honesty?",
@@ -284,7 +284,7 @@ export const startFaithPaths = {
       "A symbol connected to healing may be a reminder to pray and seek care, not a promise of healing.",
     startRoute: "/start/healing",
     prayerRoute: "/prayer/healing",
-    scriptureRoute: "/bible/path/healing",
+    scriptureRoute: "/bible/isaiah/40",
     jewelryRoute: "/jewelry/healing",
   },
   forgiveness: {
@@ -296,9 +296,9 @@ export const startFaithPaths = {
       "This path does not minimize harm; it invites mercy, truth, boundaries, and wisdom.",
     pastoralIntro:
       "Begin here when you need mercy, humility, release, or courage to repair what can be repaired.",
-    scriptureReference: "Ephesians 4:32",
+    scriptureReference: "1 Corinthians 13",
     scriptureContext:
-      "This verse calls toward kindness and forgiveness while still honoring truth and wisdom.",
+      "1 Corinthians 13 describes love as patient, humble, truthful, and enduring.",
     prayer:
       "Lord, lead me into mercy without hiding from truth. Help me receive forgiveness and extend it with wisdom.",
     reflectionPrompt:
@@ -308,7 +308,7 @@ export const startFaithPaths = {
       "A symbol of forgiveness may remind some people of grace received and extended with wisdom.",
     startRoute: "/start/forgiveness",
     prayerRoute: "/prayer/forgiveness",
-    scriptureRoute: "/bible/path/forgiveness",
+    scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/forgiveness",
   },
   anxiety: {
@@ -320,9 +320,9 @@ export const startFaithPaths = {
       "This path is for prayer and grounding; it does not replace mental health care or emergency support.",
     pastoralIntro:
       "Begin here when your mind is racing and you need a gentle, grounded way to pray.",
-    scriptureReference: "Philippians 4:6",
+    scriptureReference: "Philippians 4",
     scriptureContext:
-      "This passage gives anxious thoughts a place to be named before God in prayer.",
+      "Philippians 4 gives anxious thoughts a place to be named before God in prayer and thanksgiving.",
     prayer:
       "Lord, steady me with Your presence. Help me name what feels heavy, ask for help when needed, and move one step at a time.",
     reflectionPrompt: "What concern can I name before God without solving it all today?",
@@ -331,7 +331,7 @@ export const startFaithPaths = {
       "A symbol of steadiness may remind some people to pause and pray, not to avoid needed care.",
     startRoute: "/start/anxiety",
     prayerRoute: "/prayer/anxiety",
-    scriptureRoute: "/bible/path/anxiety",
+    scriptureRoute: "/bible/philippians/4",
     jewelryRoute: "/jewelry/anxiety",
   },
   family: {
@@ -343,9 +343,9 @@ export const startFaithPaths = {
       "This path invites prayer and practical love without promising control over another person's choices.",
     pastoralIntro:
       "Begin here when you are carrying loved ones, home, relationships, or the desire for more tenderness.",
-    scriptureReference: "Psalm 133:1",
+    scriptureReference: "1 Corinthians 13",
     scriptureContext:
-      "This passage celebrates unity while inviting patient, practical love.",
+      "1 Corinthians 13 shows love as patient, humble, truthful, and practical.",
     prayer:
       "Lord, bless the people closest to me. Teach me to love with patience, speak with care, and serve with grace.",
     reflectionPrompt: "Who can I pray for by name today?",
@@ -354,7 +354,7 @@ export const startFaithPaths = {
       "A symbol connected to family may remind some people to pray for loved ones and practice patient love.",
     startRoute: "/start/family",
     prayerRoute: "/prayer/family",
-    scriptureRoute: "/bible/path/family",
+    scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/family",
   },
 } as const;

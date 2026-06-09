@@ -1,366 +1,327 @@
+import { kjvReadingVerses } from "./kjv-reading-verses";
+
 export type BibleVerse = {
   number: number;
   text: string;
 };
 
 export type BibleChapter = {
+  id: keyof typeof kjvReadingVerses;
   bookSlug: string;
   book: string;
   chapter: number;
   title: string;
-  translation: string;
-  verses: BibleVerse[];
+  description: string;
+  theme: string;
+  whyRead: string;
+  contextIntro: string;
+  reflectionQuestion: string;
+  prayerStarter: string;
+  smallNextStep: string;
+  relatedFaithPath: string;
+  readingGroup: BibleReadingGroupKey;
+  translation: "King James Version";
+  sourceNote: string;
+  verses: readonly BibleVerse[];
 };
 
-export const genesis1: BibleChapter = {
-  bookSlug: "genesis",
-  book: "Genesis",
-  chapter: 1,
-  title: "Creation",
-  translation: "World English Bible",
-  verses: [
-    {
-      number: 1,
-      text: "In the beginning, God created the heavens and the earth.",
-    },
-    {
-      number: 2,
-      text: "Now the earth was formless and empty. Darkness was on the surface of the deep. God's Spirit was hovering over the surface of the waters.",
-    },
-    {
-      number: 3,
-      text: 'God said, "Let there be light," and there was light.',
-    },
-    {
-      number: 4,
-      text: "God saw the light, and saw that it was good. God divided the light from the darkness.",
-    },
-    {
-      number: 5,
-      text: "God called the light Day, and the darkness he called Night. There was evening and there was morning, one day.",
-    },
-    {
-      number: 6,
-      text: 'God said, "Let there be an expanse in the middle of the waters, and let it divide the waters from the waters."',
-    },
-    {
-      number: 7,
-      text: "God made the expanse, and divided the waters which were under the expanse from the waters which were above the expanse; and it was so.",
-    },
-    {
-      number: 8,
-      text: "God called the expanse sky. There was evening and there was morning, a second day.",
-    },
-    {
-      number: 9,
-      text: 'God said, "Let the waters under the sky be gathered together to one place, and let the dry land appear;" and it was so.',
-    },
-    {
-      number: 10,
-      text: "God called the dry land Earth, and the gathering together of the waters he called Seas. God saw that it was good.",
-    },
-    {
-      number: 11,
-      text: 'God said, "Let the earth put forth grass, herbs yielding seed, and fruit trees bearing fruit after their kind, with its seed in it, on the earth;" and it was so.',
-    },
-    {
-      number: 12,
-      text: "The earth brought forth grass, herbs yielding seed after their kind, and trees bearing fruit, with its seed in it, after their kind; and God saw that it was good.",
-    },
-    {
-      number: 13,
-      text: "There was evening and there was morning, a third day.",
-    },
-    {
-      number: 14,
-      text: 'God said, "Let there be lights in the expanse of sky to divide the day from the night; and let them be for signs, and for seasons, and for days and years;',
-    },
-    {
-      number: 15,
-      text: 'and let them be for lights in the expanse of sky to give light on the earth;" and it was so.',
-    },
-    {
-      number: 16,
-      text: "God made the two great lights: the greater light to rule the day, and the lesser light to rule the night. He also made the stars.",
-    },
-    {
-      number: 17,
-      text: "God set them in the expanse of sky to give light to the earth,",
-    },
-    {
-      number: 18,
-      text: "and to rule over the day and over the night, and to divide the light from the darkness. God saw that it was good.",
-    },
-    {
-      number: 19,
-      text: "There was evening and there was morning, a fourth day.",
-    },
-    {
-      number: 20,
-      text: 'God said, "Let the waters swarm with swarms of living creatures, and let birds fly above the earth in the open expanse of sky."',
-    },
-    {
-      number: 21,
-      text: "God created the large sea creatures, and every living creature that moves, with which the waters swarmed, after their kind, and every winged bird after its kind. God saw that it was good.",
-    },
-    {
-      number: 22,
-      text: 'God blessed them, saying, "Be fruitful, and multiply, and fill the waters in the seas, and let birds multiply on the earth."',
-    },
-    {
-      number: 23,
-      text: "There was evening and there was morning, a fifth day.",
-    },
-    {
-      number: 24,
-      text: 'God said, "Let the earth bring forth living creatures after their kind, livestock, creeping things, and animals of the earth after their kind;" and it was so.',
-    },
-    {
-      number: 25,
-      text: "God made the animals of the earth after their kind, and the livestock after their kind, and everything that creeps on the ground after its kind. God saw that it was good.",
-    },
-    {
-      number: 26,
-      text: 'God said, "Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth."',
-    },
-    {
-      number: 27,
-      text: "God created man in his own image. In God's image he created him; male and female he created them.",
-    },
-    {
-      number: 28,
-      text: 'God blessed them. God said to them, "Be fruitful, multiply, fill the earth, and subdue it. Have dominion over the fish of the sea, over the birds of the sky, and over every living thing that moves on the earth."',
-    },
-    {
-      number: 29,
-      text: 'God said, "Behold, I have given you every herb yielding seed, which is on the surface of all the earth, and every tree, which bears fruit yielding seed. It will be your food.',
-    },
-    {
-      number: 30,
-      text: 'To every animal of the earth, and to every bird of the sky, and to everything that creeps on the earth, in which there is life, I have given every green herb for food;" and it was so.',
-    },
-    {
-      number: 31,
-      text: "God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day.",
-    },
-  ],
-};
+export type BibleReadingGroupKey =
+  | "beginning"
+  | "peace"
+  | "protection"
+  | "prayer"
+  | "hope"
+  | "wisdom"
+  | "love";
 
-export const john1: BibleChapter = {
-  bookSlug: "john",
-  book: "John",
-  chapter: 1,
-  title: "The Word Became Flesh",
-  translation: "World English Bible",
-  verses: [
-    {
-      number: 1,
-      text: "In the beginning was the Word, and the Word was with God, and the Word was God.",
-    },
-    {
-      number: 2,
-      text: "The same was in the beginning with God.",
-    },
-    {
-      number: 3,
-      text: "All things were made through him. Without him, nothing was made that has been made.",
-    },
-    {
-      number: 4,
-      text: "In him was life, and the life was the light of men.",
-    },
-    {
-      number: 5,
-      text: "The light shines in the darkness, and the darkness hasn't overcome it.",
-    },
-    {
-      number: 6,
-      text: "There came a man sent from God, whose name was John.",
-    },
-    {
-      number: 7,
-      text: "The same came as a witness, that he might testify about the light, that all might believe through him.",
-    },
-    {
-      number: 8,
-      text: "He was not the light, but was sent that he might testify about the light.",
-    },
-    {
-      number: 9,
-      text: "The true light that enlightens everyone was coming into the world.",
-    },
-    {
-      number: 10,
-      text: "He was in the world, and the world was made through him, and the world didn't recognize him.",
-    },
-    {
-      number: 11,
-      text: "He came to his own, and those who were his own didn't receive him.",
-    },
-    {
-      number: 12,
-      text: "But as many as received him, to them he gave the right to become God's children, to those who believe in his name:",
-    },
-    {
-      number: 13,
-      text: "who were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
-    },
-    {
-      number: 14,
-      text: "The Word became flesh and lived among us. We saw his glory, such glory as of the only born Son of the Father, full of grace and truth.",
-    },
-    {
-      number: 15,
-      text: "John testified about him. He cried out, saying, \"This was he of whom I said, 'He who comes after me has surpassed me, for he was before me.'\"",
-    },
-    {
-      number: 16,
-      text: "From his fullness we all received grace upon grace.",
-    },
-    {
-      number: 17,
-      text: "For the law was given through Moses. Grace and truth were realized through Jesus Christ.",
-    },
-    {
-      number: 18,
-      text: "No one has seen God at any time. The only born Son, who is in the bosom of the Father, has declared him.",
-    },
-    {
-      number: 19,
-      text: "This is John's testimony, when the Jews sent priests and Levites from Jerusalem to ask him, \"Who are you?\"",
-    },
-    {
-      number: 20,
-      text: "He declared, and didn't deny, but he declared, \"I am not the Christ.\"",
-    },
-    {
-      number: 21,
-      text: "They asked him, \"What then? Are you Elijah?\" He said, \"I am not.\" \"Are you the prophet?\" He answered, \"No.\"",
-    },
-    {
-      number: 22,
-      text: "They said therefore to him, \"Who are you? Give us an answer to take back to those who sent us. What do you say about yourself?\"",
-    },
-    {
-      number: 23,
-      text: "He said, \"I am the voice of one crying in the wilderness, 'Make straight the way of the Lord,' as Isaiah the prophet said.\"",
-    },
-    {
-      number: 24,
-      text: "The ones who had been sent were from the Pharisees.",
-    },
-    {
-      number: 25,
-      text: "They asked him, \"Why then do you baptize if you are not the Christ, nor Elijah, nor the prophet?\"",
-    },
-    {
-      number: 26,
-      text: "John answered them, \"I baptize in water, but among you stands one whom you don't know.",
-    },
-    {
-      number: 27,
-      text: "He is the one who comes after me, who is preferred before me, whose sandal strap I'm not worthy to loosen.\"",
-    },
-    {
-      number: 28,
-      text: "These things were done in Bethany beyond the Jordan, where John was baptizing.",
-    },
-    {
-      number: 29,
-      text: "The next day, he saw Jesus coming to him, and said, \"Behold, the Lamb of God, who takes away the sin of the world!",
-    },
-    {
-      number: 30,
-      text: "This is he of whom I said, 'After me comes a man who is preferred before me, for he was before me.'",
-    },
-    {
-      number: 31,
-      text: "I didn't know him, but for this reason I came baptizing in water, that he would be revealed to Israel.\"",
-    },
-    {
-      number: 32,
-      text: "John testified, saying, \"I have seen the Spirit descending like a dove out of heaven, and it remained on him.",
-    },
-    {
-      number: 33,
-      text: "I didn't recognize him, but he who sent me to baptize in water said to me, 'On whomever you will see the Spirit descending and remaining on him is he who baptizes in the Holy Spirit.'",
-    },
-    {
-      number: 34,
-      text: "I have seen and have testified that this is the Son of God.\"",
-    },
-    {
-      number: 35,
-      text: "Again, the next day, John was standing with two of his disciples,",
-    },
-    {
-      number: 36,
-      text: "and he looked at Jesus as he walked, and said, \"Behold, the Lamb of God!\"",
-    },
-    {
-      number: 37,
-      text: "The two disciples heard him speak, and they followed Jesus.",
-    },
-    {
-      number: 38,
-      text: "Jesus turned and saw them following, and said to them, \"What are you looking for?\" They said to him, \"Rabbi\" (which is to say, being interpreted, Teacher), \"where are you staying?\"",
-    },
-    {
-      number: 39,
-      text: "He said to them, \"Come and see.\" They came and saw where he was staying, and they stayed with him that day. It was about the tenth hour.",
-    },
-    {
-      number: 40,
-      text: "One of the two who heard John and followed him was Andrew, Simon Peter's brother.",
-    },
-    {
-      number: 41,
-      text: "He first found his own brother, Simon, and said to him, \"We have found the Messiah!\" (which is, being interpreted, Christ).",
-    },
-    {
-      number: 42,
-      text: "He brought him to Jesus. Jesus looked at him and said, \"You are Simon the son of Jonah. You shall be called Cephas\" (which is by interpretation, Peter).",
-    },
-    {
-      number: 43,
-      text: "On the next day, he was determined to go out into Galilee, and he found Philip. Jesus said to him, \"Follow me.\"",
-    },
-    {
-      number: 44,
-      text: "Now Philip was from Bethsaida, the city of Andrew and Peter.",
-    },
-    {
-      number: 45,
-      text: "Philip found Nathanael, and said to him, \"We have found him of whom Moses in the law and also the prophets, wrote: Jesus of Nazareth, the son of Joseph.\"",
-    },
-    {
-      number: 46,
-      text: "Nathanael said to him, \"Can any good thing come out of Nazareth?\" Philip said to him, \"Come and see.\"",
-    },
-    {
-      number: 47,
-      text: "Jesus saw Nathanael coming to him, and said about him, \"Behold, an Israelite indeed, in whom is no deceit!\"",
-    },
-    {
-      number: 48,
-      text: "Nathanael said to him, \"How do you know me?\" Jesus answered him, \"Before Philip called you, when you were under the fig tree, I saw you.\"",
-    },
-    {
-      number: 49,
-      text: "Nathanael answered him, \"Rabbi, you are the Son of God! You are King of Israel!\"",
-    },
-    {
-      number: 50,
-      text: "Jesus answered him, \"Because I told you, 'I saw you underneath the fig tree,' do you believe? You will see greater things than these!\"",
-    },
-    {
-      number: 51,
-      text: "He said to him, \"Most certainly, I tell you all, hereafter you will see heaven opened, and the angels of God ascending and descending on the Son of Man.\"",
-    },
-  ],
-};
+export const bibleReadingGroups = [
+  {
+    key: "beginning",
+    title: "Beginning and faith",
+    description: "Start with creation, light, life, and the opening shape of faith.",
+  },
+  {
+    key: "peace",
+    title: "Peace and comfort",
+    description: "Read slowly when you need comfort, steadiness, and renewed courage.",
+  },
+  {
+    key: "protection",
+    title: "Protection and trust",
+    description:
+      "Pray for God's care with humility, wisdom, and no guarantee-based claims.",
+  },
+  {
+    key: "prayer",
+    title: "Prayer and worry",
+    description: "Bring anxious thoughts, daily needs, and gratitude into prayer.",
+  },
+  {
+    key: "hope",
+    title: "Hope and grace",
+    description: "Return to grace, mercy, and life in the Spirit.",
+  },
+  {
+    key: "wisdom",
+    title: "Wisdom and guidance",
+    description: "Slow down before decisions and practice trust with care.",
+  },
+  {
+    key: "love",
+    title: "Love and character",
+    description: "Let love become patience, humility, endurance, and action.",
+  },
+] as const satisfies readonly {
+  key: BibleReadingGroupKey;
+  title: string;
+  description: string;
+}[];
 
-export const availableBibleChapters: BibleChapter[] = [genesis1, john1];
+const kjvSourceNote =
+  "Full Scripture text is presented from the King James Version (KJV), a public-domain Bible translation used here so guided readings can be offered openly and consistently.";
+
+export const availableBibleChapters = [
+  {
+    id: "genesis-1",
+    bookSlug: "genesis",
+    book: "Genesis",
+    chapter: 1,
+    title: "Beginning, Creation, and Goodness",
+    description: "Creation, God's order, human calling, and the goodness of what God makes.",
+    theme: "Beginning, creation, God's order and goodness",
+    whyRead:
+      "Read Genesis 1 when you need to begin with wonder, gratitude, and the reminder that creation is received as a gift.",
+    contextIntro:
+      "Genesis 1 opens the Bible with creation, order, blessing, and the repeated goodness of what God makes. Read slowly and notice the movement from darkness to light, from emptiness to life, and from chaos to purpose.",
+    reflectionQuestion:
+      "Where do you need to remember God's order, goodness, or creative care in your life today?",
+    prayerStarter:
+      "God of creation, help me receive this day as a gift and notice what is good, ordered, and entrusted to my care.",
+    smallNextStep:
+      "After reading, sit quietly for one minute and name one good thing you can receive with gratitude.",
+    relatedFaithPath: "/start/gratitude",
+    readingGroup: "beginning",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["genesis-1"],
+  },
+  {
+    id: "john-1",
+    bookSlug: "john",
+    book: "John",
+    chapter: 1,
+    title: "The Word, Light, and Life",
+    description: "Jesus as the Word, the true Light, and the life at the heart of faith.",
+    theme: "Jesus, the Word, light, and life",
+    whyRead:
+      "Read John 1 when you want a clear doorway into who Jesus is and why Christian faith centers on Him.",
+    contextIntro:
+      "John 1 begins with the Word, light, life, witness, and the invitation to come and see. Read it as the opening doorway to John's Gospel, where Jesus is revealed with grace and truth.",
+    reflectionQuestion:
+      "What phrase about light, life, grace, or truth do you want to carry into prayer today?",
+    prayerStarter:
+      "Lord Jesus, draw my attention toward Your light and help me respond with honest faith, humility, and openness.",
+    smallNextStep:
+      "Choose one short phrase from the chapter and repeat it quietly before your next task or conversation.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "beginning",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["john-1"],
+  },
+  {
+    id: "psalms-23",
+    bookSlug: "psalms",
+    book: "Psalm",
+    chapter: 23,
+    title: "The Lord Is My Shepherd",
+    description: "Peace, comfort, provision, and God's shepherd-like care.",
+    theme: "Peace, comfort, and God as shepherd",
+    whyRead:
+      "Read Psalm 23 when your heart needs comfort, a slower pace, and language for trusting God's care.",
+    contextIntro:
+      "Psalm 23 is a short prayer of trust that pictures the Lord as shepherd. Read it as comfort, not as pressure to feel peaceful instantly.",
+    reflectionQuestion:
+      "Where do you need to receive care, rest, or guidance instead of trying to carry everything alone?",
+    prayerStarter:
+      "Lord, shepherd me with mercy. Lead me toward rest, courage, and trust for the next step.",
+    smallNextStep:
+      "Pause and breathe slowly through one line of the psalm, then take one gentle next step.",
+    relatedFaithPath: "/start/peace",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-23"],
+  },
+  {
+    id: "psalms-91",
+    bookSlug: "psalms",
+    book: "Psalm",
+    chapter: 91,
+    title: "Protection and Trust",
+    description: "A prayer of refuge, trust, and God's nearness in danger.",
+    theme: "Protection and trust with careful no-guarantee language",
+    whyRead:
+      "Read Psalm 91 when you want to pray for God's care while also moving with wisdom, humility, and safe support.",
+    contextIntro:
+      "Psalm 91 gives strong language for refuge and trust. Read it as a prayer that turns fear toward God, not as a formula or guarantee that harm can never happen.",
+    reflectionQuestion:
+      "Where do you need courage, wisdom, or safe help rather than fear-based promises?",
+    prayerStarter:
+      "Lord, be my refuge. Give me courage, wise judgment, and the humility to seek help where help is needed.",
+    smallNextStep:
+      "Name one wise action you can take today, such as asking for support, slowing down, or setting a careful boundary.",
+    relatedFaithPath: "/start/protection",
+    readingGroup: "protection",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-91"],
+  },
+  {
+    id: "matthew-6",
+    bookSlug: "matthew",
+    book: "Matthew",
+    chapter: 6,
+    title: "Prayer, Worry, and Daily Trust",
+    description: "Jesus teaches prayer, sincerity, treasure, and trust for daily needs.",
+    theme: "Prayer, worry, and daily trust",
+    whyRead:
+      "Read Matthew 6 when prayer feels complicated or worry is taking too much room in your attention.",
+    contextIntro:
+      "Matthew 6 is part of Jesus' Sermon on the Mount. It moves from sincere prayer to daily trust, inviting readers away from performance and anxious striving.",
+    reflectionQuestion:
+      "What worry, desire, or hidden pressure do you need to bring honestly before God?",
+    prayerStarter:
+      "Father, teach me to pray with honesty. Help me seek Your kingdom and trust You for today's needs.",
+    smallNextStep:
+      "Pray the Lord's Prayer slowly, then write down one worry you can entrust to God today.",
+    relatedFaithPath: "/start/guidance",
+    readingGroup: "prayer",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["matthew-6"],
+  },
+  {
+    id: "romans-8",
+    bookSlug: "romans",
+    book: "Romans",
+    chapter: 8,
+    title: "Hope, Grace, and Life in the Spirit",
+    description: "Grace, hope, weakness, prayer, and the love of God in Christ.",
+    theme: "Hope, grace, and life in the Spirit",
+    whyRead:
+      "Read Romans 8 when you need hope that is deeper than mood, pressure, or your own strength.",
+    contextIntro:
+      "Romans 8 is one of Paul's great chapters of hope. It speaks of life in the Spirit, weakness in prayer, suffering, hope, and the love of God in Christ.",
+    reflectionQuestion:
+      "What part of your life needs to hear that weakness, waiting, and hope can all be brought before God?",
+    prayerStarter:
+      "God of mercy, help me receive grace, pray honestly in weakness, and trust Your love in Christ.",
+    smallNextStep:
+      "Choose one phrase about hope or love from the chapter and carry it through the day.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "hope",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["romans-8"],
+  },
+  {
+    id: "proverbs-3",
+    bookSlug: "proverbs",
+    book: "Proverbs",
+    chapter: 3,
+    title: "Wisdom, Trust, and Guidance",
+    description: "Trust in the Lord, wisdom, humility, and faithful choices.",
+    theme: "Wisdom, trust, and guidance",
+    whyRead:
+      "Read Proverbs 3 when you need wisdom for ordinary decisions and a slower, humbler way to move forward.",
+    contextIntro:
+      "Proverbs 3 gathers practical wisdom around trust, humility, generosity, discipline, and peace with neighbors. Read it as guidance for character, not instant certainty.",
+    reflectionQuestion:
+      "What decision or habit needs trust, patience, and wisdom before action?",
+    prayerStarter:
+      "Lord, teach me to trust You with my path. Give me wisdom, humility, and courage for faithful choices.",
+    smallNextStep:
+      "Write one decision in a single sentence, then ask what wisdom, counsel, or patience it needs.",
+    relatedFaithPath: "/start/guidance",
+    readingGroup: "wisdom",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["proverbs-3"],
+  },
+  {
+    id: "1-corinthians-13",
+    bookSlug: "1-corinthians",
+    book: "1 Corinthians",
+    chapter: 13,
+    title: "Love, Patience, and Character",
+    description: "The way of love, patience, humility, endurance, and maturity.",
+    theme: "Love, patience, and character",
+    whyRead:
+      "Read 1 Corinthians 13 when you want love to become more than feeling: patience, humility, endurance, and action.",
+    contextIntro:
+      "1 Corinthians 13 sits inside Paul's teaching about the church and spiritual gifts. It reminds readers that even impressive gifts become empty without love.",
+    reflectionQuestion:
+      "Which description of love challenges the way you speak, choose, or respond today?",
+    prayerStarter:
+      "Lord, form love in me that is patient, humble, truthful, and enduring.",
+    smallNextStep:
+      "Choose one phrase from the chapter and practice it in one relationship today.",
+    relatedFaithPath: "/start/gratitude",
+    readingGroup: "love",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["1-corinthians-13"],
+  },
+  {
+    id: "philippians-4",
+    bookSlug: "philippians",
+    book: "Philippians",
+    chapter: 4,
+    title: "Anxiety, Peace, Prayer, and Gratitude",
+    description: "Prayer, thanksgiving, peace, contentment, and faithful attention.",
+    theme: "Anxiety, peace, prayer, and gratitude",
+    whyRead:
+      "Read Philippians 4 when anxious thoughts need a prayerful place to land and gratitude needs room to grow.",
+    contextIntro:
+      "Philippians 4 closes Paul's letter with encouragement toward prayer, gentleness, thanksgiving, peace, contentment, and shared care.",
+    reflectionQuestion:
+      "What request can you name before God with thanksgiving rather than carrying it alone?",
+    prayerStarter:
+      "Lord, steady my heart. Help me bring my requests to You, practice gratitude, and receive peace one step at a time.",
+    smallNextStep:
+      "Write one concern and one gratitude side by side, then pray over both honestly.",
+    relatedFaithPath: "/start/peace",
+    readingGroup: "prayer",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["philippians-4"],
+  },
+  {
+    id: "isaiah-40",
+    bookSlug: "isaiah",
+    book: "Isaiah",
+    chapter: 40,
+    title: "Comfort, Strength, and Waiting on God",
+    description: "Comfort, God's greatness, renewed strength, and patient hope.",
+    theme: "Strength, comfort, and waiting on God",
+    whyRead:
+      "Read Isaiah 40 when you feel worn down and need comfort that points beyond your own limits.",
+    contextIntro:
+      "Isaiah 40 speaks comfort to weary people and lifts their attention to God's greatness. Read it as an invitation to wait, receive strength, and remember who God is.",
+    reflectionQuestion:
+      "Where do you feel weary, and what would it mean to wait on God without giving up?",
+    prayerStarter:
+      "God of comfort, renew my strength. Help me wait with courage, humility, and hope.",
+    smallNextStep:
+      "Take a short walk or quiet pause, and repeat one line about renewed strength.",
+    relatedFaithPath: "/start/strength",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["isaiah-40"],
+  },
+] as const satisfies readonly BibleChapter[];
 
 export type SupportedBibleChapter = {
   bookSlug: string;
@@ -368,7 +329,10 @@ export type SupportedBibleChapter = {
   chapter: number;
   title: string;
   href: string;
+  description: string;
+  theme: string;
   translation: string;
+  readingGroup: BibleReadingGroupKey;
 };
 
 function chapterLookupKey(bookSlug: string, chapter: number) {
@@ -389,7 +353,10 @@ export const supportedBibleChapters: SupportedBibleChapter[] =
     chapter: chapter.chapter,
     title: `${chapter.book} ${chapter.chapter}`,
     href: `/bible/${chapter.bookSlug}/${chapter.chapter}`,
+    description: chapter.description,
+    theme: chapter.theme,
     translation: chapter.translation,
+    readingGroup: chapter.readingGroup,
   }));
 
 export const availableBibleChapterParams = supportedBibleChapters.map(
@@ -399,90 +366,49 @@ export const availableBibleChapterParams = supportedBibleChapters.map(
   }),
 );
 
-export const bibleBooks = {
-  genesis: {
-    slug: "genesis",
-    name: "Genesis",
-    description:
-      "A beginning point for creation, promise, family, and the first movements of covenant.",
-    availableChapters: [1],
-    translationNote: "Available chapter uses the World English Bible.",
+type BibleBook = {
+  slug: string;
+  name: string;
+  description: string;
+  availableChapters: number[];
+  translationNote: string;
+};
+
+export const bibleBooks = availableBibleChapters.reduce<Record<string, BibleBook>>(
+  (books, chapter) => {
+    const existing = books[chapter.bookSlug];
+
+    if (existing) {
+      existing.availableChapters.push(chapter.chapter);
+      existing.availableChapters.sort((a, b) => a - b);
+      return books;
+    }
+
+    books[chapter.bookSlug] = {
+      slug: chapter.bookSlug,
+      name: chapter.bookSlug === "psalms" ? "Psalms" : chapter.book,
+      description: chapter.description,
+      availableChapters: [chapter.chapter],
+      translationNote: "Available guided readings use the King James Version.",
+    };
+
+    return books;
   },
-  exodus: {
-    slug: "exodus",
-    name: "Exodus",
-    description:
-      "A place to begin exploring deliverance, worship, wilderness, and God's faithfulness.",
-    availableChapters: [],
-    translationNote: "",
-  },
-  psalms: {
-    slug: "psalms",
-    name: "Psalms",
-    description: "A doorway into prayer, praise, lament, trust, and honest worship.",
-    availableChapters: [],
-    translationNote: "",
-  },
-  proverbs: {
-    slug: "proverbs",
-    name: "Proverbs",
-    description:
-      "A wisdom-focused starting point for daily choices, character, speech, and humility.",
-    availableChapters: [],
-    translationNote: "",
-  },
-  isaiah: {
-    slug: "isaiah",
-    name: "Isaiah",
-    description: "A prophetic book page prepared for future reading and study.",
-    availableChapters: [],
-    translationNote: "",
-  },
-  matthew: {
-    slug: "matthew",
-    name: "Matthew",
-    description:
-      "A Gospel starting point focused on Jesus, His teaching, and the kingdom of God.",
-    availableChapters: [],
-    translationNote: "",
-  },
-  mark: {
-    slug: "mark",
-    name: "Mark",
-    description:
-      "A concise Gospel doorway into the works, compassion, suffering, and victory of Jesus.",
-    availableChapters: [],
-    translationNote: "",
-  },
-  luke: {
-    slug: "luke",
-    name: "Luke",
-    description:
-      "A Gospel page prepared for reading about Jesus with care, mercy, and attention to people.",
-    availableChapters: [],
-    translationNote: "",
-  },
-  john: {
-    slug: "john",
-    name: "John",
-    description:
-      "A Gospel centered on Jesus, light, life, belief, and the love of God made known.",
-    availableChapters: [1],
-    translationNote: "Available chapter uses the World English Bible.",
-  },
-  romans: {
-    slug: "romans",
-    name: "Romans",
-    description:
-      "A letter page prepared for future study of grace, faith, hope, and life in Christ.",
-    availableChapters: [],
-    translationNote: "",
-  },
-} as const;
+  {},
+);
 
 export type BibleBookSlug = keyof typeof bibleBooks;
 
 export const bibleBookSlugs = Object.keys(bibleBooks) as BibleBookSlug[];
+
+export const groupedBibleReadings = bibleReadingGroups
+  .map((group) => ({
+    ...group,
+    readings: supportedBibleChapters.filter(
+      (chapter) => chapter.readingGroup === group.key,
+    ),
+  }))
+  .filter((group) => group.readings.length > 0);
 
 export function getBibleBook(slug: string) {
   return bibleBooks[slug as BibleBookSlug];
