@@ -1,49 +1,53 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpenText, Library, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpenText,
+  Compass,
+  Heart,
+  Library,
+  Sparkles,
+} from "lucide-react";
 import {
   PageIntro,
   PageShell,
   SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
-import { groupedBibleReadings, supportedBibleChapters } from "./bible-data";
+import { groupedGuides, guideKeys, guides } from "./guide-data";
 
 export const metadata: Metadata = {
-  title: "Guided Bible Readings | Scripture, Reflection, and Prayer",
+  title: "Beginner Christian Guides",
   description:
-    "Explore a curated library of finished KJV guided Bible readings with Scripture, context, reflection questions, prayer starters, and next steps.",
+    "Beginner-friendly Christian guides for Scripture, prayer, faith, grace, Jesus, symbols, and using Hope Bible with care.",
 };
 
-export default function BiblePage() {
-  const readingCount = supportedBibleChapters.length;
+export default function GuidesPage() {
+  const firstGuide = guides[guideKeys[0]];
 
   return (
-    <PageShell active="bible">
+    <PageShell>
       <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
         <PageIntro
-          icon={BookOpenText}
-          eyebrow="Guided Bible readings"
-          title="Guided Bible Readings"
-          subtitle="A focused library of finished Scripture readings with context, reflection, prayer, and a simple next step."
+          icon={Library}
+          eyebrow="Beginner guides"
+          title="Beginner Christian Guides"
+          subtitle="Simple, careful guides for people who want to begin with Scripture, prayer, reflection, and Christian faith basics."
         />
         <div className="rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.045)] sm:p-6">
           <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-            A focused reading library
+            Seven finished guides
           </p>
           <p className="mt-2 text-base leading-7 text-[#625b51]">
-            Start with {readingCount} complete guided readings organized by
-            theme. Each one includes Scripture, context, reflection, prayer, and
-            a simple next step.
+            These guides are beginner-friendly, non-denominational, and written
+            to help visitors read Scripture, pray honestly, and use Hope Bible
+            with clear boundaries.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <SecondaryButton href={supportedBibleChapters[0].href}>
-              Start reading
+            <SecondaryButton href={`/guides/${firstGuide.slug}`}>
+              Start with a guide
             </SecondaryButton>
             <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
-            <SecondaryButton href="/guides/start-reading-the-bible">
-              How to Start Reading
-            </SecondaryButton>
           </div>
         </div>
       </div>
@@ -52,33 +56,31 @@ export default function BiblePage() {
         <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#9a6a24]">
-              <Library size={16} strokeWidth={1.8} />
-              Finished library
+              <Sparkles size={16} strokeWidth={1.8} />
+              Scripture, prayer, and reflection
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Twenty guided readings available now.
+              Begin with clear words and careful next steps.
             </h2>
           </div>
           <p className="text-base leading-7 text-[#625b51]">
-            Every reading shown here opens a complete page with KJV Scripture
-            text, short context, an after-reading reflection, a prayer starter,
-            and links into prayer and the Faith Quiz.
+            The guides are not a substitute for Scripture, church community,
+            pastoral care, or professional support. They are meant to help a
+            beginner start with humility and attention.
           </p>
         </div>
       </section>
 
       <div className="mt-5 max-w-5xl">
         <StatusNote>
-          Hope Bible currently offers a focused library of finished guided
-          readings rather than a full Bible database. Full Scripture text is
-          presented from the King James Version (KJV), a Bible translation
-          widely used in public-domain contexts in the United States so guided
-          readings can be offered openly and consistently.
+          Hope Bible is independent and does not claim to be a church, pastor,
+          ministry, denomination, Bible scholar, Bible publisher, or official
+          Christian authority.
         </StatusNote>
       </div>
 
       <div className="mt-8 grid gap-7">
-        {groupedBibleReadings.map((group) => (
+        {groupedGuides.map((group) => (
           <section
             key={group.key}
             className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6"
@@ -93,21 +95,22 @@ export default function BiblePage() {
                 </h2>
               </div>
               <p className="text-sm leading-6 text-[#625b51]">
-                Choose a finished reading below. Every link opens a polished
-                reading page with Scripture, reflection, and prayer guidance.
+                Choose a finished guide below. Each page includes practical
+                steps and links into Bible readings, prayers, and the Faith
+                Quiz where useful.
               </p>
             </div>
 
             <div className="mt-5 grid gap-4 lg:grid-cols-2">
-              {group.readings.map((reading) => (
+              {group.guides.map((guide) => (
                 <Link
-                  key={reading.href}
-                  href={reading.href}
+                  key={guide.slug}
+                  href={`/guides/${guide.slug}`}
                   className="group flex h-full min-w-0 flex-col rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] p-5 transition hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_18px_42px_rgba(71,55,35,0.08)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-                      <Sparkles size={19} strokeWidth={1.8} />
+                      <Compass size={19} strokeWidth={1.8} />
                     </span>
                     <ArrowRight
                       size={17}
@@ -115,16 +118,16 @@ export default function BiblePage() {
                     />
                   </div>
                   <h3 className="mt-5 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
-                    {reading.title}
+                    {guide.title}
                   </h3>
                   <p className="mt-2 text-sm font-semibold leading-6 text-[#9a6a24]">
-                    {reading.theme}
+                    {guide.audience}
                   </p>
                   <p className="mt-3 text-base leading-7 text-[#625b51]">
-                    {reading.description}
+                    {guide.description}
                   </p>
                   <p className="mt-5 text-sm font-semibold text-[#254737]">
-                    Open guided reading
+                    Open guide
                   </p>
                 </Link>
               ))}
@@ -137,35 +140,51 @@ export default function BiblePage() {
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#e9c985]">
-              Reading with care
+              Use the guides with humility
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-              Scripture, context, reflection, and prayer belong together.
+              Let a guide lead you back to Scripture and prayer.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
-              These readings use the King James Version and pair the text with
-              non-denominational reflection guidance. The site is independent
-              and is not an official church, Bible publisher, or religious
-              authority.
+              These pages are meant to orient beginners, not replace Scripture,
+              wise Christian community, pastoral care, or qualified help.
             </p>
           </div>
-          <Link
-            href={supportedBibleChapters[0].href}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
-          >
-            Start first reading
-            <ArrowRight size={16} strokeWidth={1.8} />
-          </Link>
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+            <Link
+              href="/bible"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
+            >
+              Guided Bible Readings
+              <BookOpenText size={16} strokeWidth={1.8} />
+            </Link>
+            <Link
+              href="/prayer"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/60 bg-[#fff8eb]/10 px-5 py-3 text-sm font-semibold text-[#fffaf0] transition hover:bg-[#fff8eb]/16"
+            >
+              Prayer Library
+              <Heart size={16} strokeWidth={1.8} />
+            </Link>
+          </div>
         </div>
       </section>
 
       <div className="mt-7 max-w-5xl">
         <StatusNote>
-          These readings are complete, polished, and built for Scripture,
-          context, reflection, and prayer. New to Scripture? Start with the
-          beginner reading guide. Faith symbols are optional reminders, not
-          guarantees.
+          For fuller boundaries, read the Content Boundaries and Editorial
+          Principles pages before treating any guide as more than general
+          spiritual encouragement.
         </StatusNote>
+      </div>
+
+      <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <SecondaryButton href="/content-boundaries">
+          Content Boundaries
+        </SecondaryButton>
+        <SecondaryButton href="/editorial-principles">
+          Editorial Principles
+        </SecondaryButton>
+        <SecondaryButton href="/about">About Hope Bible</SecondaryButton>
       </div>
     </PageShell>
   );

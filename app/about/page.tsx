@@ -163,6 +163,7 @@ export default function AboutPage() {
           <SecondaryButton href="/content-boundaries">
             Content Boundaries
           </SecondaryButton>
+          <SecondaryButton href="/guides">Beginner Guides</SecondaryButton>
           <SecondaryButton href="/contact">Contact</SecondaryButton>
           <SecondaryButton href="/disclosures">Disclosures</SecondaryButton>
         </div>
@@ -194,6 +195,7 @@ export default function AboutPage() {
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <PrimaryButton href="/start">Find your Faith Path</PrimaryButton>
+        <SecondaryButton href="/guides">Beginner Guides</SecondaryButton>
         <SecondaryButton href="/bible">Read the Bible</SecondaryButton>
         <SecondaryButton href="/prayer">Prayer Guide</SecondaryButton>
       </div>

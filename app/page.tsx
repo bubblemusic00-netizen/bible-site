@@ -50,6 +50,14 @@ const actionItems = [
     icon: Leaf,
   },
   {
+    title: "Read Beginner Guides",
+    description:
+      "Learn how to start with Scripture, prayer, faith basics, and symbols carefully.",
+    href: "/guides",
+    cta: "Open Guides",
+    icon: Compass,
+  },
+  {
     title: "Explore Faith Symbols",
     description:
       "Learn how Christian symbols may serve as thoughtful reminders of prayer and Scripture.",
@@ -212,7 +220,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-9 divide-y divide-[#dfcfb2] overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1] shadow-[0_24px_60px_rgba(71,55,35,0.075)] lg:grid lg:grid-cols-4 lg:divide-x lg:divide-y-0">
+        <div className="mt-9 divide-y divide-[#dfcfb2] overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1] shadow-[0_24px_60px_rgba(71,55,35,0.075)] lg:grid lg:grid-cols-5 lg:divide-x lg:divide-y-0">
           {actionItems.map((item) => {
             const Icon = item.icon;
 

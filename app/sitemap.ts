@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { startFaithPathSlugs } from "@/lib/faith-paths";
 import { supportedBibleChapters } from "./bible/bible-data";
+import { guideKeys } from "./guides/guide-data";
 import { jewelryIntentionKeys } from "./jewelry/intentions";
 import { prayerPathKeys } from "./prayer/prayer-paths";
 
@@ -14,6 +15,7 @@ const coreRoutes = [
   { path: "/", priority: 1 },
   { path: "/bible", priority: 0.9 },
   { path: "/prayer", priority: 0.9 },
+  { path: "/guides", priority: 0.84 },
   { path: "/start", priority: 0.9 },
   { path: "/jewelry", priority: 0.8 },
   { path: "/about", priority: 0.7 },
@@ -43,6 +45,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.73,
   }));
 
+  const guideRoutes = guideKeys.map((slug) => ({
+    path: `/guides/${slug}`,
+    priority: 0.7,
+  }));
+
   const symbolRoutes = jewelryIntentionKeys.map((slug) => ({
     path: `/jewelry/${slug}`,
     priority: 0.64,
@@ -52,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...coreRoutes,
     ...bibleReadingRoutes,
     ...prayerRoutes,
+    ...guideRoutes,
     ...startRoutes,
     ...symbolRoutes,
   ].map((route) => ({

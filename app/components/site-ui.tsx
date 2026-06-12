@@ -10,6 +10,7 @@ type NavKey =
   | "plans"
   | "bible"
   | "prayer"
+  | "guides"
   | "verse"
   | "jewelry"
   | "about";
@@ -25,6 +26,7 @@ const navItems: Array<{ key: NavKey; label: string; href: string }> = [
 
 const footerResourceLinks = [
   ...navItems,
+  { key: "guides", label: "Guides", href: "/guides" },
   { key: "verse", label: "Verse", href: "/verse-of-the-day" },
 ];
 

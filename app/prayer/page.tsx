@@ -46,6 +46,9 @@ export default function PrayerPage() {
               Start praying
             </SecondaryButton>
             <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
+            <SecondaryButton href="/guides/how-to-pray">
+              How to Pray
+            </SecondaryButton>
           </div>
         </div>
       </div>
