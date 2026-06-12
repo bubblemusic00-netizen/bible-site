@@ -2,6 +2,7 @@ import {
   startFaithPathSlugs,
   type StartFaithPathSlug,
 } from "@/lib/faith-paths";
+import type { SymbolSlug } from "./symbol-data";
 
 export type JewelryIntention = {
   slug: StartFaithPathSlug;
@@ -14,6 +15,7 @@ export type JewelryIntention = {
   prayerGuidance: string;
   reflectionPrompt: string;
   symbolReminder: string;
+  relatedSymbols: readonly SymbolSlug[];
 };
 
 export const jewelryIntentions = {
@@ -33,6 +35,7 @@ export const jewelryIntentions = {
       "What pressure do I need to bring before God instead of carrying alone?",
     symbolReminder:
       "A peace symbol can remind someone to pray and return to Scripture during the day.",
+    relatedSymbols: ["dove", "olive-branch", "light-lamp"],
   },
   strength: {
     slug: "strength",
@@ -50,6 +53,7 @@ export const jewelryIntentions = {
       "Where do I need strength for the next step rather than the whole road?",
     symbolReminder:
       "A strength symbol can be a daily cue to pray for courage and depend on God.",
+    relatedSymbols: ["cross", "anchor", "mustard-seed"],
   },
   protection: {
     slug: "protection",
@@ -67,6 +71,7 @@ export const jewelryIntentions = {
       "Where do I need courage, wisdom, a boundary, or help from someone trustworthy today?",
     symbolReminder:
       "A protection reminder can point someone back to prayer and wise action, but it should never be treated as protective power.",
+    relatedSymbols: ["shield", "shepherd-staff", "anchor"],
   },
   hope: {
     slug: "hope",
@@ -84,6 +89,7 @@ export const jewelryIntentions = {
       "What longing or ache do I need to bring before God with honesty today?",
     symbolReminder:
       "A hope symbol can remind someone to pray and seek care, not to expect an object to change an outcome.",
+    relatedSymbols: ["anchor", "light-lamp", "open-hands"],
   },
   guidance: {
     slug: "guidance",
@@ -101,6 +107,7 @@ export const jewelryIntentions = {
       "What decision needs prayer, patience, or wise counsel before I move?",
     symbolReminder:
       "A guidance symbol can remind someone to pray and seek wisdom before acting.",
+    relatedSymbols: ["light-lamp", "open-bible", "shepherd-staff"],
   },
   gratitude: {
     slug: "gratitude",
@@ -118,6 +125,7 @@ export const jewelryIntentions = {
       "What small gift, person, provision, or moment can I thank God for today?",
     symbolReminder:
       "A gratitude symbol can remind someone to notice grace and practice thanks.",
+    relatedSymbols: ["open-hands", "heart", "open-bible"],
   },
   healing: {
     slug: "healing",
@@ -135,6 +143,7 @@ export const jewelryIntentions = {
       "What pain or longing do I need to name before God with honesty?",
     symbolReminder:
       "A hope symbol can remind someone to pray and seek care, not to expect an object to heal.",
+    relatedSymbols: ["lamb", "open-hands", "anchor"],
   },
   forgiveness: {
     slug: "forgiveness",
@@ -152,6 +161,7 @@ export const jewelryIntentions = {
       "Where might I need confession, mercy, a boundary, or careful repair?",
     symbolReminder:
       "A forgiveness symbol can remind someone of grace and humility in relationships.",
+    relatedSymbols: ["cross", "lamb", "heart"],
   },
   anxiety: {
     slug: "anxiety",
@@ -169,6 +179,7 @@ export const jewelryIntentions = {
       "What concern can I name before God without trying to solve everything today?",
     symbolReminder:
       "A steadiness symbol can remind someone to pause and pray, not to avoid needed care.",
+    relatedSymbols: ["dove", "anchor", "open-hands"],
   },
   family: {
     slug: "family",
@@ -186,6 +197,7 @@ export const jewelryIntentions = {
       "Who can I pray for by name, and what patient act of love can I offer?",
     symbolReminder:
       "A family symbol can remind someone to pray for loved ones and practice care.",
+    relatedSymbols: ["heart", "shepherd-staff", "olive-branch"],
   },
 } as const satisfies Record<StartFaithPathSlug, JewelryIntention>;
 

@@ -23,6 +23,7 @@ import {
   getJewelryIntention,
   jewelryIntentionKeys,
 } from "../intentions";
+import { getFaithSymbol } from "../symbol-data";
 import { getStartFaithPathBySlug } from "@/lib/faith-paths";
 
 export function generateStaticParams() {
@@ -62,6 +63,12 @@ export default async function JewelryIntentionPage({
   const linkedFaithPath = startPath
     ? getFaithPathBySlug(startPath.linkedFaithPathSlug)
     : undefined;
+  const relatedSymbols = details
+    ? details.relatedSymbols.flatMap((symbolSlug) => {
+        const symbol = getFaithSymbol(symbolSlug);
+        return symbol ? [symbol] : [];
+      })
+    : [];
 
   if (!details || !startPath) {
     redirect("/jewelry");
@@ -158,11 +165,49 @@ export default async function JewelryIntentionPage({
         </div>
       </section>
 
+      <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.06)] sm:p-8">
+        <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+          <div>
+            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+              Related symbols
+            </p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+              Learn the reminders behind this path.
+            </h2>
+            <p className="mt-3 text-base leading-7 text-[#625b51]">
+              These symbols are educational reminders only. Let them point back
+              to Scripture, prayer, reflection, and wise care.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-3">
+            {relatedSymbols.map((symbol) => (
+              <Link
+                key={symbol.slug}
+                href={`/jewelry/symbols/${symbol.slug}`}
+                className="group rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] p-4 transition hover:border-[#c49c52] hover:bg-[#fffdf7]"
+              >
+                <h3 className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                  {symbol.name}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#625b51]">
+                  {symbol.reminder}
+                </p>
+                <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#254737]">
+                  Read meaning
+                  <ArrowRight size={15} strokeWidth={1.8} />
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="mt-8 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-              Optional faith reminders
+              Free guidance first
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
               Guidance stays free and content-first.
@@ -170,9 +215,8 @@ export default async function JewelryIntentionPage({
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               A symbol can be meaningful as a reminder, but the Scripture,
               prayer, and reflection guidance stands on its own and does not
-              depend on buying anything. If an optional shop is added later,
-              support and purchase policies will be explained clearly before
-              that experience goes live.
+              depend on any physical object. The reminder is never the source
+              of faith, care, wisdom, or spiritual results.
             </p>
           </div>
           <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />

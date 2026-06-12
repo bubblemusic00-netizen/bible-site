@@ -79,7 +79,7 @@ export const guides = {
       "For first-time visitors who want a clear, honest way to begin.",
     group: "start",
     intro:
-      "Hope Bible is built to help you take one calm next step: choose a need, read Scripture, pray honestly, reflect, and carry a simple reminder if it helps. Free guidance comes first, and no purchase is required.",
+      "Hope Bible is built to help you take one calm next step: choose a need, read Scripture, pray honestly, reflect, and carry a simple reminder if it helps. Free guidance comes first, and no physical reminder is required.",
     sections: [
       {
         heading: "Begin with the Faith Quiz",
@@ -641,7 +641,7 @@ export const guides = {
         heading: "Free guidance remains primary",
         body: [
           "If Hope Bible later offers optional physical reminders, they should remain separate from the free Scripture, prayer, and reflection guidance.",
-          "No one needs to purchase anything to use the Bible readings, prayers, guides, or Faith Quiz.",
+          "No physical reminder is required to use the Bible readings, prayers, guides, or Faith Quiz.",
         ],
       },
     ],
@@ -682,6 +682,21 @@ export const guides = {
         label: "Faith Symbols",
         href: "/jewelry",
         description: "Explore symbols as educational reminders.",
+      },
+      {
+        label: "Cross Symbol Meaning",
+        href: "/jewelry/symbols/cross",
+        description: "Learn how the cross can point to Christ, grace, and discipleship.",
+      },
+      {
+        label: "Dove Symbol Meaning",
+        href: "/jewelry/symbols/dove",
+        description: "Learn how the dove can point to peace, gentleness, and prayer.",
+      },
+      {
+        label: "Anchor Symbol Meaning",
+        href: "/jewelry/symbols/anchor",
+        description: "Learn how the anchor can point to hope and steadiness.",
       },
       {
         label: "Editorial Principles",

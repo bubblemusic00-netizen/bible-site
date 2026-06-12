@@ -3,6 +3,7 @@ import { startFaithPathSlugs } from "@/lib/faith-paths";
 import { supportedBibleChapters } from "./bible/bible-data";
 import { guideKeys } from "./guides/guide-data";
 import { jewelryIntentionKeys } from "./jewelry/intentions";
+import { symbolKeys } from "./jewelry/symbol-data";
 import { prayerPathKeys } from "./prayer/prayer-paths";
 
 const siteUrl = (
@@ -55,6 +56,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.64,
   }));
 
+  const symbolMeaningRoutes = symbolKeys.map((slug) => ({
+    path: `/jewelry/symbols/${slug}`,
+    priority: 0.63,
+  }));
+
   return [
     ...coreRoutes,
     ...bibleReadingRoutes,
@@ -62,6 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guideRoutes,
     ...startRoutes,
     ...symbolRoutes,
+    ...symbolMeaningRoutes,
   ].map((route) => ({
     url: `${siteUrl}${route.path}`,
     lastModified,
