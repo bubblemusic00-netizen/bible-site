@@ -8,14 +8,23 @@ export type PrayerSlug =
   | "before-sleep"
   | "hope"
   | "forgiveness"
-  | "anxiety";
+  | "anxiety"
+  | "wisdom"
+  | "grief"
+  | "patience"
+  | "family"
+  | "work"
+  | "loneliness"
+  | "courage"
+  | "discernment";
 
 export type PrayerGroupKey =
   | "day"
   | "peace"
   | "strength"
   | "trust"
-  | "gratitude";
+  | "gratitude"
+  | "work";
 
 export type PrayerPath = {
   slug: PrayerSlug;
@@ -48,23 +57,33 @@ export const prayerGroups = [
   },
   {
     key: "peace",
-    title: "Peace and anxiety",
-    description: "Honest prayers for restlessness, anxious thoughts, and comfort.",
+    title: "Peace, anxiety, and grief",
+    description:
+      "Honest prayers for restlessness, sorrow, anxious thoughts, and loneliness.",
   },
   {
     key: "strength",
-    title: "Strength and hope",
-    description: "Prayer for courage, patient endurance, and renewed hope.",
+    title: "Strength, courage, and patience",
+    description:
+      "Prayer for courage, patient endurance, and hope without pretending life is easy.",
   },
   {
     key: "trust",
-    title: "Trust and guidance",
-    description: "Careful prayers for wisdom, protection, and faithful decisions.",
+    title: "Guidance, wisdom, and discernment",
+    description:
+      "Careful prayers for wisdom, motives, counsel, and faithful decisions.",
   },
   {
     key: "gratitude",
-    title: "Gratitude and forgiveness",
-    description: "Prayers for receiving grace and practicing mercy with honesty.",
+    title: "Gratitude, forgiveness, and relationships",
+    description:
+      "Prayers for receiving grace, practicing mercy, and loving people with care.",
+  },
+  {
+    key: "work",
+    title: "Daily work and responsibility",
+    description:
+      "Prayers for honest work, responsibility, wise care, and practical trust.",
   },
 ] as const satisfies readonly {
   key: PrayerGroupKey;
@@ -182,7 +201,7 @@ export const prayerPaths = {
     description:
       "A careful prayer for God's care, wisdom, courage, and safe support.",
     theme: "Trust, refuge, and wise care",
-    group: "trust",
+    group: "work",
     relatedBible: {
       label: "Psalm 91",
       href: "/bible/psalms/91",
@@ -413,16 +432,295 @@ export const prayerPaths = {
     symbolReminder:
       "A symbol of steadiness may remind some people to pause and pray, not to avoid needed care.",
   },
+  wisdom: {
+    slug: "wisdom",
+    title: "Prayer for Wisdom",
+    shortTitle: "Wisdom",
+    description:
+      "A prayer for humility, teachability, listening, and wise next steps.",
+    theme: "Wisdom, humility, and teachable decisions",
+    group: "trust",
+    relatedBible: {
+      label: "James 1",
+      href: "/bible/james/1",
+      description:
+        "James 1 invites readers to ask God for wisdom and practice faith with patience.",
+    },
+    beforeYouPray:
+      "Bring your need for wisdom without demanding instant certainty. Wisdom often grows through prayer, patience, Scripture, and trusted counsel.",
+    beforeHeading: "Come ready to listen.",
+    prayerHeading: "A prayer for wisdom",
+    reflectionHeading: "Practice a teachable next step.",
+    prayer: [
+      "Father, I come to You needing wisdom.",
+      "Make me humble enough to listen, patient enough to wait, and honest enough to see my motives clearly.",
+      "Teach me through Scripture, wise counsel, quiet attention, and the responsibilities already in front of me.",
+      "Keep me from rushing just to escape uncertainty. Help me choose what is truthful, loving, and faithful, even if the whole path is not clear yet.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What question do you need to hold with humility instead of forcing an immediate answer?",
+    smallNextStep:
+      "Write one decision or question, then name one wise person, passage, or patient practice that can help you discern it.",
+    relatedFaithQuizPath: "/start/guidance",
+    symbolReminder:
+      "A symbol connected to wisdom may remind some people to pause, pray, and listen before deciding.",
+  },
+  grief: {
+    slug: "grief",
+    title: "Prayer for Grief",
+    shortTitle: "Grief",
+    description:
+      "A prayer for sorrow, memory, comfort, and not rushing the ache.",
+    theme: "Grief, sorrow, comfort, and honest lament",
+    group: "peace",
+    relatedBible: {
+      label: "Matthew 11:28-30",
+      href: "/bible/matthew/11",
+      description:
+        "Matthew 11:28-30 holds Jesus' gentle invitation to the weary and burdened.",
+    },
+    beforeYouPray:
+      "You do not need to make grief smaller before bringing it to God. Let this prayer make room for sorrow without rushing healing.",
+    beforeHeading: "Let sorrow be named.",
+    prayerHeading: "A prayer in grief",
+    reflectionHeading: "Hold memory with care.",
+    prayer: [
+      "Lord Jesus, I bring You the sorrow I cannot neatly explain.",
+      "Some things still ache. Some memories feel tender. Some moments arrive without warning, and I do not want to pretend I am untouched.",
+      "Meet me with mercy in this grief. Give me comfort that does not rush me, courage to receive support, and gentleness for the days when I feel tired.",
+      "Help me remember with love, breathe through what is heavy, and take one faithful step without demanding that my heart be finished healing.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What sorrow, memory, or unanswered ache do you need to bring honestly before God today?",
+    smallNextStep:
+      "Reach toward one safe person, quiet practice, or small act of care instead of carrying grief alone.",
+    relatedFaithQuizPath: "/start/hope",
+    symbolReminder:
+      "A symbol of hope may help some people remember prayer during grief, without pretending the grief has disappeared.",
+  },
+  patience: {
+    slug: "patience",
+    title: "Prayer for Patience",
+    shortTitle: "Patience",
+    description:
+      "A prayer for waiting, frustration, endurance, and gentleness.",
+    theme: "Patience, waiting, frustration, and endurance",
+    group: "strength",
+    relatedBible: {
+      label: "James 1",
+      href: "/bible/james/1",
+      description:
+        "James 1 connects trials, patience, wisdom, listening, and practical faith.",
+    },
+    beforeYouPray:
+      "Impatience often points to weariness, fear, or longing. Bring that honestly; this prayer is not meant to shame you for feeling stretched.",
+    beforeHeading: "Notice the pressure to rush.",
+    prayerHeading: "A prayer for patience",
+    reflectionHeading: "Choose gentleness while you wait.",
+    prayer: [
+      "Lord, I feel the strain of waiting.",
+      "Part of me wants to rush, force, complain, or control what is not moving on my timeline.",
+      "Give me patience that is honest, not passive; gentle, not careless; steady, not numb.",
+      "Help me do what is mine to do today, release what is not mine to control, and treat people with care while I wait.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "Where are you tempted to rush, force, or speak sharply because waiting feels hard?",
+    smallNextStep:
+      "Before one response or decision today, pause long enough to breathe and choose gentleness.",
+    relatedFaithQuizPath: "/start/strength",
+    symbolReminder:
+      "A symbol of patience may remind some people to slow down and pray before reacting.",
+  },
+  family: {
+    slug: "family",
+    title: "Prayer for Family",
+    shortTitle: "Family",
+    description:
+      "A prayer for love, humility, boundaries, forgiveness, and careful care at home.",
+    theme: "Family, love, humility, boundaries, and care",
+    group: "gratitude",
+    relatedBible: {
+      label: "1 Corinthians 13",
+      href: "/bible/1-corinthians/13",
+      description:
+        "1 Corinthians 13 describes love as patient, humble, truthful, and enduring.",
+    },
+    beforeYouPray:
+      "Praying for family does not mean denying harm, forcing closeness, or excusing abuse. Bring love and truth together, and seek safe support where needed.",
+    beforeHeading: "Hold loved ones with truth.",
+    prayerHeading: "A prayer for family",
+    reflectionHeading: "Love with wisdom and care.",
+    prayer: [
+      "Lord, I bring my family and close relationships before You.",
+      "Teach me to love with patience, humility, truth, and courage. Help me speak with care, listen without pride, and repair what can be repaired wisely.",
+      "Where there is distance, give me compassion without control. Where there is hurt, give me honesty and safe boundaries. Where there is gratitude, help me not overlook it.",
+      "Bless the people closest to me with mercy, wisdom, and the support they need.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "Who in your family or close circle can you pray for with both love and honesty today?",
+    smallNextStep:
+      "Choose one practical kindness, one honest boundary, or one quiet prayer by name.",
+    relatedFaithQuizPath: "/start/gratitude",
+    symbolReminder:
+      "A family-related faith reminder may help some people pray for loved ones and practice patient love.",
+  },
+  work: {
+    slug: "work",
+    title: "Prayer for Work",
+    shortTitle: "Work",
+    description:
+      "A prayer for integrity, diligence, humility, fatigue, and service.",
+    theme: "Work, responsibility, integrity, and fatigue",
+    group: "work",
+    relatedBible: {
+      label: "Proverbs 3",
+      href: "/bible/proverbs/3",
+      description:
+        "Proverbs 3 invites trust, humility, wisdom, and faithful choices.",
+    },
+    beforeYouPray:
+      "Bring your work honestly, including fatigue, pressure, ambition, boredom, or responsibility. This prayer does not promise success, promotion, money, or easy outcomes.",
+    beforeHeading: "Bring the work honestly.",
+    prayerHeading: "A prayer for work",
+    reflectionHeading: "Serve with integrity today.",
+    prayer: [
+      "Lord, I bring You the work in front of me.",
+      "Help me act with integrity when no one is watching, diligence when the task feels ordinary, and humility when I want recognition.",
+      "Give me wisdom for pressure, patience with people, and courage to do what is right without making work my whole identity.",
+      "When I am tired, remind me to rest wisely. When I am frustrated, guide my words. Let my work become a place of faithfulness, not fear.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What part of your work or responsibility needs integrity, patience, or honest limits today?",
+    smallNextStep:
+      "Choose one task to do carefully and one boundary that protects your attention or rest.",
+    relatedFaithQuizPath: "/start/guidance",
+    symbolReminder:
+      "A simple faith reminder may help some people pause, pray, and work with integrity during ordinary responsibilities.",
+  },
+  loneliness: {
+    slug: "loneliness",
+    title: "Prayer for Loneliness",
+    shortTitle: "Loneliness",
+    description:
+      "A prayer for being seen by God, longing for connection, and taking gentle next steps.",
+    theme: "Loneliness, being known, longing, and connection",
+    group: "peace",
+    relatedBible: {
+      label: "Psalm 139",
+      href: "/bible/psalms/139",
+      description:
+        "Psalm 139 speaks of being searched, known, seen, and led by God.",
+    },
+    beforeYouPray:
+      "Loneliness is not a failure. Prayer can hold the ache, but it should not replace real community, trusted support, or appropriate care.",
+    beforeHeading: "Name the ache for connection.",
+    prayerHeading: "A prayer for loneliness",
+    reflectionHeading: "Reach toward one gentle connection.",
+    prayer: [
+      "Lord, I feel the ache of loneliness.",
+      "You know the quiet places, the missed conversations, the longing to be seen, and the tiredness of carrying too much alone.",
+      "Meet me with Your nearness, and help me not turn inward in shame. Give me courage for one gentle step toward connection, community, or care.",
+      "Remind me that being lonely does not make me forgotten, unwanted, or beyond love.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "Where do you most need to feel seen, heard, or remembered today?",
+    smallNextStep:
+      "Send one honest message, step into one safe shared space, or name one person you can pray for and reach toward.",
+    relatedFaithQuizPath: "/start/hope",
+    symbolReminder:
+      "A faith reminder may help some people remember that God sees them and that reaching toward community can be a faithful step.",
+  },
+  courage: {
+    slug: "courage",
+    title: "Prayer for Courage",
+    shortTitle: "Courage",
+    description:
+      "A prayer for fear, obedience, trust, and one small brave step.",
+    theme: "Courage, fear, trust, and faithful action",
+    group: "strength",
+    relatedBible: {
+      label: "Mark 4:35-41",
+      href: "/bible/mark/4",
+      description:
+        "Mark 4:35-41 shows the disciples bringing fear to Jesus in a storm.",
+    },
+    beforeYouPray:
+      "Fear does not mean you have failed. Bring it honestly and ask for courage that moves with wisdom rather than pressure.",
+    beforeHeading: "Bring fear without shame.",
+    prayerHeading: "A prayer for courage",
+    reflectionHeading: "Take one brave, wise step.",
+    prayer: [
+      "Lord Jesus, I bring You the fear I would rather hide.",
+      "Help me see what courage looks like in this moment. Not noise, not pride, not pretending, but one faithful step with You.",
+      "Give me wisdom to avoid recklessness, humility to ask for help, and steadiness to do what love and truth require.",
+      "Let courage grow quietly in me as I trust You with the next step.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is one brave step you can take without denying your fear or rushing beyond wisdom?",
+    smallNextStep:
+      "Name the step, make it small enough to take today, and ask for support if it should not be done alone.",
+    relatedFaithQuizPath: "/start/strength",
+    symbolReminder:
+      "A symbol of courage may remind some people to pray and take one faithful step, not to deny fear.",
+  },
+  discernment: {
+    slug: "discernment",
+    title: "Prayer for Discernment",
+    shortTitle: "Discernment",
+    description:
+      "A prayer for motives, counsel, patience, and clarity over time.",
+    theme: "Discernment, motives, counsel, and clarity",
+    group: "trust",
+    relatedBible: {
+      label: "Proverbs 3",
+      href: "/bible/proverbs/3",
+      description:
+        "Proverbs 3 invites trust in the Lord, humility, and wisdom before action.",
+    },
+    beforeYouPray:
+      "Discernment is not about forcing a sign or demanding an instant answer. Make room for prayer, Scripture, counsel, motives, and time.",
+    beforeHeading: "Look beneath the decision.",
+    prayerHeading: "A prayer for discernment",
+    reflectionHeading: "Wait for clarity with humility.",
+    prayer: [
+      "Father, help me discern what is wise, loving, and true.",
+      "Search my motives without crushing me. Show me where fear, pride, pressure, or desire may be clouding my judgment.",
+      "Give me patience to seek counsel, courage to hear what I may not want to hear, and peace to wait when the answer is not ready.",
+      "Guide me toward the next faithful step, even if the full path unfolds slowly.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What motive, pressure, or desire needs to be examined before you decide?",
+    smallNextStep:
+      "Write down the decision, one motive to examine, and one trusted source of counsel or Scripture to consider.",
+    relatedFaithQuizPath: "/start/guidance",
+    symbolReminder:
+      "A symbol of discernment may remind some people to slow down, pray, and seek wisdom over time.",
+  },
 } as const satisfies Record<PrayerSlug, PrayerPath>;
 
 export const prayerPathKeys = Object.keys(prayerPaths) as PrayerSlug[];
 
+const prayerGroupOrder = {
+  day: ["morning", "before-sleep"],
+  peace: ["peace", "anxiety", "grief", "loneliness"],
+  strength: ["strength", "courage", "patience", "hope"],
+  trust: ["guidance", "wisdom", "discernment"],
+  gratitude: ["gratitude", "forgiveness", "family"],
+  work: ["work", "protection"],
+} as const satisfies Record<PrayerGroupKey, readonly PrayerSlug[]>;
+
 export const groupedPrayerPaths = prayerGroups
   .map((group) => ({
     ...group,
-    prayers: prayerPathKeys
-      .map((slug) => prayerPaths[slug])
-      .filter((prayer) => prayer.group === group.key),
+    prayers: prayerGroupOrder[group.key].map((slug) => prayerPaths[slug]),
   }))
   .filter((group) => group.prayers.length > 0);
 

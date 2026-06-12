@@ -18,7 +18,7 @@ import { groupedPrayerPaths, prayerPathKeys, prayerPaths } from "./prayer-paths"
 export const metadata: Metadata = {
   title: "Prayer Library | Christian Prayers for Daily Faith",
   description:
-    "Choose from a focused library of Christian prayers for morning, peace, strength, protection, guidance, gratitude, sleep, hope, forgiveness, and anxiety.",
+    "Choose from a focused library of Christian prayers for daily faith, including peace, wisdom, grief, family, work, courage, and discernment.",
 };
 
 export default function PrayerPage() {
@@ -38,8 +38,8 @@ export default function PrayerPage() {
             A focused prayer library
           </p>
           <p className="mt-2 text-base leading-7 text-[#625b51]">
-            Prayer can be simple, honest, and rooted in Scripture. Start with 10
-            prayers organized by the needs people often bring to God.
+            Prayer can be simple, honest, and rooted in Scripture. Start with
+            18 prayers organized by the needs people often bring to God.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <SecondaryButton href={`/prayer/${firstPrayer.slug}`}>
@@ -58,7 +58,7 @@ export default function PrayerPage() {
               Prayer, reflection, and Scripture
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Ten complete prayers available now.
+              Eighteen complete prayers available now.
             </h2>
           </div>
           <p className="text-base leading-7 text-[#625b51]">
@@ -70,7 +70,7 @@ export default function PrayerPage() {
 
       <div className="mt-5 max-w-5xl">
         <StatusNote>
-          Hope Bible currently offers a focused library of ten prayers.
+          Hope Bible currently offers a focused library of eighteen prayers.
           Prayer guidance is for Scripture-rooted reflection and encouragement;
           it does not promise outcomes or replace pastoral care, counseling,
           medical help, emergency support, or trusted community.

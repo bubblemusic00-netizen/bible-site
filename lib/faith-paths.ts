@@ -19,7 +19,7 @@ export const faithPaths = {
     finderIntro:
       "You do not have to carry the whole road at once. This path helps you ask for strength for the next faithful step.",
     startRoute: "/start/strength",
-    prayerRoute: "/prayer/strength",
+    prayerRoute: "/prayer/courage",
     scriptureRoute: "/bible/matthew/11",
     jewelryRoute: "/jewelry/strength",
   },
@@ -43,7 +43,7 @@ export const faithPaths = {
     finderIntro:
       "When the next step feels unclear, this path gives you space to pause, ask for wisdom, and move with care.",
     startRoute: "/start/guidance",
-    prayerRoute: "/prayer/guidance",
+    prayerRoute: "/prayer/discernment",
     scriptureRoute: "/bible/james/1",
     jewelryRoute: "/jewelry/guidance",
   },
@@ -115,7 +115,7 @@ export const faithPaths = {
     finderIntro:
       "Bring the people closest to you into a quiet moment of prayer. This path helps you hold family with love, patience, and faith.",
     startRoute: "/start/family",
-    prayerRoute: "/prayer/guidance",
+    prayerRoute: "/prayer/family",
     scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/family",
   },
@@ -184,7 +184,7 @@ export const startFaithPaths = {
     symbolReminder:
       "A symbol of strength may serve as a reminder to pray for courage and depend on God through hard days.",
     startRoute: "/start/strength",
-    prayerRoute: "/prayer/strength",
+    prayerRoute: "/prayer/courage",
     scriptureRoute: "/bible/matthew/11",
     jewelryRoute: "/jewelry/strength",
   },
@@ -259,7 +259,7 @@ export const startFaithPaths = {
     symbolReminder:
       "A symbol of guidance may remind some people to pause, pray, and seek wisdom before choosing.",
     startRoute: "/start/guidance",
-    prayerRoute: "/prayer/guidance",
+    prayerRoute: "/prayer/discernment",
     scriptureRoute: "/bible/james/1",
     jewelryRoute: "/jewelry/guidance",
   },
@@ -377,7 +377,7 @@ export const startFaithPaths = {
     symbolReminder:
       "A symbol connected to family may remind some people to pray for loved ones and practice patient love.",
     startRoute: "/start/family",
-    prayerRoute: "/prayer/guidance",
+    prayerRoute: "/prayer/family",
     scriptureRoute: "/bible/1-corinthians/13",
     jewelryRoute: "/jewelry/family",
   },
