@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
-  title: "Contact | Hope Bible",
+  title: "Contact",
   description:
     "Contact and support readiness for Hope Bible, an independent Christian Bible reading, prayer, and faith reflection resource.",
 };

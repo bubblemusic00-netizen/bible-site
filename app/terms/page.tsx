@@ -3,7 +3,7 @@ import { ScrollText } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | Hope Bible",
+  title: "Terms of Use",
   description:
     "Terms of Use for Hope Bible, an independent Christian Bible, prayer, faith reflection, and faith-symbol education resource.",
 };

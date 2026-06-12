@@ -3,7 +3,7 @@ import { RotateCcw } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
-  title: "Returns Policy | Hope Bible",
+  title: "Returns Policy",
   description:
     "Returns readiness information for Hope Bible before any optional public shop is introduced.",
 };

@@ -3,7 +3,7 @@ import { ShieldCheck } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Hope Bible",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for Hope Bible, an independent Christian Bible reading, prayer guidance, faith reflection, and faith-symbol education resource.",
 };

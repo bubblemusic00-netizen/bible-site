@@ -8,7 +8,7 @@ export const faithPaths = {
       "Begin with a quieter pace. This path helps you bring a restless heart into prayer, Scripture, and a simple reminder of faith.",
     startRoute: "/start/peace",
     prayerRoute: "/prayer/peace",
-    scriptureRoute: "/bible/psalms/23",
+    scriptureRoute: "/bible/psalms/46",
     jewelryRoute: "/jewelry/peace",
   },
   strength: {
@@ -20,7 +20,7 @@ export const faithPaths = {
       "You do not have to carry the whole road at once. This path helps you ask for strength for the next faithful step.",
     startRoute: "/start/strength",
     prayerRoute: "/prayer/strength",
-    scriptureRoute: "/bible/isaiah/40",
+    scriptureRoute: "/bible/matthew/11",
     jewelryRoute: "/jewelry/strength",
   },
   protection: {
@@ -32,7 +32,7 @@ export const faithPaths = {
       "When you feel vulnerable or uncertain, this path helps you pray for God's care and choose wise support without treating faith as a charm.",
     startRoute: "/start/protection",
     prayerRoute: "/prayer/protection",
-    scriptureRoute: "/bible/psalms/91",
+    scriptureRoute: "/bible/psalms/121",
     jewelryRoute: "/jewelry/protection",
   },
   guidance: {
@@ -44,7 +44,7 @@ export const faithPaths = {
       "When the next step feels unclear, this path gives you space to pause, ask for wisdom, and move with care.",
     startRoute: "/start/guidance",
     prayerRoute: "/prayer/guidance",
-    scriptureRoute: "/bible/proverbs/3",
+    scriptureRoute: "/bible/james/1",
     jewelryRoute: "/jewelry/guidance",
   },
   gratitude: {
@@ -147,9 +147,9 @@ export const startFaithPaths = {
       "This path offers Scripture and prayer for peace; it does not promise that every pressure will disappear.",
     pastoralIntro:
       "Begin here when your thoughts feel noisy or your heart feels unsettled. This path helps you pause, read Scripture, pray honestly, and take one small peaceful step.",
-    scriptureReference: "Psalm 23",
+    scriptureReference: "Psalm 46",
     scriptureContext:
-      "Psalm 23 gives peaceful language for God's shepherd-like care. Read it slowly as comfort, not as pressure to feel settled instantly.",
+      "Psalm 46 gives language for refuge, stillness, and trust when fear or pressure feels loud.",
     prayer:
       "Lord Jesus, meet me in this moment. Help me receive Your peace, release what I cannot control, and walk through today with trust.",
     reflectionPrompt:
@@ -160,7 +160,7 @@ export const startFaithPaths = {
       "A Christian symbol of peace may help some people remember to pause, pray, and return to Scripture during the day.",
     startRoute: "/start/peace",
     prayerRoute: "/prayer/peace",
-    scriptureRoute: "/bible/psalms/23",
+    scriptureRoute: "/bible/psalms/46",
     jewelryRoute: "/jewelry/peace",
   },
   strength: {
@@ -172,9 +172,9 @@ export const startFaithPaths = {
       "This path asks for strength and endurance without pretending faith removes every burden.",
     pastoralIntro:
       "Begin here when you feel worn down or stretched thin. This path helps you ask for courage, patience, and enough strength for what is actually in front of you.",
-    scriptureReference: "Isaiah 40",
+    scriptureReference: "Matthew 11:28-30",
     scriptureContext:
-      "Isaiah 40 speaks comfort to weary people and points toward renewed strength while waiting on God.",
+      "Matthew 11:28-30 holds Jesus' invitation to come with weariness and learn His gentle way of rest.",
     prayer:
       "Lord, strengthen me for what is in front of me. Give me patience, courage, humility, and steadiness for the next faithful step.",
     reflectionPrompt:
@@ -185,7 +185,7 @@ export const startFaithPaths = {
       "A symbol of strength may serve as a reminder to pray for courage and depend on God through hard days.",
     startRoute: "/start/strength",
     prayerRoute: "/prayer/strength",
-    scriptureRoute: "/bible/isaiah/40",
+    scriptureRoute: "/bible/matthew/11",
     jewelryRoute: "/jewelry/strength",
   },
   protection: {
@@ -197,9 +197,9 @@ export const startFaithPaths = {
       "This path is a prayer for God's care and wisdom, not a guarantee that an object or ritual can protect you.",
     pastoralIntro:
       "Begin here when you feel vulnerable or concerned. This path helps you pray for God's care, seek wisdom, and move toward wise support without fear-based promises.",
-    scriptureReference: "Psalm 91",
+    scriptureReference: "Psalm 121",
     scriptureContext:
-      "Psalm 91 is often read as a prayer of refuge and trust. Receive it carefully as prayer, not as a guarantee or formula.",
+      "Psalm 121 lifts the eyes toward the Lord for help and watching care while still leaving room for wise action.",
     prayer:
       "Lord, care for me with mercy and wisdom. Give me courage, guide my choices, and help me reach toward safe support where it is needed.",
     reflectionPrompt:
@@ -210,7 +210,7 @@ export const startFaithPaths = {
       "A Christian symbol may remind some people to pray and seek wisdom, but it should never be treated as a source of protection or power.",
     startRoute: "/start/protection",
     prayerRoute: "/prayer/protection",
-    scriptureRoute: "/bible/psalms/91",
+    scriptureRoute: "/bible/psalms/121",
     jewelryRoute: "/jewelry/protection",
   },
   hope: {
@@ -247,9 +247,9 @@ export const startFaithPaths = {
       "This path helps you ask for wisdom without forcing instant certainty.",
     pastoralIntro:
       "Begin here when the next step feels unclear. This path helps you slow down, ask God for wisdom, reflect honestly, and move with care.",
-    scriptureReference: "Proverbs 3",
+    scriptureReference: "James 1",
     scriptureContext:
-      "Proverbs 3 invites trust, humility, and wisdom before action. Let it slow the moment before a decision.",
+      "James 1 invites patient endurance, generous wisdom, and faith that becomes practical action.",
     prayer:
       "Father, give me wisdom. Quiet the noise around this decision and help me recognize what is honest, loving, and faithful.",
     reflectionPrompt:
@@ -260,7 +260,7 @@ export const startFaithPaths = {
       "A symbol of guidance may remind some people to pause, pray, and seek wisdom before choosing.",
     startRoute: "/start/guidance",
     prayerRoute: "/prayer/guidance",
-    scriptureRoute: "/bible/proverbs/3",
+    scriptureRoute: "/bible/james/1",
     jewelryRoute: "/jewelry/guidance",
   },
   gratitude: {

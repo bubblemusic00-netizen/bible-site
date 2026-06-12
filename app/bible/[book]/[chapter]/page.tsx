@@ -12,6 +12,7 @@ import {
   availableBibleChapterParams,
   getBibleBook,
   getBibleChapter,
+  getBibleChapterReference,
 } from "../../bible-data";
 
 export function generateStaticParams() {
@@ -34,8 +35,10 @@ export async function generateMetadata({
     };
   }
 
+  const reference = getBibleChapterReference(chapterData);
+
   return {
-    title: `${chapterData.book} ${chapterData.chapter} Guided Bible Reading`,
+    title: `${reference} Guided Bible Reading`,
     description: `${chapterData.description} Includes KJV Scripture, context, reflection, prayer, and a simple next step.`,
   };
 }
@@ -56,6 +59,8 @@ export default async function BibleChapterPage({
   if (!chapterData) {
     redirect("/bible");
   }
+
+  const reference = getBibleChapterReference(chapterData);
 
   return (
     <PageShell active="bible">
@@ -96,7 +101,7 @@ export default async function BibleChapterPage({
               {chapterData.theme}
             </p>
             <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.02] text-[#241f19] sm:text-6xl">
-              {chapterData.book} {chapterData.chapter}
+              {reference}
             </h1>
             <p className="mt-3 font-serif text-2xl font-semibold leading-tight text-[#5d4630] sm:text-3xl">
               {chapterData.title}
@@ -104,13 +109,18 @@ export default async function BibleChapterPage({
             <p className="mx-auto mt-5 max-w-[690px] text-base leading-8 text-[#625b51] sm:text-lg">
               {chapterData.contextIntro}
             </p>
+            {chapterData.readingNote ? (
+              <p className="mx-auto mt-5 max-w-[690px] rounded-lg border border-[#d8c5a3] bg-[#fffaf0]/82 px-4 py-3 text-sm font-semibold leading-6 text-[#6a563f]">
+                {chapterData.readingNote}
+              </p>
+            ) : null}
           </div>
 
           <article className="relative mx-auto mt-10 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
             <div className="flex flex-col gap-4 border-b border-[#e2d2b6] pb-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
-                  {chapterData.book} {chapterData.chapter}
+                  {reference}
                 </p>
                 <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
                   Scripture text
@@ -204,7 +214,9 @@ export default async function BibleChapterPage({
             Take the Faith Quiz
             <ArrowRight size={16} strokeWidth={1.8} />
           </PrimaryButton>
-          <SecondaryButton href="/prayer">Pray after reading</SecondaryButton>
+          <SecondaryButton href={chapterData.relatedPrayerRoute ?? "/prayer"}>
+            {chapterData.relatedPrayerLabel ?? "Pray after reading"}
+          </SecondaryButton>
           <SecondaryButton href="/bible">Back to Guided Bible Readings</SecondaryButton>
           <SecondaryButton href="/jewelry">Explore Faith Symbols</SecondaryButton>
           <SecondaryButton href={`/bible/${book}`}>

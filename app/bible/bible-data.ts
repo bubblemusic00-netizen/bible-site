@@ -10,15 +10,19 @@ export type BibleChapter = {
   bookSlug: string;
   book: string;
   chapter: number;
+  reference?: string;
   title: string;
   description: string;
   theme: string;
   whyRead: string;
   contextIntro: string;
+  readingNote?: string;
   reflectionQuestion: string;
   prayerStarter: string;
   smallNextStep: string;
   relatedFaithPath: string;
+  relatedPrayerRoute?: string;
+  relatedPrayerLabel?: string;
   readingGroup: BibleReadingGroupKey;
   translation: "King James Version";
   sourceNote: string;
@@ -29,10 +33,10 @@ export type BibleReadingGroupKey =
   | "beginning"
   | "peace"
   | "protection"
-  | "prayer"
   | "hope"
   | "wisdom"
-  | "love";
+  | "love"
+  | "identity";
 
 export const bibleReadingGroups = [
   {
@@ -52,11 +56,6 @@ export const bibleReadingGroups = [
       "Pray for God's care with humility, wisdom, and no guarantee-based claims.",
   },
   {
-    key: "prayer",
-    title: "Prayer and worry",
-    description: "Bring anxious thoughts, daily needs, and gratitude into prayer.",
-  },
-  {
     key: "hope",
     title: "Hope and grace",
     description: "Return to grace, mercy, and life in the Spirit.",
@@ -71,6 +70,11 @@ export const bibleReadingGroups = [
     title: "Love and character",
     description: "Let love become patience, humility, endurance, and action.",
   },
+  {
+    key: "identity",
+    title: "Identity and being known by God",
+    description: "Receive dignity, honest self-examination, and God's near attention.",
+  },
 ] as const satisfies readonly {
   key: BibleReadingGroupKey;
   title: string;
@@ -78,7 +82,7 @@ export const bibleReadingGroups = [
 }[];
 
 const kjvSourceNote =
-  "Full Scripture text is presented from the King James Version (KJV), a public-domain Bible translation used here so guided readings can be offered openly and consistently.";
+  "Full Scripture text is presented from the King James Version (KJV), a Bible translation widely used in public-domain contexts in the United States so guided readings can be offered openly and consistently.";
 
 export const availableBibleChapters = [
   {
@@ -196,7 +200,7 @@ export const availableBibleChapters = [
     smallNextStep:
       "Pray the Lord's Prayer slowly, then write down one worry you can entrust to God today.",
     relatedFaithPath: "/start/guidance",
-    readingGroup: "prayer",
+    readingGroup: "wisdom",
     translation: "King James Version",
     sourceNote: kjvSourceNote,
     verses: kjvReadingVerses["matthew-6"],
@@ -292,7 +296,7 @@ export const availableBibleChapters = [
     smallNextStep:
       "Write one concern and one gratitude side by side, then pray over both honestly.",
     relatedFaithPath: "/start/peace",
-    readingGroup: "prayer",
+    readingGroup: "peace",
     translation: "King James Version",
     sourceNote: kjvSourceNote,
     verses: kjvReadingVerses["philippians-4"],
@@ -321,6 +325,270 @@ export const availableBibleChapters = [
     sourceNote: kjvSourceNote,
     verses: kjvReadingVerses["isaiah-40"],
   },
+  {
+    id: "luke-15",
+    bookSlug: "luke",
+    book: "Luke",
+    chapter: 15,
+    title: "Grace, Repentance, and Returning Home",
+    description: "Jesus' parables of the lost sheep, lost coin, and returning son.",
+    theme: "Grace, repentance, returning to God",
+    whyRead:
+      "Read Luke 15 when you need a tender picture of God's mercy and the courage to return honestly.",
+    contextIntro:
+      "Luke 15 gathers three parables about what is lost and found. Read it as an invitation toward grace, repentance, and the joy of return, not as pressure to hide what is true.",
+    reflectionQuestion:
+      "Where do you need to stop hiding and begin returning toward mercy, truth, or repair?",
+    prayerStarter:
+      "Father, meet me with mercy. Help me return honestly, receive grace, and take the next truthful step.",
+    smallNextStep:
+      "Name one area where return, confession, repair, or renewed trust can begin in a small way.",
+    relatedFaithPath: "/start/forgiveness",
+    relatedPrayerRoute: "/prayer/forgiveness",
+    relatedPrayerLabel: "Prayer for Forgiveness",
+    readingGroup: "hope",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["luke-15"],
+  },
+  {
+    id: "john-3",
+    bookSlug: "john",
+    book: "John",
+    chapter: 3,
+    title: "New Birth, God's Love, and Faith",
+    description: "Nicodemus, new birth, light, love, and faith in the Son.",
+    theme: "New birth, God's love, and faith",
+    whyRead:
+      "Read John 3 when you want to understand grace, faith, and the invitation to come toward the light.",
+    contextIntro:
+      "John 3 begins with Nicodemus coming to Jesus by night and moves toward new birth, God's love, and light. Read slowly, letting questions become a doorway into faith.",
+    reflectionQuestion:
+      "What question, fear, or longing do you want to bring honestly into the light before God?",
+    prayerStarter:
+      "Lord Jesus, lead me toward Your light. Help me receive God's love with humility, faith, and honesty.",
+    smallNextStep:
+      "Write one honest question about faith, then bring it into prayer instead of pushing it away.",
+    relatedFaithPath: "/start/hope",
+    relatedPrayerRoute: "/prayer/hope",
+    relatedPrayerLabel: "Prayer for Hope",
+    readingGroup: "beginning",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["john-3"],
+  },
+  {
+    id: "matthew-5",
+    bookSlug: "matthew",
+    book: "Matthew",
+    chapter: 5,
+    title: "Beatitudes, Humility, and Christian Character",
+    description: "Jesus teaches blessedness, mercy, humility, peacemaking, and faithful character.",
+    theme: "Beatitudes, Christian character, humility",
+    whyRead:
+      "Read Matthew 5 when you want Christian character to become practical, humble, merciful, and peaceable.",
+    contextIntro:
+      "Matthew 5 opens the Sermon on the Mount. Jesus begins with the Beatitudes and then calls His hearers toward a deeper righteousness shaped by mercy, humility, truth, and love.",
+    reflectionQuestion:
+      "Which part of Jesus' teaching challenges the way you respond, speak, or seek peace today?",
+    prayerStarter:
+      "Lord Jesus, shape my character with mercy, humility, truth, and love. Teach me to live what I read.",
+    smallNextStep:
+      "Choose one Beatitude or one command from the chapter and practice it in one ordinary interaction.",
+    relatedFaithPath: "/start/guidance",
+    relatedPrayerRoute: "/prayer/guidance",
+    relatedPrayerLabel: "Prayer for Guidance",
+    readingGroup: "love",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["matthew-5"],
+  },
+  {
+    id: "psalms-121",
+    bookSlug: "psalms",
+    book: "Psalm",
+    chapter: 121,
+    title: "Help, Watching Care, and Trust",
+    description: "A short psalm of help, attention, and trust in the Lord's care.",
+    theme: "Help, watching care, trust without magic claims",
+    whyRead:
+      "Read Psalm 121 when you need to pray for help and care without treating faith as a guarantee or charm.",
+    contextIntro:
+      "Psalm 121 is a brief song of trust that lifts the eyes toward the Lord. Read it as prayerful confidence in God's care, while still making wise and careful choices.",
+    reflectionQuestion:
+      "Where do you need help, wisdom, and watchful care without pretending you can control every outcome?",
+    prayerStarter:
+      "Lord, my help comes from You. Watch over me with mercy and guide me toward wise, careful steps.",
+    smallNextStep:
+      "Name one wise support, boundary, or practical action that belongs with your prayer today.",
+    relatedFaithPath: "/start/protection",
+    relatedPrayerRoute: "/prayer/protection",
+    relatedPrayerLabel: "Prayer for Protection",
+    readingGroup: "protection",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-121"],
+  },
+  {
+    id: "psalms-139",
+    bookSlug: "psalms",
+    book: "Psalm",
+    chapter: 139,
+    title: "Known by God",
+    description: "Being searched, known, seen, and led by God with dignity and honesty.",
+    theme: "Being known by God, dignity, anxiety, identity",
+    whyRead:
+      "Read Psalm 139 when you need to remember that being known by God can bring dignity, honesty, and prayerful self-examination.",
+    contextIntro:
+      "Psalm 139 holds together God's nearness, deep knowledge, human dignity, and honest searching. Read it slowly, especially if anxiety or identity questions feel close.",
+    readingNote:
+      "This psalm includes intense language about enemies near the end. Read it as honest prayer brought before God, not as permission for hatred or harm.",
+    reflectionQuestion:
+      "What part of your life needs to be known by God rather than hidden, rushed, or judged by fear?",
+    prayerStarter:
+      "Lord, You know me fully. Lead me with mercy, truth, and dignity into the way everlasting.",
+    smallNextStep:
+      "Sit quietly for one minute and pray, 'Search me, O God,' while naming one honest thought.",
+    relatedFaithPath: "/start/anxiety",
+    relatedPrayerRoute: "/prayer/anxiety",
+    relatedPrayerLabel: "Prayer for Anxiety",
+    readingGroup: "identity",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-139"],
+  },
+  {
+    id: "ephesians-2",
+    bookSlug: "ephesians",
+    book: "Ephesians",
+    chapter: 2,
+    title: "Grace, Mercy, and Faith",
+    description: "Grace as gift, mercy in Christ, and a life shaped by good works.",
+    theme: "Grace, faith, mercy, not earning salvation",
+    whyRead:
+      "Read Ephesians 2 when you need to hear that grace is received as gift, not earned as achievement.",
+    contextIntro:
+      "Ephesians 2 moves from death to mercy, from separation to nearness, and from striving to grace. Read it as a grounded reminder that faith begins with God's gift.",
+    reflectionQuestion:
+      "Where are you trying to earn what can only be received with humility and faith?",
+    prayerStarter:
+      "God of mercy, help me receive grace as gift. Let good works grow from gratitude rather than fear.",
+    smallNextStep:
+      "Name one place you are striving for worth, then pray for grace to receive and respond.",
+    relatedFaithPath: "/start/hope",
+    relatedPrayerRoute: "/prayer/gratitude",
+    relatedPrayerLabel: "Prayer for Gratitude",
+    readingGroup: "hope",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["ephesians-2"],
+  },
+  {
+    id: "james-1",
+    bookSlug: "james",
+    book: "James",
+    chapter: 1,
+    title: "Trials, Wisdom, and Practical Faith",
+    description: "Patience, wisdom, listening, and becoming doers of the word.",
+    theme: "Trials, wisdom, patience, practical faith",
+    whyRead:
+      "Read James 1 when you need wisdom for pressure, patience in difficulty, and faith that becomes action.",
+    contextIntro:
+      "James 1 is practical and direct. It speaks of trials, wisdom, patience, speech, anger, and hearing the word in a way that changes life.",
+    reflectionQuestion:
+      "Where do you need wisdom, patience, or a slower response before you act or speak?",
+    prayerStarter:
+      "Lord, give me wisdom generously. Help me listen well, speak slowly, and live what I receive.",
+    smallNextStep:
+      "Before your next decision or reply, pause long enough to ask what wisdom and patience require.",
+    relatedFaithPath: "/start/guidance",
+    relatedPrayerRoute: "/prayer/guidance",
+    relatedPrayerLabel: "Prayer for Guidance",
+    readingGroup: "wisdom",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["james-1"],
+  },
+  {
+    id: "mark-4",
+    bookSlug: "mark",
+    book: "Mark",
+    chapter: 4,
+    reference: "Mark 4:35-41",
+    title: "Jesus in the Storm",
+    description: "A storm, fear, Jesus' presence, and peace in uncertainty.",
+    theme: "Storm, fear, Jesus, peace in uncertainty",
+    whyRead:
+      "Read Mark 4:35-41 when fear feels close and you need a Gospel picture of Jesus present in uncertainty.",
+    contextIntro:
+      "This short passage places the disciples in a real storm with Jesus in the boat. Read it as an invitation to bring fear to Christ, not as a promise that every storm ends quickly.",
+    reflectionQuestion:
+      "What fear do you need to name honestly before Jesus instead of carrying it alone?",
+    prayerStarter:
+      "Lord Jesus, meet me in uncertainty. Help me bring fear into Your presence and take the next faithful step.",
+    smallNextStep:
+      "Name the storm in one sentence, then choose one calm action you can take today.",
+    relatedFaithPath: "/start/peace",
+    relatedPrayerRoute: "/prayer/peace",
+    relatedPrayerLabel: "Prayer for Peace",
+    readingGroup: "protection",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["mark-4"],
+  },
+  {
+    id: "psalms-46",
+    bookSlug: "psalms",
+    book: "Psalm",
+    chapter: 46,
+    title: "Refuge, Stillness, and Trust",
+    description: "God as refuge, stillness in fear, and trust when the world feels unstable.",
+    theme: "Refuge, stillness, fear, trust",
+    whyRead:
+      "Read Psalm 46 when you need stillness, courage, and a prayer that names God as refuge without denying trouble.",
+    contextIntro:
+      "Psalm 46 speaks of trouble, shaking, refuge, and stillness. Read it as a call to turn toward God in fear, not to pretend fear is not real.",
+    reflectionQuestion:
+      "What noise, fear, or pressure needs the words, 'Be still, and know that I am God'?",
+    prayerStarter:
+      "God our refuge, quiet what is frantic in me. Help me trust You and take the next wise step.",
+    smallNextStep:
+      "Pause for two slow breaths before one task, repeating, 'Be still,' as a prayer.",
+    relatedFaithPath: "/start/peace",
+    relatedPrayerRoute: "/prayer/peace",
+    relatedPrayerLabel: "Prayer for Peace",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-46"],
+  },
+  {
+    id: "matthew-11",
+    bookSlug: "matthew",
+    book: "Matthew",
+    chapter: 11,
+    reference: "Matthew 11:28-30",
+    title: "Rest for the Weary",
+    description: "Jesus' invitation to the weary, burdened, and tired to come and receive rest.",
+    theme: "Rest, weariness, coming to Jesus",
+    whyRead:
+      "Read Matthew 11:28-30 when you feel weary and need Jesus' gentle invitation into rest.",
+    contextIntro:
+      "These three verses hold one of Jesus' most tender invitations. Read them slowly if you feel tired, burdened, or unsure how to keep carrying everything.",
+    reflectionQuestion:
+      "What burden do you need to bring to Jesus instead of carrying by force or fear?",
+    prayerStarter:
+      "Lord Jesus, I come weary and honest. Teach me Your rest, Your gentleness, and Your way.",
+    smallNextStep:
+      "Choose one burden to set down for a few minutes, and pray before picking up the next responsibility.",
+    relatedFaithPath: "/start/strength",
+    relatedPrayerRoute: "/prayer/strength",
+    relatedPrayerLabel: "Prayer for Strength",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["matthew-11"],
+  },
 ] as const satisfies readonly BibleChapter[];
 
 export type SupportedBibleChapter = {
@@ -334,6 +602,10 @@ export type SupportedBibleChapter = {
   translation: string;
   readingGroup: BibleReadingGroupKey;
 };
+
+export function getBibleChapterReference(chapter: BibleChapter) {
+  return chapter.reference ?? `${chapter.book} ${chapter.chapter}`;
+}
 
 function chapterLookupKey(bookSlug: string, chapter: number) {
   return `${bookSlug}:${chapter}`;
@@ -351,7 +623,7 @@ export const supportedBibleChapters: SupportedBibleChapter[] =
     bookSlug: chapter.bookSlug,
     book: chapter.book,
     chapter: chapter.chapter,
-    title: `${chapter.book} ${chapter.chapter}`,
+    title: getBibleChapterReference(chapter),
     href: `/bible/${chapter.bookSlug}/${chapter.chapter}`,
     description: chapter.description,
     theme: chapter.theme,

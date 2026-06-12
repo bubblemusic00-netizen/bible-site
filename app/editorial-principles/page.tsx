@@ -14,7 +14,7 @@ import {
 } from "../components/site-ui";
 
 export const metadata: Metadata = {
-  title: "Editorial Principles | Hope Bible",
+  title: "Editorial Principles",
   description:
     "How Hope Bible approaches Scripture, prayer, faith symbols, public-domain Bible text, and careful Christian faith-inspired content boundaries.",
 };
@@ -37,8 +37,8 @@ const principles = [
     body: "Christian symbols may help some people remember Scripture, prayer, or faith during ordinary moments. Objects are not charms, spiritual power sources, guarantees, or replacements for faith, obedience, community, or wise care.",
   },
   {
-    title: "Public-domain Scripture text",
-    body: "Full Scripture text in the guided Bible readings is presented from the King James Version (KJV), a public-domain Bible translation used here so guided readings can be offered openly and consistently. Shorter references or excerpts may use other properly attributed public-domain sources where noted.",
+    title: "Scripture text attribution",
+    body: "Full Scripture text in the guided Bible readings is presented from the King James Version (KJV), a Bible translation widely used in public-domain contexts in the United States so guided readings can be offered openly and consistently. Shorter references or excerpts may use other properly attributed public-domain sources where noted.",
   },
   {
     title: "Careful content boundaries",

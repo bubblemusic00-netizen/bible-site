@@ -4,7 +4,7 @@ import { BadgeInfo } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
-  title: "Disclosures | Hope Bible",
+  title: "Disclosures",
   description:
     "Disclosures for Hope Bible, including independent-resource status, future commerce boundaries, and clear faith-symbol language.",
 };

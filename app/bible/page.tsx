@@ -16,6 +16,8 @@ export const metadata: Metadata = {
 };
 
 export default function BiblePage() {
+  const readingCount = supportedBibleChapters.length;
+
   return (
     <PageShell active="bible">
       <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
@@ -23,16 +25,16 @@ export default function BiblePage() {
           icon={BookOpenText}
           eyebrow="Guided Bible readings"
           title="Guided Bible Readings"
-          subtitle="A small finished library of Scripture readings with context, reflection, prayer, and a simple next step."
+          subtitle="A focused library of finished Scripture readings with context, reflection, prayer, and a simple next step."
         />
         <div className="rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.045)] sm:p-6">
           <p className="text-sm font-semibold uppercase text-[#9a6a24]">
             A focused reading library
           </p>
           <p className="mt-2 text-base leading-7 text-[#625b51]">
-            Start with 10 complete guided readings organized by theme. Each one
-            includes Scripture, context, reflection, prayer, and a simple next
-            step.
+            Start with {readingCount} complete guided readings organized by
+            theme. Each one includes Scripture, context, reflection, prayer, and
+            a simple next step.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <SecondaryButton href={supportedBibleChapters[0].href}>
@@ -51,13 +53,13 @@ export default function BiblePage() {
               Finished library
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Ten guided readings available now.
+              Twenty guided readings available now.
             </h2>
           </div>
           <p className="text-base leading-7 text-[#625b51]">
-            Every reading shown here has a real page with KJV Scripture text,
-            short context, an after-reading reflection, a prayer starter, and
-            links into prayer and the Faith Quiz.
+            Every reading shown here opens a complete page with KJV Scripture
+            text, short context, an after-reading reflection, a prayer starter,
+            and links into prayer and the Faith Quiz.
           </p>
         </div>
       </section>
@@ -66,9 +68,9 @@ export default function BiblePage() {
         <StatusNote>
           Hope Bible currently offers a focused library of finished guided
           readings rather than a full Bible database. Full Scripture text is
-          presented from the King James Version (KJV), a public-domain Bible
-          translation used here so guided readings can be offered openly and
-          consistently.
+          presented from the King James Version (KJV), a Bible translation
+          widely used in public-domain contexts in the United States so guided
+          readings can be offered openly and consistently.
         </StatusNote>
       </div>
 
@@ -88,8 +90,8 @@ export default function BiblePage() {
                 </h2>
               </div>
               <p className="text-sm leading-6 text-[#625b51]">
-                Choose a finished reading below. No unfinished books or
-                unsupported chapters are listed.
+                Choose a finished reading below. Every link opens a polished
+                reading page with Scripture, reflection, and prayer guidance.
               </p>
             </div>
 
