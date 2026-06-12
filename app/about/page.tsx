@@ -9,19 +9,19 @@ import {
 } from "../components/site-ui";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About | Hope Bible",
   description:
-    "Learn about Hope Bible, an independent Christian faith-inspired platform for Bible wisdom, prayer, reflection, and meaningful Christian symbols.",
+    "Learn about Hope Bible, an independent Christian faith-inspired platform for Bible reading, prayer, reflection, faith symbols, and careful content boundaries.",
 };
 
 const principles = [
   {
     title: "Scripture with attribution",
     description:
-      "Bible text is shown with translation credit, including World English Bible attribution where WEB text appears.",
+      "Full guided readings use KJV text with clear attribution, and other Scripture sources are credited where they appear.",
   },
   {
-    title: "No fake miracle claims",
+    title: "No miracle or outcome claims",
     description:
       "Prayer and reflection are offered with humility, without promises of certain outcomes.",
   },
@@ -72,8 +72,8 @@ export default function AboutPage() {
             <p className="text-sm font-semibold uppercase text-[#9a6a24]">
               Why this exists
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
-              Built for reflection, not pressure.
+          <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+              Built for reflection, not authority.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               The Faith Path system helps a person choose a simple spiritual
@@ -82,6 +82,12 @@ export default function AboutPage() {
               respectful, and useful without pretending faith is a formula or
               replacing the care of a church, pastor, counselor, doctor, or
               trusted professional.
+            </p>
+            <p className="mt-3 text-base leading-7 text-[#625b51]">
+              Hope Bible does not claim church authority, clergy credentials,
+              or official ministry status. Its role is to organize simple
+              Scripture, prayer, reflection, and faith-symbol guidance in a way
+              that stays humble about its limits.
             </p>
           </div>
         </div>
@@ -98,7 +104,7 @@ export default function AboutPage() {
           <p className="mt-3 text-base leading-7 text-[#625b51]">
             Hope Bible is being built as a free Christian place to read the
             Bible, begin a prayer, consider a reflection, and take one grounded
-            step of faith.
+            step of faith. Free guidance remains the center of the site.
           </p>
         </article>
 
@@ -135,6 +141,30 @@ export default function AboutPage() {
             </p>
           </div>
           <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />
+        </div>
+      </section>
+
+      <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+        <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+          Read the boundaries
+        </p>
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+          Trust depends on clear limits.
+        </h2>
+        <p className="mt-3 max-w-3xl text-base leading-7 text-[#625b51]">
+          Hope Bible is content-first and independent. The pages below explain
+          how the site approaches Scripture, prayer, symbols, future commerce,
+          and support without pretending to be more than it is.
+        </p>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <SecondaryButton href="/editorial-principles">
+            Editorial Principles
+          </SecondaryButton>
+          <SecondaryButton href="/content-boundaries">
+            Content Boundaries
+          </SecondaryButton>
+          <SecondaryButton href="/contact">Contact</SecondaryButton>
+          <SecondaryButton href="/disclosures">Disclosures</SecondaryButton>
         </div>
       </section>
 

@@ -339,13 +339,21 @@ export default function JewelryPage() {
               luck, or spiritual results.
             </p>
           </div>
-          <Link
-            href="/about"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
-          >
-            Read our principles
-            <BookOpenText size={16} strokeWidth={1.8} />
-          </Link>
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+            <Link
+              href="/editorial-principles"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
+            >
+              Editorial Principles
+              <BookOpenText size={16} strokeWidth={1.8} />
+            </Link>
+            <Link
+              href="/content-boundaries"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#fff8eb]/60 px-5 py-3 text-sm font-semibold text-[#fffaf0] transition hover:bg-[#fff8eb]/10"
+            >
+              Content Boundaries
+            </Link>
+          </div>
         </div>
       </section>
 

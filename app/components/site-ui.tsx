@@ -33,6 +33,8 @@ const legalLinks = [
   { label: "Terms", href: "/terms" },
   { label: "Contact", href: "/contact" },
   { label: "Disclosures", href: "/disclosures" },
+  { label: "Editorial Principles", href: "/editorial-principles" },
+  { label: "Content Boundaries", href: "/content-boundaries" },
   { label: "Shipping", href: "/shipping" },
   { label: "Returns", href: "/returns" },
 ];

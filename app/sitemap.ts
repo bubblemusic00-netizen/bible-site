@@ -17,6 +17,8 @@ const coreRoutes = [
   { path: "/start", priority: 0.9 },
   { path: "/jewelry", priority: 0.8 },
   { path: "/about", priority: 0.7 },
+  { path: "/editorial-principles", priority: 0.64 },
+  { path: "/content-boundaries", priority: 0.64 },
   { path: "/contact", priority: 0.6 },
   { path: "/disclosures", priority: 0.6 },
   { path: "/privacy", priority: 0.5 },

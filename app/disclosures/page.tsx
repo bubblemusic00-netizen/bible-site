@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BadgeInfo } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
@@ -20,7 +21,21 @@ export default function DisclosuresPage() {
       sections={[
         {
           title: "Independent resource",
-          body: "Hope Bible is an independent Christian faith-inspired resource. It is not affiliated with an official church, ministry, denomination, Bible publisher, retail platform, or religious authority.",
+          body: (
+            <>
+              Hope Bible is an independent Christian faith-inspired resource. It
+              is not affiliated with an official church, ministry, denomination,
+              Bible publisher, retail platform, or religious authority. Read
+              the{" "}
+              <Link
+                href="/editorial-principles"
+                className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+              >
+                Editorial Principles
+              </Link>{" "}
+              for more about how content is approached.
+            </>
+          ),
         },
         {
           title: "Free content first",
@@ -28,11 +43,26 @@ export default function DisclosuresPage() {
         },
         {
           title: "Future optional shop",
-          body: "If an optional shop is added later, product pages and policies will state relevant purchase, shipping, return, support, and fulfillment details before an order is placed. Any supplier, affiliate, or third-party fulfillment relationships will be disclosed when applicable.",
+          body: "If an optional shop is added later, product pages and policies will state relevant purchase, shipping, return, support, and fulfillment details before an order is placed. Any affiliate or third-party fulfillment relationships will be disclosed when applicable.",
         },
         {
           title: "Faith reminders, not guarantees",
-          body: "Christian symbols are discussed as reminders of Scripture, prayer, and faith. They are not presented as miracle objects, protection charms, healing tools, sources of spiritual power, luck items, or promises of blessing, healing, protection, or specific outcomes.",
+          body: (
+            <>
+              Christian symbols are discussed as reminders of Scripture,
+              prayer, and faith. They are not presented as miracle objects,
+              protection charms, healing tools, sources of spiritual power, luck
+              items, or promises of blessing, healing, protection, or specific
+              outcomes. Read the{" "}
+              <Link
+                href="/content-boundaries"
+                className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+              >
+                Content Boundaries
+              </Link>{" "}
+              for the site&apos;s limits.
+            </>
+          ),
         },
       ]}
     />
