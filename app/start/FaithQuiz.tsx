@@ -136,10 +136,10 @@ export function FaithQuiz() {
   return (
     <section
       aria-labelledby="faith-quiz-title"
-      className="mt-8 overflow-hidden rounded-[1.75rem] bg-[#233f31] p-3 text-[#fffaf0] shadow-[0_30px_90px_rgba(40,71,55,0.18)] sm:p-5"
+      className="relative isolate mt-8 overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_18%_18%,rgba(239,204,139,0.18),transparent_32%),radial-gradient(circle_at_82%_16%,rgba(255,250,240,0.08),transparent_30%),linear-gradient(135deg,#17251d_0%,#203d30_48%,#121711_100%)] p-2 text-[#fffaf0] shadow-[0_34px_100px_rgba(25,45,34,0.22)] ring-1 ring-[#e9c985]/18 sm:p-4"
     >
-      <div className="grid gap-5 p-2 sm:p-3 lg:grid-cols-[0.34fr_1fr] lg:gap-7">
-        <aside className="order-2 lg:order-1 lg:py-3">
+      <div className="relative z-10 grid gap-5 p-2 sm:p-3 lg:grid-cols-[0.34fr_1fr] lg:gap-7">
+        <aside className="order-2 lg:order-1 lg:py-4">
           <p className="text-sm font-semibold uppercase text-[#e9c985]">
             Faith Quiz
           </p>
@@ -155,7 +155,7 @@ export function FaithQuiz() {
           </p>
 
           <div
-            className="mt-6 grid grid-cols-4 gap-2 lg:grid-cols-1 lg:gap-3"
+            className="mt-7 grid grid-cols-4 gap-2 border-y border-[#fff8e8]/12 py-4 lg:grid-cols-1 lg:gap-0 lg:border-y-0 lg:py-0"
             aria-label="Quiz progress"
           >
             {[
@@ -174,14 +174,14 @@ export function FaithQuiz() {
                   onClick={() => setStep(index + 1)}
                   className={
                     isActive || isComplete
-                      ? "flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#e9c985] bg-[#fffaf0] px-3 text-sm font-semibold text-[#244336] lg:justify-start lg:px-4"
-                      : "flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#fff8e8]/20 bg-[#fff8e8]/8 px-3 text-sm font-semibold text-[#fff8e8]/78 transition hover:border-[#e9c985]/70 hover:bg-[#fff8e8]/12 lg:justify-start lg:px-4"
+                      ? "flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#e9c985]/70 bg-[#fffaf0] px-3 text-sm font-semibold text-[#244336] shadow-[0_12px_26px_rgba(0,0,0,0.14)] lg:justify-start lg:rounded-none lg:border-x-0 lg:border-b lg:border-t-0 lg:bg-transparent lg:px-0 lg:text-[#fffaf0] lg:shadow-none"
+                      : "flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#fff8e8]/16 bg-[#fff8e8]/7 px-3 text-sm font-semibold text-[#fff8e8]/72 transition hover:border-[#e9c985]/60 hover:bg-[#fff8e8]/12 lg:justify-start lg:rounded-none lg:border-x-0 lg:border-b lg:border-t-0 lg:bg-transparent lg:px-0"
                   }
                 >
                   <span
                     className={
                       isActive || isComplete
-                        ? "grid size-7 shrink-0 place-items-center rounded-full bg-[#284737] text-xs text-[#fffaf0]"
+                        ? "grid size-7 shrink-0 place-items-center rounded-full bg-[#e9c985] text-xs text-[#1f392c]"
                         : "grid size-7 shrink-0 place-items-center rounded-full bg-[#fff8e8]/10 text-xs text-[#fff8e8]"
                     }
                   >
@@ -199,7 +199,13 @@ export function FaithQuiz() {
           </p>
         </aside>
 
-        <div className="order-1 min-w-0 rounded-[1.35rem] bg-[#fffaf1] p-5 text-[#241f19] shadow-[0_18px_50px_rgba(0,0,0,0.14)] sm:p-7 lg:order-2 lg:p-8">
+        <div className="order-1 min-w-0 overflow-hidden rounded-[1.65rem] bg-[#fffaf1] text-[#241f19] shadow-[0_24px_70px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60 lg:order-2">
+          <div className="border-b border-[#eadbc0] bg-[linear-gradient(135deg,#fffdf7,#f3eadb)] px-5 py-4 sm:px-7">
+            <p className="text-sm font-semibold text-[#355242]">
+              Start small. Read slowly. Pray honestly.
+            </p>
+          </div>
+          <div className="p-5 sm:p-7 lg:p-8">
           {step === 1 ? (
             <QuizStep
               eyebrow="Step 1"
@@ -288,7 +294,7 @@ export function FaithQuiz() {
                 Your Faith Path
               </p>
               <div className="mt-3 overflow-hidden rounded-[1.35rem] bg-[#f2f5ee]">
-                <div className="flex flex-col gap-4 bg-[#233f31] p-5 text-[#fffaf0] sm:flex-row sm:items-start sm:justify-between sm:p-6">
+                <div className="flex flex-col gap-4 bg-[radial-gradient(circle_at_top_right,rgba(233,201,133,0.18),transparent_42%),linear-gradient(135deg,#203d30,#182a21)] p-5 text-[#fffaf0] sm:flex-row sm:items-start sm:justify-between sm:p-6">
                   <div className="min-w-0">
                     <p className="text-sm font-semibold uppercase text-[#e9c985]">
                       {beginWith} first
@@ -316,7 +322,7 @@ export function FaithQuiz() {
                   </div>
                 </div>
 
-                <div className="grid gap-0 p-5 sm:p-6 lg:grid-cols-2">
+                <div className="grid gap-3 p-5 sm:p-6 lg:grid-cols-2">
                   {orderedResults.map((result, index) => (
                     <ResultItem
                       key={result.key}
@@ -350,6 +356,7 @@ export function FaithQuiz() {
               </div>
             </div>
           ) : null}
+          </div>
         </div>
       </div>
     </section>
@@ -384,7 +391,9 @@ function QuizStep({
       <p className="mt-3 max-w-3xl text-base leading-7 text-[#625b51]">
         {description}
       </p>
-      <div className="mt-6 border-y border-[#dfcfb2]">{children}</div>
+      <div className="mt-6 border-y border-[#dfcfb2]/86 bg-[#fffdf7]/46">
+        {children}
+      </div>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         {onBack ? (
           <button
@@ -428,7 +437,7 @@ function ChoiceButton({
       aria-pressed={selected}
       className={
         selected
-          ? "min-h-32 border-y border-[#244336] bg-[#eef1e8] p-4 text-left shadow-[0_14px_34px_rgba(40,71,55,0.08)]"
+          ? "min-h-32 border-y border-[#244336] bg-[#eef1e8] p-4 text-left shadow-[inset_4px_0_0_#244336,0_14px_34px_rgba(40,71,55,0.08)]"
           : "min-h-32 border-y border-transparent p-4 text-left transition hover:bg-[#fffdf7]"
       }
     >
@@ -478,8 +487,8 @@ function ResultItem({
     <div
       className={
         primary
-          ? "border-b border-[#c49c52] bg-[#fffaf1] p-4 shadow-[0_14px_34px_rgba(71,55,35,0.055)] lg:col-span-2"
-          : "border-b border-[#d8ddcf] p-4"
+          ? "border border-[#d7b56d] bg-[#fffaf1] p-4 shadow-[0_14px_34px_rgba(71,55,35,0.06)] lg:col-span-2"
+          : "border border-[#d8ddcf] bg-[#fffdf7]/68 p-4"
       }
     >
       <h4 className="text-sm font-semibold uppercase text-[#9a6a24]">

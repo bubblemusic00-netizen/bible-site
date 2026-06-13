@@ -47,10 +47,10 @@ const legalLinks = [
 
 export function SiteHeader({ active }: { active?: NavKey }) {
   return (
-    <header className="sticky top-0 z-50 border-b border-[#eadfcb]/70 bg-[#fbf7ed]/86 backdrop-blur-2xl">
-      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-8">
+    <header className="sticky top-0 z-50 border-b border-[#eadfcb]/70 bg-[#fbf7ed]/88 shadow-[0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-2xl">
+      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Hope Bible home">
-          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#203d30] text-[#fff8e8] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_10px_26px_rgba(32,70,54,0.16)]">
+          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#203d30] text-[#fff8e8] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_12px_28px_rgba(32,70,54,0.18)]">
             <Cross size={18} strokeWidth={1.75} />
           </span>
           <span className="truncate font-serif text-xl font-semibold tracking-[0.01em] text-[#24362c]">
@@ -65,7 +65,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
               href={item.href}
               className={
                 active === item.key
-                  ? "rounded-full bg-[#efe5d3] px-3.5 py-2 text-[#254737] shadow-[inset_0_0_0_1px_rgba(154,106,36,0.08)]"
+                  ? "rounded-full bg-[#203d30] px-3.5 py-2 text-[#fffaf0] shadow-[0_10px_24px_rgba(32,61,48,0.14)]"
                   : "rounded-full px-3.5 py-2 transition hover:bg-[#f3eadb]/72 hover:text-[#254737]"
               }
             >
@@ -88,11 +88,11 @@ export function PageShell({
   children: ReactNode;
 }) {
   return (
-    <main className="flex min-h-screen w-full flex-col bg-[#fbf7ed] text-[#27231d]">
+    <main className="flex min-h-screen w-full flex-col bg-[radial-gradient(circle_at_16%_10%,rgba(226,190,120,0.16),transparent_34%),radial-gradient(circle_at_84%_16%,rgba(51,91,68,0.08),transparent_32%),linear-gradient(135deg,rgba(255,252,244,0.96),rgba(246,238,222,0.92))] text-[#27231d]">
       <SiteHeader active={active} />
       <section
         data-page-shell
-        className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 px-4 py-9 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-72 before:bg-[radial-gradient(ellipse_at_top_left,rgba(192,143,62,0.10),transparent_62%)] sm:px-8 sm:before:inset-x-8 lg:py-12"
+        className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 px-4 py-9 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-80 before:bg-[radial-gradient(ellipse_at_top_left,rgba(192,143,62,0.12),transparent_64%)] sm:px-8 sm:before:inset-x-8 lg:py-12"
       >
         <div className="relative w-full min-w-0">{children}</div>
       </section>

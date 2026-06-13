@@ -19,7 +19,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import {
-  PageIntro,
   PageShell,
   SecondaryButton,
   StatusNote,
@@ -68,19 +67,32 @@ export default function JewelryPage() {
 
   return (
     <PageShell active="jewelry">
-      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
-        <PageIntro
-          icon={Gem}
-          eyebrow="Faith Symbols"
-          title="Christian Faith Symbols and Daily Reminders"
-          subtitle="A focused library of Christian symbols explained as reminders of Scripture, prayer, faith, humility, hope, and gratitude."
-        />
-        <StatusNote>
-          Symbols can help some people remember what they are praying through
-          in ordinary moments. They are not charms, guarantees, or sources of
-          spiritual power.
-        </StatusNote>
-      </div>
+      <section className="relative isolate overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_18%_18%,rgba(239,204,139,0.18),transparent_32%),radial-gradient(circle_at_82%_16%,rgba(255,250,240,0.08),transparent_30%),linear-gradient(135deg,#17251d_0%,#203d30_48%,#121711_100%)] px-5 py-8 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.2)] sm:px-8 sm:py-10 lg:px-10">
+        <div className="relative z-10 grid gap-8 lg:grid-cols-[0.68fr_0.32fr] lg:items-end">
+          <div className="max-w-4xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-[#e9c985]/45 bg-[#fffaf0]/8 px-4 py-2 text-sm font-semibold text-[#f3dfb6] backdrop-blur-md">
+              <Gem size={16} strokeWidth={1.8} />
+              Faith Symbols
+            </p>
+            <h1 className="mt-5 max-w-4xl font-serif text-4xl font-semibold leading-[1.02] text-[#fffaf0] sm:text-6xl">
+              Christian symbols for remembering what matters.
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#f1eadf]/82 sm:text-lg sm:leading-8">
+              Explore symbols as gentle reminders of Scripture, prayer, faith,
+              humility, hope, and gratitude in ordinary moments.
+            </p>
+          </div>
+          <div className="border-l border-[#e9c985]/45 pl-5">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#e9c985]">
+              Boundary
+            </p>
+            <p className="mt-3 text-sm font-semibold leading-6 text-[#fff8e8]/82">
+              Symbols can remind. They do not guarantee outcomes, carry
+              spiritual power, or replace Scripture, prayer, wisdom, or care.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="mt-9 border-y border-[#dfcfb2] py-8 sm:py-10">
         <div className="grid gap-7 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
@@ -116,22 +128,22 @@ export default function JewelryPage() {
       </section>
 
       <section className="mt-10">
-        <div className="grid gap-7 lg:grid-cols-[0.34fr_1fr]">
+        <div className="grid gap-8 lg:grid-cols-[0.36fr_1fr]">
           <div>
             <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-              Featured reminders
+              Symbols people recognize
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Four symbols to begin with.
+              Begin with four quiet reminders.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
-              These common symbols show how a reminder can connect back to
-              Scripture, prayer, and the Faith Quiz without becoming a promise
-              or a product.
+              These common symbols show the shape of this library: meaning
+              first, Scripture close by, and clear boundaries around what an
+              object can and cannot mean.
             </p>
           </div>
 
-          <div className="grid gap-0 border-y border-[#dfcfb2] md:grid-cols-2">
+          <div className="space-y-0 border-y border-[#dfcfb2]">
             {featuredSymbols.map((symbol) =>
               symbol ? <FeaturedSymbol key={symbol.slug} symbol={symbol} /> : null,
             )}
@@ -156,11 +168,11 @@ export default function JewelryPage() {
           </p>
         </div>
 
-        <div className="mt-7 space-y-7">
+        <div className="mt-7 overflow-hidden rounded-[1.5rem] border border-[#dfcfb2] bg-[#fffaf1]/58">
           {groupedSymbols.map((group) => (
             <section
               key={group.key}
-              className="grid gap-4 border-t border-[#dfcfb2] pt-6 lg:grid-cols-[0.32fr_1fr]"
+              className="grid gap-4 border-b border-[#dfcfb2] px-4 py-5 last:border-b-0 sm:px-6 lg:grid-cols-[0.32fr_1fr]"
             >
               <div>
                 <h3 className="font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-3xl">
@@ -262,20 +274,22 @@ function FeaturedSymbol({ symbol }: { symbol: FaithSymbol }) {
   return (
     <Link
       href={`/jewelry/symbols/${symbol.slug}`}
-      className="group min-w-0 border-b border-[#dfcfb2] py-5 transition hover:bg-[#fffaf1]/70 md:border-r md:px-5 md:odd:pl-0 md:even:border-r-0 lg:first:pl-0 lg:last:pr-0"
+      className="group grid min-w-0 gap-4 border-b border-[#dfcfb2] py-5 transition hover:bg-[#fffaf1]/62 sm:grid-cols-[auto_1fr_auto] sm:items-center"
     >
       <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
         <Icon size={20} strokeWidth={1.8} />
       </span>
-      <h3 className="mt-4 break-words font-serif text-3xl font-semibold leading-tight text-[#241f19]">
-        {symbol.name}
-      </h3>
-      <p className="mt-3 break-words text-sm leading-6 text-[#625b51]">
-        {symbol.reminder}
-      </p>
-      <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#254737]">
+      <span className="min-w-0">
+        <span className="block break-words font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+          {symbol.name}
+        </span>
+        <span className="mt-2 block break-words text-sm leading-6 text-[#625b51]">
+          {symbol.reminder}
+        </span>
+      </span>
+      <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#254737]">
         Read meaning <ArrowRight size={15} strokeWidth={1.8} />
-      </p>
+      </span>
     </Link>
   );
 }
