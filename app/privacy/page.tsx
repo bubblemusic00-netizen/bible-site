@@ -32,7 +32,7 @@ export default function PrivacyPage() {
         },
         {
           title: "Future commerce privacy",
-          body: "If a Shopify-powered shop or other commerce provider is added later, checkout, payment, shipping, and customer-support information may be handled by Shopify or relevant payment and commerce providers. Privacy details will be updated before any public shop goes live.",
+          body: "If a separate optional commerce provider is added later, payment, shipping, and customer-support information may be handled by that provider or relevant payment services. Privacy details will be updated before any public shop goes live.",
         },
       ]}
     />

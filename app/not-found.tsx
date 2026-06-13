@@ -20,8 +20,7 @@ export default function NotFound() {
       <div className="mt-8 max-w-3xl">
         <StatusNote>
           Hope Bible is focused on free Scripture, prayer, reflection, and
-          faith-symbol education. No purchases, accounts, or checkout are
-          available here.
+          faith-symbol education. No purchases or accounts are available here.
         </StatusNote>
       </div>
 

@@ -136,25 +136,28 @@ export function FaithQuiz() {
   return (
     <section
       aria-labelledby="faith-quiz-title"
-      className="mt-9 overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1] shadow-[0_26px_72px_rgba(71,55,35,0.08)]"
+      className="mt-8 overflow-hidden rounded-[1.75rem] bg-[#233f31] p-3 text-[#fffaf0] shadow-[0_30px_90px_rgba(40,71,55,0.18)] sm:p-5"
     >
-      <div className="grid gap-0 lg:grid-cols-[0.88fr_1.12fr]">
-        <aside className="order-2 border-t border-[#dfcfb2] bg-[#f2f5ee] p-5 sm:p-7 lg:order-1 lg:border-r lg:border-t-0">
-          <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+      <div className="grid gap-5 p-2 sm:p-3 lg:grid-cols-[0.34fr_1fr] lg:gap-7">
+        <aside className="order-2 lg:order-1 lg:py-3">
+          <p className="text-sm font-semibold uppercase text-[#e9c985]">
             Faith Quiz
           </p>
           <h2
             id="faith-quiz-title"
-            className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl"
+            className="mt-2 max-w-sm font-serif text-3xl font-semibold leading-tight sm:text-4xl"
           >
-            Three questions, one guided path.
+            A quiet path, shaped by three answers.
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
-            Your answers shape a simple result with Scripture, prayer,
-            reflection, and an optional reminder.
+          <p className="mt-3 max-w-sm text-sm leading-6 text-[#fff8e8]/78 sm:text-base sm:leading-7">
+            Choose what you need, where to begin, and what you are carrying.
+            The result opens Scripture, prayer, and reflection.
           </p>
 
-          <div className="mt-6 grid gap-3" aria-label="Quiz progress">
+          <div
+            className="mt-6 grid grid-cols-4 gap-2 lg:grid-cols-1 lg:gap-3"
+            aria-label="Quiz progress"
+          >
             {[
               ["1", "Need"],
               ["2", "Begin"],
@@ -171,26 +174,32 @@ export function FaithQuiz() {
                   onClick={() => setStep(index + 1)}
                   className={
                     isActive || isComplete
-                      ? "flex min-h-12 items-center gap-3 rounded-full border border-[#c49c52] bg-[#fffaf0] px-4 text-left text-sm font-semibold text-[#244336]"
-                      : "flex min-h-12 items-center gap-3 rounded-full border border-[#d8ddcf] bg-[#fbf7ed] px-4 text-left text-sm font-semibold text-[#625b51] transition hover:border-[#c49c52]"
+                      ? "flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#e9c985] bg-[#fffaf0] px-3 text-sm font-semibold text-[#244336] lg:justify-start lg:px-4"
+                      : "flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#fff8e8]/20 bg-[#fff8e8]/8 px-3 text-sm font-semibold text-[#fff8e8]/78 transition hover:border-[#e9c985]/70 hover:bg-[#fff8e8]/12 lg:justify-start lg:px-4"
                   }
                 >
-                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#284737] text-xs text-[#fffaf0]">
+                  <span
+                    className={
+                      isActive || isComplete
+                        ? "grid size-7 shrink-0 place-items-center rounded-full bg-[#284737] text-xs text-[#fffaf0]"
+                        : "grid size-7 shrink-0 place-items-center rounded-full bg-[#fff8e8]/10 text-xs text-[#fff8e8]"
+                    }
+                  >
                     {isComplete ? <Check size={15} strokeWidth={2} /> : number}
                   </span>
-                  {label}
+                  <span className="hidden sm:inline lg:inline">{label}</span>
                 </button>
               );
             })}
           </div>
 
-          <p className="mt-6 rounded-lg border border-[#d8ddcf] bg-[#fbf7ed] p-4 text-sm font-semibold leading-6 text-[#2f5140]">
+          <p className="mt-6 border-l border-[#e9c985]/55 pl-4 text-sm font-semibold leading-6 text-[#fff8e8]/82">
             No login, email, or personal details are needed. Your answers stay
             in this page as simple quiz state.
           </p>
         </aside>
 
-        <div className="order-1 min-w-0 p-5 sm:p-7 lg:order-2">
+        <div className="order-1 min-w-0 rounded-[1.35rem] bg-[#fffaf1] p-5 text-[#241f19] shadow-[0_18px_50px_rgba(0,0,0,0.14)] sm:p-7 lg:order-2 lg:p-8">
           {step === 1 ? (
             <QuizStep
               eyebrow="Step 1"
@@ -278,25 +287,25 @@ export function FaithQuiz() {
               <p className="text-sm font-semibold uppercase text-[#9a6a24]">
                 Your Faith Path
               </p>
-              <div className="mt-3 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-5 sm:p-6">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div className="mt-3 overflow-hidden rounded-[1.35rem] bg-[#f2f5ee]">
+                <div className="flex flex-col gap-4 bg-[#233f31] p-5 text-[#fffaf0] sm:flex-row sm:items-start sm:justify-between sm:p-6">
                   <div className="min-w-0">
-                    <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+                    <p className="text-sm font-semibold uppercase text-[#e9c985]">
                       {beginWith} first
                     </p>
-                    <h3 className="mt-2 font-serif text-4xl font-semibold leading-tight text-[#241f19]">
+                    <h3 className="mt-2 font-serif text-4xl font-semibold leading-tight">
                       {path.title} Faith Path
                     </h3>
-                    <p className="mt-3 text-base leading-7 text-[#625b51]">
+                    <p className="mt-3 text-base leading-7 text-[#fff8e8]/82">
                       {beginLabel} {concernGuidance[carrying]}
                     </p>
                   </div>
-                  <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#284737] text-[#fffaf0]">
+                  <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#fff8e8]/12 text-[#fffaf0]">
                     <Icon size={22} strokeWidth={1.8} />
                   </span>
                 </div>
 
-                <div className="mt-5 rounded-lg border border-[#d8ddcf] bg-[#fffaf1] p-4">
+                <div className="border-b border-[#d8ddcf] bg-[#fffaf1] p-5 sm:p-6">
                   <p className="text-sm font-semibold uppercase text-[#9a6a24]">
                     You chose
                   </p>
@@ -307,7 +316,7 @@ export function FaithQuiz() {
                   </div>
                 </div>
 
-                <div className="mt-6 grid gap-3 lg:grid-cols-2">
+                <div className="grid gap-0 p-5 sm:p-6 lg:grid-cols-2">
                   {orderedResults.map((result, index) => (
                     <ResultItem
                       key={result.key}
@@ -322,7 +331,7 @@ export function FaithQuiz() {
                   />
                 </div>
 
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <div className="flex flex-col gap-3 border-t border-[#d8ddcf] bg-[#fffaf1] p-5 sm:flex-row sm:flex-wrap sm:p-6">
                   <Link
                     href={path.startRoute}
                     className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition hover:bg-[#1f392c]"
@@ -375,7 +384,7 @@ function QuizStep({
       <p className="mt-3 max-w-3xl text-base leading-7 text-[#625b51]">
         {description}
       </p>
-      <div className="mt-6">{children}</div>
+      <div className="mt-6 border-y border-[#dfcfb2]">{children}</div>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         {onBack ? (
           <button
@@ -419,8 +428,8 @@ function ChoiceButton({
       aria-pressed={selected}
       className={
         selected
-          ? "min-h-40 rounded-lg border border-[#244336] bg-[#eef1e8] p-4 text-left shadow-[0_14px_34px_rgba(40,71,55,0.1)]"
-          : "min-h-40 rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] p-4 text-left transition hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7]"
+          ? "min-h-32 border-y border-[#244336] bg-[#eef1e8] p-4 text-left shadow-[0_14px_34px_rgba(40,71,55,0.08)]"
+          : "min-h-32 border-y border-transparent p-4 text-left transition hover:bg-[#fffdf7]"
       }
     >
       <span className="flex items-start justify-between gap-3">
@@ -469,8 +478,8 @@ function ResultItem({
     <div
       className={
         primary
-          ? "rounded-lg border border-[#c49c52] bg-[#fffaf1] p-4 shadow-[0_14px_34px_rgba(71,55,35,0.075)] lg:col-span-2"
-          : "rounded-lg border border-[#d8ddcf] bg-[#fbf7ed] p-4"
+          ? "border-b border-[#c49c52] bg-[#fffaf1] p-4 shadow-[0_14px_34px_rgba(71,55,35,0.055)] lg:col-span-2"
+          : "border-b border-[#d8ddcf] p-4"
       }
     >
       <h4 className="text-sm font-semibold uppercase text-[#9a6a24]">

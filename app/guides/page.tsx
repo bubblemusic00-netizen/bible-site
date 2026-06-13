@@ -26,7 +26,7 @@ export default function GuidesPage() {
   const firstGuide = guides[guideKeys[0]];
 
   return (
-    <PageShell>
+    <PageShell active="guides">
       <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
         <PageIntro
           icon={Library}
@@ -34,7 +34,7 @@ export default function GuidesPage() {
           title="Beginner Christian Guides"
           subtitle="Simple, careful guides for people who want to begin with Scripture, prayer, reflection, and Christian faith basics."
         />
-        <div className="rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.045)] sm:p-6">
+        <div className="border-l border-[#d8c5a3] pl-5">
           <p className="text-sm font-semibold uppercase text-[#9a6a24]">
             Seven finished guides
           </p>
@@ -52,7 +52,7 @@ export default function GuidesPage() {
         </div>
       </div>
 
-      <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-6">
+      <section className="mt-9 border-y border-[#dfcfb2] py-6">
         <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#9a6a24]">
@@ -79,11 +79,11 @@ export default function GuidesPage() {
         </StatusNote>
       </div>
 
-      <div className="mt-8 grid gap-7">
+      <div className="mt-9 grid gap-10">
         {groupedGuides.map((group) => (
           <section
             key={group.key}
-            className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6"
+            className="border-t border-[#dfcfb2] pt-7"
           >
             <div className="grid gap-3 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
               <div>
@@ -101,34 +101,34 @@ export default function GuidesPage() {
               </p>
             </div>
 
-            <div className="mt-5 grid gap-4 lg:grid-cols-2">
+            <div className="mt-5 divide-y divide-[#e4d6bd] border-y border-[#e4d6bd]">
               {group.guides.map((guide) => (
                 <Link
                   key={guide.slug}
                   href={`/guides/${guide.slug}`}
-                  className="group flex h-full min-w-0 flex-col rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] p-5 transition hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_18px_42px_rgba(71,55,35,0.08)]"
+                  className="group grid min-w-0 gap-3 py-5 transition hover:bg-[#fffaf1]/72 sm:grid-cols-[auto_1fr_auto] sm:items-start sm:px-3"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-                      <Compass size={19} strokeWidth={1.8} />
+                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+                    <Compass size={18} strokeWidth={1.8} />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-3xl">
+                      {guide.title}
                     </span>
+                    <span className="mt-1 block text-sm font-semibold leading-6 text-[#9a6a24]">
+                      {guide.audience}
+                    </span>
+                    <span className="mt-2 block text-base leading-7 text-[#625b51]">
+                      {guide.description}
+                    </span>
+                  </span>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#254737] sm:justify-self-end">
+                    Open
                     <ArrowRight
-                      size={17}
-                      className="mt-1 shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+                      size={15}
+                      className="transition group-hover:translate-x-1"
                     />
-                  </div>
-                  <h3 className="mt-5 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
-                    {guide.title}
-                  </h3>
-                  <p className="mt-2 text-sm font-semibold leading-6 text-[#9a6a24]">
-                    {guide.audience}
-                  </p>
-                  <p className="mt-3 text-base leading-7 text-[#625b51]">
-                    {guide.description}
-                  </p>
-                  <p className="mt-5 text-sm font-semibold text-[#254737]">
-                    Open guide
-                  </p>
+                  </span>
                 </Link>
               ))}
             </div>

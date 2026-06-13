@@ -73,21 +73,21 @@ export default function AboutPage() {
               Why this exists
             </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
-              Built for reflection, not authority.
+              Built from a need for hope, not authority.
             </h2>
+            <p className="mt-3 text-base leading-7 text-[#625b51]">
+              Hope Bible was shaped by a personal awareness that people often
+              look toward faith, prayer, and hope during painful seasons. The
+              goal is not to exploit that need, but to offer a respectful,
+              free place to begin with Scripture, prayer, and reflection.
+            </p>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               The Faith Path system helps a person choose a simple spiritual
               direction, then continue through prayer, Scripture, reflection,
-              and an optional symbolic reminder. It is meant to feel calm,
-              respectful, and useful without pretending faith is a formula or
-              replacing the care of a church, pastor, counselor, doctor, or
-              trusted professional.
-            </p>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
-              Hope Bible does not claim church authority, clergy credentials,
-              or official ministry status. Its role is to organize simple
-              Scripture, prayer, reflection, and faith-symbol guidance in a way
-              that stays humble about its limits.
+              and an optional symbolic reminder. Hope Bible does not claim
+              church authority, clergy credentials, or official ministry status.
+              Its role is to organize guidance in a way that stays humble about
+              its limits.
             </p>
           </div>
         </div>
