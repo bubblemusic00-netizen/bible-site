@@ -22,7 +22,13 @@ export type PrayerSlug =
   | "surgery"
   | "marriage"
   | "children"
-  | "provision";
+  | "provision"
+  | "job-interview"
+  | "addiction-recovery"
+  | "prodigal-child"
+  | "new-baby"
+  | "exams"
+  | "safe-travel";
 
 export type PrayerGroupKey =
   | "day"
@@ -912,6 +918,210 @@ export const prayerPaths = {
     symbolReminder:
       "A faith reminder can prompt prayer and steadiness in money stress — it is not a luck charm or a promise of wealth.",
   },
+  "job-interview": {
+    slug: "job-interview",
+    title: "Prayer for a Job Interview",
+    shortTitle: "Job Interview",
+    description:
+      "A calming prayer before a job interview or important meeting — for clarity, confidence, and peace about the outcome.",
+    theme: "Work, courage, and trust",
+    group: "work",
+    relatedBible: {
+      label: "Proverbs 3",
+      href: "/bible/proverbs/3",
+      description:
+        "Proverbs 3 calls us to trust God and not lean only on our own understanding.",
+    },
+    beforeYouPray:
+      "Prepare well, then let the outcome rest. You can do your honest best and still trust God with what you cannot control.",
+    beforeHeading: "Prepare, then breathe.",
+    prayerHeading: "A prayer before an interview",
+    reflectionHeading: "Do your best, release the rest.",
+    prayer: [
+      "Lord, I am nervous, and I bring this opportunity honestly to You.",
+      "Steady my mind and calm my body. Help me to think clearly, listen well, and speak with honesty about who I am and what I can offer.",
+      "Give me favor where it is right, and peace if this door does not open. Remind me that my worth is not decided by one conversation.",
+      "Provide for what I need, and lead me to good and honest work in Your timing.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is in your control to prepare — and what do you need to release?",
+    smallNextStep:
+      "Prepare two thoughtful questions and one example to share, then rest the night before.",
+    relatedFaithQuizPath: "/start/guidance",
+    symbolReminder:
+      "A simple reminder can be a cue to pause and pray before a stressful meeting — it does not decide the outcome.",
+  },
+  "addiction-recovery": {
+    slug: "addiction-recovery",
+    title: "Prayer for Addiction and Recovery",
+    shortTitle: "Recovery",
+    description:
+      "A prayer for freedom from addiction and for the daily strength of recovery — for yourself or someone you love.",
+    theme: "Strength, honesty, and help",
+    group: "strength",
+    relatedBible: {
+      label: "Romans 8",
+      href: "/bible/romans/8",
+      description:
+        "Romans 8 speaks of no condemnation and a love nothing can separate us from.",
+    },
+    beforeYouPray:
+      "Recovery is one honest day at a time, and asking for help is strength, not weakness. Prayer goes alongside real support — counselors, groups, and people who can walk with you.",
+    beforeHeading: "Begin with honesty.",
+    prayerHeading: "A prayer for recovery",
+    reflectionHeading: "One honest day at a time.",
+    prayer: [
+      "Lord, You know the struggle I carry and how tired I am of fighting it alone.",
+      "Give me strength for today — not the whole road, just today. Where I am ashamed, meet me with grace; where I am weak, be my help.",
+      "Surround me with people who tell the truth and who will not give up on me. Give me the courage to reach for help and to keep reaching.",
+      "Free me, heal what drives the craving, and rebuild what has been broken — in me and in the people I have hurt.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is one honest step toward help you can take today?",
+    smallNextStep:
+      "Reach out to one trusted person or support resource today — a counselor, a group, a sponsor, or a friend.",
+    relatedFaithQuizPath: "/start/strength",
+    symbolReminder:
+      "A reminder carried in recovery can be a cue to pray and to call for support — it is not a cure and does not replace real help.",
+  },
+  "prodigal-child": {
+    slug: "prodigal-child",
+    title: "Prayer for a Prodigal Child",
+    shortTitle: "Prodigal Child",
+    description:
+      "A prayer for a child who has wandered — from faith, from home, or from you — held with love, hope, and wise boundaries.",
+    theme: "Hope, love, and patient trust",
+    group: "gratitude",
+    relatedBible: {
+      label: "Luke 15",
+      href: "/bible/luke/15",
+      description:
+        "Luke 15 tells of a father who watches and runs to welcome a returning child.",
+    },
+    beforeYouPray:
+      "Loving a child who has wandered is exhausting. You can keep hoping and praying while still holding wise, loving boundaries — and your love does not earn their return.",
+    beforeHeading: "Bring your child to the Father.",
+    prayerHeading: "A prayer for a prodigal child",
+    reflectionHeading: "Hope without controlling.",
+    prayer: [
+      "Lord, I bring my child to You — the one I love and ache for, the one I cannot fix.",
+      "Watch over them where I cannot reach. Protect them, soften their heart, and let mercy meet them on whatever road they are on.",
+      "Guard me from despair, from controlling, and from giving up. Help me to keep the door open with love and with wisdom.",
+      "You are the Father who runs to welcome. I trust them to You, again, today.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is the difference, right now, between loving your child and trying to control the outcome?",
+    smallNextStep:
+      "Send one message of love without pressure, and consider one wise boundary you may need to hold.",
+    relatedFaithQuizPath: "/start/hope",
+    symbolReminder:
+      "A reminder worn for a wandering child can be a cue to keep praying — it cannot bring them back; that is held in love and time.",
+  },
+  "new-baby": {
+    slug: "new-baby",
+    title: "Prayer for a New Baby",
+    shortTitle: "A New Baby",
+    description:
+      "A prayer of gratitude and protection for a new baby and for new or expecting parents.",
+    theme: "Gratitude, protection, and new life",
+    group: "gratitude",
+    relatedBible: {
+      label: "Psalm 139",
+      href: "/bible/psalms/139",
+      description:
+        "Psalm 139 marvels that we are fearfully and wonderfully made and fully known.",
+    },
+    beforeYouPray:
+      "New life brings joy and tiredness and worry all at once. Receive the gift honestly, and ask for help and rest where you need them.",
+    beforeHeading: "Receive the gift with thanks.",
+    prayerHeading: "A prayer for a new baby",
+    reflectionHeading: "Joy, with help where you need it.",
+    prayer: [
+      "Lord, thank You for this new life — fearfully and wonderfully made, and known by You already.",
+      "Watch over this little one in body and breath, and steady the parents in love, patience, and rest.",
+      "Where there is fear, give peace; where there is exhaustion, give help; where there is wonder, let gratitude grow.",
+      "Surround this family with people who will support them, and let this child be cherished and safe.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is one thing to give thanks for, and one kind of help you can ask for?",
+    smallNextStep:
+      "Offer or accept one practical help this week — a meal, an hour of rest, or a check-in.",
+    relatedFaithQuizPath: "/start/gratitude",
+    symbolReminder:
+      "A keepsake for a new baby can be a tender reminder to pray for them — it offers no protection in itself.",
+  },
+  exams: {
+    slug: "exams",
+    title: "Prayer for Exams and Studying",
+    shortTitle: "Exams",
+    description:
+      "A steadying prayer for students facing exams — for focus, calm, and doing your honest best.",
+    theme: "Wisdom, focus, and peace",
+    group: "trust",
+    relatedBible: {
+      label: "James 1",
+      href: "/bible/james/1",
+      description:
+        "James 1 says that anyone who lacks wisdom can ask God, who gives generously.",
+    },
+    beforeYouPray:
+      "Study what you can, then bring the pressure to God. A test measures one thing on one day; it does not measure your worth.",
+    beforeHeading: "Settle the mind.",
+    prayerHeading: "A prayer for exams",
+    reflectionHeading: "Honest effort, settled heart.",
+    prayer: [
+      "Lord, I ask for a clear mind and a calm heart as I study and as I sit this exam.",
+      "Help me to recall what I have learned, to think carefully, and to manage my time without panic.",
+      "Where I have not prepared enough, give me grace and a lesson for next time. Where I have done my best, give me peace with the result.",
+      "Remind me that my worth is not decided by a grade.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is one focused thing to study — and one worry to hand over?",
+    smallNextStep:
+      "Pick the single most important topic to review next, and plan one real break and a good night's sleep.",
+    relatedFaithQuizPath: "/start/guidance",
+    symbolReminder:
+      "A small reminder can be a cue to pause and breathe before a test — it does not affect the result.",
+  },
+  "safe-travel": {
+    slug: "safe-travel",
+    title: "Prayer for Safe Travel",
+    shortTitle: "Safe Travel",
+    description:
+      "A short prayer for safe travel — for a trip, a commute, or a loved one on the road.",
+    theme: "Protection, peace, and trust",
+    group: "peace",
+    relatedBible: {
+      label: "Psalm 121",
+      href: "/bible/psalms/121",
+      description:
+        "Psalm 121 says the Lord watches over your going out and your coming in.",
+    },
+    beforeYouPray:
+      "Take the practical precautions, then travel with a settled heart. You can be careful and trusting at the same time.",
+    beforeHeading: "Settle before you set out.",
+    prayerHeading: "A prayer for safe travel",
+    reflectionHeading: "Careful and trusting.",
+    prayer: [
+      "Lord, watch over this journey — my going out and my coming in.",
+      "Give me alertness and calm, and guard everyone traveling with me and around me.",
+      "Bring me safely to where I am going, and to the people waiting for me.",
+      "Where I am anxious, give me peace; where I am rushed, give me patience.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What precaution can you take, and what worry can you hand over before you go?",
+    smallNextStep:
+      "Check the practical details, then take one slow breath and begin the trip unhurried.",
+    relatedFaithQuizPath: "/start/protection",
+    symbolReminder:
+      "A travel keepsake can be a calm reminder to pray — it is not a protective charm and does not replace care on the road.",
+  },
 } as const satisfies Record<PrayerSlug, PrayerPath>;
 
 export const prayerPathKeys = Object.keys(prayerPaths) as PrayerSlug[];
@@ -926,11 +1136,26 @@ const prayerGroupOrder = {
     "healing",
     "sick-loved-one",
     "surgery",
+    "safe-travel",
   ],
-  strength: ["strength", "courage", "patience", "hope"],
-  trust: ["guidance", "wisdom", "discernment"],
-  gratitude: ["gratitude", "forgiveness", "family", "marriage", "children"],
-  work: ["work", "protection", "provision"],
+  strength: [
+    "strength",
+    "courage",
+    "patience",
+    "hope",
+    "addiction-recovery",
+  ],
+  trust: ["guidance", "wisdom", "discernment", "exams"],
+  gratitude: [
+    "gratitude",
+    "forgiveness",
+    "family",
+    "marriage",
+    "children",
+    "prodigal-child",
+    "new-baby",
+  ],
+  work: ["work", "protection", "provision", "job-interview"],
 } as const satisfies Record<PrayerGroupKey, readonly PrayerSlug[]>;
 
 export const groupedPrayerPaths = prayerGroups
