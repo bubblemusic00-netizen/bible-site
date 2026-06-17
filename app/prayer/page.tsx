@@ -34,7 +34,7 @@ export default function PrayerPage() {
           subtitle="Choose a prayer for what you are carrying today, with Scripture, reflection, and one simple next step."
         />
         <div className="border-l border-[#d8c5a3] pl-5">
-          <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+          <p className="text-sm font-semibold uppercase text-[#8f6220]">
             A focused prayer library
           </p>
           <p className="mt-2 text-base leading-7 text-[#625b51]">
@@ -56,7 +56,7 @@ export default function PrayerPage() {
       <section className="mt-9 border-y border-[#dfcfb2] py-6">
         <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#8f6220]">
               <Library size={16} strokeWidth={1.8} />
               Prayer, reflection, and Scripture
             </p>
@@ -88,7 +88,7 @@ export default function PrayerPage() {
           >
             <div className="grid gap-3 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
               <div>
-                <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+                <p className="text-sm font-semibold uppercase text-[#8f6220]">
                   {group.title}
                 </p>
                 <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
@@ -115,7 +115,7 @@ export default function PrayerPage() {
                     <span className="block font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-3xl">
                       {prayer.title}
                     </span>
-                    <span className="mt-1 block text-sm font-semibold leading-6 text-[#9a6a24]">
+                    <span className="mt-1 block text-sm font-semibold leading-6 text-[#8f6220]">
                       {prayer.theme}
                     </span>
                     <span className="mt-2 block text-base leading-7 text-[#625b51]">

@@ -132,7 +132,7 @@ export default async function SymbolPage({
             </div>
           </div>
           <div className="p-6 sm:p-8 lg:p-9">
-            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase text-[#8f6220]">
               What it can remind someone of
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -141,7 +141,7 @@ export default async function SymbolPage({
             <p className="mt-4 text-base leading-7 text-[#625b51]">
               {details.reminder}
             </p>
-            <p className="mt-4 text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="mt-4 text-sm font-semibold uppercase text-[#8f6220]">
               Scripture reference
             </p>
             <p className="mt-2 text-base leading-7 text-[#625b51]">
@@ -172,7 +172,7 @@ export default async function SymbolPage({
       <section className="mt-8 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase text-[#8f6220]">
               Boundary note
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -233,7 +233,7 @@ function RelatedPanel({
       <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
         <Icon size={20} strokeWidth={1.8} />
       </span>
-      <p className="mt-5 text-sm font-semibold uppercase text-[#9a6a24]">
+      <p className="mt-5 text-sm font-semibold uppercase text-[#8f6220]">
         {eyebrow}
       </p>
       <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
@@ -244,7 +244,7 @@ function RelatedPanel({
       </p>
       <Link
         href={link.href}
-        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#8f6220]"
       >
         Open
         <ArrowRight size={15} strokeWidth={1.8} />

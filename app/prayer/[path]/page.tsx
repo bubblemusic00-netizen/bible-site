@@ -121,7 +121,7 @@ export default async function PrayerPathPage({
           </div>
 
           <section className="relative mx-auto mt-10 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-7 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-9">
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
               Before you pray
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
@@ -134,7 +134,7 @@ export default async function PrayerPathPage({
 
           <article className="relative mx-auto mt-6 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
             <div className="border-b border-[#e2d2b6] pb-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
                 Prayer text
               </p>
               <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -172,7 +172,7 @@ export default async function PrayerPathPage({
                     <h3 className="font-serif text-2xl font-semibold text-[#241f19]">
                       Related Scripture
                     </h3>
-                    <p className="mt-1 text-sm font-semibold text-[#9a6a24]">
+                    <p className="mt-1 text-sm font-semibold text-[#8f6220]">
                       {prayer.relatedBible.label}
                     </p>
                   </div>

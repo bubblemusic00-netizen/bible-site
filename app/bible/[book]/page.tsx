@@ -51,7 +51,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
       />
 
       <section className="mt-9 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+        <p className="text-sm font-semibold uppercase text-[#8f6220]">
           Finished guided readings
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
@@ -74,7 +74,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
                 </span>
                 <ArrowRight
                   size={17}
-                  className="shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+                  className="shrink-0 text-[#8f6220] transition group-hover:translate-x-1"
                 />
               </div>
               <span className="w-fit rounded-full bg-[#284737] px-3 py-1 text-xs font-semibold text-[#fffaf0]">

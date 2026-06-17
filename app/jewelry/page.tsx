@@ -97,7 +97,7 @@ export default function JewelryPage() {
       <section className="mt-9 border-y border-[#dfcfb2] py-8 sm:py-10">
         <div className="grid gap-7 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase text-[#8f6220]">
               Start with meaning
             </p>
             <h2 className="mt-2 max-w-2xl font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -130,7 +130,7 @@ export default function JewelryPage() {
       <section className="mt-10">
         <div className="grid gap-8 lg:grid-cols-[0.36fr_1fr]">
           <div>
-            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase text-[#8f6220]">
               Symbols people recognize
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -154,7 +154,7 @@ export default function JewelryPage() {
       <section className="mt-12">
         <div className="grid gap-5 lg:grid-cols-[0.36fr_1fr] lg:items-end">
           <div>
-          <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+          <p className="text-sm font-semibold uppercase text-[#8f6220]">
             Symbol index
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -195,7 +195,7 @@ export default function JewelryPage() {
       <section className="mt-12 border-y border-[#dfcfb2] py-8 sm:py-10">
         <div className="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase text-[#8f6220]">
               Explore by Faith Path
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -220,7 +220,7 @@ export default function JewelryPage() {
                   </h3>
                   <ArrowRight
                     size={16}
-                    className="mt-1 shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+                    className="mt-1 shrink-0 text-[#8f6220] transition group-hover:translate-x-1"
                   />
                 </div>
                 <p className="mt-2 text-sm leading-6 text-[#625b51]">

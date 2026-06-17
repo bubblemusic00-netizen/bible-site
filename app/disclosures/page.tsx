@@ -29,7 +29,7 @@ export default function DisclosuresPage() {
               the{" "}
               <Link
                 href="/editorial-principles"
-                className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+                className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#8f6220]"
               >
                 Editorial Principles
               </Link>{" "}
@@ -56,7 +56,7 @@ export default function DisclosuresPage() {
               outcomes. Read the{" "}
               <Link
                 href="/content-boundaries"
-                className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+                className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#8f6220]"
               >
                 Content Boundaries
               </Link>{" "}

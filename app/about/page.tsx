@@ -69,7 +69,7 @@ export default function AboutPage() {
             <Heart size={22} strokeWidth={1.8} />
           </span>
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase text-[#8f6220]">
               Why this exists
             </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
@@ -127,7 +127,7 @@ export default function AboutPage() {
       <section className="mt-6 max-w-5xl rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+            <p className="text-sm font-semibold uppercase text-[#8f6220]">
               Support readiness
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
@@ -145,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+        <p className="text-sm font-semibold uppercase text-[#8f6220]">
           Read the boundaries
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
@@ -170,7 +170,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+        <p className="text-sm font-semibold uppercase text-[#8f6220]">
           Trust principles
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">

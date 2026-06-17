@@ -140,7 +140,7 @@ export default async function BibleChapterPage({
           <article className="relative mx-auto mt-10 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
             <div className="flex flex-col gap-4 border-b border-[#e2d2b6] pb-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
+                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
                   {reference}
                 </p>
                 <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -158,7 +158,7 @@ export default async function BibleChapterPage({
                   key={verse.number}
                   className="grid w-full min-w-0 grid-cols-[1.65rem_minmax(0,1fr)] gap-3 text-[1.08rem] leading-8 text-[#302b24] sm:grid-cols-[2.25rem_minmax(0,1fr)] sm:text-[1.22rem] sm:leading-10"
                 >
-                  <span className="pt-1 text-xs font-semibold leading-6 text-[#9a6a24]/70 sm:text-sm">
+                  <span className="pt-1 text-xs font-semibold leading-6 text-[#8f6220]/70 sm:text-sm">
                     {verse.number}
                   </span>
                   <span className="block min-w-0 whitespace-normal break-words">

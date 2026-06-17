@@ -290,7 +290,7 @@ export function FaithQuiz() {
 
           {step === 4 ? (
             <div>
-              <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+              <p className="text-sm font-semibold uppercase text-[#8f6220]">
                 Your Faith Path
               </p>
               <div className="mt-3 overflow-hidden rounded-[1.35rem] bg-[#f2f5ee]">
@@ -312,7 +312,7 @@ export function FaithQuiz() {
                 </div>
 
                 <div className="border-b border-[#d8ddcf] bg-[#fffaf1] p-5 sm:p-6">
-                  <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+                  <p className="text-sm font-semibold uppercase text-[#8f6220]">
                     You chose
                   </p>
                   <div className="mt-3 grid gap-3 sm:grid-cols-3">
@@ -382,7 +382,7 @@ function QuizStep({
 }) {
   return (
     <div>
-      <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+      <p className="text-sm font-semibold uppercase text-[#8f6220]">
         {eyebrow}
       </p>
       <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -464,7 +464,7 @@ function ChoiceButton({
 function ChosenAnswer({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
+      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
         {label}
       </p>
       <p className="mt-1 break-words text-sm font-semibold leading-6 text-[#244336]">
@@ -491,7 +491,7 @@ function ResultItem({
           : "border border-[#d8ddcf] bg-[#fffdf7]/68 p-4"
       }
     >
-      <h4 className="text-sm font-semibold uppercase text-[#9a6a24]">
+      <h4 className="text-sm font-semibold uppercase text-[#8f6220]">
         {title}
       </h4>
       <p className="mt-2 text-sm leading-6 text-[#625b51]">{body}</p>

@@ -41,7 +41,7 @@ export default function VerseOfTheDayPage() {
       />
 
       <section className="mt-9 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_20px_44px_rgba(71,55,35,0.07)] sm:p-8">
-        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
+        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
           <CalendarDays size={15} strokeWidth={1.8} />
           {today}
         </p>

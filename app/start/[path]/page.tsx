@@ -79,7 +79,7 @@ export default async function StartPathPage({
       </div>
 
       <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-6">
-        <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+        <p className="text-sm font-semibold uppercase text-[#8f6220]">
           Full Faith Quiz result
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -195,7 +195,7 @@ function PathSection({
       <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
         <Icon size={20} strokeWidth={1.8} />
       </span>
-      <p className="mt-5 text-sm font-semibold uppercase text-[#9a6a24]">
+      <p className="mt-5 text-sm font-semibold uppercase text-[#8f6220]">
         {eyebrow}
       </p>
       <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
@@ -205,7 +205,7 @@ function PathSection({
       {href && cta ? (
         <Link
           href={href}
-          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#8f6220]"
         >
           {cta}
           <ArrowRight size={15} strokeWidth={1.8} />

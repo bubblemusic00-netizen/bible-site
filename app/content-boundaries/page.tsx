@@ -73,7 +73,7 @@ export default function ContentBoundariesPage() {
 
       <section className="mt-9 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase text-[#9a6a24]">
+          <p className="text-sm font-semibold uppercase text-[#8f6220]">
             Clear limits
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
@@ -140,14 +140,14 @@ export default function ContentBoundariesPage() {
         For Scripture and prayer resources, return to{" "}
         <Link
           href="/bible"
-          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#8f6220]"
         >
           Guided Bible Readings
         </Link>{" "}
         or the{" "}
         <Link
           href="/prayer"
-          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#9a6a24]"
+          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#8f6220]"
         >
           Prayer Library
         </Link>

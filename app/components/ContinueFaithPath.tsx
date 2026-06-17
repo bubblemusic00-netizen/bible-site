@@ -86,7 +86,7 @@ export function ContinueFaithPath() {
         </span>
         <ArrowRight
           size={16}
-          className="mt-1 shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+          className="mt-1 shrink-0 text-[#8f6220] transition group-hover:translate-x-1"
         />
       </span>
       <span className="mt-3 block font-serif text-2xl font-semibold leading-tight">

@@ -129,7 +129,7 @@ export default async function GuidePage({
 
           <div className="relative mx-auto mt-10 grid w-full max-w-[920px] gap-5 lg:grid-cols-[0.74fr_1.26fr]">
             <aside className="h-fit rounded-lg border border-[#d9c59d] bg-[#fffdf8] p-5 shadow-[0_22px_70px_rgba(71,55,35,0.07)] sm:p-6 lg:sticky lg:top-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
                 In this guide
               </p>
               <ul className="mt-4 grid gap-3 text-sm font-semibold leading-6 text-[#355242]">
@@ -137,7 +137,7 @@ export default async function GuidePage({
                   <li key={section.heading}>
                     <a
                       href={`#${toSectionId(section.heading)}`}
-                      className="inline-flex min-h-9 items-center transition hover:text-[#9a6a24]"
+                      className="inline-flex min-h-9 items-center transition hover:text-[#8f6220]"
                     >
                       {section.heading}
                     </a>
@@ -146,7 +146,7 @@ export default async function GuidePage({
                 <li>
                   <a
                     href="#try-this-today"
-                    className="inline-flex min-h-9 items-center transition hover:text-[#9a6a24]"
+                    className="inline-flex min-h-9 items-center transition hover:text-[#8f6220]"
                   >
                     Try this today
                   </a>
@@ -284,7 +284,7 @@ function RelatedLinks({
               </div>
               <ArrowRight
                 size={16}
-                className="mt-1 shrink-0 text-[#9a6a24] transition group-hover:translate-x-1"
+                className="mt-1 shrink-0 text-[#8f6220] transition group-hover:translate-x-1"
                 strokeWidth={1.8}
               />
             </div>
