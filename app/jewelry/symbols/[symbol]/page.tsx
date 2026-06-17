@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import {
   BackButton,
+  Breadcrumbs,
   PageIntro,
   PageShell,
   SecondaryButton,
@@ -109,6 +110,13 @@ export default async function SymbolPage({
             description: details.meaning,
             path: `/jewelry/symbols/${symbol}`,
           }),
+        ]}
+      />
+      <Breadcrumbs
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Faith Symbols", path: "/jewelry" },
+          { name: details.name, path: `/jewelry/symbols/${symbol}` },
         ]}
       />
       <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">

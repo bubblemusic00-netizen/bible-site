@@ -14,6 +14,7 @@ import { FaithJourneyNav } from "@/app/components/FaithJourneyNav";
 import { getFaithPathBySlug } from "@/lib/faith-paths";
 import {
   BackButton,
+  Breadcrumbs,
   PageIntro,
   PageShell,
   SecondaryButton,
@@ -93,6 +94,13 @@ export default async function JewelryIntentionPage({
             description: details.intro,
             path: `/jewelry/${intention}`,
           }),
+        ]}
+      />
+      <Breadcrumbs
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Faith Symbols", path: "/jewelry" },
+          { name: details.relatedTheme, path: `/jewelry/${intention}` },
         ]}
       />
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">

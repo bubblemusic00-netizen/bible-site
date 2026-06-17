@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { redirect } from "next/navigation";
 import {
+  Breadcrumbs,
   PageShell,
   PrimaryButton,
   SecondaryButton,
@@ -77,6 +78,13 @@ export default async function PrayerPathPage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Prayer Library", path: "/prayer" },
+            { name: prayer.title, path: `/prayer/${path}` },
+          ]}
+        />
         <nav
           aria-label="Prayer navigation"
           className="flex flex-col gap-3 rounded-lg border border-[#dfcfb2] bg-[#fffaf1]/86 px-4 py-3 shadow-[0_18px_42px_rgba(71,55,35,0.06)] sm:flex-row sm:items-center sm:justify-between sm:px-5"

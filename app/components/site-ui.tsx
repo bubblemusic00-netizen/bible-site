@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
-import { ArrowLeft, ArrowRight, Cross } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronRight, Cross } from "lucide-react";
 import { MobileSiteMenu } from "./MobileSiteMenu";
 
 type NavKey =
@@ -330,6 +330,48 @@ export function BackButton({ href, label }: { href: string; label: string }) {
       <ArrowLeft size={16} />
       {label}
     </PrimaryButton>
+  );
+}
+
+export function Breadcrumbs({
+  items,
+}: {
+  items: { name: string; path: string }[];
+}) {
+  return (
+    <nav aria-label="Breadcrumb" className="mb-5 w-full min-w-0">
+      <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-[#7b6a52]">
+        {items.map((item, index) => {
+          const isLast = index === items.length - 1;
+          return (
+            <li key={item.path} className="flex items-center gap-x-1.5">
+              {isLast ? (
+                <span
+                  aria-current="page"
+                  className="font-semibold text-[#2f5140]"
+                >
+                  {item.name}
+                </span>
+              ) : (
+                <>
+                  <Link
+                    href={item.path}
+                    className="font-semibold transition hover:text-[#204636]"
+                  >
+                    {item.name}
+                  </Link>
+                  <ChevronRight
+                    size={14}
+                    strokeWidth={1.8}
+                    className="shrink-0 text-[#bba77f]"
+                  />
+                </>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
   );
 }
 

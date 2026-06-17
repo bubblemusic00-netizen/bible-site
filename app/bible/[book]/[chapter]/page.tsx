@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight, BookOpenText, Feather, Sparkles } from "lucide-react";
 import { redirect } from "next/navigation";
 import {
+  Breadcrumbs,
   PageShell,
   PrimaryButton,
   SecondaryButton,
@@ -86,6 +87,14 @@ export default async function BibleChapterPage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Guided Bible Readings", path: "/bible" },
+            { name: bookDetails.name, path: `/bible/${book}` },
+            { name: reference, path: canonicalPath },
+          ]}
+        />
         <nav
           aria-label="Reading navigation"
           className="flex flex-col gap-3 rounded-lg border border-[#dfcfb2] bg-[#fffaf1]/86 px-4 py-3 shadow-[0_18px_42px_rgba(71,55,35,0.06)] sm:flex-row sm:items-center sm:justify-between sm:px-5"
