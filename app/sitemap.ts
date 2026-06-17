@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { startFaithPathSlugs } from "@/lib/faith-paths";
+import { SITE_URL } from "@/lib/seo";
 import { supportedBibleChapters } from "./bible/bible-data";
 import { guideKeys } from "./guides/guide-data";
 import { jewelryIntentionKeys } from "./jewelry/intentions";
@@ -7,9 +8,7 @@ import { symbolKeys } from "./jewelry/symbol-data";
 import { prayerPathKeys } from "./prayer/prayer-paths";
 import { verseTopicKeys } from "./verses/verse-topics";
 
-const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-).replace(/\/$/, "");
+const siteUrl = SITE_URL;
 
 // Stamped at build time so the sitemap reflects each deploy.
 const lastModified = new Date();

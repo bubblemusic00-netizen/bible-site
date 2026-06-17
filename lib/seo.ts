@@ -7,9 +7,23 @@ export const SITE_NAME = "Hope Bible";
 export const SITE_DESCRIPTION =
   "Free Bible reading, prayer guidance, and Christian faith reflections for Scripture, prayer, and meaningful faith reminders.";
 
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-).replace(/\/$/, "");
+// Resolve the canonical base URL, in priority order:
+// 1. NEXT_PUBLIC_SITE_URL — set this once a custom domain is connected.
+// 2. VERCEL_PROJECT_PRODUCTION_URL — auto-injected by Vercel (stable prod
+//    domain, no protocol), so canonical/OG/sitemap are correct with no manual
+//    env setup.
+// 3. localhost — local development fallback.
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.replace(/\/$/, "");
+
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (vercel) return `https://${vercel.replace(/\/$/, "")}`;
+
+  return "http://localhost:3000";
+}
+
+export const SITE_URL = resolveSiteUrl();
 
 /** Build a fully qualified URL from a site-relative path. */
 export function absoluteUrl(path: string): string {

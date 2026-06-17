@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "./components/JsonLd";
-import { organizationSchema, websiteSchema } from "@/lib/seo";
+import { organizationSchema, websiteSchema, SITE_URL } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,9 +16,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Hope Bible | Free Bible Reading and Prayer Guidance",
     template: "%s | Hope Bible",
