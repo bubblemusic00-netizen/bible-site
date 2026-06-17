@@ -5,6 +5,7 @@ import { guideKeys } from "./guides/guide-data";
 import { jewelryIntentionKeys } from "./jewelry/intentions";
 import { symbolKeys } from "./jewelry/symbol-data";
 import { prayerPathKeys } from "./prayer/prayer-paths";
+import { verseTopicKeys } from "./verses/verse-topics";
 
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
@@ -18,6 +19,7 @@ const coreRoutes = [
   { path: "/bible", priority: 0.9 },
   { path: "/prayer", priority: 0.9 },
   { path: "/guides", priority: 0.84 },
+  { path: "/verses", priority: 0.84 },
   { path: "/start", priority: 0.9 },
   { path: "/jewelry", priority: 0.8 },
   { path: "/about", priority: 0.7 },
@@ -52,6 +54,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const verseRoutes = verseTopicKeys.map((slug) => ({
+    path: `/verses/${slug}`,
+    priority: 0.72,
+  }));
+
   const symbolRoutes = jewelryIntentionKeys.map((slug) => ({
     path: `/jewelry/${slug}`,
     priority: 0.64,
@@ -67,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...bibleReadingRoutes,
     ...prayerRoutes,
     ...guideRoutes,
+    ...verseRoutes,
     ...startRoutes,
     ...symbolRoutes,
     ...symbolMeaningRoutes,

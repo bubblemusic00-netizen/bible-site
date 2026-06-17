@@ -25,6 +25,7 @@ const navItems: Array<{ key: NavKey; label: string; href: string }> = [
 const footerResourceLinks = [
   { label: "Bible", href: "/bible" },
   { label: "Prayer", href: "/prayer" },
+  { label: "Bible Verses", href: "/verses" },
   { label: "Faith Quiz", href: "/start" },
   { label: "Guides", href: "/guides" },
   { label: "Faith Symbols", href: "/jewelry" },
