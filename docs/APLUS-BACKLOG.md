@@ -34,9 +34,9 @@ Last updated: 2026-06-17.
 
 ## 2. SEO
 
-- [ ] **P1 · 🟢 Per-section OG images** — →A+. Dynamic OG with page title for Bible/prayer/guide/symbol.
-- [ ] **P1 · 🟢 Self-canonical on static pages** — partial→A+. about, legal, index pages (about/privacy/terms/contact/returns/shipping/disclosures/editorial/content-boundaries + section indexes).
-- [ ] **P1 · 🟢 FAQ schema** — →A+. Where guides/pages are Q&A-shaped → FAQPage rich snippets.
+- [x] **P1 · 🟢 Per-section OG images** — →A+. Dynamic OG with page title for Bible/prayer/guide/symbol.
+- [x] **P1 · 🟢 Self-canonical on static pages** — partial→A+. about, legal, index pages (about/privacy/terms/contact/returns/shipping/disclosures/editorial/content-boundaries + section indexes).
+- [~] **P1 · 🟢 FAQ schema** — →A+. Where guides/pages are Q&A-shaped → FAQPage rich snippets.
 - [ ] **P1 · 🟢 Internal-linking pass** — weak→A+. Spread authority: related-content blocks, contextual links, hub-and-spoke.
 - [ ] **P2 · 🟢 Sitemap per-item lastmod** — coarse→A+. Real per-content dates instead of one global date.
 - [ ] **P1 · 🟢 Content depth** — C→A+. More Bible chapters, prayers, guides (the real organic moat). Big but autonomous.
@@ -52,14 +52,14 @@ Last updated: 2026-06-17.
 
 ## 4. Design — foundations
 
-- [ ] **P0 · 🟢 Contrast / WCAG** — C+→A+. Audit low-opacity cream text (`/76 /70 /72`) over photo/gradients + gold eyebrows on cream; lift to ≥4.5:1.
+- [x] **P0 · 🟢 Contrast / WCAG** — C+→A+. Audit low-opacity cream text (`/76 /70 /72`) over photo/gradients + gold eyebrows on cream; lift to ≥4.5:1.
 - [ ] **P3 · 🟢 Spacing rhythm variation** — B+→A+. Break uniform `py-9/12` monotony with intentional tension.
 - [ ] **P2 · 🟢 Layout variety** — B→A+. Add 2nd content template; kill the one-pattern sameness (eyebrow→serif h2→body→CTA everywhere).
 - [ ] **P3 · 🟢 Visual hierarchy focal moments** — B+→A+. Give inner pages a "hero moment," not just repeated pattern.
 
 ## 5. Design — components
 
-- [ ] **P0 · 🟢 Form / input component system** — C→A+. None exists; blocks email capture + checkout. Build input/textarea/select/validation/error styling.
+- [x] **P0 · 🟢 Form / input component system** — C→A+. None exists; blocks email capture + checkout. Build input/textarea/select/validation/error styling.
 - [ ] **P2 · 🟢 Card variety** — B+→A+. More than one card treatment; reduce flat bordered-box repetition.
 - [ ] **P3 · 🟢 Button states** — A−→A+. Add disabled/loading/active variants.
 - [ ] **P2 · 🟢 Iconography distinctiveness** — B→A+. Custom/brand icons vs generic lucide-only.
@@ -74,7 +74,7 @@ Last updated: 2026-06-17.
 
 ## 7. Design — interaction & a11y
 
-- [ ] **P0 · 🟢 prefers-reduced-motion** — D→A+. No reduced-motion handling; smooth-scroll + hover translate + transitions ignore it. ~10-line WCAG 2.3.3 fix.
+- [x] **P0 · 🟢 prefers-reduced-motion** — D→A+. No reduced-motion handling; smooth-scroll + hover translate + transitions ignore it. ~10-line WCAG 2.3.3 fix.
 - [ ] **P2 · 🟢 Loading states** — none→A+. Skeletons/spinners for client interactions (quiz, future async).
 - [ ] **P2 · 🟢 Empty / error states** — →A+. Polish 404 + any empty states.
 - [ ] **P2 · 🟡 Mobile nav UX verification** — B→A+. Render-test the mobile menu interaction (needs browser).
