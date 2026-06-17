@@ -31,6 +31,7 @@ import {
 } from "./symbol-data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/jewelry" },
   title: "Christian Faith Symbols and Daily Reminders",
   description:
     "Learn about Christian symbols as daily reminders of Scripture, prayer, and faith. Symbols are reminders, not guarantees or sources of spiritual power.",

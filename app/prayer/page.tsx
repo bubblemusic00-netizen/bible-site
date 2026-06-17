@@ -16,6 +16,7 @@ import {
 import { groupedPrayerPaths, prayerPathKeys, prayerPaths } from "./prayer-paths";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/prayer" },
   title: "Prayer Library | Christian Prayers for Daily Faith",
   description:
     "Choose from a focused library of Christian prayers for daily faith, including peace, wisdom, grief, family, work, courage, and discernment.",

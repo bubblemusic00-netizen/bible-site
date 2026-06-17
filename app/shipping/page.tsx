@@ -3,6 +3,7 @@ import { PackageCheck } from "lucide-react";
 import { LegalInfoPage } from "../components/LegalInfoPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/shipping" },
   title: "Shipping Policy",
   description:
     "Shipping readiness information for Hope Bible before any optional public shop is introduced.",

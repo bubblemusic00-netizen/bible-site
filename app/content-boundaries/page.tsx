@@ -16,6 +16,7 @@ import {
 } from "../components/site-ui";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/content-boundaries" },
   title: "Content Boundaries",
   description:
     "Clear boundaries for Hope Bible content, including prayer, Scripture reflection, faith symbols, professional care, and emergency support.",

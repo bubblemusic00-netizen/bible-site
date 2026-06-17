@@ -4,6 +4,7 @@ import { PageIntro, PageShell } from "../components/site-ui";
 import { FaithQuiz } from "./FaithQuiz";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/start" },
   title: "Faith Quiz | Scripture, Prayer, and Reflection",
   description:
     "Take a simple Faith Quiz for Christian faith guidance with Scripture, prayer, reflection, and an optional faith-symbol reminder.",

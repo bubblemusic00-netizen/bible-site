@@ -9,6 +9,7 @@ import {
 } from "../components/site-ui";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About",
   description:
     "Learn about Hope Bible, an independent Christian faith-inspired platform for Bible reading, prayer, reflection, faith symbols, and careful content boundaries.",

@@ -14,6 +14,7 @@ import {
 } from "../components/site-ui";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/editorial-principles" },
   title: "Editorial Principles",
   description:
     "How Hope Bible approaches Scripture, prayer, faith symbols, public-domain Bible text, and careful Christian faith-inspired content boundaries.",

@@ -10,6 +10,7 @@ import {
 import { groupedBibleReadings, supportedBibleChapters } from "./bible-data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/bible" },
   title: "Guided Bible Readings | Scripture, Reflection, and Prayer",
   description:
     "Explore a curated library of finished KJV guided Bible readings with Scripture, context, reflection questions, prayer starters, and next steps.",

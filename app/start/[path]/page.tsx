@@ -47,6 +47,7 @@ export async function generateMetadata({
   return {
     title: `${faithPath.title} Faith Path | Scripture and Prayer`,
     description: `${faithPath.description} Begin with Scripture, prayer, reflection, and a careful next step.`,
+    alternates: { canonical: `/start/${path}` },
   };
 }
 

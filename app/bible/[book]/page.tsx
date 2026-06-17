@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpenText } from "lucide-react";
 import { redirect } from "next/navigation";
@@ -13,6 +14,25 @@ export function generateStaticParams() {
   return Array.from(
     new Set(supportedBibleChapters.map((chapter) => chapter.bookSlug)),
   ).map((book) => ({ book }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ book: string }>;
+}): Promise<Metadata> {
+  const { book } = await params;
+  const details = getBibleBook(book);
+
+  if (!details) {
+    return { title: "Bible Book" };
+  }
+
+  return {
+    title: `${details.name} Guided Bible Readings`,
+    description: details.description,
+    alternates: { canonical: `/bible/${book}` },
+  };
 }
 
 export default async function BibleBookPage({

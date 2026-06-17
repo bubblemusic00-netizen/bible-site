@@ -17,6 +17,7 @@ import {
 import { groupedGuides, guideKeys, guides } from "./guide-data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/guides" },
   title: "Beginner Christian Guides",
   description:
     "Beginner-friendly Christian guides for Scripture, prayer, faith, grace, Jesus, symbols, and using Hope Bible with care.",
