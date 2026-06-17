@@ -1,4 +1,5 @@
-import { BookOpenText, Sparkles } from "lucide-react";
+import type { Metadata } from "next";
+import { BookOpenText, CalendarDays, Sparkles } from "lucide-react";
 import {
   PageIntro,
   PageShell,
@@ -6,9 +7,30 @@ import {
   SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
-import { verseOfTheDay } from "./verse-data";
+import { getVerseOfTheDay } from "./verse-data";
+
+// Regenerate hourly so the verse advances reliably near midnight (UTC) without
+// a redeploy, while staying cached for visitors.
+export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  title: "Verse of the Day",
+  description:
+    "A new King James Version Bible verse each day, with a short reflection and a prayer to carry it into your day.",
+  alternates: {
+    canonical: "/verse-of-the-day",
+  },
+};
 
 export default function VerseOfTheDayPage() {
+  const verse = getVerseOfTheDay();
+  const today = new Date().toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+
   return (
     <PageShell active="verse">
       <PageIntro
@@ -19,14 +41,15 @@ export default function VerseOfTheDayPage() {
       />
 
       <section className="mt-9 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_20px_44px_rgba(71,55,35,0.07)] sm:p-8">
-        <p className="text-sm font-semibold uppercase text-[#9a6a24]">
-          {verseOfTheDay.reference}
+        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#9a6a24]">
+          <CalendarDays size={15} strokeWidth={1.8} />
+          {today}
         </p>
         <blockquote className="mt-4 font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-          &ldquo;{verseOfTheDay.text}&rdquo;
+          &ldquo;{verse.text}&rdquo;
         </blockquote>
         <p className="mt-5 text-sm font-semibold text-[#2f5140]">
-          {verseOfTheDay.reference} - {verseOfTheDay.translation}
+          {verse.reference} - {verse.translation}
         </p>
       </section>
 
@@ -40,13 +63,11 @@ export default function VerseOfTheDayPage() {
               A quiet reflection
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
-              Jesus offers peace as a gift before every pressure is solved.
-              Let this verse slow your thoughts and invite your heart back to
-              trust, one honest breath at a time.
+              {verse.reflection}
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <PrimaryButton href="/bible">Read the Bible</PrimaryButton>
-              <SecondaryButton href="/prayer/peace">
+              <SecondaryButton href={`/prayer/${verse.prayerSlug}`}>
                 Pray with this verse
               </SecondaryButton>
             </div>
@@ -54,12 +75,22 @@ export default function VerseOfTheDayPage() {
         </div>
       </section>
 
+      <section className="mt-6 max-w-4xl rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
+          Come back tomorrow
+        </p>
+        <p className="mt-2 text-base leading-7 text-[#625b51]">
+          A new verse is chosen each day. Make it a small daily habit: read
+          slowly, sit with the reflection, and carry one line into the hours
+          ahead.
+        </p>
+      </section>
+
       <div className="mt-6 max-w-4xl">
         <StatusNote>
-          Scripture text from the World English Bible (WEB), public domain.
+          Scripture text from the King James Version (KJV), public domain.
         </StatusNote>
       </div>
-
     </PageShell>
   );
 }
