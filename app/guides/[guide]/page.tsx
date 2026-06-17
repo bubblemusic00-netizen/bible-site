@@ -20,6 +20,8 @@ import {
   StatusNote,
 } from "../../components/site-ui";
 import { getGuide, guideKeys, type GuideLink } from "../guide-data";
+import { JsonLd } from "../../components/JsonLd";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
 export function generateStaticParams() {
   return guideKeys.map((guide) => ({ guide }));
@@ -47,6 +49,9 @@ export async function generateMetadata({
         ? "How to Use This Site"
         : guide.title,
     description: guide.description,
+    alternates: {
+      canonical: `/guides/${guideSlug}`,
+    },
   };
 }
 
@@ -64,6 +69,20 @@ export default async function GuidePage({
 
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Beginner Guides", path: "/guides" },
+            { name: guide.title, path: `/guides/${guideSlug}` },
+          ]),
+          articleSchema({
+            headline: guide.title,
+            description: guide.description,
+            path: `/guides/${guideSlug}`,
+          }),
+        ]}
+      />
       <div className="mx-auto w-full max-w-6xl">
         <nav
           aria-label="Guide navigation"

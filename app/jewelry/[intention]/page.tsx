@@ -25,6 +25,8 @@ import {
 } from "../intentions";
 import { getFaithSymbol } from "../symbol-data";
 import { getStartFaithPathBySlug } from "@/lib/faith-paths";
+import { JsonLd } from "@/app/components/JsonLd";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
 export function generateStaticParams() {
   return jewelryIntentionKeys.map((intention) => ({ intention }));
@@ -49,6 +51,9 @@ export async function generateMetadata({
   return {
     title: details.pageTitle,
     description: `${details.reminderDirection} Learn how Christian symbols can serve as reminders of Scripture and prayer, not guarantees or charms.`,
+    alternates: {
+      canonical: `/jewelry/${intention}`,
+    },
   };
 }
 
@@ -76,6 +81,20 @@ export default async function JewelryIntentionPage({
 
   return (
     <PageShell active="jewelry">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Faith Symbols", path: "/jewelry" },
+            { name: details.relatedTheme, path: `/jewelry/${intention}` },
+          ]),
+          articleSchema({
+            headline: details.pageTitle,
+            description: details.intro,
+            path: `/jewelry/${intention}`,
+          }),
+        ]}
+      />
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
         <PageIntro
           icon={Gem}

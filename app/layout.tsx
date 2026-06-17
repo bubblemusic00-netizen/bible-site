@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import { JsonLd } from "./components/JsonLd";
+import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,9 +26,6 @@ export const metadata: Metadata = {
   description:
     "Free Bible reading, prayer guidance, and Christian faith reflections for Scripture, prayer, and meaningful faith reminders.",
   applicationName: "Hope Bible",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Hope Bible | Free Bible Reading and Prayer Guidance",
     description:
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Hope Bible | Free Bible Reading and Prayer Guidance",
     description:
       "Free Bible reading, prayer guidance, and Christian faith reflections.",
@@ -60,7 +59,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
-      <body>{children}</body>
+      <body>
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        {children}
+      </body>
     </html>
   );
 }

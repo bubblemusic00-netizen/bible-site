@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
   description:
     "Take a short Faith Quiz and find Scripture, prayer, reflection, and one gentle next step for what you are carrying today.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const libraryLinks = [

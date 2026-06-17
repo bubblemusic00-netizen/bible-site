@@ -10,7 +10,8 @@ const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
 ).replace(/\/$/, "");
 
-const lastModified = new Date("2026-06-08");
+// Stamped at build time so the sitemap reflects each deploy.
+const lastModified = new Date();
 
 const coreRoutes = [
   { path: "/", priority: 1 },

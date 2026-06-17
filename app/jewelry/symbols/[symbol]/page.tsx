@@ -32,6 +32,8 @@ import {
   type FaithSymbol,
   type SymbolIconKey,
 } from "../../symbol-data";
+import { JsonLd } from "@/app/components/JsonLd";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
 const iconMap: Record<SymbolIconKey, LucideIcon> = {
   anchor: Anchor,
@@ -73,6 +75,9 @@ export async function generateMetadata({
   return {
     title: `${details.shortLabel} Symbol Meaning`,
     description: `${details.name} explained as a Christian reminder of Scripture, prayer, and faith, with clear boundaries against treating symbols as guarantees or power.`,
+    alternates: {
+      canonical: `/jewelry/symbols/${symbol}`,
+    },
   };
 }
 
@@ -92,6 +97,20 @@ export default async function SymbolPage({
 
   return (
     <PageShell active="jewelry">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Faith Symbols", path: "/jewelry" },
+            { name: details.name, path: `/jewelry/symbols/${symbol}` },
+          ]),
+          articleSchema({
+            headline: `${details.name} Symbol Meaning`,
+            description: details.meaning,
+            path: `/jewelry/symbols/${symbol}`,
+          }),
+        ]}
+      />
       <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
         <PageIntro
           icon={Icon}

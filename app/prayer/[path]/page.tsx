@@ -16,6 +16,8 @@ import {
   StatusNote,
 } from "../../components/site-ui";
 import { getPrayerPath, prayerPathKeys } from "../prayer-paths";
+import { JsonLd } from "../../components/JsonLd";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
 export function generateStaticParams() {
   return prayerPathKeys.map((path) => ({ path }));
@@ -40,6 +42,9 @@ export async function generateMetadata({
   return {
     title: prayer.title,
     description: `${prayer.description} Includes before-you-pray guidance, a full prayer, related Scripture, reflection, and a small next step.`,
+    alternates: {
+      canonical: `/prayer/${path}`,
+    },
   };
 }
 
@@ -57,6 +62,20 @@ export default async function PrayerPathPage({
 
   return (
     <PageShell active="prayer">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Prayer Library", path: "/prayer" },
+            { name: prayer.title, path: `/prayer/${path}` },
+          ]),
+          articleSchema({
+            headline: prayer.title,
+            description: prayer.description,
+            path: `/prayer/${path}`,
+          }),
+        ]}
+      />
       <div className="mx-auto w-full max-w-6xl">
         <nav
           aria-label="Prayer navigation"

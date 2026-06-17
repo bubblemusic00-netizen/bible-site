@@ -14,6 +14,8 @@ import {
   getBibleChapter,
   getBibleChapterReference,
 } from "../../bible-data";
+import { JsonLd } from "../../../components/JsonLd";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
 export function generateStaticParams() {
   return availableBibleChapterParams;
@@ -40,6 +42,9 @@ export async function generateMetadata({
   return {
     title: `${reference} Guided Bible Reading`,
     description: `${chapterData.description} Includes KJV Scripture, context, reflection, prayer, and a simple next step.`,
+    alternates: {
+      canonical: `/bible/${book}/${chapter}`,
+    },
   };
 }
 
@@ -61,9 +66,25 @@ export default async function BibleChapterPage({
   }
 
   const reference = getBibleChapterReference(chapterData);
+  const canonicalPath = `/bible/${book}/${chapter}`;
 
   return (
     <PageShell active="bible">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Guided Bible Readings", path: "/bible" },
+            { name: bookDetails.name, path: `/bible/${book}` },
+            { name: reference, path: canonicalPath },
+          ]),
+          articleSchema({
+            headline: `${reference} Guided Bible Reading`,
+            description: chapterData.description,
+            path: canonicalPath,
+          }),
+        ]}
+      />
       <div className="mx-auto w-full max-w-6xl">
         <nav
           aria-label="Reading navigation"
