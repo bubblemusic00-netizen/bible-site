@@ -64,6 +64,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
             <Link
               key={item.key}
               href={item.href}
+              aria-current={active === item.key ? "page" : undefined}
               className={
                 active === item.key
                   ? "rounded-full bg-[#203d30] px-3.5 py-2 text-[#fffaf0] shadow-[0_10px_24px_rgba(32,61,48,0.14)]"
@@ -89,7 +90,10 @@ export function PageShell({
   children: ReactNode;
 }) {
   return (
-    <main className="flex min-h-screen w-full flex-col bg-[radial-gradient(circle_at_16%_10%,rgba(226,190,120,0.16),transparent_34%),radial-gradient(circle_at_84%_16%,rgba(51,91,68,0.08),transparent_32%),linear-gradient(135deg,rgba(255,252,244,0.96),rgba(246,238,222,0.92))] text-[#27231d]">
+    <main
+      id="main-content"
+      className="flex min-h-screen w-full flex-col bg-[radial-gradient(circle_at_16%_10%,rgba(226,190,120,0.16),transparent_34%),radial-gradient(circle_at_84%_16%,rgba(51,91,68,0.08),transparent_32%),linear-gradient(135deg,rgba(255,252,244,0.96),rgba(246,238,222,0.92))] text-[#27231d]"
+    >
       <SiteHeader active={active} />
       <section
         data-page-shell

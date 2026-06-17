@@ -52,7 +52,10 @@ const quietPath = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-full flex-col bg-[#111711] text-[#fffaf0]">
+    <main
+      id="main-content"
+      className="flex min-h-screen w-full flex-col bg-[#111711] text-[#fffaf0]"
+    >
       <SiteHeader active="home" />
 
       <section className="relative isolate flex min-h-[calc(100svh-4rem)] overflow-hidden">
