@@ -8,7 +8,7 @@ import { prayerPathKeys } from "./prayer/prayer-paths";
 import { verseTopicKeys } from "./verses/verse-topics";
 
 const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 ).replace(/\/$/, "");
 
 // Stamped at build time so the sitemap reflects each deploy.
