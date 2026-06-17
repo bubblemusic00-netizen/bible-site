@@ -282,6 +282,270 @@ export const verseTopics = {
     relatedFaithPath: "peace",
     translation: "King James Version",
   },
+  love: {
+    slug: "love",
+    title: "Bible Verses About Love",
+    shortTitle: "Love",
+    description:
+      "King James Version Bible verses about love — God's love for us and how to love others — with a reflection and a prayer.",
+    intro:
+      "Scripture describes love less as a feeling and more as patient, humble action. These verses show both the love God gives and the love we are called to practice.",
+    verses: [
+      {
+        reference: "1 Corinthians 13:4-5",
+        text: "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up, doth not behave itself unseemly, seeketh not her own, is not easily provoked, thinketh no evil.",
+      },
+      {
+        reference: "John 3:16",
+        text: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+      },
+      {
+        reference: "1 John 4:19",
+        text: "We love him, because he first loved us.",
+      },
+      {
+        reference: "1 John 4:7",
+        text: "Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",
+      },
+      {
+        reference: "Romans 8:38-39",
+        text: "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      },
+      {
+        reference: "John 15:13",
+        text: "Greater love hath no man than this, that a man lay down his life for his friends.",
+      },
+      {
+        reference: "Mark 12:30-31",
+        text: "And thou shalt love the Lord thy God with all thy heart... and thy neighbour as thyself.",
+      },
+    ],
+    reflection:
+      "Love that is received first becomes love we can give. Choose one patient, humble, practical act of love today.",
+    relatedPrayerSlug: "family",
+    relatedFaithPath: "family",
+    translation: "King James Version",
+  },
+  faith: {
+    slug: "faith",
+    title: "Bible Verses About Faith",
+    shortTitle: "Faith",
+    description:
+      "King James Version Bible verses about faith and trusting God, with a short reflection and a prayer.",
+    intro:
+      "Faith is not certainty about everything; it is trust in God when sight runs out. These verses describe a faith that can start small and still hold.",
+    verses: [
+      {
+        reference: "Hebrews 11:1",
+        text: "Now faith is the substance of things hoped for, the evidence of things not seen.",
+      },
+      {
+        reference: "Hebrews 11:6",
+        text: "But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.",
+      },
+      {
+        reference: "2 Corinthians 5:7",
+        text: "For we walk by faith, not by sight.",
+      },
+      {
+        reference: "Matthew 17:20",
+        text: "If ye have faith as a grain of mustard seed, ye shall say unto this mountain, Remove hence to yonder place; and it shall remove.",
+      },
+      {
+        reference: "Mark 9:23",
+        text: "Jesus said unto him, If thou canst believe, all things are possible to him that believeth.",
+      },
+      {
+        reference: "Romans 10:17",
+        text: "So then faith cometh by hearing, and hearing by the word of God.",
+      },
+      {
+        reference: "Ephesians 2:8",
+        text: "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God.",
+      },
+    ],
+    reflection:
+      "Faith does not require feeling strong. A small, honest 'I believe; help my unbelief' is enough to take the next step.",
+    relatedPrayerSlug: "hope",
+    relatedFaithPath: "hope",
+    translation: "King James Version",
+  },
+  forgiveness: {
+    slug: "forgiveness",
+    title: "Bible Verses About Forgiveness",
+    shortTitle: "Forgiveness",
+    description:
+      "King James Version Bible verses about forgiveness — receiving grace and extending it — with a reflection and a prayer.",
+    intro:
+      "Forgiveness in Scripture flows from grace already received. These verses speak of God's mercy and the call to release others — with wisdom and safe boundaries.",
+    verses: [
+      {
+        reference: "Ephesians 4:32",
+        text: "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
+      },
+      {
+        reference: "Colossians 3:13",
+        text: "Forbearing one another, and forgiving one another, if any man have a quarrel against any: even as Christ forgave you, so also do ye.",
+      },
+      {
+        reference: "1 John 1:9",
+        text: "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+      },
+      {
+        reference: "Matthew 6:14",
+        text: "For if ye forgive men their trespasses, your heavenly Father will also forgive you.",
+      },
+      {
+        reference: "Psalm 103:12",
+        text: "As far as the east is from the west, so far hath he removed our transgressions from us.",
+      },
+      {
+        reference: "Mark 11:25",
+        text: "And when ye stand praying, forgive, if ye have ought against any: that your Father also which is in heaven may forgive you your trespasses.",
+      },
+      {
+        reference: "Micah 7:18",
+        text: "He retaineth not his anger for ever, because he delighteth in mercy.",
+      },
+    ],
+    reflection:
+      "Forgiving is not pretending nothing happened, and it does not mean staying in harm. It is releasing the debt to God while keeping wise boundaries.",
+    relatedPrayerSlug: "forgiveness",
+    relatedFaithPath: "forgiveness",
+    translation: "King James Version",
+  },
+  gratitude: {
+    slug: "gratitude",
+    title: "Bible Verses About Gratitude and Thankfulness",
+    shortTitle: "Gratitude",
+    description:
+      "King James Version Bible verses about gratitude and giving thanks, with a short reflection and a prayer.",
+    intro:
+      "Thankfulness is partly attention — noticing grace that is easy to overlook. These verses invite gratitude even within a hard season, not only after it.",
+    verses: [
+      {
+        reference: "1 Thessalonians 5:18",
+        text: "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+      },
+      {
+        reference: "Psalm 100:4",
+        text: "Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.",
+      },
+      {
+        reference: "Colossians 3:15",
+        text: "And let the peace of God rule in your hearts... and be ye thankful.",
+      },
+      {
+        reference: "Philippians 4:6",
+        text: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+      },
+      {
+        reference: "Psalm 107:1",
+        text: "O give thanks unto the LORD, for he is good: for his mercy endureth for ever.",
+      },
+      {
+        reference: "James 1:17",
+        text: "Every good gift and every perfect gift is from above, and cometh down from the Father of lights.",
+      },
+      {
+        reference: "Psalm 9:1",
+        text: "I will praise thee, O LORD, with my whole heart; I will shew forth all thy marvellous works.",
+      },
+    ],
+    reflection:
+      "Name one specific gift today — a person, a provision, a small mercy — and give thanks for it without denying what is still hard.",
+    relatedPrayerSlug: "gratitude",
+    relatedFaithPath: "gratitude",
+    translation: "King James Version",
+  },
+  trust: {
+    slug: "trust",
+    title: "Bible Verses About Trusting God",
+    shortTitle: "Trust",
+    description:
+      "King James Version Bible verses about trusting God in uncertainty, with a reflection and a prayer.",
+    intro:
+      "Trust does not erase questions; it decides where to rest them. These verses point to a God worth leaning on when the path is unclear.",
+    verses: [
+      {
+        reference: "Proverbs 3:5-6",
+        text: "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      },
+      {
+        reference: "Psalm 56:3",
+        text: "What time I am afraid, I will trust in thee.",
+      },
+      {
+        reference: "Isaiah 26:3",
+        text: "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+      },
+      {
+        reference: "Jeremiah 17:7",
+        text: "Blessed is the man that trusteth in the LORD, and whose hope the LORD is.",
+      },
+      {
+        reference: "Psalm 37:5",
+        text: "Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.",
+      },
+      {
+        reference: "Nahum 1:7",
+        text: "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+      },
+      {
+        reference: "Psalm 28:7",
+        text: "The LORD is my strength and my shield; my heart trusted in him, and I am helped.",
+      },
+    ],
+    reflection:
+      "You can be honest about fear and still choose trust. Name the worry, then commit the next step to God.",
+    relatedPrayerSlug: "guidance",
+    relatedFaithPath: "guidance",
+    translation: "King James Version",
+  },
+  finances: {
+    slug: "finances",
+    title: "Bible Verses About Money and Provision",
+    shortTitle: "Finances",
+    description:
+      "King James Version Bible verses about money, provision, and contentment, with a reflection and a prayer.",
+    intro:
+      "Scripture speaks plainly about money — provision, contentment, and trust. These verses steady the heart without promising wealth.",
+    verses: [
+      {
+        reference: "Philippians 4:19",
+        text: "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
+      },
+      {
+        reference: "Matthew 6:33",
+        text: "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+      },
+      {
+        reference: "Hebrews 13:5",
+        text: "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+      },
+      {
+        reference: "Proverbs 3:9-10",
+        text: "Honour the LORD with thy substance, and with the firstfruits of all thine increase: so shall thy barns be filled with plenty.",
+      },
+      {
+        reference: "Psalm 37:25",
+        text: "I have been young, and now am old; yet have I not seen the righteous forsaken, nor his seed begging bread.",
+      },
+      {
+        reference: "2 Corinthians 9:8",
+        text: "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work.",
+      },
+      {
+        reference: "1 Timothy 6:6",
+        text: "But godliness with contentment is great gain.",
+      },
+    ],
+    reflection:
+      "Money stress is real, and so is provision. Do the next practical thing, give thanks for what is enough, and refuse both panic and shame.",
+    relatedPrayerSlug: "provision",
+    relatedFaithPath: "hope",
+    translation: "King James Version",
+  },
 } as const satisfies Record<string, VerseTopic>;
 
 export type VerseTopicSlug = keyof typeof verseTopics;
