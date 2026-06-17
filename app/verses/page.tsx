@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { BookOpenText } from "lucide-react";
 import { CardLink, PageIntro, PageShell, StatusNote } from "../components/site-ui";
+import { JsonLd } from "../components/JsonLd";
+import { itemListSchema } from "@/lib/seo";
 import { allVerseTopics } from "./verse-topics";
 
 export const metadata: Metadata = {
@@ -13,6 +15,15 @@ export const metadata: Metadata = {
 export default function VersesPage() {
   return (
     <PageShell>
+      <JsonLd
+        data={itemListSchema(
+          "Bible Verses by Topic",
+          allVerseTopics.map((topic) => ({
+            name: topic.title,
+            path: `/verses/${topic.slug}`,
+          })),
+        )}
+      />
       <PageIntro
         icon={BookOpenText}
         eyebrow="Topical Scripture"

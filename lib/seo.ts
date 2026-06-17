@@ -130,6 +130,24 @@ export function articleSchema(input: ArticleSchemaInput): JsonLdObject {
   };
 }
 
+/** ItemList schema for index/hub pages that list child content. */
+export function itemListSchema(
+  name: string,
+  items: readonly BreadcrumbItem[],
+): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: absoluteUrl(item.path),
+    })),
+  };
+}
+
 export type FaqItem = {
   question: string;
   answer: string;
