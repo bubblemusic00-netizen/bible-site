@@ -237,15 +237,17 @@ export default function JewelryPage() {
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#e9c985]">
-              Free guidance first
+              Free first, always
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-              No physical reminder is required.
+              A reminder you can keep close.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
-              The Bible readings, prayers, guides, and Faith Quiz stand on their
-              own. A symbol can be helpful only as a humble reminder of prayer,
-              Scripture, and careful living.
+              The Bible readings, prayers, guides, and Faith Quiz are always
+              free. For many people, a small reminder kept close — a cross, a
+              verse, a symbol — gently brings the heart back to prayer in the
+              middle of an ordinary day. It points to faith; it never replaces
+              it.
             </p>
           </div>
           <Link
