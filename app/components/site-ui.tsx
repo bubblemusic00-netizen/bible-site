@@ -104,6 +104,7 @@ export function PageShell({
 
 export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
   const isDark = tone === "dark";
+  const year = new Date().getFullYear();
 
   return (
     <footer
@@ -221,6 +222,19 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
           </nav>
         ) : null}
       </div>
+      {!isDark ? (
+        <div className="border-t border-[#eadfcb]">
+          <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-sm text-[#7b6a52] sm:flex-row sm:items-center sm:justify-between sm:px-8">
+            <p>
+              © {year} Hope Bible. Free Scripture, prayer, and reflection.
+            </p>
+            <p className="font-serif italic text-[#3f4a40]">
+              &ldquo;Cast thy burden upon the LORD, and he shall sustain
+              thee.&rdquo; — Psalm 55:22
+            </p>
+          </div>
+        </div>
+      ) : null}
     </footer>
   );
 }
@@ -301,7 +315,7 @@ export function PrimaryButton({
   return (
     <Link
       href={href}
-      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full bg-[#203d30] px-5 py-3 text-center text-sm font-semibold text-[#fffaf0] shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-[#183326] hover:shadow-[0_18px_42px_rgba(40,71,55,0.22)]"
+      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full bg-[#203d30] px-5 py-3 text-center text-sm font-semibold text-[#fffaf0] shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-[#183326] hover:shadow-[0_18px_42px_rgba(40,71,55,0.22)] active:translate-y-0 active:scale-[0.98]"
     >
       {children}
     </Link>
@@ -318,7 +332,7 @@ export function SecondaryButton({
   return (
     <Link
       href={href}
-      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full border border-[#dcc8a5] bg-[#fffaf0]/82 px-5 py-3 text-center text-sm font-semibold text-[#355242] transition hover:-translate-y-0.5 hover:border-[#bd9247] hover:bg-[#fffdf7]"
+      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full border border-[#dcc8a5] bg-[#fffaf0]/82 px-5 py-3 text-center text-sm font-semibold text-[#355242] transition hover:-translate-y-0.5 hover:border-[#bd9247] hover:bg-[#fffdf7] active:translate-y-0 active:scale-[0.98]"
     >
       {children}
     </Link>
@@ -376,9 +390,23 @@ export function Breadcrumbs({
   );
 }
 
-export function StatusNote({ children }: { children: ReactNode }) {
+export function StatusNote({
+  children,
+  tone = "default",
+}: {
+  children: ReactNode;
+  tone?: "default" | "boundary" | "info";
+}) {
+  const toneStyles = {
+    default: "border-[#d8ddcf] bg-[#f2f5ee]/76 text-[#2f5140]",
+    boundary: "border-[#e3d3b0] bg-[#fbf3e3]/80 text-[#7b561b]",
+    info: "border-[#cfdce6] bg-[#eef4f8]/80 text-[#34566b]",
+  }[tone];
+
   return (
-    <p className="w-full max-w-full break-words rounded-lg border border-[#d8ddcf] bg-[#f2f5ee]/76 px-4 py-3 text-sm font-semibold leading-6 text-[#2f5140]">
+    <p
+      className={`w-full max-w-full break-words rounded-lg border px-4 py-3 text-sm font-semibold leading-6 ${toneStyles}`}
+    >
       {children}
     </p>
   );
