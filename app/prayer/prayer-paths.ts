@@ -16,7 +16,13 @@ export type PrayerSlug =
   | "work"
   | "loneliness"
   | "courage"
-  | "discernment";
+  | "discernment"
+  | "healing"
+  | "sick-loved-one"
+  | "surgery"
+  | "marriage"
+  | "children"
+  | "provision";
 
 export type PrayerGroupKey =
   | "day"
@@ -704,17 +710,227 @@ export const prayerPaths = {
     symbolReminder:
       "A symbol of discernment may remind some people to slow down, pray, and seek wisdom over time.",
   },
+  healing: {
+    slug: "healing",
+    title: "Prayer for Healing",
+    shortTitle: "Healing",
+    description:
+      "An honest prayer for healing — for the body, the heart, and the long wait — while still seeking wise care.",
+    theme: "Healing, comfort, and wise care",
+    group: "peace",
+    relatedBible: {
+      label: "Matthew 11",
+      href: "/bible/matthew/11",
+      description:
+        "Jesus invites the weary and burdened to come to Him for rest.",
+    },
+    beforeYouPray:
+      "Healing is not always quick, and praying for it is not a failure to accept reality. Bring the pain honestly, and keep seeking the care of doctors and people who can help.",
+    beforeHeading: "Bring the pain honestly.",
+    prayerHeading: "A prayer for healing",
+    reflectionHeading: "Hold hope and care together.",
+    prayer: [
+      "Lord, You see the part of me that hurts — the part I can name and the part I cannot.",
+      "I ask for healing: for my body, my mind, and my heart. Where healing comes slowly, give me patience. Where it does not come the way I hoped, give me Your nearness and a hope that does not depend on my circumstances.",
+      "Guide the wisdom and the hands of the people who care for me. Help me to receive help without shame, and to rest when I need to rest.",
+      "Hold the people I love who are also waiting and weary. Be near to the brokenhearted, and let me not carry this alone.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What do you need healing for today — and what is one form of care or support you can reach toward?",
+    smallNextStep:
+      "Name one source of help — a doctor, a friend, a support group — and take one small step toward it this week.",
+    relatedFaithQuizPath: "/start/healing",
+    symbolReminder:
+      "An anchor or dove can be a quiet reminder to keep praying and to keep seeking wise care — never a promise of a particular outcome.",
+  },
+  "sick-loved-one": {
+    slug: "sick-loved-one",
+    title: "Prayer for a Sick Loved One",
+    shortTitle: "A Sick Loved One",
+    description:
+      "A prayer for someone you love who is sick or suffering, when you feel helpless and long to help.",
+    theme: "Intercession, comfort, and trust",
+    group: "peace",
+    relatedBible: {
+      label: "Psalm 46",
+      href: "/bible/psalms/46",
+      description:
+        "Psalm 46 names God as a refuge and a very present help in trouble.",
+    },
+    beforeYouPray:
+      "Loving someone who is suffering can leave you feeling powerless. Prayer is one real thing you can do — and so is showing up with practical care.",
+    beforeHeading: "Bring the one you love before God.",
+    prayerHeading: "A prayer for a sick loved one",
+    reflectionHeading: "Pray, then show up.",
+    prayer: [
+      "Lord, I bring before You someone I love who is sick and hurting. You know their name, their pain, and their fear better than I do.",
+      "Bring healing where healing can come, and comfort and dignity in every moment. Steady the people caring for them, and give wisdom to every doctor and nurse.",
+      "Where I feel helpless, show me one practical way to love them well — a visit, a meal, a steady presence, an honest prayer.",
+      "Guard my own heart from despair. Help me to trust You with what I cannot control, and to keep showing up with patience and love.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "Who are you carrying right now — and what is one concrete way to support them this week?",
+    smallNextStep:
+      "Do one practical kindness for them or their caregivers: a message, a meal, a visit, or a shared errand.",
+    relatedFaithQuizPath: "/start/healing",
+    symbolReminder:
+      "A small reminder worn or carried can be a cue to keep praying for someone — it holds no power over their healing.",
+  },
+  surgery: {
+    slug: "surgery",
+    title: "Prayer Before Surgery",
+    shortTitle: "Before Surgery",
+    description:
+      "A steadying prayer before a surgery or medical procedure, for the patient and for the people waiting.",
+    theme: "Peace, trust, and wise care",
+    group: "peace",
+    relatedBible: {
+      label: "Psalm 91",
+      href: "/bible/psalms/91",
+      description: "Psalm 91 speaks of God as a refuge and shelter in fear.",
+    },
+    beforeYouPray:
+      "Fear before a procedure is normal. You can be honest about it and still be at peace. Trust the medical team, and bring the rest to God.",
+    beforeHeading: "Name the fear, then breathe.",
+    prayerHeading: "A prayer before surgery",
+    reflectionHeading: "Rest in care you can trust.",
+    prayer: [
+      "Lord, I am facing something that frightens me, and I bring that fear honestly to You.",
+      "Steady my heart and my breathing. Give skill, focus, and clear judgment to the surgeons, nurses, and everyone who will care for me.",
+      "Watch over my body through what I cannot control. Bring me through, and grant patience for the recovery that follows.",
+      "Comfort the people waiting and worrying for me. Let us all rest in the knowledge that we are not alone.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What fear can you name and hand over before the procedure?",
+    smallNextStep:
+      "Write down your questions for the medical team, and ask one trusted person to wait with or check on you.",
+    relatedFaithQuizPath: "/start/healing",
+    symbolReminder:
+      "A keepsake held before a procedure can be a calm reminder to pray — it is not a charm and does not change the outcome.",
+  },
+  marriage: {
+    slug: "marriage",
+    title: "Prayer for My Marriage",
+    shortTitle: "Marriage",
+    description:
+      "A prayer for your marriage — for love, patience, repair, and honest care, in good seasons and hard ones.",
+    theme: "Love, patience, and repair",
+    group: "gratitude",
+    relatedBible: {
+      label: "1 Corinthians 13",
+      href: "/bible/1-corinthians/13",
+      description:
+        "1 Corinthians 13 describes love as patient, kind, humble, and enduring.",
+    },
+    beforeYouPray:
+      "Praying for a marriage is not pretending it is perfect. Bring the gratitude and the strain honestly. Where there is harm or danger, seek safe help as well.",
+    beforeHeading: "Bring the whole marriage, honestly.",
+    prayerHeading: "A prayer for my marriage",
+    reflectionHeading: "Love in practical ways.",
+    prayer: [
+      "Lord, I bring my marriage to You — the love in it, the weariness in it, and the places that need repair.",
+      "Make me patient and kind, slow to anger and quick to listen. Where I have been proud or distant, give me the humility to own it and the courage to make it right.",
+      "Protect us from contempt and quiet resentment. Renew tenderness between us, and help us choose each other again in ordinary, practical ways.",
+      "Give us wisdom for what is hard, honesty for what is unspoken, and grace for what we cannot yet fix.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is one humble, practical act of love you can offer your spouse this week?",
+    smallNextStep:
+      "Do one small, concrete thing today: a sincere apology, an unhurried conversation, or one act of care without keeping score.",
+    relatedFaithQuizPath: "/start/family",
+    symbolReminder:
+      "A simple reminder can prompt prayer for a spouse — it does not guarantee feelings or repair, which take honest effort and sometimes outside help.",
+  },
+  children: {
+    slug: "children",
+    title: "Prayer for My Children",
+    shortTitle: "My Children",
+    description:
+      "A prayer for your children — for their safety, character, and faith, and for your own patience as a parent.",
+    theme: "Love, protection, and patient care",
+    group: "gratitude",
+    relatedBible: {
+      label: "Psalm 121",
+      href: "/bible/psalms/121",
+      description: "Psalm 121 speaks of God's watchful, unsleeping care.",
+    },
+    beforeYouPray:
+      "You cannot control everything for your children, and the weight of that is real. Bring your love and your worry to God, and parent with patience rather than fear.",
+    beforeHeading: "Lift your children by name.",
+    prayerHeading: "A prayer for my children",
+    reflectionHeading: "Love them with patience.",
+    prayer: [
+      "Lord, I lift my children to You by name. You love them even more than I do.",
+      "Watch over their bodies, their minds, and their hearts. Grow in them kindness, honesty, courage, and a faith that is truly their own.",
+      "Where I cannot be with them, be their guard and their guide. Where I fail as a parent, cover my mistakes and help me make repair.",
+      "Give me patience for the long work of raising them, wisdom for each season, and the grace to love them without trying to control them.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What does each of your children need most from you right now — presence, patience, a boundary, or grace?",
+    smallNextStep:
+      "Pray for each child by name today, and give one of them unhurried, undistracted attention.",
+    relatedFaithQuizPath: "/start/family",
+    symbolReminder:
+      "A reminder worn for a child can be a cue to pray for them — it offers no protection in itself; that rests in God and wise care.",
+  },
+  provision: {
+    slug: "provision",
+    title: "Prayer for Financial Provision",
+    shortTitle: "Provision",
+    description:
+      "An honest prayer in financial stress — for provision, wisdom, and steadiness while you do the practical work.",
+    theme: "Provision, trust, and wise work",
+    group: "work",
+    relatedBible: {
+      label: "Matthew 6",
+      href: "/bible/matthew/6",
+      description:
+        "In Matthew 6, Jesus teaches about worry, provision, and seeking first God's kingdom.",
+    },
+    beforeYouPray:
+      "Money stress is heavy and real. Prayer is not a substitute for practical steps — it is where you bring the fear so you can act with a clearer head.",
+    beforeHeading: "Name the worry plainly.",
+    prayerHeading: "A prayer for provision",
+    reflectionHeading: "Trust, then take a step.",
+    prayer: [
+      "Lord, You know exactly what I am facing and what I am afraid of. I bring my finances and my fear honestly to You.",
+      "Provide for what we truly need. Give me wisdom with what I have, clarity for hard decisions, and the humility to ask for help when I need it.",
+      "Guard me from panic and from shame. Steady me to do the next practical thing — the budget, the call, the application, the honest conversation.",
+      "Where provision comes through other people, give me gratitude; and where I can help someone else, make me generous even now.",
+      "Amen.",
+    ],
+    reflectionPrompt:
+      "What is the one next practical step you have been avoiding out of fear?",
+    smallNextStep:
+      "Take one concrete action this week: a simple budget, a payment-plan call, a job lead, or an honest conversation about money.",
+    relatedFaithQuizPath: "/start/hope",
+    symbolReminder:
+      "A faith reminder can prompt prayer and steadiness in money stress — it is not a luck charm or a promise of wealth.",
+  },
 } as const satisfies Record<PrayerSlug, PrayerPath>;
 
 export const prayerPathKeys = Object.keys(prayerPaths) as PrayerSlug[];
 
 const prayerGroupOrder = {
   day: ["morning", "before-sleep"],
-  peace: ["peace", "anxiety", "grief", "loneliness"],
+  peace: [
+    "peace",
+    "anxiety",
+    "grief",
+    "loneliness",
+    "healing",
+    "sick-loved-one",
+    "surgery",
+  ],
   strength: ["strength", "courage", "patience", "hope"],
   trust: ["guidance", "wisdom", "discernment"],
-  gratitude: ["gratitude", "forgiveness", "family"],
-  work: ["work", "protection"],
+  gratitude: ["gratitude", "forgiveness", "family", "marriage", "children"],
+  work: ["work", "protection", "provision"],
 } as const satisfies Record<PrayerGroupKey, readonly PrayerSlug[]>;
 
 export const groupedPrayerPaths = prayerGroups
