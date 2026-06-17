@@ -546,6 +546,182 @@ export const verseTopics = {
     relatedFaithPath: "hope",
     translation: "King James Version",
   },
+  baptism: {
+    slug: "baptism",
+    title: "Bible Verses for a Baptism",
+    shortTitle: "Baptism",
+    description:
+      "King James Version Bible verses for a baptism or christening — meaningful for a card, a blessing, or an engraved keepsake.",
+    intro:
+      "A baptism marks a new beginning and a family's hope. These verses suit a card, a spoken blessing, or an inscription on a keepsake gift.",
+    verses: [
+      {
+        reference: "Matthew 28:19",
+        text: "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost.",
+      },
+      {
+        reference: "Acts 2:38",
+        text: "Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost.",
+      },
+      {
+        reference: "Romans 6:4",
+        text: "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.",
+      },
+      {
+        reference: "Galatians 3:27",
+        text: "For as many of you as have been baptized into Christ have put on Christ.",
+      },
+      {
+        reference: "Mark 16:16",
+        text: "He that believeth and is baptized shall be saved.",
+      },
+      {
+        reference: "Proverbs 22:6",
+        text: "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+      },
+      {
+        reference: "Psalm 139:14",
+        text: "I will praise thee; for I am fearfully and wonderfully made.",
+      },
+    ],
+    reflection:
+      "A baptism is a beginning, not a finish line. These verses also make a meaningful inscription for a card or a small keepsake to mark the day.",
+    relatedPrayerSlug: "children",
+    relatedFaithPath: "family",
+    translation: "King James Version",
+  },
+  wedding: {
+    slug: "wedding",
+    title: "Bible Verses for a Wedding",
+    shortTitle: "Wedding",
+    description:
+      "King James Version Bible verses for a wedding — for vows, a reading, a card, or an engraved keepsake.",
+    intro:
+      "These verses about love and covenant suit a wedding reading, a vow, a card, or an inscription on a gift the couple will keep.",
+    verses: [
+      {
+        reference: "1 Corinthians 13:4",
+        text: "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up.",
+      },
+      {
+        reference: "Ecclesiastes 4:9-10",
+        text: "Two are better than one; because they have a good reward for their labour. For if they fall, the one will lift up his fellow.",
+      },
+      {
+        reference: "Genesis 2:24",
+        text: "Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.",
+      },
+      {
+        reference: "Colossians 3:14",
+        text: "And above all these things put on charity, which is the bond of perfectness.",
+      },
+      {
+        reference: "Mark 10:9",
+        text: "What therefore God hath joined together, let not man put asunder.",
+      },
+      {
+        reference: "1 Corinthians 13:13",
+        text: "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+      },
+      {
+        reference: "Proverbs 18:22",
+        text: "Whoso findeth a wife findeth a good thing, and obtaineth favour of the LORD.",
+      },
+    ],
+    reflection:
+      "Marriage is daily, patient love more than a single day's feeling. A chosen verse can become a vow, a toast, or a keepsake the couple carries.",
+    relatedPrayerSlug: "marriage",
+    relatedFaithPath: "family",
+    translation: "King James Version",
+  },
+  sympathy: {
+    slug: "sympathy",
+    title: "Bible Verses for a Funeral or Sympathy Card",
+    shortTitle: "Sympathy",
+    description:
+      "Comforting King James Version Bible verses for a funeral, memorial, or sympathy card, with a gentle reflection.",
+    intro:
+      "Finding words for someone's loss is hard. These verses offer comfort and hope for a card, a eulogy, or a quiet keepsake of remembrance.",
+    verses: [
+      {
+        reference: "John 11:25",
+        text: "I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live.",
+      },
+      {
+        reference: "Revelation 21:4",
+        text: "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain.",
+      },
+      {
+        reference: "Psalm 23:4",
+        text: "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me.",
+      },
+      {
+        reference: "Matthew 5:4",
+        text: "Blessed are they that mourn: for they shall be comforted.",
+      },
+      {
+        reference: "Psalm 34:18",
+        text: "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
+      },
+      {
+        reference: "2 Corinthians 5:8",
+        text: "We are confident, I say, and willing rather to be absent from the body, and to be present with the Lord.",
+      },
+      {
+        reference: "1 Thessalonians 4:13",
+        text: "That ye sorrow not, even as others which have no hope.",
+      },
+    ],
+    reflection:
+      "There are no perfect words for grief. A gentle verse and a simple 'I am with you' can carry more than a long message — on a card or a keepsake of remembrance.",
+    relatedPrayerSlug: "grief",
+    relatedFaithPath: "healing",
+    translation: "King James Version",
+  },
+  graduation: {
+    slug: "graduation",
+    title: "Bible Verses for a Graduation",
+    shortTitle: "Graduation",
+    description:
+      "Encouraging King James Version Bible verses for a graduation — for a card, a speech, or a keepsake gift.",
+    intro:
+      "Graduation is a threshold — full of hope and uncertainty. These verses encourage courage and trust for the road ahead, ideal for a card or keepsake.",
+    verses: [
+      {
+        reference: "Jeremiah 29:11",
+        text: "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
+      },
+      {
+        reference: "Joshua 1:9",
+        text: "Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+      },
+      {
+        reference: "Proverbs 3:5-6",
+        text: "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      },
+      {
+        reference: "Philippians 4:13",
+        text: "I can do all things through Christ which strengtheneth me.",
+      },
+      {
+        reference: "Isaiah 40:31",
+        text: "They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles.",
+      },
+      {
+        reference: "Proverbs 16:3",
+        text: "Commit thy works unto the LORD, and thy thoughts shall be established.",
+      },
+      {
+        reference: "Psalm 32:8",
+        text: "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.",
+      },
+    ],
+    reflection:
+      "The next step rarely comes with a map, only with enough light for the first move. A verse chosen here makes a lasting card or keepsake for the journey ahead.",
+    relatedPrayerSlug: "guidance",
+    relatedFaithPath: "guidance",
+    translation: "King James Version",
+  },
 } as const satisfies Record<string, VerseTopic>;
 
 export type VerseTopicSlug = keyof typeof verseTopics;
