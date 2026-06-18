@@ -181,19 +181,18 @@ export default async function SymbolPage({
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase text-[#8f6220]">
-              Boundary note
+              An honest note
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              What this symbol does not mean.
+              Meaningful, never magic.
             </h2>
           </div>
           <div className="space-y-3 text-base leading-7 text-[#625b51]">
             <p>{details.boundaryNote}</p>
             <p>
-              A symbol can be meaningful when it points back to prayer,
-              Scripture, humility, and wise action. It should never replace
-              faith, repentance, community, care, or the work of actually
-              following what Scripture teaches.
+              Worn or kept close, it can gently call you back to prayer,
+              Scripture, and one faithful next step — a reminder that points to
+              faith, never a substitute for it.
             </p>
           </div>
         </div>
@@ -202,14 +201,14 @@ export default async function SymbolPage({
       <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-[#e9c985]">
-            Careful use
+            Keeping it close
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-            Let the symbol point back to the practice.
+            A keepsake that keeps faith close.
           </h2>
           <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
-            {details.futureReminderUse} The symbol is only helpful if it keeps
-            attention on Scripture, prayer, and one faithful next step.
+            {details.futureReminderUse} Worn close, it becomes a small daily cue
+            to pause, pray, and return to Scripture.
           </p>
         </div>
       </section>

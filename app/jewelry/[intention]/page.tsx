@@ -111,9 +111,8 @@ export default async function JewelryIntentionPage({
           subtitle={details.intro}
         />
         <StatusNote>
-          Symbols can help some people remember prayer and Scripture. They are
-          not promises, guarantees, charms, luck items, or sources of spiritual
-          power.
+          A symbol can help you remember to pray and return to Scripture — a
+          reminder, not a charm or a guarantee.
         </StatusNote>
       </div>
 
@@ -171,15 +170,14 @@ export default async function JewelryIntentionPage({
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#e9c985]">
-              Clear boundary
+              A gentle reminder
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-              A reminder, not a result.
+              A reminder, kept close.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
-              {details.symbolReminder} It should never be treated as a source
-              of power, protection, healing, luck, blessing, or spiritual
-              outcome.
+              {details.symbolReminder} Meaningful as a cue to pray and return to
+              Scripture — never a charm or a guarantee of an outcome.
             </p>
           </div>
           <Link
@@ -234,16 +232,15 @@ export default async function JewelryIntentionPage({
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#8f6220]">
-              Free guidance first
+              Free first, always
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Guidance stays free and content-first.
+              The guidance is always free.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
-              A symbol can be meaningful as a reminder, but the Scripture,
-              prayer, and reflection guidance stands on its own and does not
-              depend on any physical object. The reminder is never the source
-              of faith, care, wisdom, or spiritual results.
+              The Scripture, prayer, and reflection here stand on their own and
+              stay free. A keepsake is simply an optional way to keep the
+              reminder close — it points to faith, never replaces it.
             </p>
           </div>
           <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />
