@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-// Branded app icon (also referenced as the Organization logo in JSON-LD).
+// Branded app icon: doorway opening toward light (matches the nav mark).
 export const size = { width: 512, height: 512 };
 export const contentType = "image/png";
 
@@ -17,35 +17,74 @@ export default function Icon() {
           background: "#203d30",
         }}
       >
-        {/* Cross mark composed from two bars (satori: flexbox/absolute only). */}
         <div
           style={{
             position: "relative",
             display: "flex",
-            width: 320,
-            height: 320,
+            width: 210,
+            height: 250,
           }}
         >
+          {/* arch outline */}
           <div
             style={{
               position: "absolute",
-              left: 134,
-              top: 24,
-              width: 52,
-              height: 272,
-              borderRadius: 26,
+              top: 0,
+              left: 0,
+              width: 210,
+              height: 250,
+              border: "18px solid #fff8e8",
+              borderBottom: "none",
+              borderTopLeftRadius: 105,
+              borderTopRightRadius: 105,
+              boxSizing: "border-box",
+            }}
+          />
+          {/* threshold base */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              width: 210,
+              height: 18,
               background: "#fff8e8",
+              borderRadius: 9,
+            }}
+          />
+          {/* light */}
+          <div
+            style={{
+              position: "absolute",
+              top: 58,
+              left: 88,
+              width: 34,
+              height: 108,
+              background: "#e9c985",
+              borderRadius: 17,
+            }}
+          />
+          {/* ascending steps */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 34,
+              left: 55,
+              width: 100,
+              height: 12,
+              background: "#e9c985",
+              borderRadius: 6,
             }}
           />
           <div
             style={{
               position: "absolute",
-              left: 48,
-              top: 104,
-              width: 224,
-              height: 52,
-              borderRadius: 26,
-              background: "#fff8e8",
+              bottom: 56,
+              left: 70,
+              width: 70,
+              height: 12,
+              background: "#e9c985",
+              borderRadius: 6,
             }}
           />
         </div>
