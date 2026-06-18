@@ -68,12 +68,13 @@ export default function Home() {
           sizes="100vw"
           placeholder="blur"
           blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Crect width='100%25' height='100%25' fill='%23cfc8bb'/%3E%3C/svg%3E"
-          className="object-cover object-[50%_45%] saturate-[1.04] contrast-[1.05]"
+          className="object-cover object-[52%_42%] saturate-[1.07] contrast-[1.06] brightness-[1.04]"
         />
-        {/* Cinematic scrim: one vertical wash for legibility + a soft left
-            gradient so the headline reads while the photo still breathes. */}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,12,0.5)_0%,rgba(11,16,12,0.34)_40%,rgba(12,17,13,0.9)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(11,16,12,0.82)_0%,rgba(11,16,12,0.42)_48%,transparent_80%)]" />
+        {/* Cinematic scrim: dark where the text sits (left/bottom), luminous
+            marble toward the right, plus a warm gold glow for depth. */}
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,12,0.4)_0%,rgba(11,16,12,0.16)_42%,rgba(12,17,13,0.88)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(11,16,12,0.86)_0%,rgba(11,16,12,0.4)_46%,transparent_78%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(58%_48%_at_82%_18%,rgba(233,201,133,0.16),transparent_62%)]" />
         <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#111711] via-[#111711]/84 to-transparent" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-10 sm:px-8 lg:grid-cols-[1fr_0.58fr] lg:py-14">
