@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Gem, Sparkles } from "lucide-react";
+import { ArrowRight, Gem } from "lucide-react";
 import {
   PageShell,
   SecondaryButton,
@@ -50,7 +50,6 @@ export default function ShopPage() {
         <div className="absolute inset-0 bg-[linear-gradient(125deg,rgba(13,20,15,0.88)_0%,rgba(22,37,29,0.7)_52%,rgba(13,18,14,0.82)_100%)]" />
         <div className="relative z-10">
           <p className="inline-flex items-center gap-2 rounded-full border border-[#e9c985]/45 bg-[#fffaf0]/10 px-4 py-2 text-sm font-semibold text-[#f3dfb6] backdrop-blur-md">
-            <Sparkles size={16} strokeWidth={1.8} />
             {STORE_LIVE ? "Faith Reminders" : "Coming soon"}
           </p>
           <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] sm:text-6xl">

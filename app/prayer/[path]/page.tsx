@@ -6,7 +6,6 @@ import {
   BookOpenText,
   Feather,
   Heart,
-  Sparkles,
 } from "lucide-react";
 import { redirect } from "next/navigation";
 import {
@@ -117,7 +116,6 @@ export default async function PrayerPathPage({
 
           <div className="relative mx-auto w-full max-w-[760px] text-center">
             <p className="inline-flex items-center gap-2 rounded-full border border-[#d5bd8d] bg-[#fffaf0] px-4 py-2 text-sm font-semibold text-[#7b561b] shadow-[0_8px_18px_rgba(81,59,31,0.05)]">
-              <Sparkles size={16} strokeWidth={1.8} />
               {prayer.theme}
             </p>
             <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.02] text-[#241f19] sm:text-6xl">

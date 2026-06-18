@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BookOpenText, CalendarDays, Sparkles } from "lucide-react";
+import { BookOpenText, CalendarDays } from "lucide-react";
 import {
   PageIntro,
   PageShell,
@@ -35,7 +35,7 @@ export default function VerseOfTheDayPage() {
   return (
     <PageShell active="verse">
       <PageIntro
-        icon={Sparkles}
+        icon={CalendarDays}
         eyebrow="Daily Scripture"
         title="Verse of the Day"
         subtitle="Take a quiet moment with Scripture before the day gets loud."

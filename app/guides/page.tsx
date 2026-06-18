@@ -6,7 +6,6 @@ import {
   Compass,
   Heart,
   Library,
-  Sparkles,
 } from "lucide-react";
 import {
   PageIntro,
@@ -57,7 +56,6 @@ export default function GuidesPage() {
         <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#8f6220]">
-              <Sparkles size={16} strokeWidth={1.8} />
               Scripture, prayer, and reflection
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">

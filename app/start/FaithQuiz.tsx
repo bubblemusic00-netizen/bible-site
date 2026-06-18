@@ -12,7 +12,6 @@ import {
   Leaf,
   PenLine,
   Shield,
-  Sparkles,
   Sun,
 } from "lucide-react";
 import {
@@ -34,7 +33,7 @@ const pathIcons: Record<StartFaithPathSlug, typeof Leaf> = {
   peace: Leaf,
   strength: Shield,
   protection: Shield,
-  hope: Sparkles,
+  hope: Sun,
   guidance: Compass,
   gratitude: Sun,
   healing: Heart,

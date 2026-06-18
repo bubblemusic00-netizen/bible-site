@@ -135,22 +135,17 @@ export default function Home() {
               Free to begin. No login, no pressure.
             </p>
 
-            <div
-              className="fade-rise mt-7 flex flex-wrap items-center gap-2 text-[#f1eadf]"
+            <p
+              className="fade-rise mt-7 flex flex-wrap items-baseline gap-x-3 gap-y-1"
               style={{ animationDelay: "400ms" }}
             >
-              <span className="mr-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#f3dfb6]/80">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f3dfb6]/75">
                 For moments of
               </span>
-              {momentWords.map((word) => (
-                <span
-                  key={word}
-                  className="rounded-full border border-[#fff8e8]/20 bg-[#fffaf0]/[0.06] px-3.5 py-1.5 text-sm font-medium backdrop-blur-md"
-                >
-                  {word}
-                </span>
-              ))}
-            </div>
+              <span className="font-serif text-lg italic text-[#f1eadf]/90">
+                {momentWords.map((w) => w.toLowerCase()).join(" · ")}
+              </span>
+            </p>
           </div>
 
           <div className="relative hidden lg:block">

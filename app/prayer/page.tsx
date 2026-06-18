@@ -5,7 +5,7 @@ import {
   BookOpenText,
   Heart,
   Library,
-  Sparkles,
+  HandHeart,
 } from "lucide-react";
 import {
   PageIntro,
@@ -111,7 +111,7 @@ export default function PrayerPage() {
                   className="group flex min-w-0 flex-col rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 p-5 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
                 >
                   <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-                    <Sparkles size={18} strokeWidth={1.8} />
+                    <HandHeart size={18} strokeWidth={1.8} />
                   </span>
                   <span className="mt-4 block font-serif text-2xl font-semibold leading-tight text-[#241f19]">
                     {prayer.title}
