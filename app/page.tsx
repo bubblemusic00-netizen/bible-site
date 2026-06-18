@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   BookOpenText,
+  ChevronDown,
   Compass,
   Cross,
   Heart,
@@ -175,6 +176,13 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="pointer-events-none absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[#f1eadf]/70 lg:flex">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.28em]">
+            Scroll
+          </span>
+          <ChevronDown size={18} strokeWidth={1.8} className="scroll-cue" />
         </div>
       </section>
 

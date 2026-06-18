@@ -81,7 +81,7 @@ export default function PrayerPage() {
         </StatusNote>
       </div>
 
-      <div className="mt-9 grid gap-10">
+      <div data-reveal className="mt-9 grid gap-10">
         {groupedPrayerPaths.map((group) => (
           <section
             key={group.key}
