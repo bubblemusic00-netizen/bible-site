@@ -65,16 +65,19 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[60%_48%] saturate-[0.82] contrast-[1.05]"
+          className="object-cover object-[62%_42%] saturate-[1.06] contrast-[1.08]"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_22%,rgba(246,213,151,0.22),transparent_28%),radial-gradient(circle_at_22%_78%,rgba(47,80,61,0.38),transparent_38%),linear-gradient(90deg,rgba(12,18,14,0.98),rgba(23,40,31,0.88)_45%,rgba(71,55,35,0.28)),linear-gradient(180deg,rgba(17,23,17,0.18),rgba(17,23,17,0.84))]" />
+        {/* Cinematic scrim: one vertical wash for legibility + a soft left
+            gradient so the headline reads while the photo still breathes. */}
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,12,0.5)_0%,rgba(11,16,12,0.34)_40%,rgba(12,17,13,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(11,16,12,0.82)_0%,rgba(11,16,12,0.42)_48%,transparent_80%)]" />
         <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#111711] via-[#111711]/84 to-transparent" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-10 sm:px-8 lg:grid-cols-[1fr_0.58fr] lg:py-14">
           <div className="max-w-4xl">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#e8d4ad]/38 bg-[#fffaf0]/9 px-4 py-2 text-sm font-semibold text-[#f3dfb6] shadow-[0_18px_44px_rgba(0,0,0,0.18)] backdrop-blur-md">
-              <Cross size={16} strokeWidth={1.8} />
-              Hope Bible
+            <p className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.22em] text-[#f3dfb6]/90">
+              <Cross size={15} strokeWidth={1.8} />
+              Scripture &amp; Prayer
             </p>
             <h1 className="mt-6 max-w-4xl font-serif text-5xl font-semibold leading-[0.98] text-[#fffaf0] sm:text-7xl lg:text-[5.8rem]">
               Find Scripture and prayer for what you are carrying.
