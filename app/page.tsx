@@ -60,12 +60,12 @@ export default function Home() {
 
       <section className="relative isolate flex min-h-[calc(100svh-4rem)] overflow-hidden">
         <Image
-          src="/hero-bible-window.webp"
-          alt="Open Bible in warm morning light near a window"
+          src="/hero-marble.jpg"
+          alt="Carrara marble with warm gold veining"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[62%_42%] saturate-[1.06] contrast-[1.08]"
+          className="object-cover object-[50%_45%] saturate-[1.04] contrast-[1.05]"
         />
         {/* Cinematic scrim: one vertical wash for legibility + a soft left
             gradient so the headline reads while the photo still breathes. */}
