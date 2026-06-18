@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Hope Bible, an independent Christian Bible reading, prayer guidance, faith reflection, and faith-symbol education resource.",
+    "Privacy Policy for Selah, an independent Christian Bible reading, prayer guidance, faith reflection, and faith-symbol education resource.",
 };
 
 export default function PrivacyPage() {
@@ -16,12 +16,12 @@ export default function PrivacyPage() {
       eyebrow="Privacy"
       title="Privacy Policy"
       subtitle="How this independent Christian resource handles privacy for the current free website."
-      note="Hope Bible currently provides free Bible reading, prayer, reflection, and faith-symbol education without user accounts, payment processing, or public shop features."
+      note="Selah currently provides free Bible reading, prayer, reflection, and faith-symbol education without user accounts, payment processing, or public shop features."
       updated="June 9, 2026"
       sections={[
         {
           title: "Basic site usage",
-          body: "Hope Bible is currently a free informational resource. It does not provide user accounts, payment processing, public comments, or a public shop. Normal technical information may be processed by hosting infrastructure so pages can load and remain secure.",
+          body: "Selah is currently a free informational resource. It does not provide user accounts, payment processing, public comments, or a public shop. Normal technical information may be processed by hosting infrastructure so pages can load and remain secure.",
         },
         {
           title: "Contact and support",

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "About",
   description:
-    "Learn about Hope Bible, an independent Christian faith-inspired platform for Bible reading, prayer, reflection, faith symbols, and careful content boundaries.",
+    "Learn about Selah, an independent Christian faith-inspired platform for Bible reading, prayer, reflection, faith symbols, and careful content boundaries.",
 };
 
 const principles = [
@@ -39,7 +39,7 @@ const principles = [
   {
     title: "Independent Christian resource",
     description:
-      "Hope Bible is not affiliated with any Bible publisher, church, denomination, ministry, or retail platform.",
+      "Selah is not affiliated with any Bible publisher, church, denomination, ministry, or retail platform.",
   },
   {
     title: "Reflection, not authority",
@@ -54,9 +54,9 @@ export default function AboutPage() {
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
         <PageIntro
           icon={ShieldCheck}
-          eyebrow="About Hope Bible"
+          eyebrow="About Selah"
           title="An independent Christian faith-inspired platform."
-          subtitle="Hope Bible helps visitors explore Bible wisdom, prayer, reflection, and meaningful Christian symbols with honesty, care, and respect."
+          subtitle="Selah helps visitors explore Bible wisdom, prayer, reflection, and meaningful Christian symbols with honesty, care, and respect."
         />
         <StatusNote>
           This site is independent and is not an official church, ministry,
@@ -77,7 +77,7 @@ export default function AboutPage() {
               Built from a need for hope, not authority.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
-              Hope Bible was shaped by a personal awareness that people often
+              Selah was shaped by a personal awareness that people often
               look toward faith, prayer, and hope during painful seasons. The
               goal is not to exploit that need, but to offer a respectful,
               free place to begin with Scripture, prayer, and reflection.
@@ -85,7 +85,7 @@ export default function AboutPage() {
             <p className="mt-3 text-base leading-7 text-[#625b51]">
               The Faith Path system helps a person choose a simple spiritual
               direction, then continue through prayer, Scripture, reflection,
-              and an optional symbolic reminder. Hope Bible does not claim
+              and an optional symbolic reminder. Selah does not claim
               church authority, clergy credentials, or official ministry status.
               Its role is to organize guidance in a way that stays humble about
               its limits.
@@ -103,7 +103,7 @@ export default function AboutPage() {
             Scripture, prayer, and reflection
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
-            Hope Bible is being built as a free Christian place to read the
+            Selah is being built as a free Christian place to read the
             Bible, begin a prayer, consider a reflection, and take one grounded
             step of faith. Free guidance remains the center of the site.
           </p>
@@ -135,7 +135,7 @@ export default function AboutPage() {
               Prepared for trust before commerce.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#625b51]">
-              If Hope Bible later adds an optional shop for simple faith
+              If Selah later adds an optional shop for simple faith
               reminders, support, shipping, returns, privacy, and disclosures
               will be explained before purchase. The free Scripture, prayer,
               and reflection guidance will remain separate from any purchase.
@@ -153,7 +153,7 @@ export default function AboutPage() {
           Trust depends on clear limits.
         </h2>
         <p className="mt-3 max-w-3xl text-base leading-7 text-[#625b51]">
-          Hope Bible is content-first and independent. The pages below explain
+          Selah is content-first and independent. The pages below explain
           how the site approaches Scripture, prayer, symbols, future commerce,
           and support without pretending to be more than it is.
         </p>

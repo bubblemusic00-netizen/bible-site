@@ -70,7 +70,7 @@ export default function BiblePage() {
 
       <div className="mt-5 max-w-5xl">
         <StatusNote>
-          Hope Bible currently offers a focused library of finished guided
+          Selah currently offers a focused library of finished guided
           readings rather than a full Bible database. Full Scripture text is
           presented from the King James Version (KJV), a Bible translation
           widely used in public-domain contexts in the United States so guided

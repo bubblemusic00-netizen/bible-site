@@ -5,7 +5,7 @@ import {
 } from "@/app/components/og-image";
 import { getJewelryIntention } from "../intentions";
 
-export const alt = "Hope Bible faith symbol reminder";
+export const alt = "Selah faith symbol reminder";
 export const size = ogSize;
 export const contentType = ogContentType;
 

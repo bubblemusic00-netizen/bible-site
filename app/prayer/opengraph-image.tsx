@@ -4,7 +4,7 @@ import {
   renderOgImage,
 } from "@/app/components/og-image";
 
-export const alt = "Hope Bible prayer library";
+export const alt = "Selah prayer library";
 export const size = ogSize;
 export const contentType = ogContentType;
 

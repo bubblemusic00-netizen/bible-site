@@ -50,12 +50,12 @@ export function SiteHeader({ active }: { active?: NavKey }) {
   return (
     <header className="sticky top-0 z-50 border-b border-[#eadfcb]/70 bg-[#fbf7ed]/88 shadow-[0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-2xl">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
-        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Hope Bible home">
+        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Selah home">
           <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#203d30] text-[#fff8e8] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_12px_28px_rgba(32,70,54,0.18)]">
             <Cross size={18} strokeWidth={1.75} />
           </span>
           <span className="truncate font-serif text-xl font-semibold tracking-[0.01em] text-[#24362c]">
-            Hope Bible
+            Selah
           </span>
         </Link>
 
@@ -133,7 +133,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
                 : "max-w-2xl font-serif text-2xl font-semibold leading-tight text-[#24362c]"
             }
           >
-            Hope Bible
+            Selah
           </p>
           {!isDark ? (
             <div className="mt-3 grid max-w-md gap-2 text-sm leading-6 text-[#625b51]">
@@ -230,7 +230,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
         <div className="border-t border-[#eadfcb]">
           <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-sm text-[#7b6a52] sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <p>
-              © {year} Hope Bible. Free Scripture, prayer, and reflection.
+              © {year} Selah. Free Scripture, prayer, and reflection.
             </p>
             <p className="font-serif italic text-[#3f4a40]">
               &ldquo;Cast thy burden upon the LORD, and he shall sustain

@@ -5,7 +5,7 @@ import {
 } from "@/app/components/og-image";
 import { getBibleChapter, getBibleChapterReference } from "../../bible-data";
 
-export const alt = "Hope Bible guided Bible reading";
+export const alt = "Selah guided Bible reading";
 export const size = ogSize;
 export const contentType = ogContentType;
 

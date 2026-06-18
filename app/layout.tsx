@@ -18,24 +18,24 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hope Bible | Free Bible Reading and Prayer Guidance",
-    template: "%s | Hope Bible",
+    default: "Selah | Free Bible Reading and Prayer Guidance",
+    template: "%s | Selah",
   },
   description:
     "Free Bible reading, prayer guidance, and Christian faith reflections for Scripture, prayer, and meaningful faith reminders.",
-  applicationName: "Hope Bible",
+  applicationName: "Selah",
   openGraph: {
-    title: "Hope Bible | Free Bible Reading and Prayer Guidance",
+    title: "Selah | Free Bible Reading and Prayer Guidance",
     description:
       "Free Bible reading, prayer guidance, and Christian faith reflections for Scripture, prayer, and meaningful faith reminders.",
     url: "/",
-    siteName: "Hope Bible",
+    siteName: "Selah",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hope Bible | Free Bible Reading and Prayer Guidance",
+    title: "Selah | Free Bible Reading and Prayer Guidance",
     description:
       "Free Bible reading, prayer guidance, and Christian faith reflections.",
   },

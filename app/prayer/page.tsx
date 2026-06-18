@@ -74,7 +74,7 @@ export default function PrayerPage() {
 
       <div className="mt-5 max-w-5xl">
         <StatusNote>
-          Hope Bible currently offers a focused library of eighteen prayers.
+          Selah currently offers a focused library of eighteen prayers.
           Prayer guidance is for Scripture-rooted reflection and encouragement;
           it does not promise outcomes or replace pastoral care, counseling,
           medical help, emergency support, or trusted community.

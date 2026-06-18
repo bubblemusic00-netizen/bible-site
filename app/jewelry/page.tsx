@@ -111,7 +111,7 @@ export default function JewelryPage() {
               pray, return to Scripture, or take one faithful next step.
             </p>
             <p>
-              The meaning is not in the object itself. Hope Bible explains
+              The meaning is not in the object itself. Selah explains
               symbols as memory aids for faith and reflection, never as
               spiritual force, status, luck, or a way to control outcomes.
             </p>

@@ -42,7 +42,7 @@ export const guideGroups = [
     key: "start",
     title: "Start here",
     description:
-      "Simple orientation for using Hope Bible with Scripture, prayer, and reflection.",
+      "Simple orientation for using Selah with Scripture, prayer, and reflection.",
   },
   {
     key: "bible-prayer",
@@ -71,15 +71,15 @@ export const guideGroups = [
 export const guides = {
   "how-to-use-hope-bible": {
     slug: "how-to-use-hope-bible",
-    title: "How to Use Hope Bible",
-    shortTitle: "Use Hope Bible",
+    title: "How to Use Selah",
+    shortTitle: "Use Selah",
     description:
       "A simple guide to the Faith Quiz, guided Bible readings, prayer pages, reflection prompts, and faith-symbol reminders.",
     audience:
       "For first-time visitors who want a clear, honest way to begin.",
     group: "start",
     intro:
-      "Hope Bible is built to help you take one calm next step: choose a need, read Scripture, pray honestly, reflect, and carry a simple reminder if it helps. Free guidance comes first, and no physical reminder is required.",
+      "Selah is built to help you take one calm next step: choose a need, read Scripture, pray honestly, reflect, and carry a simple reminder if it helps. Free guidance comes first, and no physical reminder is required.",
     sections: [
       {
         heading: "Begin with the Faith Quiz",
@@ -154,11 +154,11 @@ export const guides = {
       {
         label: "Editorial Principles",
         href: "/editorial-principles",
-        description: "Read how Hope Bible approaches content with boundaries.",
+        description: "Read how Selah approaches content with boundaries.",
       },
     ],
     boundaryNote:
-      "Hope Bible is independent. It is not a church, pastor, ministry, denomination, Bible publisher, or religious authority.",
+      "Selah is independent. It is not a church, pastor, ministry, denomination, Bible publisher, or religious authority.",
   },
   "start-reading-the-bible": {
     slug: "start-reading-the-bible",
@@ -248,7 +248,7 @@ export const guides = {
     ],
     relatedSymbols: [],
     boundaryNote:
-      "Hope Bible can help you begin, but it does not replace Scripture itself, church community, pastoral care, or wise Christian teaching.",
+      "Selah can help you begin, but it does not replace Scripture itself, church community, pastoral care, or wise Christian teaching.",
   },
   "how-to-pray": {
     slug: "how-to-pray",
@@ -640,7 +640,7 @@ export const guides = {
       {
         heading: "Free guidance remains primary",
         body: [
-          "If Hope Bible later offers optional physical reminders, they should remain separate from the free Scripture, prayer, and reflection guidance.",
+          "If Selah later offers optional physical reminders, they should remain separate from the free Scripture, prayer, and reflection guidance.",
           "No physical reminder is required to use the Bible readings, prayers, guides, or Faith Quiz.",
         ],
       },

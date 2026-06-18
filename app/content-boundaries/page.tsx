@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/content-boundaries" },
   title: "Content Boundaries",
   description:
-    "Clear boundaries for Hope Bible content, including prayer, Scripture reflection, faith symbols, professional care, and emergency support.",
+    "Clear boundaries for Selah content, including prayer, Scripture reflection, faith symbols, professional care, and emergency support.",
 };
 
 const boundaries = [
   {
     title: "Not an official church or ministry",
-    body: "Hope Bible is independent. It is not an official church, ministry, denomination, pastor, Bible publisher, or religious authority.",
+    body: "Selah is independent. It is not an official church, ministry, denomination, pastor, Bible publisher, or religious authority.",
     icon: Church,
   },
   {
@@ -35,7 +35,7 @@ const boundaries = [
   },
   {
     title: "Not professional or emergency support",
-    body: "Hope Bible is not counseling, therapy, medical advice, legal advice, financial advice, crisis care, or emergency support.",
+    body: "Selah is not counseling, therapy, medical advice, legal advice, financial advice, crisis care, or emergency support.",
     icon: HeartHandshake,
   },
   {
@@ -63,7 +63,7 @@ export default function ContentBoundariesPage() {
           icon={ShieldCheck}
           eyebrow="Content boundaries"
           title="Content Boundaries"
-          subtitle="What Hope Bible can offer, what it cannot replace, and when visitors should seek church, community, professional, or emergency support."
+          subtitle="What Selah can offer, what it cannot replace, and when visitors should seek church, community, professional, or emergency support."
         />
         <StatusNote>
           These boundaries are here to keep the site honest and useful. They
@@ -81,7 +81,7 @@ export default function ContentBoundariesPage() {
             Spiritual encouragement should not pretend to be authority.
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
-            Hope Bible is designed to help people begin with Bible reading,
+            Selah is designed to help people begin with Bible reading,
             prayer, reflection, and meaningful reminders. It should be used with
             humility, wisdom, and honest awareness of what an independent
             website cannot do.

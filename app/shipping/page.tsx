@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/shipping" },
   title: "Shipping Policy",
   description:
-    "Shipping readiness information for Hope Bible before any optional public shop is introduced.",
+    "Shipping readiness information for Selah before any optional public shop is introduced.",
 };
 
 export default function ShippingPage() {
@@ -15,13 +15,13 @@ export default function ShippingPage() {
       icon={PackageCheck}
       eyebrow="Shipping"
       title="Shipping Policy"
-      subtitle="Hope Bible does not currently operate a public shop or ship physical goods."
+      subtitle="Selah does not currently operate a public shop or ship physical goods."
       note="The current site is a free faith-guidance resource. If an optional shop is added later, shipping details will be shown clearly before purchase."
       updated="June 9, 2026"
       sections={[
         {
           title: "Current status",
-          body: "Hope Bible currently offers Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education. It does not collect shipping addresses or fulfill physical orders.",
+          body: "Selah currently offers Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education. It does not collect shipping addresses or fulfill physical orders.",
         },
         {
           title: "If a shop is added later",

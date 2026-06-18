@@ -5,7 +5,7 @@ import {
 } from "@/app/components/og-image";
 import { getGuide } from "../guide-data";
 
-export const alt = "Hope Bible beginner guide";
+export const alt = "Selah beginner guide";
 export const size = ogSize;
 export const contentType = ogContentType;
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/terms" },
   title: "Terms of Use",
   description:
-    "Terms of Use for Hope Bible, an independent Christian Bible, prayer, faith reflection, and faith-symbol education resource.",
+    "Terms of Use for Selah, an independent Christian Bible, prayer, faith reflection, and faith-symbol education resource.",
 };
 
 export default function TermsPage() {
@@ -16,12 +16,12 @@ export default function TermsPage() {
       eyebrow="Terms"
       title="Terms of Use"
       subtitle="Plain-language terms for using this free Bible, prayer, reflection, and faith-symbol education resource."
-      note="Hope Bible is currently a free guidance-first website. If an optional shop is added later, product-specific terms and policies will be provided before public launch."
+      note="Selah is currently a free guidance-first website. If an optional shop is added later, product-specific terms and policies will be provided before public launch."
       updated="June 9, 2026"
       sections={[
         {
           title: "Informational purpose",
-          body: "Hope Bible provides general Scripture references, prayer guidance, faith reflections, and educational content about Christian symbols. The content is offered for personal reflection and general spiritual encouragement.",
+          body: "Selah provides general Scripture references, prayer guidance, faith reflections, and educational content about Christian symbols. The content is offered for personal reflection and general spiritual encouragement.",
         },
         {
           title: "No professional counseling",
@@ -29,7 +29,7 @@ export default function TermsPage() {
         },
         {
           title: "Independent resource",
-          body: "Hope Bible is independent. It is not an official church, ministry, denomination, Bible publisher, or religious authority. Visitors are responsible for reading Scripture in context and seeking trusted local guidance when needed.",
+          body: "Selah is independent. It is not an official church, ministry, denomination, Bible publisher, or religious authority. Visitors are responsible for reading Scripture in context and seeking trusted local guidance when needed.",
         },
         {
           title: "No promised outcomes",

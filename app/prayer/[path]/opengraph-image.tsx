@@ -5,7 +5,7 @@ import {
 } from "@/app/components/og-image";
 import { getPrayerPath } from "../prayer-paths";
 
-export const alt = "Hope Bible prayer";
+export const alt = "Selah prayer";
 export const size = ogSize;
 export const contentType = ogContentType;
 

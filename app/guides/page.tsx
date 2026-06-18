@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guides" },
   title: "Beginner Christian Guides",
   description:
-    "Beginner-friendly Christian guides for Scripture, prayer, faith, grace, Jesus, symbols, and using Hope Bible with care.",
+    "Beginner-friendly Christian guides for Scripture, prayer, faith, grace, Jesus, symbols, and using Selah with care.",
 };
 
 export default function GuidesPage() {
@@ -41,7 +41,7 @@ export default function GuidesPage() {
           </p>
           <p className="mt-2 text-base leading-7 text-[#625b51]">
             These guides are beginner-friendly, non-denominational, and written
-            to help visitors read Scripture, pray honestly, and use Hope Bible
+            to help visitors read Scripture, pray honestly, and use Selah
             with clear boundaries.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -74,7 +74,7 @@ export default function GuidesPage() {
 
       <div className="mt-5 max-w-5xl">
         <StatusNote>
-          Hope Bible is independent and does not claim to be a church, pastor,
+          Selah is independent and does not claim to be a church, pastor,
           ministry, denomination, Bible scholar, Bible publisher, or official
           Christian authority.
         </StatusNote>
@@ -185,7 +185,7 @@ export default function GuidesPage() {
         <SecondaryButton href="/editorial-principles">
           Editorial Principles
         </SecondaryButton>
-        <SecondaryButton href="/about">About Hope Bible</SecondaryButton>
+        <SecondaryButton href="/about">About Selah</SecondaryButton>
       </div>
     </PageShell>
   );

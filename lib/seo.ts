@@ -2,7 +2,7 @@
 // JSON-LD builders. Builders return plain serializable objects rendered by the
 // <JsonLd /> component as <script type="application/ld+json">.
 
-export const SITE_NAME = "Hope Bible";
+export const SITE_NAME = "Selah";
 
 export const SITE_DESCRIPTION =
   "Free Bible reading, prayer guidance, and Christian faith reflections for Scripture, prayer, and meaningful faith reminders.";

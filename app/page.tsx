@@ -12,7 +12,7 @@ import { SiteFooter, SiteHeader } from "./components/site-ui";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Hope Bible | Scripture and Prayer for What You Carry",
+    absolute: "Selah | Scripture and Prayer for What You Carry",
   },
   description:
     "Take a short Faith Quiz and find Scripture, prayer, reflection, and one gentle next step for what you are carrying today.",
@@ -164,7 +164,7 @@ export default function Home() {
               A quiet place to begin when life feels heavy.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#f1eadf]/78">
-              Hope Bible was shaped by a simple observation: in painful
+              Selah was shaped by a simple observation: in painful
               seasons, many people look for hope, prayer, and words that help
               them take the next step. This site offers a respectful place to
               begin with Scripture, prayer, and reflection without pressure to

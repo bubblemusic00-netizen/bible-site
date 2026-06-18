@@ -4,7 +4,7 @@ import {
   renderOgImage,
 } from "@/app/components/og-image";
 
-export const alt = "Hope Bible Christian faith symbols";
+export const alt = "Selah Christian faith symbols";
 export const size = ogSize;
 export const contentType = ogContentType;
 

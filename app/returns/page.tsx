@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/returns" },
   title: "Returns Policy",
   description:
-    "Returns readiness information for Hope Bible before any optional public shop is introduced.",
+    "Returns readiness information for Selah before any optional public shop is introduced.",
 };
 
 export default function ReturnsPage() {
@@ -15,13 +15,13 @@ export default function ReturnsPage() {
       icon={RotateCcw}
       eyebrow="Returns"
       title="Returns Policy"
-      subtitle="Hope Bible does not currently operate a public shop, so there are no active product returns."
+      subtitle="Selah does not currently operate a public shop, so there are no active product returns."
       note="If an optional shop is added later, return and refund details will be stated clearly before purchase."
       updated="June 9, 2026"
       sections={[
         {
           title: "Current status",
-          body: "Hope Bible currently provides free Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education. There are no active product orders, returns, exchanges, refunds, or warranties on the current site.",
+          body: "Selah currently provides free Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education. There are no active product orders, returns, exchanges, refunds, or warranties on the current site.",
         },
         {
           title: "If a shop is added later",

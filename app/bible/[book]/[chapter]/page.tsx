@@ -234,7 +234,7 @@ export default async function BibleChapterPage({
 
         <div className="mx-auto mt-8 w-full max-w-[980px]">
           <StatusNote>
-            {chapterData.sourceNote} Hope Bible offers reflection and prayer
+            {chapterData.sourceNote} Selah offers reflection and prayer
             guidance, not official church, publisher, or counseling authority.
           </StatusNote>
         </div>

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/disclosures" },
   title: "Disclosures",
   description:
-    "Disclosures for Hope Bible, including independent-resource status, future commerce boundaries, and clear faith-symbol language.",
+    "Disclosures for Selah, including independent-resource status, future commerce boundaries, and clear faith-symbol language.",
 };
 
 export default function DisclosuresPage() {
@@ -17,14 +17,14 @@ export default function DisclosuresPage() {
       eyebrow="Disclosures"
       title="Disclosures"
       subtitle="Clear boundaries for a free, independent Christian faith-inspired resource."
-      note="Hope Bible currently provides Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education as free content. Any optional shop added later will be separate from the guidance content."
+      note="Selah currently provides Bible readings, prayer guidance, Faith Quiz results, and faith-symbol education as free content. Any optional shop added later will be separate from the guidance content."
       updated="June 9, 2026"
       sections={[
         {
           title: "Independent resource",
           body: (
             <>
-              Hope Bible is an independent Christian faith-inspired resource. It
+              Selah is an independent Christian faith-inspired resource. It
               is not affiliated with an official church, ministry, denomination,
               Bible publisher, retail platform, or religious authority. Read
               the{" "}

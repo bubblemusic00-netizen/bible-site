@@ -17,21 +17,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/editorial-principles" },
   title: "Editorial Principles",
   description:
-    "How Hope Bible approaches Scripture, prayer, faith symbols, public-domain Bible text, and careful Christian faith-inspired content boundaries.",
+    "How Selah approaches Scripture, prayer, faith symbols, public-domain Bible text, and careful Christian faith-inspired content boundaries.",
 };
 
 const principles = [
   {
     title: "Scripture first, with humility",
-    body: "Hope Bible encourages visitors to begin with Scripture, prayer, and reflection. The site can offer guidance, but it does not replace reading Scripture directly, participating in a local church or Christian community, or seeking wise pastoral support.",
+    body: "Selah encourages visitors to begin with Scripture, prayer, and reflection. The site can offer guidance, but it does not replace reading Scripture directly, participating in a local church or Christian community, or seeking wise pastoral support.",
   },
   {
     title: "Non-denominational and beginner-friendly",
-    body: "Content is written for broad Christian reflection and for people who may be new to Bible reading or prayer. Hope Bible avoids denominational arguments, speculative theology, and divisive claims that would distract from simple Scripture, prayer, and reflection.",
+    body: "Content is written for broad Christian reflection and for people who may be new to Bible reading or prayer. Selah avoids denominational arguments, speculative theology, and divisive claims that would distract from simple Scripture, prayer, and reflection.",
   },
   {
     title: "No miracle or outcome guarantees",
-    body: "Prayer and reflection are presented with humility. Hope Bible does not promise healing, protection, money, success, anxiety relief, blessing, or any guaranteed outcome. Faith is not treated as a formula for controlling results.",
+    body: "Prayer and reflection are presented with humility. Selah does not promise healing, protection, money, success, anxiety relief, blessing, or any guaranteed outcome. Faith is not treated as a formula for controlling results.",
   },
   {
     title: "Symbols as reminders, not power",
@@ -43,7 +43,7 @@ const principles = [
   },
   {
     title: "Careful content boundaries",
-    body: "Hope Bible is not pastoral counseling, therapy, crisis care, medical advice, legal advice, financial advice, or official church authority. Content is for personal reflection and general spiritual encouragement.",
+    body: "Selah is not pastoral counseling, therapy, crisis care, medical advice, legal advice, financial advice, or official church authority. Content is for personal reflection and general spiritual encouragement.",
   },
 ];
 
@@ -55,10 +55,10 @@ export default function EditorialPrinciplesPage() {
           icon={PenLine}
           eyebrow="Editorial trust"
           title="Editorial Principles"
-          subtitle="How Hope Bible approaches Scripture, prayer, reflection, and Christian symbols with care, humility, and clear boundaries."
+          subtitle="How Selah approaches Scripture, prayer, reflection, and Christian symbols with care, humility, and clear boundaries."
         />
         <StatusNote>
-          Hope Bible is an independent Christian faith-inspired resource. It is
+          Selah is an independent Christian faith-inspired resource. It is
           not an official church, ministry, denomination, or religious
           authority.
         </StatusNote>
@@ -73,7 +73,7 @@ export default function EditorialPrinciplesPage() {
             Begin with Scripture, then move carefully.
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
-            The purpose of Hope Bible is to help people take a simple next step:
+            The purpose of Selah is to help people take a simple next step:
             read Scripture, pray honestly, reflect with care, and remember faith
             in ordinary life. The site should never pretend to be a pastor, a
             church, a theological authority, or a shortcut around Christian
@@ -108,7 +108,7 @@ export default function EditorialPrinciplesPage() {
               Content should keep becoming clearer and more careful.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
-              Hope Bible content may be improved over time for clarity,
+              Selah content may be improved over time for clarity,
               accuracy, attribution, and care. Before any public commerce
               launch, content and claims should be reviewed carefully,
               especially around faith symbols and product language.
@@ -123,7 +123,7 @@ export default function EditorialPrinciplesPage() {
           href="/content-boundaries"
           icon={ShieldCheck}
           title="Content Boundaries"
-          body="Read what Hope Bible is not meant to replace."
+          body="Read what Selah is not meant to replace."
         />
         <TrustLink
           href="/bible"

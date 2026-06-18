@@ -5,7 +5,7 @@ import {
 } from "@/app/components/og-image";
 import { getFaithSymbol } from "../../symbol-data";
 
-export const alt = "Hope Bible Christian symbol meaning";
+export const alt = "Selah Christian symbol meaning";
 export const size = ogSize;
 export const contentType = ogContentType;
 

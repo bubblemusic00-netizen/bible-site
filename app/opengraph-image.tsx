@@ -3,7 +3,7 @@ import { SITE_NAME } from "@/lib/seo";
 
 // Default site-wide social share image. Applies to every route that does not
 // define its own opengraph-image deeper in the tree.
-export const alt = "Hope Bible — Scripture and prayer for what you carry";
+export const alt = "Selah — Scripture and prayer for what you carry";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
