@@ -6,28 +6,22 @@ import { MobileSiteMenu } from "./MobileSiteMenu";
 
 // Selah mark: a doorway/threshold opening toward light, with ascending steps.
 function SelahMark() {
+  const gold = "#e6bf63";
   return (
-    <svg viewBox="0 0 24 24" className="size-5" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 28 32" className="size-7" fill="none" aria-hidden="true">
       <path
-        d="M5 20.5 V11 a7 7 0 0 1 14 0 V20.5"
+        d="M5 29 V13 a9 9 0 0 1 18 0 V29"
         stroke="#fff8e8"
-        strokeWidth="1.7"
+        strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M4.4 20.5 H19.6"
-        stroke="#fff8e8"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <rect x="10.6" y="7.6" width="2.8" height="8" rx="1.4" fill="#e9c985" />
-      <path
-        d="M8.4 18.5 H15.6 M9.4 16.6 H14.6"
-        stroke="#e9c985"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-      />
+      <path d="M4 29 H24" stroke="#fff8e8" strokeWidth="1.7" strokeLinecap="round" />
+      <rect x="12.3" y="8.5" width="3.4" height="7.6" rx="1.7" fill={gold} />
+      <rect x="10.5" y="17.2" width="7" height="1.7" rx="0.85" fill={gold} />
+      <rect x="9.3" y="20.2" width="9.4" height="1.7" rx="0.85" fill={gold} />
+      <rect x="8.1" y="23.2" width="11.8" height="1.7" rx="0.85" fill={gold} />
+      <rect x="6.9" y="26.2" width="14.2" height="1.7" rx="0.85" fill={gold} />
     </svg>
   );
 }
@@ -83,11 +77,11 @@ export function SiteHeader({
           className="flex min-w-0 items-center gap-3"
           aria-label="Selah home"
         >
-          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#203d30] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_12px_28px_rgba(32,70,54,0.18)]">
+          <span className="grid size-10 shrink-0 place-items-center rounded-[13px] bg-[#203d30] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_12px_28px_rgba(32,70,54,0.22)]">
             <SelahMark />
           </span>
           <span
-            className={`truncate font-serif text-xl font-semibold tracking-[0.01em] transition-colors ${
+            className={`truncate font-serif text-[1.4rem] font-semibold tracking-[0.005em] transition-colors ${
               transparent ? "text-[#fff8e8]" : "text-[#24362c]"
             }`}
           >
