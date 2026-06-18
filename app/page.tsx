@@ -24,19 +24,19 @@ export const metadata: Metadata = {
 const libraryLinks = [
   {
     title: "Bible",
-    description: "Read finished guided passages slowly, with context.",
+    description: "Short guided readings — the passage, what it means, how to sit with it.",
     href: "/bible",
     icon: BookOpenText,
   },
   {
     title: "Prayer",
-    description: "Find honest words for peace, courage, grief, and hope.",
+    description: "Words for when you don't have your own — grief, fear, waiting, thanks.",
     href: "/prayer",
     icon: Heart,
   },
   {
     title: "Guides",
-    description: "Beginner help for Scripture, prayer, grace, faith, and symbols.",
+    description: "New to this? Plain-language starts on prayer, grace, and faith.",
     href: "/guides",
     icon: Compass,
   },
@@ -95,8 +95,9 @@ export default function Home() {
               className="fade-rise mt-6 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-xl sm:leading-8"
               style={{ animationDelay: "170ms" }}
             >
-              Take a short Faith Quiz and receive a Bible reading, a prayer, a
-              reflection prompt, and one gentle next step.
+              Answer three questions about what you&rsquo;re carrying. In about
+              a minute, you&rsquo;ll have a passage to read, a prayer to pray,
+              and one small thing to do next.
             </p>
 
             <div
@@ -187,11 +188,11 @@ export default function Home() {
               A quiet place to begin when life feels heavy.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#f1eadf]/78">
-              Selah was shaped by a simple observation: in painful
-              seasons, many people look for hope, prayer, and words that help
-              them take the next step. This site offers a respectful place to
-              begin with Scripture, prayer, and reflection without pressure to
-              buy anything.
+              Most faith sites are loud — pop-ups, sign-ups, ten things to
+              click. Selah is the opposite. When you&rsquo;re grieving, anxious,
+              or just worn out, you shouldn&rsquo;t have to dig for a verse or
+              the right words. Tell us what you&rsquo;re carrying, and we&rsquo;ll
+              hand you something small and true to hold onto.
             </p>
           </div>
         </div>
@@ -243,11 +244,12 @@ export default function Home() {
               Faith Symbols
             </p>
             <p className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#fffaf0] sm:text-4xl">
-              Some people carry reminders of what they are praying through.
+              Some prayers you want to keep close.
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-[#f1eadf]/72">
-              Symbols are explained as optional reminders only, never as
-              guarantees or sources of spiritual power.
+              A cross, an anchor, a verse worn at the collarbone — a small
+              keepsake that brings you back to what you&rsquo;re praying through.
+              A reminder, never a charm.
             </p>
           </div>
           <Link
