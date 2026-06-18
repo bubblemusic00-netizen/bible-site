@@ -1,9 +1,36 @@
 "use client";
 
 import Link from "next/link";
-import { Cross } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MobileSiteMenu } from "./MobileSiteMenu";
+
+// Selah mark: a doorway/threshold opening toward light, with ascending steps.
+function SelahMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-5" fill="none" aria-hidden="true">
+      <path
+        d="M5 20.5 V11 a7 7 0 0 1 14 0 V20.5"
+        stroke="#fff8e8"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4.4 20.5 H19.6"
+        stroke="#fff8e8"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+      <rect x="10.6" y="7.6" width="2.8" height="8" rx="1.4" fill="#e9c985" />
+      <path
+        d="M8.4 18.5 H15.6 M9.4 16.6 H14.6"
+        stroke="#e9c985"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
 
 export type NavKey =
   | "home"
@@ -56,8 +83,8 @@ export function SiteHeader({
           className="flex min-w-0 items-center gap-3"
           aria-label="Selah home"
         >
-          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#203d30] text-[#fff8e8] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_12px_28px_rgba(32,70,54,0.18)]">
-            <Cross size={18} strokeWidth={1.75} />
+          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#203d30] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_12px_28px_rgba(32,70,54,0.18)]">
+            <SelahMark />
           </span>
           <span
             className={`truncate font-serif text-xl font-semibold tracking-[0.01em] transition-colors ${
