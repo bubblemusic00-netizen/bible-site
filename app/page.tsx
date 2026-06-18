@@ -225,7 +225,7 @@ export default function Home() {
               A library for the next step, not a wall of choices.
             </h2>
           </div>
-          <div className="grid gap-0 border-y border-[#fff8e8]/12 md:grid-cols-3 md:border-l">
+          <div className="grid gap-4 md:grid-cols-3">
           {libraryLinks.map((item) => {
             const Icon = item.icon;
 
@@ -233,18 +233,24 @@ export default function Home() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex min-h-32 items-start gap-4 border-b border-[#fff8e8]/12 px-0 py-5 text-[#fffaf0] transition hover:bg-[#fffaf0]/7 md:border-b-0 md:border-r md:px-5 md:last:border-r-0"
+                className="group flex min-h-44 flex-col rounded-xl border border-[#fff8e8]/10 bg-[#fffaf0]/[0.04] p-5 text-[#fffaf0] shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#e9c985]/35 hover:bg-[#fffaf0]/[0.07]"
               >
-                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#e9c985]/12 text-[#e9c985] transition group-hover:bg-[#e9c985]/18">
-                  <Icon size={19} strokeWidth={1.8} />
+                <span className="grid size-11 place-items-center rounded-full bg-[#e9c985]/12 text-[#e9c985] transition group-hover:bg-[#e9c985]/20">
+                  <Icon size={20} strokeWidth={1.8} />
                 </span>
-                <span>
-                  <span className="block font-serif text-2xl font-semibold leading-tight">
-                    {item.title}
-                  </span>
-                  <span className="mt-1 block text-sm leading-6 text-[#f1eadf]/72">
-                    {item.description}
-                  </span>
+                <span className="mt-4 block font-serif text-2xl font-semibold leading-tight">
+                  {item.title}
+                </span>
+                <span className="mt-1 block text-sm leading-6 text-[#f1eadf]/72">
+                  {item.description}
+                </span>
+                <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-[#e9c985]">
+                  Open
+                  <ArrowRight
+                    size={14}
+                    strokeWidth={1.8}
+                    className="transition-transform duration-200 group-hover:translate-x-1"
+                  />
                 </span>
               </Link>
             );
