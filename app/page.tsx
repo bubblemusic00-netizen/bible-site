@@ -10,6 +10,10 @@ import {
   Heart,
 } from "lucide-react";
 import { SiteFooter, SiteHeader } from "./components/site-ui";
+import { getVerseOfTheDay } from "./verse-of-the-day/verse-data";
+
+// Advance the homepage verse near midnight (UTC) without a redeploy.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: {
@@ -45,13 +49,9 @@ const libraryLinks = [
 
 const momentWords = ["Peace", "Guidance", "Strength", "Hope"];
 
-const quietPath = [
-  "Name what you are carrying.",
-  "Receive Scripture and prayer.",
-  "Take one gentle next step.",
-];
-
 export default function Home() {
+  const verse = getVerseOfTheDay();
+
   return (
     <main
       id="main-content"
@@ -97,9 +97,8 @@ export default function Home() {
               className="fade-rise mt-6 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-xl sm:leading-8"
               style={{ animationDelay: "170ms" }}
             >
-              Answer three questions about what you&rsquo;re carrying. In about
-              a minute, you&rsquo;ll have a passage to read, a prayer to pray,
-              and one small thing to do next.
+              Answer three quiet questions. In a minute, you&rsquo;ll have a
+              passage, a prayer, and one small thing to carry into your day.
             </p>
 
             <div
@@ -150,27 +149,29 @@ export default function Home() {
 
           <div className="relative hidden lg:block">
             <div className="absolute -inset-8 rounded-full bg-[#e9c985]/12 blur-3xl" />
-            <div className="relative border-l border-[#f3dfb6]/35 bg-[#fffaf0]/8 px-7 py-7 shadow-[0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#e9c985]">
-                A quiet beginning
+            <figure className="relative border-l border-[#f3dfb6]/35 bg-[#fffaf0]/8 px-8 py-9 shadow-[0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+              <figcaption className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#e9c985]">
+                Today&rsquo;s verse
+                <span className="h-px flex-1 bg-[#f3dfb6]/25" />
+              </figcaption>
+              <blockquote className="mt-7 font-serif text-[1.6rem] font-medium leading-[1.34] text-[#fffaf0]">
+                &ldquo;{verse.text}&rdquo;
+              </blockquote>
+              <p className="mt-6 text-sm font-semibold tracking-[0.04em] text-[#f3dfb6]">
+                {verse.reference} &middot; KJV
               </p>
-              <div className="mt-6 space-y-5">
-                {quietPath.map((item, index) => (
-                  <div key={item} className="grid grid-cols-[auto_1fr] gap-4">
-                    <span className="mt-1 grid size-8 place-items-center rounded-full border border-[#e9c985]/50 text-sm font-semibold text-[#f3dfb6]">
-                      {index + 1}
-                    </span>
-                    <p className="border-b border-[#fff8e8]/14 pb-5 font-serif text-2xl font-semibold leading-tight text-[#fffaf0]">
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 text-sm leading-6 text-[#f1eadf]/72">
-                The path is small on purpose: Scripture, prayer, reflection,
-                then a next step you can actually carry.
-              </p>
-            </div>
+              <Link
+                href="/verse-of-the-day"
+                className="group mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-[#e9c985] transition hover:text-[#f3dfb6]"
+              >
+                A new verse each morning
+                <ArrowRight
+                  size={15}
+                  strokeWidth={1.8}
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                />
+              </Link>
+            </figure>
           </div>
         </div>
 

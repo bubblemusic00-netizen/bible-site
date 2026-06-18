@@ -40,6 +40,7 @@ const navItems: Array<{ key: NavKey; label: string; href: string }> = [
   { key: "start", label: "Faith Quiz", href: "/start" },
   { key: "bible", label: "Bible", href: "/bible" },
   { key: "prayer", label: "Prayer", href: "/prayer" },
+  { key: "verse", label: "Daily Verse", href: "/verse-of-the-day" },
   { key: "guides", label: "Guides", href: "/guides" },
   { key: "jewelry", label: "Faith Symbols", href: "/jewelry" },
 ];
