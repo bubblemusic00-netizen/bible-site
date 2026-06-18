@@ -65,6 +65,8 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Crect width='100%25' height='100%25' fill='%23cfc8bb'/%3E%3C/svg%3E"
           className="object-cover object-[50%_45%] saturate-[1.04] contrast-[1.05]"
         />
         {/* Cinematic scrim: one vertical wash for legibility + a soft left
@@ -75,40 +77,65 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-10 sm:px-8 lg:grid-cols-[1fr_0.58fr] lg:py-14">
           <div className="max-w-4xl">
-            <p className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.22em] text-[#f3dfb6]/90">
+            <p
+              className="fade-rise inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.22em] text-[#f3dfb6]/90"
+              style={{ animationDelay: "0ms" }}
+            >
               <Cross size={15} strokeWidth={1.8} />
               Scripture &amp; Prayer
             </p>
-            <h1 className="mt-6 max-w-4xl font-serif text-5xl font-semibold leading-[0.98] text-[#fffaf0] sm:text-7xl lg:text-[5.8rem]">
-              Find Scripture and prayer for what you are carrying.
+            <h1
+              className="fade-rise mt-6 max-w-4xl font-serif text-5xl font-semibold leading-[0.98] tracking-[-0.015em] text-[#fffaf0] sm:text-7xl lg:text-[5.8rem]"
+              style={{ animationDelay: "90ms" }}
+            >
+              Find Scripture and prayer for what you are{" "}
+              <span className="italic">carrying</span>.
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-xl sm:leading-8">
+            <p
+              className="fade-rise mt-6 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-xl sm:leading-8"
+              style={{ animationDelay: "170ms" }}
+            >
               Take a short Faith Quiz and receive a Bible reading, a prayer, a
               reflection prompt, and one gentle next step.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <div
+              className="fade-rise mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
+              style={{ animationDelay: "250ms" }}
+            >
               <Link
                 href="/start"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-6 py-3 text-sm font-semibold text-[#203d30] shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
+                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-6 py-3 text-sm font-semibold text-[#203d30] shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0] hover:shadow-[0_24px_64px_rgba(233,201,133,0.32)]"
               >
                 Take the Faith Quiz
-                <ArrowRight size={17} strokeWidth={1.8} />
+                <ArrowRight
+                  size={17}
+                  strokeWidth={1.8}
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                />
               </Link>
               <Link
                 href="#library"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/55 bg-[#fffaf0]/8 px-6 py-3 text-sm font-semibold text-[#fffaf0] backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-[#fffaf0]/14"
+                className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-[#f1eadf] transition hover:text-[#fffaf0]"
               >
                 <BookOpenText size={17} strokeWidth={1.8} />
-                Explore Bible & Prayer
+                <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-[#f3dfb6]/70">
+                  Explore Bible &amp; Prayer
+                </span>
               </Link>
             </div>
 
-            <p className="mt-6 max-w-xl text-sm font-semibold leading-6 text-[#f1eadf]/76">
+            <p
+              className="fade-rise mt-6 max-w-xl text-sm font-semibold leading-6 text-[#f1eadf]/76"
+              style={{ animationDelay: "330ms" }}
+            >
               Free to begin. No login, no pressure.
             </p>
 
-            <div className="mt-7 flex flex-wrap items-center gap-2 text-[#f1eadf]">
+            <div
+              className="fade-rise mt-7 flex flex-wrap items-center gap-2 text-[#f1eadf]"
+              style={{ animationDelay: "400ms" }}
+            >
               <span className="mr-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#f3dfb6]/80">
                 For moments of
               </span>

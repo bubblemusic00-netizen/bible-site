@@ -84,6 +84,24 @@ a:focus-visible {
   color: #241f19;
 }
 
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered entrance for hero elements (animation-delay set inline).
+   The reduced-motion block below collapses the duration to ~0, so the
+   final state (visible) still applies for users who opt out of motion. */
+.fade-rise {
+  animation: fade-rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
