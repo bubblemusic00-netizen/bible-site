@@ -92,12 +92,12 @@ export function PageShell({
   return (
     <main
       id="main-content"
-      className="flex min-h-screen w-full flex-col bg-[radial-gradient(circle_at_16%_10%,rgba(226,190,120,0.16),transparent_34%),radial-gradient(circle_at_84%_16%,rgba(51,91,68,0.08),transparent_32%),linear-gradient(135deg,rgba(255,252,244,0.96),rgba(246,238,222,0.92))] text-[#27231d]"
+      className="flex min-h-screen w-full flex-col bg-[linear-gradient(180deg,#faf7f0_0%,#f3eee3_100%)] text-[#27231d]"
     >
       <SiteHeader active={active} />
       <section
         data-page-shell
-        className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 px-4 py-9 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-80 before:bg-[radial-gradient(ellipse_at_top_left,rgba(192,143,62,0.12),transparent_64%)] sm:px-8 sm:before:inset-x-8 lg:py-12"
+        className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 px-4 py-9 sm:px-8 lg:py-12"
       >
         <div className="relative w-full min-w-0">{children}</div>
       </section>
