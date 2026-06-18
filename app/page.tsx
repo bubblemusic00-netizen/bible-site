@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <main
       id="main-content"
-      className="flex min-h-screen w-full flex-col bg-[#111711] text-[#fffaf0]"
+      className="flex min-h-screen w-full flex-col bg-[radial-gradient(125%_55%_at_50%_0%,#1b271e_0%,#11170f_48%,#0c110b_100%)] text-[#fffaf0]"
     >
       <SiteHeader active="home" overHero />
 
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#111711] px-4 py-8 sm:px-8">
+      <section className="px-4 py-8 sm:px-8">
         <div
           data-reveal
           className="mx-auto grid w-full max-w-7xl gap-5 border-y border-[#fff8e8]/10 py-7 lg:grid-cols-[0.32fr_1fr] lg:items-start"
@@ -211,7 +211,7 @@ export default function Home() {
 
       <section
         id="library"
-        className="relative z-10 bg-[#111711] px-4 pb-10 sm:px-8"
+        className="relative z-10 px-4 pb-10 sm:px-8"
       >
         <div
           data-reveal
