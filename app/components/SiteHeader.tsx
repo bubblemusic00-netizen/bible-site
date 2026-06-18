@@ -46,7 +46,7 @@ export function SiteHeader({
     <header
       className={`sticky top-0 z-50 transition-colors duration-300 ${
         transparent
-          ? "border-b border-transparent bg-transparent"
+          ? "border-b border-transparent bg-gradient-to-b from-[#0b100c]/55 via-[#0b100c]/25 to-transparent"
           : "border-b border-[#eadfcb]/70 bg-[#fbf7ed]/88 shadow-[0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-2xl"
       }`}
     >
