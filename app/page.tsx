@@ -291,13 +291,13 @@ export default function Home() {
           className="mx-auto flex max-w-2xl flex-col items-center"
         >
           <Image
-            src="/selah-logo.png"
+            src="/selah-cream.png"
             alt="Selah"
-            width={460}
-            height={307}
-            className="h-auto w-[clamp(240px,42vw,430px)]"
+            width={1044}
+            height={612}
+            className="h-auto w-[clamp(260px,44vw,460px)]"
           />
-          <p className="mt-5 font-serif text-xl italic text-[#f1eadf]/80">
+          <p className="mt-4 font-serif text-xl italic text-[#f1eadf]/80">
             Pause. Be still. Carry it with you.
           </p>
         </div>
