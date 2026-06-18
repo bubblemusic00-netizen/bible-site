@@ -1,7 +1,15 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
-import { ArrowLeft, ArrowRight, ChevronRight, Cross } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ChevronRight,
+  Compass,
+  Cross,
+  Scale,
+  ShieldCheck,
+} from "lucide-react";
 import { MobileSiteMenu } from "./MobileSiteMenu";
 
 type NavKey =
@@ -157,7 +165,8 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
           }
         >
           {!isDark ? (
-            <h2 className="text-sm font-semibold uppercase text-[#7b561b]">
+            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
+              <Compass size={14} strokeWidth={1.8} />
               Explore
             </h2>
           ) : null}
@@ -165,7 +174,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
             className={
               isDark
                 ? "flex flex-wrap gap-x-4 gap-y-2"
-                : "mt-3 grid grid-cols-2 gap-x-5 gap-y-2 text-sm font-semibold text-[#355242]"
+                : "mt-4 grid gap-y-2.5 text-sm font-semibold text-[#355242]"
             }
           >
           {footerResourceLinks.map((item) => (
@@ -188,7 +197,8 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
             aria-label="Footer trust navigation"
             className="min-w-0"
           >
-            <h2 className="text-sm font-semibold uppercase text-[#7b561b]">
+            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
+              <ShieldCheck size={14} strokeWidth={1.8} />
               Trust
             </h2>
             <div className="mt-3 grid gap-y-2 text-sm font-semibold text-[#7b561b]">
@@ -209,7 +219,8 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
             aria-label="Footer legal navigation"
             className="min-w-0"
           >
-            <h2 className="text-sm font-semibold uppercase text-[#7b561b]">
+            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
+              <Scale size={14} strokeWidth={1.8} />
               Policies
             </h2>
             <div className="mt-3 grid gap-y-2 text-sm font-semibold text-[#7b561b]">
