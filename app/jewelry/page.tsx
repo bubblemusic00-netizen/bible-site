@@ -128,7 +128,7 @@ export default function JewelryPage() {
         </div>
       </section>
 
-      <section className="mt-10">
+      <section data-reveal className="mt-10">
         <div className="grid gap-8 lg:grid-cols-[0.36fr_1fr]">
           <div>
             <p className="text-sm font-semibold uppercase text-[#8f6220]">
@@ -152,7 +152,7 @@ export default function JewelryPage() {
         </div>
       </section>
 
-      <section className="mt-12">
+      <section data-reveal className="mt-12">
         <div className="grid gap-5 lg:grid-cols-[0.36fr_1fr] lg:items-end">
           <div>
           <p className="text-sm font-semibold uppercase text-[#8f6220]">

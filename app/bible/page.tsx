@@ -78,7 +78,7 @@ export default function BiblePage() {
         </StatusNote>
       </div>
 
-      <div data-reveal className="mt-9 grid gap-10">
+      <div data-reveal-stagger className="mt-9 grid gap-10">
         {groupedBibleReadings.map((group) => (
           <section
             key={group.key}

@@ -159,7 +159,7 @@ export default async function PrayerPathPage({
         </section>
 
         <section
-          id="after-prayer"
+          id="after-prayer" data-reveal
           className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
         >
           <div className="mx-auto max-w-[760px]">

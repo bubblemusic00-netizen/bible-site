@@ -15,7 +15,9 @@ export function ScrollReveal() {
     root.classList.add("js-reveal");
 
     const els = Array.from(
-      document.querySelectorAll<HTMLElement>("[data-reveal]:not(.revealed)"),
+      document.querySelectorAll<HTMLElement>(
+        "[data-reveal]:not(.revealed), [data-reveal-stagger]:not(.revealed)",
+      ),
     );
     if (els.length === 0) return;
 

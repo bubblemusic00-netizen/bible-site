@@ -73,7 +73,7 @@ export default function ShopPage() {
         </div>
       </section>
 
-      <section data-reveal className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <section data-reveal-stagger className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {allProducts.map((product) => {
           const href = productUrl(product);
           const cardClass =
