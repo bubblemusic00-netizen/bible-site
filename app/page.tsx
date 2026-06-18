@@ -285,6 +285,24 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-[#0d120c] px-4 py-16 text-center sm:px-8">
+        <div
+          data-reveal
+          className="mx-auto flex max-w-2xl flex-col items-center"
+        >
+          <Image
+            src="/selah-logo.png"
+            alt="Selah"
+            width={460}
+            height={307}
+            className="h-auto w-[clamp(240px,42vw,430px)]"
+          />
+          <p className="mt-5 font-serif text-xl italic text-[#f1eadf]/80">
+            Pause. Be still. Carry it with you.
+          </p>
+        </div>
+      </section>
+
       <SiteFooter />
     </main>
   );
