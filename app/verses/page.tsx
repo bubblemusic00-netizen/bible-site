@@ -31,7 +31,7 @@ export default function VersesPage() {
         subtitle="Short, gathered passages for real moments — each with a quiet reflection and a prayer to carry it further."
       />
 
-      <section className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <section data-reveal className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {allVerseTopics.map((topic) => (
           <CardLink
             key={topic.slug}

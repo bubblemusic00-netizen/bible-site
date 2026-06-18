@@ -99,7 +99,7 @@ export default async function VerseTopicPage({
         ))}
       </section>
 
-      <section className="mt-6 max-w-4xl rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-6 sm:p-8">
+      <section data-reveal className="mt-6 max-w-4xl rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-6 sm:p-8">
         <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
           <Feather size={15} strokeWidth={1.8} />
           A quiet reflection
