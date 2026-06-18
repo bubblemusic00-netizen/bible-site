@@ -105,7 +105,7 @@ export default function Home() {
             </div>
 
             <p className="mt-6 max-w-xl text-sm font-semibold leading-6 text-[#f1eadf]/76">
-              Free guidance. No login. No purchase required.
+              Free to begin. No login, no pressure.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2 text-sm font-semibold text-[#f1eadf]/82">
