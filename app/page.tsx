@@ -108,23 +108,19 @@ export default function Home() {
               Free to begin. No login, no pressure.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2 text-sm font-semibold text-[#f1eadf]/82">
-              <span className="mr-1 py-2 text-[#f3dfb6]">
+            <div className="mt-7 flex flex-wrap items-center gap-2 text-[#f1eadf]">
+              <span className="mr-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#f3dfb6]/80">
                 For moments of
               </span>
               {momentWords.map((word) => (
                 <span
                   key={word}
-                  className="rounded-full border border-[#fff8e8]/18 bg-[#fffaf0]/8 px-3 py-2 backdrop-blur-md"
+                  className="rounded-full border border-[#fff8e8]/20 bg-[#fffaf0]/[0.06] px-3.5 py-1.5 text-sm font-medium backdrop-blur-md"
                 >
                   {word}
                 </span>
               ))}
             </div>
-
-            <p className="mt-6 max-w-xl text-sm leading-6 text-[#f1eadf]/70">
-              Choose what you need today. Read slowly. Pray honestly.
-            </p>
           </div>
 
           <div className="relative hidden lg:block">
