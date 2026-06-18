@@ -6,15 +6,19 @@ import {
   SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
-import { allProducts, formatPrice } from "@/lib/products";
+import { allProducts, formatPrice, productUrl, STORE_URL } from "@/lib/products";
+
+const STORE_LIVE = Boolean(STORE_URL);
 
 export const metadata: Metadata = {
-  title: "Faith Reminders — Coming Soon",
+  title: STORE_LIVE
+    ? "Faith Reminders — Christian Keepsakes"
+    : "Faith Reminders — Coming Soon",
   description:
-    "A small, carefully chosen collection of faith keepsakes that point back to Scripture and prayer. Launching soon.",
+    "A small, carefully chosen collection of faith keepsakes that point back to Scripture and prayer.",
   alternates: { canonical: "/shop" },
-  // Thin pre-launch preview — keep out of the index until the shop is real.
-  robots: { index: false, follow: true },
+  // Keep the thin preview out of the index until the store is live.
+  robots: STORE_LIVE ? undefined : { index: false, follow: true },
 };
 
 const intentionLabels: Record<string, string> = {
@@ -36,7 +40,7 @@ export default function ShopPage() {
       <section className="relative isolate overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_18%_18%,rgba(239,204,139,0.18),transparent_32%),linear-gradient(135deg,#17251d_0%,#203d30_48%,#121711_100%)] px-5 py-9 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.2)] sm:px-8 sm:py-12 lg:px-10">
         <p className="inline-flex items-center gap-2 rounded-full border border-[#e9c985]/45 bg-[#fffaf0]/8 px-4 py-2 text-sm font-semibold text-[#f3dfb6] backdrop-blur-md">
           <Sparkles size={16} strokeWidth={1.8} />
-          Coming soon
+          {STORE_LIVE ? "Faith Reminders" : "Coming soon"}
         </p>
         <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] sm:text-6xl">
           Faith reminders you can keep close.
@@ -58,43 +62,68 @@ export default function ShopPage() {
       </section>
 
       <section className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {allProducts.map((product) => (
-          <article
-            key={product.slug}
-            className="flex h-full flex-col overflow-hidden rounded-lg border border-[#eadbc0] bg-[#fffaf1]/78 shadow-[0_18px_42px_rgba(71,55,35,0.045)]"
-          >
-            <div className="relative grid h-40 place-items-center border-b border-[#eadbc0] bg-[radial-gradient(circle_at_30%_25%,rgba(238,241,232,0.9),#f2f5ee)]">
-              <Gem size={34} strokeWidth={1.5} className="text-[#254737]/70" />
-              <span className="absolute right-3 top-3 rounded-full bg-[#233f31] px-3 py-1 text-xs font-semibold text-[#fff8e8]">
-                Coming soon
-              </span>
-            </div>
-            <div className="flex flex-1 flex-col p-5">
-              <h2 className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
-                {product.name}
-              </h2>
-              <p className="mt-1 text-sm leading-6 text-[#625b51]">
-                {product.tagline}
-              </p>
-              <p className="mt-3 text-sm font-semibold text-[#2f5140]">
-                From {formatPrice(product.priceCents)}
-                <span className="ml-2 font-normal text-[#8a7f70]">
-                  {product.material}
-                </span>
-              </p>
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {product.intentions.map((intention) => (
-                  <span
-                    key={intention}
-                    className="rounded-full border border-[#e2d4ba] bg-[#fbf7ed] px-2.5 py-1 text-xs font-semibold text-[#8f6220]"
-                  >
-                    {intentionLabels[intention] ?? intention}
+        {allProducts.map((product) => {
+          const href = productUrl(product);
+          const cardClass =
+            "flex h-full flex-col overflow-hidden rounded-lg border border-[#eadbc0] bg-[#fffaf1]/78 shadow-[0_18px_42px_rgba(71,55,35,0.045)]";
+
+          const content = (
+            <>
+              <div className="relative grid h-40 place-items-center border-b border-[#eadbc0] bg-[radial-gradient(circle_at_30%_25%,rgba(238,241,232,0.9),#f2f5ee)]">
+                <Gem size={34} strokeWidth={1.5} className="text-[#254737]/70" />
+                {href ? null : (
+                  <span className="absolute right-3 top-3 rounded-full bg-[#233f31] px-3 py-1 text-xs font-semibold text-[#fff8e8]">
+                    Coming soon
                   </span>
-                ))}
+                )}
               </div>
-            </div>
-          </article>
-        ))}
+              <div className="flex flex-1 flex-col p-5">
+                <h2 className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                  {product.name}
+                </h2>
+                <p className="mt-1 text-sm leading-6 text-[#625b51]">
+                  {product.tagline}
+                </p>
+                <p className="mt-3 text-sm font-semibold text-[#2f5140]">
+                  From {formatPrice(product.priceCents)}
+                  <span className="ml-2 font-normal text-[#8a7f70]">
+                    {product.material}
+                  </span>
+                </p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {product.intentions.map((intention) => (
+                    <span
+                      key={intention}
+                      className="rounded-full border border-[#e2d4ba] bg-[#fbf7ed] px-2.5 py-1 text-xs font-semibold text-[#8f6220]"
+                    >
+                      {intentionLabels[intention] ?? intention}
+                    </span>
+                  ))}
+                </div>
+                {href ? (
+                  <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#254737]">
+                    Shop now
+                    <ArrowRight size={15} strokeWidth={1.8} />
+                  </p>
+                ) : null}
+              </div>
+            </>
+          );
+
+          return href ? (
+            <Link
+              key={product.slug}
+              href={href}
+              className={`group transition hover:-translate-y-0.5 hover:border-[#c49c52] hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)] ${cardClass}`}
+            >
+              {content}
+            </Link>
+          ) : (
+            <article key={product.slug} className={cardClass}>
+              {content}
+            </article>
+          );
+        })}
       </section>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

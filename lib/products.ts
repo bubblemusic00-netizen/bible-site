@@ -61,7 +61,24 @@ export type Product = {
   sourcing: ProductSourcing;
   /** Brand-integrity line: a keepsake that points to faith, never a charm. */
   boundaryNote: string;
+  /** Shopify product handle; defaults to slug when omitted. */
+  shopifyHandle?: string;
 };
+
+/**
+ * Base URL of the Shopify store, e.g. https://shop.hopebible.com.
+ * Set NEXT_PUBLIC_SHOPIFY_URL in Vercel once the store exists.
+ */
+export const STORE_URL = (process.env.NEXT_PUBLIC_SHOPIFY_URL || "").replace(
+  /\/$/,
+  "",
+);
+
+/** Customer-facing product URL on Shopify, or null until the store is set. */
+export function productUrl(product: Product): string | null {
+  if (!STORE_URL) return null;
+  return `${STORE_URL}/products/${product.shopifyHandle ?? product.slug}`;
+}
 
 const KEEPSAKE_BOUNDARY =
   "An optional keepsake meant to point back to Scripture and prayer. It is not a charm and carries no power or guarantee.";
