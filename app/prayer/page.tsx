@@ -62,7 +62,7 @@ export default function PrayerPage() {
               Prayer, reflection, and Scripture
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Eighteen complete prayers available now.
+              {prayerPathKeys.length} complete prayers, available now.
             </h2>
           </div>
           <p className="text-base leading-7 text-[#625b51]">
@@ -74,8 +74,9 @@ export default function PrayerPage() {
 
       <div className="mt-5 max-w-5xl">
         <StatusNote>
-          Selah currently offers a focused library of eighteen prayers.
-          Prayer guidance is for Scripture-rooted reflection and encouragement;
+          Selah currently offers a focused library of {prayerPathKeys.length}{" "}
+          prayers. Prayer guidance is for Scripture-rooted reflection and
+          encouragement;
           it does not promise outcomes or replace pastoral care, counseling,
           medical help, emergency support, or trusted community.
         </StatusNote>
