@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Gem, Sparkles } from "lucide-react";
 import {
@@ -37,27 +38,38 @@ const intentionLabels: Record<string, string> = {
 export default function ShopPage() {
   return (
     <PageShell>
-      <section className="relative isolate overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_18%_18%,rgba(239,204,139,0.18),transparent_32%),linear-gradient(135deg,#17251d_0%,#203d30_48%,#121711_100%)] px-5 py-9 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.2)] sm:px-8 sm:py-12 lg:px-10">
-        <p className="inline-flex items-center gap-2 rounded-full border border-[#e9c985]/45 bg-[#fffaf0]/8 px-4 py-2 text-sm font-semibold text-[#f3dfb6] backdrop-blur-md">
-          <Sparkles size={16} strokeWidth={1.8} />
-          {STORE_LIVE ? "Faith Reminders" : "Coming soon"}
-        </p>
-        <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] sm:text-6xl">
-          Faith reminders you can keep close.
-        </h1>
-        <p className="mt-5 max-w-2xl text-base leading-7 text-[#f1eadf]/86 sm:text-lg">
-          A small, carefully chosen collection of keepsakes — each one a quiet
-          cue to return to Scripture and prayer. The Bible readings, prayers,
-          and Faith Quiz stay free, always.
-        </p>
-        <div className="mt-7">
-          <Link
-            href="/start"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
-          >
-            Find the one for what you carry
-            <ArrowRight size={16} strokeWidth={1.8} />
-          </Link>
+      <section className="relative isolate overflow-hidden rounded-[2rem] px-5 py-12 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.22)] sm:px-8 sm:py-16 lg:px-10">
+        <Image
+          src="/hero-marble.jpg"
+          alt="Carrara marble with warm gold veining"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(125deg,rgba(13,20,15,0.88)_0%,rgba(22,37,29,0.7)_52%,rgba(13,18,14,0.82)_100%)]" />
+        <div className="relative z-10">
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#e9c985]/45 bg-[#fffaf0]/10 px-4 py-2 text-sm font-semibold text-[#f3dfb6] backdrop-blur-md">
+            <Sparkles size={16} strokeWidth={1.8} />
+            {STORE_LIVE ? "Faith Reminders" : "Coming soon"}
+          </p>
+          <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] sm:text-6xl">
+            Faith reminders you can keep close.
+          </h1>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-lg">
+            A small, carefully chosen collection of keepsakes — each one a quiet
+            cue to return to Scripture and prayer. The Bible readings, prayers,
+            and Faith Quiz stay free, always.
+          </p>
+          <div className="mt-7">
+            <Link
+              href="/start"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
+            >
+              Find the one for what you carry
+              <ArrowRight size={16} strokeWidth={1.8} />
+            </Link>
+          </div>
         </div>
       </section>
 
