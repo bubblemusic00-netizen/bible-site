@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "./components/JsonLd";
+import { ScrollReveal } from "./components/ScrollReveal";
 import { organizationSchema, websiteSchema, SITE_URL } from "@/lib/seo";
 
 const inter = Inter({
@@ -66,6 +67,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <ScrollReveal />
         {children}
       </body>
     </html>

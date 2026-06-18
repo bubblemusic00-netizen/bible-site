@@ -330,7 +330,7 @@ export function PrimaryButton({
   return (
     <Link
       href={href}
-      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full bg-[#203d30] px-5 py-3 text-center text-sm font-semibold text-[#fffaf0] shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-[#183326] hover:shadow-[0_18px_42px_rgba(40,71,55,0.22)] active:translate-y-0 active:scale-[0.98]"
+      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full bg-[#203d30] px-5 py-3 text-center text-sm font-semibold text-[#fffaf0] shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#183326] hover:shadow-[0_18px_42px_rgba(40,71,55,0.22)] active:translate-y-0 active:scale-[0.98]"
     >
       {children}
     </Link>
@@ -347,7 +347,7 @@ export function SecondaryButton({
   return (
     <Link
       href={href}
-      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full border border-[#dcc8a5] bg-[#fffaf0]/82 px-5 py-3 text-center text-sm font-semibold text-[#355242] transition hover:-translate-y-0.5 hover:border-[#bd9247] hover:bg-[#fffdf7] active:translate-y-0 active:scale-[0.98]"
+      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full border border-[#dcc8a5] bg-[#fffaf0]/82 px-5 py-3 text-center text-sm font-semibold text-[#355242] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#bd9247] hover:bg-[#fffdf7] active:translate-y-0 active:scale-[0.98]"
     >
       {children}
     </Link>

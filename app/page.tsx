@@ -179,7 +179,10 @@ export default function Home() {
       </section>
 
       <section className="bg-[#111711] px-4 py-8 sm:px-8">
-        <div className="mx-auto grid w-full max-w-7xl gap-5 border-y border-[#fff8e8]/10 py-7 lg:grid-cols-[0.32fr_1fr] lg:items-start">
+        <div
+          data-reveal
+          className="mx-auto grid w-full max-w-7xl gap-5 border-y border-[#fff8e8]/10 py-7 lg:grid-cols-[0.32fr_1fr] lg:items-start"
+        >
           <p className="text-sm font-semibold uppercase text-[#e9c985]">
             Why this exists
           </p>
@@ -202,7 +205,10 @@ export default function Home() {
         id="library"
         className="relative z-10 bg-[#111711] px-4 pb-10 sm:px-8"
       >
-        <div className="mx-auto grid w-full max-w-7xl gap-6 border-b border-[#fff8e8]/10 pb-8 lg:grid-cols-[0.32fr_1fr]">
+        <div
+          data-reveal
+          className="mx-auto grid w-full max-w-7xl gap-6 border-b border-[#fff8e8]/10 pb-8 lg:grid-cols-[0.32fr_1fr]"
+        >
           <div>
             <p className="text-sm font-semibold uppercase text-[#e9c985]">
               Explore quietly
@@ -238,7 +244,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto grid w-full max-w-7xl gap-5 pt-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div
+          data-reveal
+          className="mx-auto grid w-full max-w-7xl gap-5 pt-8 lg:grid-cols-[1fr_auto] lg:items-center"
+        >
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#e9c985]">
               Faith Symbols
