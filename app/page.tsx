@@ -56,7 +56,7 @@ export default function Home() {
       id="main-content"
       className="flex min-h-screen w-full flex-col bg-[#111711] text-[#fffaf0]"
     >
-      <SiteHeader active="home" />
+      <SiteHeader active="home" overHero />
 
       <section className="relative isolate flex min-h-[calc(100svh-4rem)] overflow-hidden">
         <Image
