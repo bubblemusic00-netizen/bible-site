@@ -1,9 +1,8 @@
-// Email subscribe endpoint.
-//
-// NOTE: This currently validates input only and does NOT persist anything.
-// Before mounting the NewsletterSignup component on live pages, wire a real
-// provider here (e.g. Resend audiences, ConvertKit, Mailchimp) so addresses
-// are actually stored. Until then, do not collect addresses in production.
+import { Resend } from "resend";
+
+// Email subscribe endpoint backed by Resend audiences.
+// Set RESEND_API_KEY and RESEND_AUDIENCE_ID in the Vercel project to activate.
+// Until then it returns 503 (no addresses are silently lost or faked).
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -20,8 +19,29 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid email address." }, { status: 400 });
   }
 
-  // TODO: persist `email` with an email provider before going live.
-  // e.g. await resend.contacts.create({ email, audienceId: ... })
+  const apiKey = process.env.RESEND_API_KEY;
+  const audienceId = process.env.RESEND_AUDIENCE_ID;
 
-  return Response.json({ ok: true });
+  if (!apiKey || !audienceId) {
+    return Response.json(
+      { error: "Email signup is not configured yet." },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+    const { error } = await resend.contacts.create({
+      email,
+      audienceId,
+      unsubscribed: false,
+    });
+    if (error) throw new Error(error.message);
+    return Response.json({ ok: true });
+  } catch {
+    return Response.json(
+      { error: "Could not subscribe right now. Please try again." },
+      { status: 502 },
+    );
+  }
 }

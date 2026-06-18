@@ -8,6 +8,7 @@ import {
   StatusNote,
 } from "../components/site-ui";
 import { getVerseOfTheDay } from "./verse-data";
+import { NewsletterSignup } from "../components/forms";
 
 // Regenerate hourly so the verse advances reliably near midnight (UTC) without
 // a redeploy, while staying cached for visitors.
@@ -84,6 +85,14 @@ export default function VerseOfTheDayPage() {
           slowly, sit with the reflection, and carry one line into the hours
           ahead.
         </p>
+      </section>
+
+      <section className="mt-6 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 sm:p-8">
+        <NewsletterSignup
+          heading="Get the verse in your inbox"
+          description="One short, quiet email each morning — a verse, a reflection, and a prayer. No spam. Unsubscribe anytime."
+          cta="Send me the daily verse"
+        />
       </section>
 
       <div className="mt-6 max-w-4xl">
