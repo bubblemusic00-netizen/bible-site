@@ -71,8 +71,8 @@ export default function JewelryPage() {
       <section className="relative isolate overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_18%_18%,rgba(239,204,139,0.18),transparent_32%),radial-gradient(circle_at_82%_16%,rgba(255,250,240,0.08),transparent_30%),linear-gradient(135deg,#17251d_0%,#203d30_48%,#121711_100%)] px-5 py-8 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.2)] sm:px-8 sm:py-10 lg:px-10">
         <div className="relative z-10 grid gap-8 lg:grid-cols-[0.68fr_0.32fr] lg:items-end">
           <div className="max-w-4xl">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#e9c985]/45 bg-[#fffaf0]/8 px-4 py-2 text-sm font-semibold text-[#f3dfb6] backdrop-blur-md">
-              <Gem size={16} strokeWidth={1.8} />
+            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#e9c985]">
+              <Gem size={15} strokeWidth={1.8} />
               Faith Symbols
             </p>
             <h1 className="mt-5 max-w-4xl font-serif text-4xl font-semibold leading-[1.02] text-[#fffaf0] sm:text-6xl">
