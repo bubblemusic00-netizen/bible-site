@@ -186,7 +186,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
       </div>
       {!isDark ? (
         <div className="border-t border-[#eadfcb]">
-          <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-sm text-[#7b6a52] sm:flex-row sm:items-center sm:justify-between sm:px-8">
+          <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-sm text-[#6a5f4d] sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <p>
               © {year} Selah. Free Scripture, prayer, and reflection.
             </p>
@@ -317,7 +317,7 @@ export function Breadcrumbs({
 }) {
   return (
     <nav aria-label="Breadcrumb" className="mb-5 w-full min-w-0">
-      <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-[#7b6a52]">
+      <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-[#6a5f4d]">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
@@ -340,7 +340,7 @@ export function Breadcrumbs({
                   <ChevronRight
                     size={14}
                     strokeWidth={1.8}
-                    className="shrink-0 text-[#bba77f]"
+                    className="shrink-0 text-[#94886f]"
                   />
                 </>
               )}

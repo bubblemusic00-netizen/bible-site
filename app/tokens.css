@@ -1,0 +1,65 @@
+/* tokens.css — GENERATED from design-kit profile.json (Selah). Do not edit by hand.
+   Source: C:\1.ALL-AI\_databases\design ux ui\design-kit  →  node generate-tokens.mjs profile.json
+   Contrast: every required pair verified ≥ WCAG 2.2 AA (fg 14.6:1, muted 5.85:1, accent 11.39:1). */
+:root {
+  --neutral-0: #1b1712;
+  --neutral-1: #27231d;
+  --neutral-2: #463f33;
+  --neutral-3: #6a5f4d;
+  --neutral-4: #94886f;
+  --neutral-5: #c6b99e;
+  --neutral-6: #e4d9c2;
+  --neutral-7: #f4ecdb;
+  --neutral-8: #fbf7ed;
+  --accent: #203d30;
+  --accent-fg: #fffaf0;
+
+  --bg: #fbf7ed;            /* fg on bg = 14.6:1 */
+  --surface: #f4ecdb;
+  --fg: #27231d;
+  --muted: #6a5f4d;      /* muted on bg = 5.85:1 */
+  --border: #e4d9c2;
+  --accent-bg: #203d30;  /* accent-fg on accent = 11.39:1 */
+  --gold: #c49c52;       /* decorative only — fails text contrast on cream */
+
+  --text-xs: 12.8px;  --text-sm: 14px;  --text-base: 16px;
+  --text-lg: 20px;  --text-xl: 25px;  --text-2xl: 31.25px;
+  --text-3xl: 39.06px; --text-4xl: 48.83px; --text-5xl: 61.04px;
+
+  --font-display: var(--font-cormorant), Cormorant Garamond, Georgia, serif;
+  --font-text: var(--font-inter), Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --weight-heading: 600;
+  --weight-body: 400;
+  --lh-body: 1.6;
+  --lh-heading: 1.12;
+  --measure: 68ch;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --section-y: 96px;
+  --content-max: 1120px;
+  --gutter: 24px;
+
+  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px; --radius-pill: 9999px;
+
+  /* motion — durations scale by element size/distance (playbook §11) */
+  --duration-micro: 130ms;       /* hover, toggle, focus */
+  --duration: 220ms;                  /* standard: most transitions */
+  --duration-expressive: 360ms; /* large surfaces, sections */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);          /* enter/appear */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);           /* exit/dismiss */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);   /* move between positions */
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);   /* expressive/branded */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* default (back-compat) */
+}
+
+@media (max-width: 640px) { :root { --section-y: 56px; } }
+@media (prefers-reduced-motion: reduce) { :root { --duration-micro: 0ms; --duration: 0ms; --duration-expressive: 0ms; } }

@@ -7,7 +7,7 @@ import { ArrowRight, Check, Loader2 } from "lucide-react";
 // Built ahead of email/checkout wiring so capture features drop in cleanly.
 
 const fieldBase =
-  "w-full rounded-lg border border-[#d8c5a3] bg-[#fffaf0] px-4 py-3 text-base text-[#241f19] placeholder:text-[#9c9082] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition focus:border-[#bd9247] focus:outline-none focus:ring-2 focus:ring-[#c49c52]/45 disabled:cursor-not-allowed disabled:opacity-60";
+  "w-full rounded-lg border border-[#d8c5a3] bg-[#fffaf0] px-4 py-3 text-base text-[#241f19] placeholder:text-[#756a59] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition focus:border-[#bd9247] focus:outline-none focus:ring-2 focus:ring-[#c49c52]/45 disabled:cursor-not-allowed disabled:opacity-60";
 
 export function FormField({
   label,

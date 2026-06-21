@@ -155,7 +155,7 @@ export default async function BibleChapterPage({
                   Scripture text
                 </h2>
               </div>
-              <p className="text-sm font-semibold leading-6 text-[#746c60]">
+              <p className="text-sm font-semibold leading-6 text-[#6a5f4d]">
                 {chapterData.translation}
               </p>
             </div>

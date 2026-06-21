@@ -97,7 +97,7 @@ export default function ShopPage() {
                 </p>
                 <p className="mt-3 text-sm font-semibold text-[#2f5140]">
                   From {formatPrice(product.priceCents)}
-                  <span className="ml-2 font-normal text-[#8a7f70]">
+                  <span className="ml-2 font-normal text-[#6a5f4d]">
                     {product.material}
                   </span>
                 </p>

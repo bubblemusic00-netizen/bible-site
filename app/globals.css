@@ -1,8 +1,11 @@
 @import "tailwindcss";
+/* Design tokens — generated + WCAG-gated from the design-kit. Source of truth for the visual system. */
+@import "./tokens.css";
 
 :root {
-  --background: #fbf7ed;
-  --foreground: #27231d;
+  /* Bridged to generated tokens so the whole site shares one verified palette. */
+  --background: var(--bg);
+  --foreground: var(--fg);
 }
 
 @theme inline {
@@ -75,7 +78,7 @@ a {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid #c49c52;
+  outline: 3px solid var(--gold);
   outline-offset: 3px;
 }
 
