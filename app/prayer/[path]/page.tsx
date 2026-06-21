@@ -115,10 +115,10 @@ export default async function PrayerPathPage({
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto w-full max-w-[760px] text-center">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#d5bd8d] bg-[#fffaf0] px-4 py-2 text-sm font-semibold text-[#7b561b] shadow-[0_8px_18px_rgba(81,59,31,0.05)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8f6220]">
               {prayer.theme}
             </p>
-            <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.02] text-[#241f19] sm:text-6xl">
+            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.02] text-[#241f19] sm:text-7xl">
               {prayer.title}
             </h1>
             <p className="mx-auto mt-5 max-w-[690px] text-base leading-8 text-[#625b51] sm:text-lg">
@@ -148,9 +148,18 @@ export default async function PrayerPathPage({
               </h2>
             </div>
 
-            <div className="mt-8 space-y-6 text-[1.08rem] leading-8 text-[#302b24] sm:space-y-7 sm:text-[1.22rem] sm:leading-10">
-              {prayer.prayer.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+            <div className="mt-8 space-y-5 font-serif text-[1.3rem] leading-[1.7] text-[#2b251d] sm:space-y-6 sm:text-[1.5rem] sm:leading-[1.72]">
+              {prayer.prayer.map((paragraph, i) => (
+                <p
+                  key={paragraph}
+                  className={
+                    i === 0
+                      ? "first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-serif first-letter:text-[3.6rem] first-letter:font-semibold first-letter:leading-[0.72] first-letter:text-[#8f6220] sm:first-letter:text-[4.4rem]"
+                      : undefined
+                  }
+                >
+                  {paragraph}
+                </p>
               ))}
             </div>
           </article>

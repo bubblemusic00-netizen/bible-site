@@ -126,10 +126,10 @@ export default async function BibleChapterPage({
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto w-full max-w-[760px] text-center">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#d5bd8d] bg-[#fffaf0] px-4 py-2 text-sm font-semibold text-[#7b561b] shadow-[0_8px_18px_rgba(81,59,31,0.05)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8f6220]">
               {chapterData.theme}
             </p>
-            <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.02] text-[#241f19] sm:text-6xl">
+            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.02] text-[#241f19] sm:text-7xl">
               {reference}
             </h1>
             <p className="mt-3 font-serif text-2xl font-semibold leading-tight text-[#5d4630] sm:text-3xl">
@@ -146,30 +146,31 @@ export default async function BibleChapterPage({
           </div>
 
           <article className="relative mx-auto mt-10 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
-            <div className="flex flex-col gap-4 border-b border-[#e2d2b6] pb-6 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
-                  {reference}
-                </p>
-                <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-                  Scripture text
-                </h2>
-              </div>
-              <p className="text-sm font-semibold leading-6 text-[#6a5f4d]">
+            <div className="flex items-center justify-between gap-4 border-b border-[#e2d2b6] pb-5">
+              <h2 className="font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-[1.75rem]">
+                {reference}
+              </h2>
+              <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
                 {chapterData.translation}
               </p>
             </div>
 
-            <div className="mt-9 space-y-6 sm:space-y-7">
-              {chapterData.verses.map((verse) => (
+            <div className="mt-9 space-y-5 sm:space-y-6">
+              {chapterData.verses.map((verse, i) => (
                 <p
                   key={verse.number}
-                  className="grid w-full min-w-0 grid-cols-[1.65rem_minmax(0,1fr)] gap-3 text-[1.08rem] leading-8 text-[#302b24] sm:grid-cols-[2.25rem_minmax(0,1fr)] sm:text-[1.22rem] sm:leading-10"
+                  className="grid w-full min-w-0 grid-cols-[1.5rem_minmax(0,1fr)] gap-3 font-serif text-[1.3rem] leading-[1.7] text-[#2b251d] sm:grid-cols-[2rem_minmax(0,1fr)] sm:text-[1.5rem] sm:leading-[1.72]"
                 >
-                  <span className="pt-1 text-xs font-semibold leading-6 text-[#8f6220]/70 sm:text-sm">
+                  <span className="select-none pt-[0.55rem] text-right font-sans text-[0.7rem] font-semibold leading-none text-[#8f6220]/75 sm:text-xs">
                     {verse.number}
                   </span>
-                  <span className="block min-w-0 whitespace-normal break-words">
+                  <span
+                    className={
+                      i === 0
+                        ? "block min-w-0 whitespace-normal break-words first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-serif first-letter:text-[3.6rem] first-letter:font-semibold first-letter:leading-[0.72] first-letter:text-[#8f6220] sm:first-letter:text-[4.4rem]"
+                        : "block min-w-0 whitespace-normal break-words"
+                    }
+                  >
                     {verse.text}
                   </span>
                 </p>
