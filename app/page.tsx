@@ -296,6 +296,7 @@ export default function Home() {
             alt="Selah"
             width={1044}
             height={612}
+            sizes="(max-width: 640px) 280px, 460px"
             className="h-auto w-[clamp(260px,44vw,460px)]"
           />
           <p className="mt-4 font-serif text-xl italic text-[#f1eadf]/80">

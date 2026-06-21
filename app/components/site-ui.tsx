@@ -230,13 +230,12 @@ export function PageIntro({
 
 export function CardLink({
   href,
-  icon: Icon,
   title,
   description,
   cta = "Open",
 }: {
   href: string;
-  icon: LucideIcon;
+  icon?: LucideIcon;
   title: string;
   description: string;
   cta?: string;
@@ -247,22 +246,21 @@ export function CardLink({
       className="group relative flex h-full min-w-0 flex-col overflow-hidden rounded-lg border border-[#eadbc0] bg-[#fffaf1]/78 p-5 shadow-[0_18px_42px_rgba(71,55,35,0.045)] transition duration-200 hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)]"
     >
       <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#ffffff]" />
-      <div className="flex items-start justify-between gap-4">
-        <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
-          <Icon size={20} strokeWidth={1.8} />
-        </span>
-        <ArrowRight
-          size={17}
-          className="mt-1 shrink-0 text-[#9b6b25] transition group-hover:translate-x-1"
-        />
-      </div>
-      <h2 className="mt-5 break-words font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+      <h2 className="break-words font-serif text-[1.7rem] font-semibold leading-[1.1] text-[#241f19]">
         {title}
       </h2>
-      <p className="mt-2 break-words text-sm leading-6 text-[#625b51]">
+      <span className="mt-4 block h-px w-10 bg-[#d8c5a3] transition-all duration-200 group-hover:w-16 group-hover:bg-[#c49c52]" />
+      <p className="mt-4 break-words text-base leading-7 text-[#625b51]">
         {description}
       </p>
-      <p className="mt-5 text-sm font-semibold text-[#254737]">{cta}</p>
+      <p className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#254737]">
+        {cta}
+        <ArrowRight
+          size={15}
+          strokeWidth={1.8}
+          className="transition-transform duration-200 group-hover:translate-x-1"
+        />
+      </p>
     </Link>
   );
 }
