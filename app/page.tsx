@@ -72,107 +72,80 @@ export default function Home() {
         />
         {/* Cinematic scrim: dark where the text sits (left/bottom), luminous
             marble toward the right, plus a warm gold glow for depth. */}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,12,0.4)_0%,rgba(11,16,12,0.16)_42%,rgba(12,17,13,0.88)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(11,16,12,0.86)_0%,rgba(11,16,12,0.4)_46%,transparent_78%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(58%_48%_at_82%_18%,rgba(233,201,133,0.16),transparent_62%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,12,0.5)_0%,rgba(11,16,12,0.2)_38%,rgba(12,17,13,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,rgba(11,16,12,0.82)_0%,rgba(11,16,12,0.4)_44%,transparent_74%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(60%_42%_at_50%_8%,rgba(233,201,133,0.14),transparent_64%)]" />
         <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#111711] via-[#111711]/84 to-transparent" />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-10 sm:px-8 lg:grid-cols-[1fr_0.58fr] lg:py-14">
-          <div className="max-w-4xl">
-            <p
-              className="fade-rise inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.22em] text-[#f3dfb6]/90"
-              style={{ animationDelay: "0ms" }}
-            >
-              <Cross size={15} strokeWidth={1.8} />
-              Scripture &amp; Prayer
-            </p>
-            <h1
-              className="fade-rise mt-6 max-w-4xl font-serif text-5xl font-semibold leading-[0.98] tracking-[-0.015em] text-[#fffaf0] sm:text-7xl lg:text-[5.8rem]"
-              style={{ animationDelay: "90ms" }}
-            >
-              Find Scripture and prayer for what you are{" "}
-              <span className="italic">carrying</span>.
-            </h1>
-            <p
-              className="fade-rise mt-6 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-xl sm:leading-8"
-              style={{ animationDelay: "170ms" }}
-            >
-              Answer three quiet questions. In a minute, you&rsquo;ll have a
-              passage, a prayer, and one small thing to carry into your day.
-            </p>
+        <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-8 lg:py-20">
+          <p
+            className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#f3dfb6]/90"
+            style={{ animationDelay: "0ms" }}
+          >
+            <span className="h-px w-8 bg-[#f3dfb6]/40" />
+            <Cross size={15} strokeWidth={1.8} />
+            Scripture &amp; Prayer
+            <span className="h-px w-8 bg-[#f3dfb6]/40" />
+          </p>
+          <h1
+            className="fade-rise mt-7 max-w-[15ch] font-serif text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.015em] text-[#fffaf0] sm:text-7xl sm:leading-[0.98] lg:text-[6rem]"
+            style={{ animationDelay: "90ms" }}
+          >
+            Find Scripture and prayer for what you are{" "}
+            <span className="italic">carrying</span>.
+          </h1>
+          <p
+            className="fade-rise mt-7 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-xl sm:leading-8"
+            style={{ animationDelay: "170ms" }}
+          >
+            Answer three quiet questions. In a minute, you&rsquo;ll have a
+            passage, a prayer, and one small thing to carry into your day.
+          </p>
 
-            <div
-              className="fade-rise mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
-              style={{ animationDelay: "250ms" }}
+          <div
+            className="fade-rise mt-9 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center"
+            style={{ animationDelay: "250ms" }}
+          >
+            <Link
+              href="/start"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-7 py-3 text-sm font-semibold text-[#203d30] shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0] hover:shadow-[0_24px_64px_rgba(233,201,133,0.32)]"
             >
-              <Link
-                href="/start"
-                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-6 py-3 text-sm font-semibold text-[#203d30] shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0] hover:shadow-[0_24px_64px_rgba(233,201,133,0.32)]"
-              >
-                Take the Faith Quiz
-                <ArrowRight
-                  size={17}
-                  strokeWidth={1.8}
-                  className="transition-transform duration-200 group-hover:translate-x-1"
-                />
-              </Link>
-              <Link
-                href="#library"
-                className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-[#f1eadf] transition hover:text-[#fffaf0]"
-              >
-                <BookOpenText size={17} strokeWidth={1.8} />
-                <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-[#f3dfb6]/70">
-                  Explore Bible &amp; Prayer
-                </span>
-              </Link>
-            </div>
-
-            <p
-              className="fade-rise mt-6 max-w-xl text-sm font-semibold leading-6 text-[#f1eadf]/76"
-              style={{ animationDelay: "330ms" }}
+              Take the Faith Quiz
+              <ArrowRight
+                size={17}
+                strokeWidth={1.8}
+                className="transition-transform duration-200 group-hover:translate-x-1"
+              />
+            </Link>
+            <Link
+              href="#library"
+              className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-[#f1eadf] transition hover:text-[#fffaf0]"
             >
-              Free to begin. No login, no pressure.
-            </p>
-
-            <p
-              className="fade-rise mt-7 flex flex-wrap items-baseline gap-x-3 gap-y-1"
-              style={{ animationDelay: "400ms" }}
-            >
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f3dfb6]/75">
-                For moments of
+              <BookOpenText size={17} strokeWidth={1.8} />
+              <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-[#f3dfb6]/70">
+                Explore Bible &amp; Prayer
               </span>
-              <span className="font-serif text-lg italic text-[#f1eadf]/90">
-                {momentWords.map((w) => w.toLowerCase()).join(" · ")}
-              </span>
-            </p>
+            </Link>
           </div>
 
-          <div className="relative hidden lg:block">
-            <div className="absolute -inset-8 rounded-full bg-[#e9c985]/12 blur-3xl" />
-            <figure className="relative border-l border-[#f3dfb6]/35 bg-[#fffaf0]/8 px-8 py-9 shadow-[0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
-              <figcaption className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#e9c985]">
-                Today&rsquo;s verse
-                <span className="h-px flex-1 bg-[#f3dfb6]/25" />
-              </figcaption>
-              <blockquote className="mt-7 font-serif text-[1.6rem] font-medium leading-[1.34] text-[#fffaf0]">
-                &ldquo;{verse.text}&rdquo;
-              </blockquote>
-              <p className="mt-6 text-sm font-semibold tracking-[0.04em] text-[#f3dfb6]">
-                {verse.reference} &middot; KJV
-              </p>
-              <Link
-                href="/verse-of-the-day"
-                className="group mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-[#e9c985] transition hover:text-[#f3dfb6]"
-              >
-                A new verse each morning
-                <ArrowRight
-                  size={15}
-                  strokeWidth={1.8}
-                  className="transition-transform duration-200 group-hover:translate-x-1"
-                />
-              </Link>
-            </figure>
-          </div>
+          <p
+            className="fade-rise mt-7 text-sm font-semibold leading-6 text-[#f1eadf]/76"
+            style={{ animationDelay: "330ms" }}
+          >
+            Free to begin. No login, no pressure.
+          </p>
+
+          <p
+            className="fade-rise mt-7 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1"
+            style={{ animationDelay: "400ms" }}
+          >
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f3dfb6]/75">
+              For moments of
+            </span>
+            <span className="font-serif text-lg italic text-[#f1eadf]/90">
+              {momentWords.map((w) => w.toLowerCase()).join(" · ")}
+            </span>
+          </p>
         </div>
 
         <div className="pointer-events-none absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[#f1eadf]/70 lg:flex">
@@ -180,6 +153,37 @@ export default function Home() {
             Scroll
           </span>
           <ChevronDown size={18} strokeWidth={1.8} className="scroll-cue" />
+        </div>
+      </section>
+
+      <section className="relative bg-[#fbf7ed] px-4 py-20 text-center text-[#2b251d] sm:px-8">
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.14),transparent_70%)]"
+          aria-hidden
+        />
+        <div data-reveal className="relative mx-auto max-w-3xl">
+          <p className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#8f6220]">
+            <span className="h-px w-8 bg-[#d8c5a3]" />
+            Today&rsquo;s verse
+            <span className="h-px w-8 bg-[#d8c5a3]" />
+          </p>
+          <blockquote className="mt-7 font-serif text-3xl font-medium leading-[1.3] text-[#2b251d] sm:text-[2.6rem] sm:leading-[1.24]">
+            &ldquo;{verse.text}&rdquo;
+          </blockquote>
+          <p className="mt-7 text-sm font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+            {verse.reference} &middot; KJV
+          </p>
+          <Link
+            href="/verse-of-the-day"
+            className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#254737] transition hover:text-[#203d30]"
+          >
+            A new verse each morning
+            <ArrowRight
+              size={15}
+              strokeWidth={1.8}
+              className="transition-transform duration-200 group-hover:translate-x-1"
+            />
+          </Link>
         </div>
       </section>
 

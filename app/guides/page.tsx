@@ -107,20 +107,18 @@ export default function GuidesPage() {
                   href={`/guides/${guide.slug}`}
                   className="group flex min-w-0 flex-col rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 p-5 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
                 >
-                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-                    <Compass size={18} strokeWidth={1.8} />
-                  </span>
-                  <span className="mt-4 block font-serif text-2xl font-semibold leading-tight text-[#241f19]">
-                    {guide.title}
-                  </span>
-                  <span className="mt-1 block text-sm font-semibold leading-6 text-[#8f6220]">
+                  <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
                     {guide.audience}
                   </span>
-                  <span className="mt-2 block text-base leading-7 text-[#625b51]">
+                  <span className="mt-3 block font-serif text-[1.7rem] font-semibold leading-[1.1] text-[#241f19]">
+                    {guide.title}
+                  </span>
+                  <span className="mt-4 block h-px w-10 bg-[#d8c5a3] transition-all duration-200 group-hover:w-16 group-hover:bg-[#c49c52]" />
+                  <span className="mt-4 block text-base leading-7 text-[#625b51]">
                     {guide.description}
                   </span>
-                  <span className="mt-auto inline-flex items-center gap-2 pt-4 text-sm font-semibold text-[#254737]">
-                    Open
+                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#254737]">
+                    Read
                     <ArrowRight
                       size={15}
                       strokeWidth={1.8}
