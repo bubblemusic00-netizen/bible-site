@@ -161,7 +161,7 @@ export default async function BibleChapterPage({
                   key={verse.number}
                   className="grid w-full min-w-0 grid-cols-[1.5rem_minmax(0,1fr)] gap-3 font-serif text-[1.3rem] leading-[1.7] text-[#2b251d] sm:grid-cols-[2rem_minmax(0,1fr)] sm:text-[1.5rem] sm:leading-[1.72]"
                 >
-                  <span className="select-none pt-[0.55rem] text-right font-sans text-[0.7rem] font-semibold leading-none text-[#8f6220]/75 sm:text-xs">
+                  <span className="select-none pt-[0.55rem] text-right font-sans text-[0.7rem] font-semibold leading-none text-[#8f6220] sm:text-xs">
                     {verse.number}
                   </span>
                   <span
