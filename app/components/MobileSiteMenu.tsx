@@ -23,7 +23,7 @@ export function MobileSiteMenu({
     <div className="relative flex shrink-0 lg:hidden">
       <button
         type="button"
-        aria-label={isOpen ? "Close site navigation" : "Open site navigation"}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-controls="mobile-site-menu"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((open) => !open)}
