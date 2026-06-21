@@ -46,10 +46,10 @@ export default function VerseOfTheDayPage() {
           <CalendarDays size={15} strokeWidth={1.8} />
           {today}
         </p>
-        <blockquote className="mt-4 font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+        <blockquote className="mt-5 font-serif text-3xl font-medium leading-[1.3] text-[#2b251d] sm:text-[2.6rem] sm:leading-[1.24]">
           &ldquo;{verse.text}&rdquo;
         </blockquote>
-        <p className="mt-5 text-sm font-semibold text-[#2f5140]">
+        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-[#8f6220]">
           {verse.reference} - {verse.translation}
         </p>
       </section>

@@ -92,7 +92,7 @@ export default async function VerseTopicPage({
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
               {verse.reference}
             </p>
-            <blockquote className="mt-2 font-serif text-xl leading-relaxed text-[#241f19] sm:text-2xl">
+            <blockquote className="mt-3 font-serif text-[1.3rem] leading-[1.6] text-[#2b251d] sm:text-[1.55rem]">
               &ldquo;{verse.text}&rdquo;
             </blockquote>
           </div>

@@ -122,10 +122,10 @@ export default async function GuidePage({
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto w-full max-w-[800px] text-center">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#d5bd8d] bg-[#fffaf0] px-4 py-2 text-sm font-semibold text-[#7b561b] shadow-[0_8px_18px_rgba(81,59,31,0.05)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8f6220]">
               {guide.audience}
             </p>
-            <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.02] text-[#241f19] sm:text-6xl">
+            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.02] text-[#241f19] sm:text-7xl">
               {guide.title}
             </h1>
             <p className="mx-auto mt-5 max-w-[720px] text-base leading-8 text-[#625b51] sm:text-lg">
