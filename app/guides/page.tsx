@@ -35,8 +35,8 @@ export default function GuidesPage() {
           subtitle="Simple, careful guides for people who want to begin with Scripture, prayer, reflection, and Christian faith basics."
         />
         <div className="border-l border-[#d8c5a3] pl-5">
-          <p className="text-sm font-semibold uppercase text-[#8f6220]">
-            Seven finished guides
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+            {guideKeys.length} beginner guides
           </p>
           <p className="mt-2 text-base leading-7 text-[#625b51]">
             These guides are beginner-friendly, non-denominational, and written
