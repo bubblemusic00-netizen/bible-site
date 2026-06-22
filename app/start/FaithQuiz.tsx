@@ -355,22 +355,22 @@ export function FaithQuiz() {
 
             {step === 4 && path && beginWith && carrying && doorway ? (
               <div>
-                <h2
-                  ref={headingRef}
-                  tabIndex={-1}
-                  className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220] outline-none"
-                >
+                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
                   Your Faith Path
-                </h2>
+                </p>
                 <div className="mt-3 overflow-hidden rounded-[1.35rem] bg-[#f2f5ee]">
                   <div className="flex flex-col gap-4 bg-[radial-gradient(circle_at_top_right,rgba(233,201,133,0.18),transparent_42%),linear-gradient(135deg,#203d30,#182a21)] p-5 text-[#fffaf0] sm:flex-row sm:items-start sm:justify-between sm:p-6">
                     <div className="min-w-0">
                       <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#e9c985]">
                         {beginWith} first
                       </p>
-                      <p className="mt-2 font-serif text-4xl font-semibold leading-tight">
+                      <h2
+                        ref={headingRef}
+                        tabIndex={-1}
+                        className="mt-2 font-serif text-4xl font-semibold leading-tight text-[#fffaf0] outline-none"
+                      >
                         {path.title} Faith Path
-                      </p>
+                      </h2>
                       <p className="mt-3 text-base leading-7 text-[#fff8e8]/82">
                         Because you are carrying {carrying.toLowerCase()}:{" "}
                         {concernGuidance[carrying]}
