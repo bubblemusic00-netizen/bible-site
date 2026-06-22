@@ -355,7 +355,7 @@ export function Breadcrumbs({
                 <>
                   <Link
                     href={item.path}
-                    className="font-semibold transition hover:text-[#204636]"
+                    className="font-semibold underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-[#9a7322]/50"
                   >
                     {item.name}
                   </Link>
