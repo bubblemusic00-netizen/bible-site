@@ -137,6 +137,20 @@ a:focus-visible {
   transform-origin: top right;
 }
 
+/* Gold medallion catching light — a slow highlight sweep across the metal. */
+@keyframes medallion-shine {
+  0% {
+    transform: translateX(-260%) skewX(-20deg);
+  }
+  16%,
+  100% {
+    transform: translateX(460%) skewX(-20deg);
+  }
+}
+.medallion-shimmer {
+  animation: medallion-shine 5s ease-in-out infinite;
+}
+
 /* Scroll reveal — only active once JS adds `js-reveal` (no-JS stays visible). */
 .js-reveal [data-reveal] {
   opacity: 0;

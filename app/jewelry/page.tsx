@@ -105,15 +105,6 @@ export default function JewelryPage() {
       >
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.10] mix-blend-overlay"
-          style={{
-            backgroundImage: "url(/hero-marble.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div
-          aria-hidden
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),transparent_30%)]"
         />
         <div
@@ -122,7 +113,7 @@ export default function JewelryPage() {
         />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <div className="flex justify-center">
-            <Medallion icon={Cross} size={112} tone="dark" />
+            <Medallion icon={Cross} size={112} tone="dark" shimmer />
           </div>
           <p className="mt-8 inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.24em] text-[#e9c985]">
             <Gem size={15} strokeWidth={1.8} />
@@ -196,18 +187,20 @@ export default function JewelryPage() {
         </div>
       </section>
 
-      {/* Integrity as a brand value, not a buried disclaimer. */}
-      <section className="mt-14 rounded-[1.5rem] border border-[#dfcfb2] bg-[#fffaf1]/70 p-7 text-center shadow-[0_18px_44px_rgba(71,55,35,0.05)] sm:mt-16 sm:p-10">
+      {/* Integrity as a brand creed, not a buried disclaimer. */}
+      <section className="mt-14 rounded-[1.5rem] border border-[#e6d8bd] bg-[#fbf6ea] p-8 text-center shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_40px_-18px_rgba(60,45,25,0.18),inset_0_1px_0_rgba(255,255,255,0.7)] sm:mt-16 sm:p-12">
         <div className="mx-auto max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8f6220]">
+          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-[#8f6220]">
+            <span className="h-px w-8 bg-[#d8c5a3]" />
             A reminder, never a charm
+            <span className="h-px w-8 bg-[#d8c5a3]" />
           </p>
-          <p className="mt-4 font-serif text-xl leading-relaxed text-[#2b251d] sm:text-2xl">
+          <p className="mt-6 font-serif text-2xl font-medium leading-[1.45] text-[#2b251d] sm:text-[1.85rem]">
             A symbol points to faith; it never replaces it. Nothing we make will
             ever promise protection, healing, luck, or spiritual power — and we
             will always say so plainly.
           </p>
-          <p className="mt-4 text-sm leading-7 text-[#625b51]">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#5f574a]">
             The meaning is never in the object. It is in the Scripture, the
             prayer, and the God it quietly points you back to.
           </p>
@@ -222,15 +215,6 @@ export default function JewelryPage() {
             "radial-gradient(120% 100% at 70% 0%, #304b3a 0%, #1c3026 56%, #10201a 100%)",
         }}
       >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.09] mix-blend-overlay"
-          style={{
-            backgroundImage: "url(/hero-marble.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),transparent_30%)]"
@@ -359,10 +343,12 @@ function Medallion({
   icon: Icon,
   size = 72,
   tone = "light",
+  shimmer = false,
 }: {
   icon: LucideIcon;
   size?: number;
   tone?: "light" | "dark";
+  shimmer?: boolean;
 }) {
   const face =
     tone === "dark"
@@ -380,17 +366,24 @@ function Medallion({
       }}
     >
       <span
-        className={`grid size-full place-items-center rounded-full ${tone === "dark" ? "text-[#f0dca6]" : "text-[#6a5526]"} shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.8),inset_0_-2px_5px_rgba(120,95,45,0.3)]`}
+        className={`relative grid size-full place-items-center overflow-hidden rounded-full ${tone === "dark" ? "text-[#f0dca6]" : "text-[#6a5526]"} shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.8),inset_0_-2px_5px_rgba(120,95,45,0.3)]`}
         style={{ background: face }}
       >
         <Icon
           size={Math.round(size * 0.4)}
           strokeWidth={1.5}
-          className={
+          className={`relative z-10 ${
             tone === "dark"
               ? "drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)]"
               : "drop-shadow-[0_1px_0_rgba(255,255,255,0.65)]"
-          }
+          }`}
+        />
+        <span
+          className={`pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/55 to-transparent motion-reduce:hidden ${
+            shimmer
+              ? "medallion-shimmer"
+              : "-translate-x-[260%] -skew-x-[20deg] transition-transform duration-700 ease-out group-hover:translate-x-[460%]"
+          }`}
         />
       </span>
     </span>
