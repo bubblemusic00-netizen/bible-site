@@ -75,10 +75,10 @@ export function SiteHeader({
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
         <Link
           href="/"
-          className="flex min-w-0 items-center gap-3"
+          className="group flex min-w-0 items-center gap-3"
           aria-label="Selah home"
         >
-          <span className="grid size-10 shrink-0 place-items-center rounded-[13px] bg-[#203d30] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_12px_28px_rgba(32,70,54,0.22)]">
+          <span className="grid size-10 shrink-0 place-items-center rounded-[13px] bg-[#203d30] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_12px_28px_rgba(32,70,54,0.22)] transition-transform duration-200 ease-out group-hover:scale-[1.05]">
             <SelahMark />
           </span>
           <span
