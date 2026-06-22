@@ -58,7 +58,7 @@ export default function GuidesPage() {
         </StatusNote>
       </div>
 
-      <div data-reveal-stagger className="mt-9 grid gap-10">
+      <div className="mt-9 grid gap-10">
         {groupedGuides.map((group) => (
           <section
             key={group.key}
@@ -73,17 +73,28 @@ export default function GuidesPage() {
               </h2>
             </div>
 
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div
+              className={`mt-5 grid gap-4 ${
+                group.key === "start" ? "" : "sm:grid-cols-2"
+              }`}
+            >
               {group.guides.map((guide) => (
                 <Link
                   key={guide.slug}
                   href={`/guides/${guide.slug}`}
-                  className="group flex min-w-0 flex-col rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 p-5 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
+                  className={`group flex min-w-0 flex-col rounded-xl border border-[#e4d6bd] shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)] ${
+                    group.key === "start"
+                      ? "bg-[#fbf6ea] p-7 sm:p-8"
+                      : "bg-[#fffaf1]/70 p-5 hover:bg-[#fffdf7]"
+                  }`}
                 >
-                  <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
-                    {guide.audience}
-                  </span>
-                  <span className="mt-3 block font-serif text-[1.7rem] font-semibold leading-[1.1] text-[#241f19]">
+                  <span
+                    className={`block font-serif font-semibold leading-[1.1] text-[#241f19] ${
+                      group.key === "start"
+                        ? "text-[2rem] sm:text-[2.3rem]"
+                        : "text-[1.7rem]"
+                    }`}
+                  >
                     {guide.title}
                   </span>
                   <span className="mt-4 block h-px w-10 bg-[#d8c5a3] transition-all duration-200 group-hover:w-16 group-hover:bg-[#c49c52]" />
