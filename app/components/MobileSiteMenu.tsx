@@ -36,7 +36,7 @@ export function MobileSiteMenu({
       {isOpen ? (
         <div
           id="mobile-site-menu"
-          className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[min(18rem,calc(100vw-2rem))] overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-2 shadow-[0_22px_60px_rgba(71,55,35,0.18)]"
+          className="menu-in absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[min(18rem,calc(100vw-2rem))] overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-2 shadow-[0_22px_60px_rgba(71,55,35,0.18)]"
         >
           <nav aria-label="Mobile navigation" className="grid gap-1">
             {items.map((item) => (
