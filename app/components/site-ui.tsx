@@ -168,7 +168,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               <ShieldCheck size={14} strokeWidth={1.8} />
               Trust
             </h2>
-            <div className="mt-3 grid gap-y-2 text-sm font-semibold text-[#7b561b]">
+            <div className="mt-3 grid gap-y-2 text-sm font-semibold text-[#355242]">
             {trustLinks.map((item) => (
               <Link
                 key={item.href}
@@ -190,7 +190,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               <Scale size={14} strokeWidth={1.8} />
               Policies
             </h2>
-            <div className="mt-3 grid gap-y-2 text-sm font-semibold text-[#7b561b]">
+            <div className="mt-3 grid gap-y-2 text-sm font-semibold text-[#355242]">
             {legalLinks.map((item) => (
               <Link
                 key={item.href}
