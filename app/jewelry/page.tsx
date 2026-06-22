@@ -230,26 +230,24 @@ export default function JewelryPage() {
           </p>
         </div>
 
-        <div className="mt-7 overflow-hidden rounded-[1.5rem] border border-[#dfcfb2] bg-[#fffaf1]/58">
+        <div className="mt-10 space-y-12">
           {groupedSymbols.map((group) => (
-            <section
-              key={group.key}
-              className="grid gap-4 border-b border-[#dfcfb2] px-4 py-5 last:border-b-0 sm:px-6 lg:grid-cols-[0.32fr_1fr]"
-            >
-              <div>
-                <h3 className="font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-3xl">
+            <div key={group.key}>
+              <div className="flex items-baseline gap-3">
+                <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
                   {group.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-[#625b51]">
-                  {group.description}
-                </p>
+                </span>
+                <span className="h-px flex-1 bg-[#e4d6bd]" />
               </div>
-              <div className="grid gap-x-5 gap-y-0 md:grid-cols-3">
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#625b51]">
+                {group.description}
+              </p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {group.symbols.map((symbol) => (
                   <SymbolIndexLink key={symbol.slug} symbol={symbol} />
                 ))}
               </div>
-            </section>
+            </div>
           ))}
         </div>
       </section>
@@ -348,19 +346,24 @@ function SymbolIndexLink({ symbol }: { symbol: FaithSymbol }) {
   return (
     <Link
       href={`/jewelry/symbols/${symbol.slug}`}
-      className="group flex min-w-0 items-start gap-3 border-t border-[#e2d4ba] py-4 transition hover:border-[#c49c52]"
+      className="group flex min-w-0 items-center gap-3.5 rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 px-4 py-3.5 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_14px_30px_rgba(71,55,35,0.08)]"
     >
-      <span className="mt-1 grid size-9 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-        <Icon size={17} strokeWidth={1.8} />
+      <span className="grid size-11 shrink-0 place-items-center rounded-full border border-[#e9c985]/45 bg-[radial-gradient(circle,#fffaf1,#f1e8d4)] text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
+        <Icon size={18} strokeWidth={1.7} />
       </span>
       <span className="min-w-0">
-        <span className="block break-words font-serif text-xl font-semibold leading-tight text-[#241f19]">
+        <span className="block break-words font-serif text-lg font-semibold leading-tight text-[#241f19]">
           {symbol.name}
         </span>
-        <span className="mt-1 block break-words text-sm leading-6 text-[#625b51]">
+        <span className="mt-0.5 block break-words text-xs font-semibold uppercase tracking-[0.08em] text-[#8f6220]">
           {symbol.scriptureReference}
         </span>
       </span>
+      <ArrowRight
+        size={15}
+        strokeWidth={1.8}
+        className="ml-auto shrink-0 text-[#c9b79a] transition group-hover:translate-x-0.5 group-hover:text-[#8f6220]"
+      />
     </Link>
   );
 }
