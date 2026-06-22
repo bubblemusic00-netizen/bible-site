@@ -177,12 +177,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 py-8 sm:px-8">
+      <section className="px-4 py-16 sm:px-8 lg:py-20">
         <div
           data-reveal
-          className="mx-auto grid w-full max-w-7xl gap-5 border-y border-[#fff8e8]/10 py-7 lg:grid-cols-[0.32fr_1fr] lg:items-start"
+          className="mx-auto grid w-full max-w-7xl gap-5 lg:grid-cols-[0.32fr_1fr] lg:items-start"
         >
-          <p className="text-sm font-semibold uppercase text-[#e9c985]">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#e9c985]">
             Why this exists
           </p>
           <div className="max-w-3xl">
@@ -246,7 +246,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-10 px-4 py-14 text-[#fffaf0] sm:px-8">
+      <section className="relative z-10 px-4 py-16 text-[#fffaf0] sm:px-8 lg:py-20">
         <div
           data-reveal
           className="mx-auto grid w-full max-w-7xl gap-5 lg:grid-cols-[1fr_auto] lg:items-center"
