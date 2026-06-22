@@ -202,17 +202,17 @@ export default function Home() {
 
       <section
         id="library"
-        className="relative z-10 px-4 pb-10 sm:px-8"
+        className="relative z-10 bg-[#fbf7ed] px-4 py-16 text-[#241f19] sm:px-8 lg:py-20"
       >
         <div
           data-reveal
-          className="mx-auto grid w-full max-w-7xl gap-6 border-b border-[#fff8e8]/10 pb-8 lg:grid-cols-[0.32fr_1fr]"
+          className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[0.32fr_1fr] lg:items-start"
         >
           <div>
-            <p className="text-sm font-semibold uppercase text-[#e9c985]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
               Explore quietly
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#fffaf0] sm:text-4xl">
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
               A library for the next step, not a wall of choices.
             </h2>
           </div>
@@ -222,16 +222,16 @@ export default function Home() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex min-h-44 flex-col rounded-xl border border-[#fff8e8]/10 bg-[#fffaf0]/[0.04] p-6 text-[#fffaf0] shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#e9c985]/35 hover:bg-[#fffaf0]/[0.07]"
+                className="group flex min-h-44 flex-col rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 p-6 text-[#241f19] shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
               >
-                <span className="block font-serif text-[1.7rem] font-semibold leading-[1.1]">
+                <span className="block font-serif text-[1.7rem] font-semibold leading-[1.1] text-[#241f19]">
                   {item.title}
                 </span>
-                <span className="mt-4 block h-px w-10 bg-[#e9c985]/45 transition-all duration-200 group-hover:w-16 group-hover:bg-[#e9c985]" />
-                <span className="mt-4 block text-sm leading-6 text-[#f1eadf]/72">
+                <span className="mt-4 block h-px w-10 bg-[#d8c5a3] transition-all duration-200 group-hover:w-16 group-hover:bg-[#c49c52]" />
+                <span className="mt-4 block text-sm leading-6 text-[#625b51]">
                   {item.description}
                 </span>
-                <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-[#e9c985]">
+                <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-[#254737]">
                   Open
                   <ArrowRight
                     size={14}
@@ -244,13 +244,15 @@ export default function Home() {
           })}
           </div>
         </div>
+      </section>
 
+      <section className="relative z-10 px-4 py-14 text-[#fffaf0] sm:px-8">
         <div
           data-reveal
-          className="mx-auto grid w-full max-w-7xl gap-5 pt-8 lg:grid-cols-[1fr_auto] lg:items-center"
+          className="mx-auto grid w-full max-w-7xl gap-5 lg:grid-cols-[1fr_auto] lg:items-center"
         >
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#e9c985]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#e9c985]">
               Faith Symbols
             </p>
             <p className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#fffaf0] sm:text-4xl">
