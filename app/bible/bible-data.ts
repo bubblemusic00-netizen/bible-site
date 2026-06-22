@@ -36,7 +36,8 @@ export type BibleReadingGroupKey =
   | "hope"
   | "wisdom"
   | "love"
-  | "identity";
+  | "identity"
+  | "praise";
 
 export const bibleReadingGroups = [
   {
@@ -74,6 +75,11 @@ export const bibleReadingGroups = [
     key: "identity",
     title: "Identity and being known by God",
     description: "Receive dignity, honest self-examination, and God's near attention.",
+  },
+  {
+    key: "praise",
+    title: "Praise and worship",
+    description: "Turn the heart upward — thanksgiving, wonder, and the steady mercy of God.",
   },
 ] as const satisfies readonly {
   key: BibleReadingGroupKey;
@@ -588,6 +594,558 @@ export const availableBibleChapters = [
     translation: "King James Version",
     sourceNote: kjvSourceNote,
     verses: kjvReadingVerses["matthew-11"],
+  },
+  {
+    id: "hebrews-11",
+    bookSlug: "hebrews",
+    book: "Hebrews",
+    chapter: 11,
+    title: "By Faith: A Cloud of Witnesses",
+    description: "Faith defined and embodied — a long line of people who trusted God before they saw the promise.",
+    theme: "Faith, trust, and the long obedience of believing",
+    whyRead:
+      "Read Hebrews 11 when your own faith feels small and you need the company of people who walked by trust, not sight.",
+    contextIntro:
+      "Hebrews 11 opens with a definition of faith, then walks through Abel, Noah, Abraham, Sarah, Moses, and many more who obeyed before they understood. Read it as a reminder that faith has always meant moving toward a promise you cannot yet see.",
+    reflectionQuestion:
+      "Whose faith has gone before you — and what small step of trust is yours to take today?",
+    prayerStarter:
+      "God of Abraham and Sarah, give me faith for the part of the road I can see, and trust for the part I cannot.",
+    smallNextStep:
+      "Name one person whose faith shaped yours, and one step you can take in trust this week.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "beginning",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["hebrews-11"],
+  },
+  {
+    id: "psalms-27",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 27,
+    title: "The LORD Is My Light",
+    description: "Confidence in God's presence when enemies, fear, and waiting press in.",
+    theme: "Light, confidence, and waiting on the LORD",
+    whyRead:
+      "Read Psalm 27 when fear is loud and you need to remember where your safety actually rests.",
+    contextIntro:
+      "Psalm 27 moves between bold confidence ('whom shall I fear?') and honest pleading, ending in the discipline of waiting. Read it slowly when courage and fear are both present at once.",
+    reflectionQuestion:
+      "What would change today if you truly believed the LORD is your light and your stronghold?",
+    prayerStarter:
+      "LORD, be my light in this fear. Teach me to wait on You with courage instead of dread.",
+    smallNextStep:
+      "Write the one thing you most fear, then read verse 1 over it slowly.",
+    relatedFaithPath: "/start/peace",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-27"],
+  },
+  {
+    id: "psalms-34",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 34,
+    title: "Taste and See",
+    description: "A song of deliverance for the brokenhearted and crushed in spirit.",
+    theme: "Deliverance, nearness, and praise in trouble",
+    whyRead:
+      "Read Psalm 34 when you feel broken or afraid and need to be reminded that God is near to the crushed in spirit.",
+    contextIntro:
+      "Psalm 34 blesses the LORD at all times, invites you to 'taste and see,' and promises that God is near to the brokenhearted. Read it as both praise and comfort.",
+    reflectionQuestion:
+      "Where do you need to know that the LORD is near to the brokenhearted right now?",
+    prayerStarter:
+      "LORD, You are near to the broken. Draw close to the part of me that is crushed, and let me taste Your goodness.",
+    smallNextStep:
+      "Name one trouble honestly, then thank God for one specific good thing alongside it.",
+    relatedFaithPath: "/start/healing",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-34"],
+  },
+  {
+    id: "john-14",
+    bookSlug: "john",
+    book: "John",
+    chapter: 14,
+    title: "Let Not Your Heart Be Troubled",
+    description: "Jesus comforts His friends with the promise of the Father's house, the Way, and the Spirit.",
+    theme: "Comfort, the Way, and the gift of peace",
+    whyRead:
+      "Read John 14 when your heart is troubled and you need Jesus' own words of comfort and direction.",
+    contextIntro:
+      "On the night before the cross, Jesus comforts His disciples: a place prepared, Himself as the way, and the promise of the Spirit and a peace the world cannot give. Read it when fear and grief are close.",
+    reflectionQuestion:
+      "What troubled place in your heart most needs to hear 'let not your heart be troubled' today?",
+    prayerStarter:
+      "Lord Jesus, quiet my troubled heart. Be the way I walk and the peace I carry.",
+    smallNextStep:
+      "Reread verse 27 slowly and name the worry you are choosing to hand over.",
+    relatedFaithPath: "/start/peace",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["john-14"],
+  },
+  {
+    id: "isaiah-41",
+    bookSlug: "isaiah",
+    book: "Isaiah",
+    chapter: 41,
+    title: "Fear Thou Not",
+    description: "God's promise to uphold, strengthen, and hold the hand of His people.",
+    theme: "Reassurance, strength, and God's steadying hand",
+    whyRead:
+      "Read Isaiah 41 when anxiety tells you that you are alone and unheld.",
+    contextIntro:
+      "Isaiah 41 speaks tenderly to a fearful people: 'fear thou not; for I am with thee.' Read it slowly when you need to hear God promise to strengthen and uphold you.",
+    reflectionQuestion:
+      "What fear do you need to bring under the promise 'I will uphold thee'?",
+    prayerStarter:
+      "LORD, You promise to hold my right hand. Steady me; I am afraid, and I need Your strength.",
+    smallNextStep:
+      "Place one hand open in your lap and pray verse 10 as you breathe slowly.",
+    relatedFaithPath: "/start/anxiety",
+    readingGroup: "peace",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["isaiah-41"],
+  },
+  {
+    id: "psalms-62",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 62,
+    title: "My Soul Waiteth",
+    description: "Rest and stillness in God alone as rock, salvation, and defence.",
+    theme: "Stillness, trust, and God as the only sure ground",
+    whyRead:
+      "Read Psalm 62 when you are tempted to find your security in things that cannot hold.",
+    contextIntro:
+      "Psalm 62 returns again and again to one settled truth: 'my soul, wait thou only upon God.' Read it when your trust has scattered and needs to come home to one place.",
+    reflectionQuestion:
+      "Where have you been resting your security that cannot actually hold it?",
+    prayerStarter:
+      "God, You alone are my rock. Gather my scattered trust and let my soul wait only upon You.",
+    smallNextStep:
+      "Sit in silence for one minute and repeat 'my soul, wait thou only upon God.'",
+    relatedFaithPath: "/start/protection",
+    readingGroup: "protection",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-62"],
+  },
+  {
+    id: "psalms-18",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 18,
+    title: "The LORD My Rock",
+    description: "A song of rescue — God as rock, fortress, and deliverer in deep trouble.",
+    theme: "Rescue, refuge, and strength in distress",
+    whyRead:
+      "Read Psalm 18 when you have come through trouble, or are still in it, and need the language of rescue.",
+    contextIntro:
+      "Psalm 18 is David's song after deliverance: God reached down, drew him out of deep waters, and set him in a large place. Read it when you need to remember who your refuge is.",
+    reflectionQuestion:
+      "Where do you need God to be your rock and fortress today?",
+    prayerStarter:
+      "LORD, my rock and my deliverer, reach into this trouble and set my feet in a wide place.",
+    smallNextStep:
+      "Recall one past rescue and thank God for it by name.",
+    relatedFaithPath: "/start/protection",
+    readingGroup: "protection",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-18"],
+  },
+  {
+    id: "romans-5",
+    bookSlug: "romans",
+    book: "Romans",
+    chapter: 5,
+    title: "Peace With God, Hope in Suffering",
+    description: "Justified by faith, we have peace with God — and suffering that works toward hope.",
+    theme: "Peace with God, endurance, and proven hope",
+    whyRead:
+      "Read Romans 5 when suffering feels pointless and you need to see how God works it toward hope.",
+    contextIntro:
+      "Romans 5 declares peace with God through faith, then traces a path: tribulation works patience, patience experience, and experience hope — a hope that does not make ashamed. Read it when you need endurance with a purpose.",
+    reflectionQuestion:
+      "What suffering might God be working toward patience, character, or hope in you?",
+    prayerStarter:
+      "Father, thank You for peace with You. In this hard season, work even my suffering toward hope.",
+    smallNextStep:
+      "Name one hard thing and one way it has grown your endurance.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "hope",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["romans-5"],
+  },
+  {
+    id: "lamentations-3",
+    bookSlug: "lamentations",
+    book: "Lamentations",
+    chapter: 3,
+    title: "His Mercies Are New",
+    description: "Grief that turns, mid-sentence, toward the faithfulness of God.",
+    theme: "Honest lament and mercy that is new each morning",
+    whyRead:
+      "Read Lamentations 3 when grief is real and you need permission to mourn and a reason to hope.",
+    contextIntro:
+      "Lamentations 3 sits in deep sorrow, then turns on a hinge: 'his compassions fail not. They are new every morning.' Read it when you need to grieve honestly without losing hope.",
+    reflectionQuestion:
+      "What grief do you need to name honestly before you reach for 'his mercies are new'?",
+    prayerStarter:
+      "LORD, my sorrow is real. Meet me here, and let me trust that Your mercies are new this morning.",
+    smallNextStep:
+      "Name the grief plainly, then read verses 22-23 aloud.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "hope",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["lamentations-3"],
+  },
+  {
+    id: "1-peter-1",
+    bookSlug: "1-peter",
+    book: "1 Peter",
+    chapter: 1,
+    title: "A Living Hope",
+    description: "Born again to a living hope, kept by God's power through trials that refine faith.",
+    theme: "Living hope, refined faith, and inheritance kept",
+    whyRead:
+      "Read 1 Peter 1 when your faith is being tested and you need hope that outlasts the trial.",
+    contextIntro:
+      "1 Peter 1 anchors a suffering people in a living hope and an inheritance that does not fade, describing trials as fire that refines faith more precious than gold. Read it when you are weary but still holding on.",
+    reflectionQuestion:
+      "How might your present trial be refining a faith more precious than gold?",
+    prayerStarter:
+      "Father, thank You for a living hope. Keep me by Your power and refine my faith through what is hard.",
+    smallNextStep:
+      "Name one trial and one thing it is teaching you to trust.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "hope",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["1-peter-1"],
+  },
+  {
+    id: "revelation-21",
+    bookSlug: "revelation",
+    book: "Revelation",
+    chapter: 21,
+    title: "All Things New",
+    description: "A new heaven and earth, where God wipes away every tear and death is no more.",
+    theme: "Renewal, God's presence, and the end of every tear",
+    whyRead:
+      "Read Revelation 21 when grief or loss makes you long for the promise that God will make all things new.",
+    contextIntro:
+      "Revelation 21 shows the end of the story: God dwelling with His people, every tear wiped away, no more death or sorrow. Read it when you need to lift your eyes past the present to where everything is healed.",
+    reflectionQuestion:
+      "What tear do you long for God to wipe away — and how does this promise steady you today?",
+    prayerStarter:
+      "God who makes all things new, hold what hurts in me now, and keep my hope fixed on the day every tear is gone.",
+    smallNextStep:
+      "Name one loss you carry and pray it into the promise of verse 4.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "hope",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["revelation-21"],
+  },
+  {
+    id: "proverbs-2",
+    bookSlug: "proverbs",
+    book: "Proverbs",
+    chapter: 2,
+    title: "Search for Wisdom",
+    description: "Wisdom as buried treasure — sought, received, and protective.",
+    theme: "Seeking wisdom, discernment, and protection",
+    whyRead:
+      "Read Proverbs 2 when you want to grow in discernment and seek wisdom as something worth digging for.",
+    contextIntro:
+      "Proverbs 2 promises that those who cry out for wisdom and search for it like hidden treasure will understand the fear of the LORD. Read it when you want to take the pursuit of wisdom seriously.",
+    reflectionQuestion:
+      "What decision or area of life are you willing to 'search for wisdom' about, rather than rush?",
+    prayerStarter:
+      "LORD, I want wisdom enough to dig for it. Give me discernment and a heart that seeks understanding.",
+    smallNextStep:
+      "Name one decision and one wise person you could ask about it this week.",
+    relatedFaithPath: "/start/guidance",
+    readingGroup: "wisdom",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["proverbs-2"],
+  },
+  {
+    id: "ecclesiastes-3",
+    bookSlug: "ecclesiastes",
+    book: "Ecclesiastes",
+    chapter: 3,
+    title: "A Time for Everything",
+    description: "Seasons under heaven — and a God who makes everything beautiful in its time.",
+    theme: "Seasons, timing, and trusting God's larger frame",
+    whyRead:
+      "Read Ecclesiastes 3 when life feels out of season and you need to trust that there is a time for everything.",
+    contextIntro:
+      "Ecclesiastes 3 names the seasons — to weep and laugh, mourn and dance, keep and let go — and sets them inside God's eternity. Read it when you need permission to be in the season you are actually in.",
+    reflectionQuestion:
+      "What season are you actually in right now, and what does it ask of you?",
+    prayerStarter:
+      "God of every season, help me accept the time I am in and trust that You make things beautiful in Your time.",
+    smallNextStep:
+      "Name your current season honestly and one thing it makes room for.",
+    relatedFaithPath: "/start/guidance",
+    readingGroup: "wisdom",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["ecclesiastes-3"],
+  },
+  {
+    id: "james-3",
+    bookSlug: "james",
+    book: "James",
+    chapter: 3,
+    title: "Taming the Tongue",
+    description: "The power of words and the difference between earthly and heavenly wisdom.",
+    theme: "Speech, humility, and wisdom from above",
+    whyRead:
+      "Read James 3 when your words have run ahead of you and you want wisdom that is gentle and peaceable.",
+    contextIntro:
+      "James 3 weighs the small but mighty tongue, then contrasts bitter, self-seeking 'wisdom' with the wisdom from above — pure, peaceable, gentle, and full of mercy. Read it when you want your words and motives to align.",
+    reflectionQuestion:
+      "Where do your words need the wisdom that is 'first pure, then peaceable'?",
+    prayerStarter:
+      "LORD, set a guard over my tongue and give me the wisdom from above — gentle, honest, and merciful.",
+    smallNextStep:
+      "Recall one recent conversation and one thing you'd say more gently next time.",
+    relatedFaithPath: "/start/guidance",
+    readingGroup: "wisdom",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["james-3"],
+  },
+  {
+    id: "colossians-3",
+    bookSlug: "colossians",
+    book: "Colossians",
+    chapter: 3,
+    title: "Put On Love",
+    description: "Set your mind above, put off the old, and put on compassion, forgiveness, and love.",
+    theme: "New life, forgiveness, and love as the bond",
+    whyRead:
+      "Read Colossians 3 when you want practical help putting off old patterns and putting on a life of love.",
+    contextIntro:
+      "Colossians 3 calls you to seek the things above, then to clothe yourself with mercy, kindness, humility, patience, forgiveness, and — over all — love, the bond of perfectness. Read it when you want to live differently.",
+    reflectionQuestion:
+      "What 'old garment' do you need to put off, and what part of love do you need to put on?",
+    prayerStarter:
+      "Lord, help me put off what is dying in me and put on compassion, forgiveness, and love today.",
+    smallNextStep:
+      "Name one person to forgive or be patient with, and one concrete act of kindness.",
+    relatedFaithPath: "/start/forgiveness",
+    readingGroup: "love",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["colossians-3"],
+  },
+  {
+    id: "galatians-5",
+    bookSlug: "galatians",
+    book: "Galatians",
+    chapter: 5,
+    title: "The Fruit of the Spirit",
+    description: "Freedom that serves in love, and the fruit the Spirit grows in a yielded life.",
+    theme: "Freedom, the Spirit, and fruit that grows",
+    whyRead:
+      "Read Galatians 5 when you want to grow love, joy, peace, and patience instead of forcing them.",
+    contextIntro:
+      "Galatians 5 sets freedom against the works of the flesh and lists the fruit of the Spirit — love, joy, peace, longsuffering, gentleness, and more. Read it when you want character that is grown, not manufactured.",
+    reflectionQuestion:
+      "Which fruit of the Spirit do you most want God to grow in you this season?",
+    prayerStarter:
+      "Holy Spirit, grow Your fruit in me. I cannot force love, joy, or peace — I can only yield to You.",
+    smallNextStep:
+      "Pick one fruit and one situation today to let the Spirit grow it.",
+    relatedFaithPath: "/start/peace",
+    readingGroup: "love",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["galatians-5"],
+  },
+  {
+    id: "1-john-4",
+    bookSlug: "1-john",
+    book: "1 John",
+    chapter: 4,
+    title: "God Is Love",
+    description: "Love that comes from God, casts out fear, and shows itself in how we love each other.",
+    theme: "God's love, perfect love, and loving one another",
+    whyRead:
+      "Read 1 John 4 when you need to be reminded that love comes from God and casts out fear.",
+    contextIntro:
+      "1 John 4 grounds all love in God — 'we love him, because he first loved us' — and says perfect love casts out fear. Read it when fear has crowded out love, or love feels hard to give.",
+    reflectionQuestion:
+      "Where do you need 'perfect love' to cast out a fear that's been steering you?",
+    prayerStarter:
+      "God who is love, let Your love cast out my fear and overflow into how I love the people near me.",
+    smallNextStep:
+      "Name one fear and one person you can love more freely because of God's love for you.",
+    relatedFaithPath: "/start/family",
+    readingGroup: "love",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["1-john-4"],
+  },
+  {
+    id: "romans-12",
+    bookSlug: "romans",
+    book: "Romans",
+    chapter: 12,
+    title: "Love in Action",
+    description: "A living sacrifice, a renewed mind, and love that is sincere and practical.",
+    theme: "Surrender, renewal, and sincere love",
+    whyRead:
+      "Read Romans 12 when you want faith to become daily, practical love.",
+    contextIntro:
+      "Romans 12 turns belief into life: present yourself a living sacrifice, be transformed by a renewed mind, and let love be without hypocrisy — patient, humble, and good to all. Read it when you want to live what you believe.",
+    reflectionQuestion:
+      "What would 'love without hypocrisy' look like in one relationship this week?",
+    prayerStarter:
+      "Lord, renew my mind and make my love sincere. Help me offer today to You as a living sacrifice.",
+    smallNextStep:
+      "Choose one act of sincere love to do today without being asked.",
+    relatedFaithPath: "/start/guidance",
+    readingGroup: "love",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["romans-12"],
+  },
+  {
+    id: "ephesians-1",
+    bookSlug: "ephesians",
+    book: "Ephesians",
+    chapter: 1,
+    title: "Chosen and Adopted",
+    description: "Blessed, chosen, adopted, and sealed — the riches of belonging to God.",
+    theme: "Belonging, adoption, and spiritual blessing",
+    whyRead:
+      "Read Ephesians 1 when you need to remember who you are and whose you are.",
+    contextIntro:
+      "Ephesians 1 piles up the riches of belonging to God: chosen before the foundation of the world, adopted, redeemed, and sealed with the Spirit. Read it when your identity feels shaky.",
+    reflectionQuestion:
+      "How would today feel different if you truly received that you are chosen and adopted?",
+    prayerStarter:
+      "Father, thank You for choosing and adopting me. Open my eyes to the riches of belonging to You.",
+    smallNextStep:
+      "Read verses 3-6 and write one truth about who you are in Christ.",
+    relatedFaithPath: "/start/hope",
+    readingGroup: "identity",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["ephesians-1"],
+  },
+  {
+    id: "psalms-8",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 8,
+    title: "What Is Man",
+    description: "Wonder at God's majesty and the dignity He gives to small human beings.",
+    theme: "Wonder, smallness, and God-given dignity",
+    whyRead:
+      "Read Psalm 8 when you feel small and need to recover both humility and dignity before God.",
+    contextIntro:
+      "Psalm 8 looks up at the heavens and asks, 'what is man, that thou art mindful of him?' — then marvels that God crowns humanity with honour. Read it to hold smallness and dignity together.",
+    reflectionQuestion:
+      "How does it change your day to be both small before God and crowned with honour by Him?",
+    prayerStarter:
+      "LORD, how excellent is Your name. Thank You that You are mindful of me even in my smallness.",
+    smallNextStep:
+      "Step outside, look up, and thank God for one thing you can see.",
+    relatedFaithPath: "/start/gratitude",
+    readingGroup: "identity",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-8"],
+  },
+  {
+    id: "psalms-100",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 100,
+    title: "Make a Joyful Noise",
+    description: "A short, full-hearted call to thanksgiving and praise.",
+    theme: "Thanksgiving, gladness, and the goodness of God",
+    whyRead:
+      "Read Psalm 100 when you need a simple, direct turn toward gratitude and praise.",
+    contextIntro:
+      "Psalm 100 is brief and bright: serve the LORD with gladness, enter His gates with thanksgiving, for the LORD is good and His mercy is everlasting. Read it when your heart needs to be lifted.",
+    reflectionQuestion:
+      "What can you give thanks for right now, even in a small voice?",
+    prayerStarter:
+      "LORD, You are good and Your mercy endures. Lift my heart to thank You, even today.",
+    smallNextStep:
+      "Say three specific thank-yous to God out loud.",
+    relatedFaithPath: "/start/gratitude",
+    readingGroup: "praise",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-100"],
+  },
+  {
+    id: "psalms-103",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 103,
+    title: "Bless the LORD, O My Soul",
+    description: "Remembering God's benefits — forgiveness, healing, redemption, and steadfast mercy.",
+    theme: "Gratitude, mercy, and a God who remembers we are dust",
+    whyRead:
+      "Read Psalm 103 when you need to remember God's benefits and His tender, fatherly mercy.",
+    contextIntro:
+      "Psalm 103 calls the soul to bless the LORD and 'forget not all his benefits' — forgiveness, healing, redemption — and pictures God as a father who pities, knowing we are but dust. Read it to recover gratitude and tenderness.",
+    reflectionQuestion:
+      "Which of God's benefits — forgiveness, healing, redemption, mercy — do you most need to remember today?",
+    prayerStarter:
+      "Bless the LORD, O my soul. Help me forget not Your benefits, and receive Your mercy like a child.",
+    smallNextStep:
+      "List three 'benefits' from God you tend to forget, and thank Him for each.",
+    relatedFaithPath: "/start/gratitude",
+    readingGroup: "praise",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-103"],
+  },
+  {
+    id: "psalms-145",
+    bookSlug: "psalms",
+    book: "Psalms",
+    chapter: 145,
+    title: "I Will Extol Thee",
+    description: "Daily praise for the greatness, goodness, and nearness of God to all who call.",
+    theme: "Daily praise and God's nearness to all who call",
+    whyRead:
+      "Read Psalm 145 when you want to make praise a daily habit and remember God is near to all who call.",
+    contextIntro:
+      "Psalm 145 praises God every day for His greatness and tender mercies, declaring that the LORD is near to all who call upon Him in truth. Read it to make gratitude a daily rhythm.",
+    reflectionQuestion:
+      "What would it look like to praise God 'every day' this week, not only when things go well?",
+    prayerStarter:
+      "LORD, I will extol You. Be near to me as I call, and teach me to praise You every day.",
+    smallNextStep:
+      "Set one daily moment this week to name one thing God is good in.",
+    relatedFaithPath: "/start/gratitude",
+    readingGroup: "praise",
+    translation: "King James Version",
+    sourceNote: kjvSourceNote,
+    verses: kjvReadingVerses["psalms-145"],
   },
 ] as const satisfies readonly BibleChapter[];
 
