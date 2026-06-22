@@ -41,7 +41,8 @@ export default function VerseOfTheDayPage() {
         subtitle="Take a quiet moment with Scripture before the day gets loud."
       />
 
-      <section className="mt-9 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_20px_44px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="relative mt-9 max-w-4xl overflow-hidden rounded-lg border border-[#e0cfa8] bg-[linear-gradient(160deg,#fffdf7,#fdf6e6)] p-7 shadow-[0_28px_64px_rgba(71,55,35,0.1)] sm:p-10">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#c49c52,#e9c985)]" />
         <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
           <CalendarDays size={15} strokeWidth={1.8} />
           {today}
@@ -54,7 +55,7 @@ export default function VerseOfTheDayPage() {
         </p>
       </section>
 
-      <section className="mt-6 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-5 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
           A quiet reflection
         </p>
