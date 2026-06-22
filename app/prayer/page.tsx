@@ -88,19 +88,13 @@ export default function PrayerPage() {
             key={group.key}
             className="border-t border-[#dfcfb2] pt-7"
           >
-            <div className="grid gap-3 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-              <div>
-                <p className="text-sm font-semibold uppercase text-[#8f6220]">
-                  {group.title}
-                </p>
-                <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
-                  {group.description}
-                </h2>
-              </div>
-              <p className="text-sm leading-6 text-[#625b51]">
-                Choose a prayer for today, then continue with Scripture,
-                reflection, and a small next step.
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+                {group.title}
               </p>
+              <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+                {group.description}
+              </h2>
             </div>
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
