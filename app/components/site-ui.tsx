@@ -81,15 +81,35 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
         }
       >
         <div className="min-w-0">
-          <p
-            className={
-              isDark
-                ? "text-xs leading-5"
-                : "max-w-2xl font-serif text-2xl font-semibold leading-tight text-[#24362c]"
-            }
-          >
-            Selah
-          </p>
+          {isDark ? (
+            <p className="text-xs leading-5">Selah</p>
+          ) : (
+            <div className="flex items-center gap-2.5">
+              <svg
+                viewBox="0 0 28 32"
+                className="size-6 shrink-0"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 29 V13 a9 9 0 0 1 18 0 V29"
+                  stroke="#24362c"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path d="M4 29 H24" stroke="#24362c" strokeWidth="1.7" strokeLinecap="round" />
+                <rect x="12.3" y="8.5" width="3.4" height="7.6" rx="1.7" fill="#9a7322" />
+                <rect x="10.5" y="17.2" width="7" height="1.7" rx="0.85" fill="#9a7322" />
+                <rect x="9.3" y="20.2" width="9.4" height="1.7" rx="0.85" fill="#9a7322" />
+                <rect x="8.1" y="23.2" width="11.8" height="1.7" rx="0.85" fill="#9a7322" />
+                <rect x="6.9" y="26.2" width="14.2" height="1.7" rx="0.85" fill="#9a7322" />
+              </svg>
+              <p className="font-serif text-2xl font-semibold leading-tight text-[#24362c]">
+                Selah
+              </p>
+            </div>
+          )}
           {!isDark ? (
             <div className="mt-3 grid max-w-md gap-2 text-sm leading-6 text-[#625b51]">
               <p>
