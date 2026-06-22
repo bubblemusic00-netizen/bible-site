@@ -4,6 +4,7 @@ import { ArrowRight, BookOpenText } from "lucide-react";
 import {
   PageIntro,
   PageShell,
+  PrimaryButton,
   SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
@@ -38,9 +39,10 @@ export default function BiblePage() {
             a simple next step.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <SecondaryButton href={supportedBibleChapters[0].href}>
+            <PrimaryButton href={supportedBibleChapters[0].href}>
               Start reading
-            </SecondaryButton>
+              <ArrowRight size={16} strokeWidth={1.8} />
+            </PrimaryButton>
             <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
             <SecondaryButton href="/guides/start-reading-the-bible">
               How to Start Reading

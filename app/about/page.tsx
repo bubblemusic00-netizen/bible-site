@@ -29,7 +29,7 @@ const principles = [
   {
     title: "No pressure-based selling",
     description:
-      "The site is being built as a spiritual resource first, without fear tactics, manufactured urgency, or invented social proof.",
+      "The site is a spiritual resource first, without fear tactics, manufactured urgency, or invented social proof.",
   },
   {
     title: "Faith symbols as reminders",
@@ -103,9 +103,9 @@ export default function AboutPage() {
             Scripture, prayer, and reflection
           </h2>
           <p className="mt-3 text-base leading-7 text-[#625b51]">
-            Selah is being built as a free Christian place to read the
-            Bible, begin a prayer, consider a reflection, and take one grounded
-            step of faith. Free guidance remains the center of the site.
+            Selah is a free Christian place to read the Bible, begin a prayer,
+            consider a reflection, and take one grounded step of faith. Free
+            guidance is the center of the site.
           </p>
         </article>
 

@@ -119,7 +119,7 @@ export default function Home() {
           </div>
 
           <p
-            className="fade-rise mt-7 text-sm font-semibold leading-6 text-[#f1eadf]/76"
+            className="fade-rise mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/76"
             style={{ animationDelay: "330ms" }}
           >
             Free to begin. No login, no pressure.

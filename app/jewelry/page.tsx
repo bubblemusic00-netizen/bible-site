@@ -87,7 +87,7 @@ export default function JewelryPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#e9c985]">
               Boundary
             </p>
-            <p className="mt-3 text-sm font-semibold leading-6 text-[#fff8e8]/82">
+            <p className="mt-3 text-sm font-semibold leading-6 text-[#fff8e8]/95">
               Symbols can remind. They do not guarantee outcomes, carry
               spiritual power, or replace Scripture, prayer, wisdom, or care.
             </p>
