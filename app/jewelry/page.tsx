@@ -95,14 +95,40 @@ const momentSymbols = [
 export default function JewelryPage() {
   return (
     <PageShell active="jewelry">
-      {/* Hero — emotional hook: identity and memory, not fear. */}
-      <section className="relative isolate overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_82%_12%,rgba(239,204,139,0.22),transparent_46%),radial-gradient(circle_at_12%_88%,rgba(255,250,240,0.08),transparent_40%),linear-gradient(135deg,#16241c_0%,#203d30_52%,#101510_100%)] px-5 py-12 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.22)] ring-1 ring-[#e9c985]/15 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
+      {/* Hero — a lit, textured surface with a single precious object. */}
+      <section
+        className="relative isolate overflow-hidden rounded-[2rem] px-5 py-20 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.26)] ring-1 ring-[#e9c985]/15 sm:px-10 sm:py-28 lg:px-14"
+        style={{
+          background:
+            "radial-gradient(120% 92% at 30% 0%, #304b3a 0%, #1c3026 54%, #10201a 100%)",
+        }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.10] mix-blend-overlay"
+          style={{
+            backgroundImage: "url(/hero-marble.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),transparent_30%)]"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(58%_40%_at_72%_6%,rgba(233,201,133,0.18),transparent_62%)]"
+        />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
-          <p className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.24em] text-[#e9c985]">
+          <div className="flex justify-center">
+            <Medallion icon={Cross} size={112} tone="dark" />
+          </div>
+          <p className="mt-8 inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.24em] text-[#e9c985]">
             <Gem size={15} strokeWidth={1.8} />
             Faith Symbols
           </p>
-          <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.04] text-[#fffaf0] sm:text-6xl">
+          <h1 className="mt-5 font-serif text-5xl font-medium leading-[1.0] tracking-[-0.02em] text-[#fffaf0] sm:text-7xl">
             Keep what steadies you close.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#f1eadf]/88 sm:text-lg">
@@ -154,7 +180,7 @@ export default function JewelryPage() {
       </section>
 
       {/* Symbols as moments you are carrying — desire through specificity. */}
-      <section data-reveal className="mt-14 sm:mt-16">
+      <section className="mt-14 sm:mt-16">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8f6220]">
             A reminder for the moment you are in
@@ -213,7 +239,7 @@ export default function JewelryPage() {
       </section>
 
       {/* Browse the full library (SEO + exploration). */}
-      <section data-reveal id="symbols" className="mt-14 scroll-mt-24 sm:mt-16">
+      <section id="symbols" className="mt-14 scroll-mt-24 sm:mt-16">
         <div className="grid gap-5 lg:grid-cols-[0.4fr_1fr] lg:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
@@ -304,27 +330,69 @@ export default function JewelryPage() {
   );
 }
 
+// CSS-engraved gold medallion: a struck-metal feel without product photos.
+// Conic-gradient rim (brushed-gold bevel) + recessed inner face + debossed glyph.
+function Medallion({
+  icon: Icon,
+  size = 72,
+  tone = "light",
+}: {
+  icon: LucideIcon;
+  size?: number;
+  tone?: "light" | "dark";
+}) {
+  const face =
+    tone === "dark"
+      ? "radial-gradient(circle at 50% 32%, #294a39, #16271d)"
+      : "radial-gradient(circle at 50% 32%, #fdf7e7, #ece0c4)";
+  return (
+    <span
+      aria-hidden
+      className="relative grid shrink-0 place-items-center rounded-full p-[2px] shadow-[0_12px_28px_rgba(71,55,35,0.22)]"
+      style={{
+        width: size,
+        height: size,
+        background:
+          "conic-gradient(from 140deg, #a87f3c, #f3dca0, #c79a4d, #eaddae, #9c7333, #f0d99e, #a87f3c)",
+      }}
+    >
+      <span
+        className={`grid size-full place-items-center rounded-full ${tone === "dark" ? "text-[#f0dca6]" : "text-[#6a5526]"} shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.8),inset_0_-2px_5px_rgba(120,95,45,0.3)]`}
+        style={{ background: face }}
+      >
+        <Icon
+          size={Math.round(size * 0.4)}
+          strokeWidth={1.5}
+          className={
+            tone === "dark"
+              ? "drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)]"
+              : "drop-shadow-[0_1px_0_rgba(255,255,255,0.65)]"
+          }
+        />
+      </span>
+    </span>
+  );
+}
+
 function MomentCard({
   symbol,
 }: {
   symbol: (typeof momentSymbols)[number];
 }) {
-  const Icon = symbol.icon;
-
   return (
     <Link
       href={`/jewelry/symbols/${symbol.slug}`}
-      className="group relative flex flex-col rounded-2xl border border-[#e4d6bd] bg-[#fffaf1]/75 p-6 shadow-[0_16px_40px_rgba(71,55,35,0.06)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_24px_56px_rgba(71,55,35,0.1)] sm:p-7"
+      className="group relative flex flex-col rounded-[12px] border border-[#e6d8bd] bg-[#fbf6ea] p-7 shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_38px_-16px_rgba(60,45,25,0.2),inset_0_1px_0_rgba(255,255,255,0.75)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#c9a86a] hover:shadow-[0_1px_2px_rgba(60,45,25,0.06),0_30px_56px_-18px_rgba(60,45,25,0.28),inset_0_1px_0_rgba(255,255,255,0.85)] sm:p-9"
     >
-      <span className="relative grid size-16 place-items-center rounded-full border border-[#e9c985]/55 bg-[radial-gradient(circle,#fffaf1,#f1e8d4)] text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_10px_24px_rgba(71,55,35,0.1)]">
-        <Icon size={26} strokeWidth={1.6} />
-      </span>
-      <h3 className="mt-5 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+      <Medallion icon={symbol.icon} size={78} />
+      <h3 className="mt-7 font-serif text-[1.85rem] font-medium leading-[1.1] text-[#241f19]">
         {symbol.moment}
       </h3>
-      <p className="mt-3 text-base leading-7 text-[#625b51]">{symbol.craft}</p>
-      <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#e4d6bd] pt-4">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+      <p className="mt-3 max-w-[34ch] text-base leading-7 text-[#5f574a]">
+        {symbol.craft}
+      </p>
+      <div className="mt-7 flex items-center justify-between gap-3 border-t border-[#e0cfa8]/0 pt-5 [border-image:linear-gradient(90deg,transparent,#d8c5a3,transparent)_1]">
+        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
           {symbol.name} &middot; {symbol.verse}
         </span>
         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#254737]">
@@ -348,9 +416,7 @@ function SymbolIndexLink({ symbol }: { symbol: FaithSymbol }) {
       href={`/jewelry/symbols/${symbol.slug}`}
       className="group flex min-w-0 items-center gap-3.5 rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 px-4 py-3.5 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_14px_30px_rgba(71,55,35,0.08)]"
     >
-      <span className="grid size-11 shrink-0 place-items-center rounded-full border border-[#e9c985]/45 bg-[radial-gradient(circle,#fffaf1,#f1e8d4)] text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
-        <Icon size={18} strokeWidth={1.7} />
-      </span>
+      <Medallion icon={Icon} size={46} />
       <span className="min-w-0">
         <span className="block break-words font-serif text-lg font-semibold leading-tight text-[#241f19]">
           {symbol.name}
