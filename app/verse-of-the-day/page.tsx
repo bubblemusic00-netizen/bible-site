@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BookOpenText, CalendarDays } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import {
   PageIntro,
   PageShell,
@@ -55,24 +55,20 @@ export default function VerseOfTheDayPage() {
       </section>
 
       <section className="mt-6 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-          <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-            <BookOpenText size={20} strokeWidth={1.8} />
-          </span>
-          <div className="min-w-0">
-            <h2 className="font-serif text-3xl font-semibold text-[#241f19]">
-              A quiet reflection
-            </h2>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
-              {verse.reflection}
-            </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <PrimaryButton href="/bible">Read the Bible</PrimaryButton>
-              <SecondaryButton href={`/prayer/${verse.prayerSlug}`}>
-                Pray with this verse
-              </SecondaryButton>
-            </div>
-          </div>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+          A quiet reflection
+        </p>
+        <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+          Sit with it before the day gets loud.
+        </h2>
+        <p className="mt-3 max-w-2xl text-base leading-7 text-[#625b51]">
+          {verse.reflection}
+        </p>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <PrimaryButton href="/bible">Read the Bible</PrimaryButton>
+          <SecondaryButton href={`/prayer/${verse.prayerSlug}`}>
+            Pray with this verse
+          </SecondaryButton>
         </div>
       </section>
 
