@@ -143,7 +143,7 @@ export default async function PrayerPathPage({
           <article className="relative mx-auto mt-6 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
             <div className="border-b border-[#e2d2b6] pb-6">
               <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
-                Prayer text
+                The prayer
               </p>
               <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
                 {prayer.prayerHeading}

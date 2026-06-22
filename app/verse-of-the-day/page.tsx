@@ -50,7 +50,7 @@ export default function VerseOfTheDayPage() {
           &ldquo;{verse.text}&rdquo;
         </blockquote>
         <p className="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-[#8f6220]">
-          {verse.reference} - {verse.translation}
+          {verse.reference} &middot; {verse.translation}
         </p>
       </section>
 

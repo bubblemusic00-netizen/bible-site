@@ -208,7 +208,7 @@ export function FaithQuiz() {
       className="relative isolate mt-8 overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_18%_18%,rgba(239,204,139,0.18),transparent_32%),radial-gradient(circle_at_82%_16%,rgba(255,250,240,0.08),transparent_30%),linear-gradient(135deg,#17251d_0%,#203d30_48%,#121711_100%)] p-2 text-[#fffaf0] shadow-[0_34px_100px_rgba(25,45,34,0.22)] ring-1 ring-[#e9c985]/18 sm:p-4"
     >
       <div className="relative z-10 grid gap-5 p-2 sm:p-3 lg:grid-cols-[0.34fr_1fr] lg:gap-7">
-        <aside className="order-2 lg:order-1 lg:py-4">
+        <aside className="order-1 lg:py-4">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#e9c985]">
             Faith Quiz
           </p>
@@ -273,7 +273,7 @@ export function FaithQuiz() {
           </p>
         </aside>
 
-        <div className="order-1 min-w-0 overflow-hidden rounded-[1.65rem] bg-[#fffaf1] text-[#241f19] shadow-[0_24px_70px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60 lg:order-2">
+        <div className="order-2 min-w-0 overflow-hidden rounded-[1.65rem] bg-[#fffaf1] text-[#241f19] shadow-[0_24px_70px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60 lg:order-2">
           <div className="border-b border-[#eadbc0] bg-[linear-gradient(135deg,#fffdf7,#f3eadb)] px-5 py-4 sm:px-7">
             <p className="text-sm font-semibold text-[#355242]">
               Start small. Read slowly. Pray honestly.
@@ -499,7 +499,7 @@ function QuizStep({
           type="button"
           onClick={onNext}
           disabled={!canAdvance}
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-[#1f392c] disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-[#1f392c] disabled:cursor-not-allowed disabled:bg-[#e7decb] disabled:text-[#9c8f79] disabled:shadow-none"
         >
           {actionLabel}
           <ArrowRight size={16} strokeWidth={1.8} />

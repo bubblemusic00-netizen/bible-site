@@ -134,9 +134,11 @@ export default async function SymbolPage({
 
       <section className="mt-9 overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1] shadow-[0_24px_70px_rgba(71,55,35,0.08)]">
         <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
-          <div className="grid place-items-center border-b border-[#dfcfb2] bg-[#f2f5ee] p-8 lg:border-b-0 lg:border-r">
-            <div className="grid size-28 place-items-center rounded-full border border-[#d8ddcf] bg-[#fffaf1] text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_20px_45px_rgba(40,71,55,0.1)]">
-              <Icon size={46} strokeWidth={1.55} />
+          <div className="relative grid place-items-center overflow-hidden border-b border-[#dfcfb2] bg-[radial-gradient(circle_at_center,#fbf7ed,#eef1e8)] p-10 lg:border-b-0 lg:border-r">
+            <div className="pointer-events-none absolute size-60 rounded-full bg-[radial-gradient(circle,rgba(196,156,82,0.16),transparent_70%)]" />
+            <div className="pointer-events-none absolute size-44 rounded-full border border-[#d8ddcf]/60" />
+            <div className="relative grid size-32 place-items-center rounded-full border border-[#d8ddcf] bg-[#fffaf1] text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_20px_45px_rgba(40,71,55,0.1)]">
+              <Icon size={52} strokeWidth={1.4} />
             </div>
           </div>
           <div className="p-6 sm:p-8 lg:p-9">
@@ -144,7 +146,7 @@ export default async function SymbolPage({
               What it can remind someone of
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              A reminder for ordinary faithfulness.
+              What the {details.name} points to.
             </h2>
             <p className="mt-4 text-base leading-7 text-[#625b51]">
               {details.reminder}

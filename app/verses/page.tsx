@@ -38,7 +38,7 @@ export default function VersesPage() {
             href={`/verses/${topic.slug}`}
             icon={BookOpenText}
             title={topic.shortTitle}
-            description={`${topic.verses.length} verses on ${topic.shortTitle.toLowerCase()}, with a reflection and a prayer.`}
+            description={topic.intro.split(/(?<=\.)\s/)[0]}
             cta="Read the verses"
           />
         ))}

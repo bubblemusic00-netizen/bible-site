@@ -150,10 +150,10 @@ export default async function BibleChapterPage({
           <article className="relative mx-auto mt-10 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
             <div className="flex items-center justify-between gap-4 border-b border-[#e2d2b6] pb-5">
               <h2 className="font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-[1.75rem]">
-                {reference}
+                The Reading
               </h2>
               <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
-                {chapterData.translation}
+                {reference} &middot; {chapterData.translation}
               </p>
             </div>
 
