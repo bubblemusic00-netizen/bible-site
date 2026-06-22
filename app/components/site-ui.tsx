@@ -177,7 +177,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="inline-flex min-h-10 items-center transition hover:text-[#204636]"
+                className="inline-flex min-h-10 items-center underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-[#9a7322]/60"
               >
                 {item.label}
               </Link>
@@ -199,7 +199,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="inline-flex min-h-10 items-center transition hover:text-[#204636]"
+                className="inline-flex min-h-10 items-center underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-[#9a7322]/60"
               >
                 {item.label}
               </Link>
