@@ -214,9 +214,32 @@ export default function JewelryPage() {
         </div>
       </section>
 
-      {/* Waitlist — the honest conversion step. */}
-      <section className="mt-14 overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_top_right,rgba(233,201,133,0.16),transparent_46%),linear-gradient(135deg,#203d30,#15241b)] p-7 text-[#fffaf0] shadow-[0_28px_80px_rgba(40,71,55,0.22)] sm:mt-16 sm:p-10">
-        <div className="mx-auto max-w-2xl text-center">
+      {/* Waitlist — the honest conversion step, on the same lit surface as the hero. */}
+      <section
+        className="relative isolate mt-14 overflow-hidden rounded-[1.5rem] px-7 py-11 text-[#fffaf0] shadow-[0_28px_80px_rgba(40,71,55,0.24)] ring-1 ring-[#e9c985]/15 sm:mt-16 sm:px-10 sm:py-14"
+        style={{
+          background:
+            "radial-gradient(120% 100% at 70% 0%, #304b3a 0%, #1c3026 56%, #10201a 100%)",
+        }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.09] mix-blend-overlay"
+          style={{
+            backgroundImage: "url(/hero-marble.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),transparent_30%)]"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_44%_at_72%_4%,rgba(233,201,133,0.16),transparent_64%)]"
+        />
+        <div className="relative z-10 mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#e9c985]">
             The first pieces are being made
           </p>
