@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { SiteHeader, type NavKey } from "./SiteHeader";
 import { ReadingProgress } from "./ReadingProgress";
+import { BackToTop } from "./BackToTop";
 
 export { SiteHeader };
 
@@ -58,6 +59,7 @@ export function PageShell({
       >
         <div className="relative w-full min-w-0">{children}</div>
       </section>
+      <BackToTop />
       <SiteFooter />
     </main>
   );
