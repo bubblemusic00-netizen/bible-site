@@ -126,8 +126,10 @@ export default async function BibleChapterPage({
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto w-full max-w-[760px] text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8f6220]">
+            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-[#8f6220]">
+              <span className="h-px w-8 bg-[#d8c5a3]" />
               {chapterData.theme}
+              <span className="h-px w-8 bg-[#d8c5a3]" />
             </p>
             <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.02] text-[#241f19] sm:text-7xl">
               {reference}
