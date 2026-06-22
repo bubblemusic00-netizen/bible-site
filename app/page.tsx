@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  BookOpenText,
-  ChevronDown,
-  Compass,
-  Cross,
-  Heart,
-} from "lucide-react";
+import { ArrowRight, BookOpenText, ChevronDown, Cross } from "lucide-react";
 import { SiteFooter, SiteHeader } from "./components/site-ui";
 import { getVerseOfTheDay } from "./verse-of-the-day/verse-data";
 
@@ -31,19 +24,16 @@ const libraryLinks = [
     title: "Bible",
     description: "Short guided readings — the passage, what it means, how to sit with it.",
     href: "/bible",
-    icon: BookOpenText,
   },
   {
     title: "Prayer",
     description: "Words for when you don't have your own — grief, fear, waiting, thanks.",
     href: "/prayer",
-    icon: Heart,
   },
   {
     title: "Guides",
     description: "New to this? Plain-language starts on prayer, grace, and faith.",
     href: "/guides",
-    icon: Compass,
   },
 ];
 
@@ -228,24 +218,20 @@ export default function Home() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
           {libraryLinks.map((item) => {
-            const Icon = item.icon;
-
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex min-h-44 flex-col rounded-xl border border-[#fff8e8]/10 bg-[#fffaf0]/[0.04] p-5 text-[#fffaf0] shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#e9c985]/35 hover:bg-[#fffaf0]/[0.07]"
+                className="group flex min-h-44 flex-col rounded-xl border border-[#fff8e8]/10 bg-[#fffaf0]/[0.04] p-6 text-[#fffaf0] shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#e9c985]/35 hover:bg-[#fffaf0]/[0.07]"
               >
-                <span className="grid size-11 place-items-center rounded-full bg-[#e9c985]/12 text-[#e9c985] transition group-hover:bg-[#e9c985]/20">
-                  <Icon size={20} strokeWidth={1.8} />
-                </span>
-                <span className="mt-4 block font-serif text-2xl font-semibold leading-tight">
+                <span className="block font-serif text-[1.7rem] font-semibold leading-[1.1]">
                   {item.title}
                 </span>
-                <span className="mt-1 block text-sm leading-6 text-[#f1eadf]/72">
+                <span className="mt-4 block h-px w-10 bg-[#e9c985]/45 transition-all duration-200 group-hover:w-16 group-hover:bg-[#e9c985]" />
+                <span className="mt-4 block text-sm leading-6 text-[#f1eadf]/72">
                   {item.description}
                 </span>
-                <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-[#e9c985]">
+                <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-[#e9c985]">
                   Open
                   <ArrowRight
                     size={14}
