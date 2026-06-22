@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpenText, Library } from "lucide-react";
+import { ArrowRight, BookOpenText } from "lucide-react";
 import {
   PageIntro,
   PageShell,
@@ -49,26 +49,7 @@ export default function BiblePage() {
         </div>
       </div>
 
-      <section className="mt-9 border-y border-[#dfcfb2] py-6">
-        <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#8f6220]">
-              <Library size={16} strokeWidth={1.8} />
-              Finished library
-            </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Twenty guided readings available now.
-            </h2>
-          </div>
-          <p className="text-base leading-7 text-[#625b51]">
-            Every reading shown here opens a complete page with KJV Scripture
-            text, short context, an after-reading reflection, a prayer starter,
-            and links into prayer and the Faith Quiz.
-          </p>
-        </div>
-      </section>
-
-      <div className="mt-5 max-w-5xl">
+      <div className="mt-9 max-w-5xl">
         <StatusNote>
           Selah currently offers a focused library of finished guided
           readings rather than a full Bible database. Full Scripture text is
