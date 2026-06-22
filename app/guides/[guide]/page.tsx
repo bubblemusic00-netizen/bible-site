@@ -19,7 +19,13 @@ import {
   SecondaryButton,
   StatusNote,
 } from "../../components/site-ui";
-import { getGuide, guideKeys, type GuideLink } from "../guide-data";
+import {
+  getGuide,
+  guideGroups,
+  guideKeys,
+  guides,
+  type GuideLink,
+} from "../guide-data";
 import { JsonLd } from "../../components/JsonLd";
 import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
@@ -66,6 +72,13 @@ export default async function GuidePage({
   if (!guide) {
     redirect("/guides");
   }
+
+  const siblingGuides = guideKeys
+    .map((key) => guides[key])
+    .filter((g) => g.group === guide.group && g.slug !== guide.slug);
+  const groupTitle =
+    guideGroups.find((group) => group.key === guide.group)?.title ??
+    "More guides";
 
   return (
     <PageShell>
@@ -239,6 +252,39 @@ export default async function GuidePage({
         <div className="mx-auto mt-8 w-full max-w-[980px]">
           <StatusNote>{guide.boundaryNote}</StatusNote>
         </div>
+
+        {siblingGuides.length > 0 ? (
+          <section className="mx-auto mt-10 w-full max-w-[980px] border-t border-[#dfcfb2] pt-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+              Keep exploring &middot; {groupTitle}
+            </p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {siblingGuides.map((sibling) => (
+                <Link
+                  key={sibling.slug}
+                  href={`/guides/${sibling.slug}`}
+                  className="group flex min-w-0 flex-col rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 p-5 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
+                >
+                  <span className="block font-serif text-xl font-semibold leading-tight text-[#241f19]">
+                    {sibling.title}
+                  </span>
+                  <span className="mt-3 block h-px w-9 bg-[#d8c5a3] transition-all duration-200 group-hover:w-14 group-hover:bg-[#c49c52]" />
+                  <span className="mt-3 block text-sm leading-6 text-[#625b51]">
+                    {sibling.description}
+                  </span>
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-[#254737]">
+                    Read
+                    <ArrowRight
+                      size={14}
+                      strokeWidth={1.8}
+                      className="transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <div className="mx-auto mt-8 flex w-full max-w-[980px] flex-col gap-3 sm:flex-row sm:flex-wrap">
           <PrimaryButton href="/guides">
