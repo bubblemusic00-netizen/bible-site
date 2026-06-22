@@ -301,20 +301,20 @@ export default function JewelryPage() {
             </p>
           </div>
 
-          <div className="grid gap-x-6 gap-y-0 sm:grid-cols-2">
+          <div className="grid gap-x-4 gap-y-0 sm:grid-cols-2">
             {Object.values(jewelryIntentions).map((intention) => (
               <Link
                 key={intention.slug}
                 href={`/jewelry/${intention.slug}`}
-                className="group border-t border-[#dfcfb2] py-4 transition hover:border-[#c49c52]"
+                className="group rounded-xl border-t border-[#e4d6bd] px-4 py-5 transition duration-200 hover:border-transparent hover:bg-[#fbf6ea]"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-serif text-xl font-semibold leading-tight text-[#241f19]">
+                  <h3 className="font-serif text-xl font-semibold leading-tight text-[#241f19] transition-colors group-hover:text-[#7a5113]">
                     {intention.relatedTheme}
                   </h3>
                   <ArrowRight
                     size={16}
-                    className="mt-1 shrink-0 text-[#8f6220] transition group-hover:translate-x-1"
+                    className="mt-1 shrink-0 text-[#c9b79a] transition group-hover:translate-x-1 group-hover:text-[#8f6220]"
                   />
                 </div>
                 <p className="mt-2 text-sm leading-6 text-[#625b51]">
