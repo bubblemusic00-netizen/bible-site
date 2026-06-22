@@ -505,7 +505,7 @@ function QuizStep({
           <ArrowRight size={16} strokeWidth={1.8} />
         </button>
         {!canAdvance ? (
-          <p className="text-sm font-semibold text-[#8a7256]" aria-hidden>
+          <p className="text-sm font-semibold text-[#6a5f4d]" aria-hidden>
             Choose one to continue.
           </p>
         ) : null}
