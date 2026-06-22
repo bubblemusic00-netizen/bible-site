@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowRight,
-  BookOpenText,
-  Compass,
-  Heart,
-  Library,
-} from "lucide-react";
+import { ArrowRight, BookOpenText, Heart, Library } from "lucide-react";
 import {
   PageIntro,
   PageShell,
+  PrimaryButton,
   SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
@@ -44,36 +39,21 @@ export default function GuidesPage() {
             with clear boundaries.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <SecondaryButton href={`/guides/${firstGuide.slug}`}>
+            <PrimaryButton href={`/guides/${firstGuide.slug}`}>
               Start with a guide
-            </SecondaryButton>
+              <ArrowRight size={16} strokeWidth={1.8} />
+            </PrimaryButton>
             <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
           </div>
         </div>
       </div>
 
-      <section className="mt-9 border-y border-[#dfcfb2] py-6">
-        <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#8f6220]">
-              Scripture, prayer, and reflection
-            </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              Begin with clear words and careful next steps.
-            </h2>
-          </div>
-          <p className="text-base leading-7 text-[#625b51]">
-            The guides are not a substitute for Scripture, church community,
-            pastoral care, or professional support. They are meant to help a
-            beginner start with humility and attention.
-          </p>
-        </div>
-      </section>
-
-      <div className="mt-5 max-w-5xl">
+      <div className="mt-8 max-w-5xl">
         <StatusNote>
-          Selah is independent and does not claim to be a church, pastor,
-          ministry, denomination, Bible scholar, Bible publisher, or official
+          These guides help a beginner start with humility and attention. They
+          are not a substitute for Scripture, church community, pastoral care,
+          or professional support. Selah is independent and does not claim to be
+          a church, pastor, ministry, denomination, Bible publisher, or official
           Christian authority.
         </StatusNote>
       </div>
