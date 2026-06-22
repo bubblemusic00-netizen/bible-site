@@ -10,6 +10,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { SiteHeader, type NavKey } from "./SiteHeader";
+import { ReadingProgress } from "./ReadingProgress";
 
 export { SiteHeader };
 
@@ -49,6 +50,7 @@ export function PageShell({
       id="main-content"
       className="flex min-h-screen w-full flex-col bg-[linear-gradient(180deg,#faf7f0_0%,#f3eee3_100%)] text-[#27231d]"
     >
+      <ReadingProgress />
       <SiteHeader active={active} />
       <section
         data-page-shell
