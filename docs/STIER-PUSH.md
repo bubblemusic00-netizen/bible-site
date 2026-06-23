@@ -15,7 +15,7 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [ ] **verse-topic** (A−→S) — card-stack rhythm; enlarge/restyle refs.
 - [ ] **guides index** (A−→S) — vary closing CTA (de-formula).
 - [ ] **guide /who-is-jesus** (A−→S) — calm busy lower half (checklist + 3 related rows).
-- [ ] **jewelry index** (A−→S) — strengthen faint symbol-grid icons; differentiate the two dark waitlist blocks.
+- [x] **jewelry index** (A−→S) — DONE (3befcd9). Symbol-grid medallions bumped 46→54 for presence. Twin dark surfaces kept (intentional).
 - [x] **votd** (A−→S) — DONE (2dd345e). Flat mid-page now a Read/Reflect/Carry daily rhythm.
 - [ ] **start-result /hope** (A−→S) — reduce card-type density; de-formula dark band.
 - [ ] **terms/legal** (B+→S) — light memorability pass (low priority).

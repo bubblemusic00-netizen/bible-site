@@ -12,7 +12,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "/verses" },
 };
 
+const occasionSlugs = new Set([
+  "baptism",
+  "wedding",
+  "sympathy",
+  "graduation",
+]);
+
 export default function VersesPage() {
+  const occasionTopics = allVerseTopics.filter((t) =>
+    occasionSlugs.has(t.slug),
+  );
+  const facingTopics = allVerseTopics.filter(
+    (t) => !occasionSlugs.has(t.slug),
+  );
+  const groups = [
+    { title: "For what you are facing", topics: facingTopics },
+    { title: "For life's moments", topics: occasionTopics },
+  ].filter((g) => g.topics.length > 0);
+
   return (
     <PageShell>
       <JsonLd
@@ -31,18 +49,32 @@ export default function VersesPage() {
         subtitle="Short, gathered passages for real moments — each with a quiet reflection and a prayer to carry it further."
       />
 
-      <section data-reveal-stagger className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {allVerseTopics.map((topic) => (
-          <CardLink
-            key={topic.slug}
-            href={`/verses/${topic.slug}`}
-            icon={BookOpenText}
-            title={topic.shortTitle}
-            description={topic.intro.split(/(?<=\.)\s/)[0]}
-            cta="Read the verses"
-          />
+      <div data-reveal-stagger className="mt-9 grid gap-14">
+        {groups.map((group) => (
+          <section key={group.title} className="border-t border-[#dfcfb2] pt-7">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+                {group.title}
+              </p>
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+                {group.topics.length} topics
+              </span>
+            </div>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {group.topics.map((topic) => (
+                <CardLink
+                  key={topic.slug}
+                  href={`/verses/${topic.slug}`}
+                  icon={BookOpenText}
+                  title={topic.shortTitle}
+                  description={topic.intro.split(/(?<=\.)\s/)[0]}
+                  cta="Read the verses"
+                />
+              ))}
+            </div>
+          </section>
         ))}
-      </section>
+      </div>
 
       <div className="mt-8 max-w-4xl">
         <StatusNote>
