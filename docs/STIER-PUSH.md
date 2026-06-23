@@ -4,8 +4,8 @@ Source grading: `audit/grade-report.md` (2026-06-23). Goal: every page A+/S-tier
 Order = leverage (top first). Check off as shipped. Each item = its own commit + push (auto-deploys).
 
 ## Per-page lifts
-- [ ] **shop** (B→S) — kill the single-gem-glyph placeholders. Give each product a real visual: CSS-engraved medallion/material treatment per symbol (reuse symbol-page craft), distinct per product. Money page must look finished.
-- [ ] **prayer index** (B→S) — de-pack. Fewer rows per group, more breathing room, a visual anchor/featured item per cluster. Fix cramped top intro area.
+- [x] **shop** (B→S) — DONE (e0ccd78). Per-product engraved medallions: finish from material (gold/steel), icon by product, verse-bar + ring + bail shape variants. Replaces single gem glyph.
+- [x] **prayer index** (B→S) — DONE (1dba395). Dropped redundant intro band, count chips per group, lighter headings, more breathing room. Fixed stale "18 prayers" → 30.
 - [ ] **bible index** (B→S) — de-pack the wall of small 2-col readings. Anchor per group, rhythm break.
 - [ ] **bible book /john** (B−→S) — under-built. Add book intro, themes, why-read, full chapter list, next-step. Stop the empty-card look.
 - [ ] **contact** (C+→S) — give a real channel (email link / form) or a credible single contact line; stop the "can't contact" read.

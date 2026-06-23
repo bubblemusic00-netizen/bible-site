@@ -61,22 +61,25 @@ export default function BiblePage() {
         </StatusNote>
       </div>
 
-      <div data-reveal-stagger className="mt-9 grid gap-10">
+      <div data-reveal-stagger className="mt-9 grid gap-14">
         {groupedBibleReadings.map((group) => (
           <section
             key={group.key}
             className="border-t border-[#dfcfb2] pt-7"
           >
-            <div>
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
                 {group.title}
               </p>
-              <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
-                {group.description}
-              </h2>
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+                {group.readings.length} readings
+              </span>
             </div>
+            <h2 className="mt-2 max-w-2xl font-serif text-[1.7rem] font-semibold leading-tight text-[#241f19] sm:text-[1.95rem]">
+              {group.description}
+            </h2>
 
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2">
               {group.readings.map((reading) => (
                 <Link
                   key={reading.href}
