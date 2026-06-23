@@ -6,7 +6,7 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 ## Per-page lifts
 - [x] **shop** (B→S) — DONE (e0ccd78). Per-product engraved medallions: finish from material (gold/steel), icon by product, verse-bar + ring + bail shape variants. Replaces single gem glyph.
 - [x] **prayer index** (B→S) — DONE (1dba395). Dropped redundant intro band, count chips per group, lighter headings, more breathing room. Fixed stale "18 prayers" → 30.
-- [ ] **bible index** (B→S) — de-pack the wall of small 2-col readings. Anchor per group, rhythm break.
+- [x] **bible index** (B→S) — DONE (806649f). Same cluster treatment as prayer: count chips, lighter headings, breathing room.
 - [ ] **bible book /john** (B−→S) — under-built. Add book intro, themes, why-read, full chapter list, next-step. Stop the empty-card look.
 - [ ] **contact** (C+→S) — give a real channel (email link / form) or a credible single contact line; stop the "can't contact" read.
 - [ ] **about** (B+→S) — add warmth; collapse near-identical disclaimer cards; lead with mission not legal.
