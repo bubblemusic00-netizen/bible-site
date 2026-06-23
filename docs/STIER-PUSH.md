@@ -7,8 +7,8 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [x] **shop** (B→S) — DONE (e0ccd78). Per-product engraved medallions: finish from material (gold/steel), icon by product, verse-bar + ring + bail shape variants. Replaces single gem glyph.
 - [x] **prayer index** (B→S) — DONE (1dba395). Dropped redundant intro band, count chips per group, lighter headings, more breathing room. Fixed stale "18 prayers" → 30.
 - [x] **bible index** (B→S) — DONE (806649f). Same cluster treatment as prayer: count chips, lighter headings, breathing room.
-- [ ] **bible book /john** (B−→S) — under-built. Add book intro, themes, why-read, full chapter list, next-step. Stop the empty-card look.
-- [ ] **contact** (C+→S) — give a real channel (email link / form) or a credible single contact line; stop the "can't contact" read.
+- [x] **bible book /john** (B−→S) — DONE (970edf7). Book subtitle, "what each reading includes" strip, rich theme-titled chapter cards. Whole [book] template.
+- [ ] **contact** (C+→S) — BLOCKED: needs owner's real support email/contact channel (won't invent an address). Ask user, then wire a mailto/line.
 - [ ] **about** (B+→S) — add warmth; collapse near-identical disclaimer cards; lead with mission not legal.
 - [ ] **home** (A−→S) — strengthen library cards (contrast/weight); justify or trim the giant "Selah" lantern lockup; differentiate the 3 dark sections.
 - [ ] **verses index** (A−→S) — break 16-card monotony (featured row / size rhythm / quiet break).

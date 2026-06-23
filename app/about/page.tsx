@@ -64,7 +64,24 @@ export default function AboutPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-9 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-9 max-w-5xl overflow-hidden rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.05)] sm:p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+          The name
+        </p>
+        <h2 className="mt-2 max-w-3xl font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+          &ldquo;Selah&rdquo; is an invitation to pause.
+        </h2>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-[#625b51]">
+          <span className="font-semibold text-[#241f19]">Selah</span> appears
+          more than seventy times in the Psalms &mdash; a small word that is
+          often understood as a pause: a breath between lines, a moment to stop
+          and let the words settle before moving on. That is the whole idea
+          here. Read a little, pray honestly, sit with one verse, and take a
+          single next step &mdash; unhurried, and without pressure.
+        </p>
+      </section>
+
+      <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:items-start">
           <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
             <Heart size={22} strokeWidth={1.8} />
@@ -125,26 +142,6 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className="mt-6 max-w-5xl rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
-        <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#8f6220]">
-              Support readiness
-            </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
-              Prepared for trust before commerce.
-            </h2>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
-              If Selah later adds an optional shop for simple faith
-              reminders, support, shipping, returns, privacy, and disclosures
-              will be explained before purchase. The free Scripture, prayer,
-              and reflection guidance will remain separate from any purchase.
-            </p>
-          </div>
-          <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />
-        </div>
-      </section>
-
       <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
         <p className="text-sm font-semibold uppercase text-[#8f6220]">
           Read the boundaries
@@ -153,8 +150,9 @@ export default function AboutPage() {
           Trust depends on clear limits.
         </h2>
         <p className="mt-3 max-w-3xl text-base leading-7 text-[#625b51]">
-          Selah is content-first and independent. The pages below explain
-          how the site approaches Scripture, prayer, symbols, future commerce,
+          Selah is content-first and independent. Free Scripture, prayer, and
+          reflection stay separate from any future shop, and the pages below
+          explain how the site approaches Scripture, prayer, symbols, commerce,
           and support without pretending to be more than it is.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
