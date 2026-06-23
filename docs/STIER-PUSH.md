@@ -16,7 +16,7 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [ ] **guides index** (A−→S) — vary closing CTA (de-formula).
 - [ ] **guide /who-is-jesus** (A−→S) — calm busy lower half (checklist + 3 related rows).
 - [ ] **jewelry index** (A−→S) — strengthen faint symbol-grid icons; differentiate the two dark waitlist blocks.
-- [ ] **votd** (A−→S) — fill plain mid-page.
+- [x] **votd** (A−→S) — DONE (2dd345e). Flat mid-page now a Read/Reflect/Carry daily rhythm.
 - [ ] **start-result /hope** (A−→S) — reduce card-type density; de-formula dark band.
 - [ ] **terms/legal** (B+→S) — light memorability pass (low priority).
 
