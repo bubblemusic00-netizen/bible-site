@@ -314,10 +314,8 @@ function RelatedLinks({
 }) {
   return (
     <section className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
-      <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-        <Icon size={20} strokeWidth={1.8} />
-      </span>
-      <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+      <h2 className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.14em] text-[#8f6220]">
+        <Icon size={16} strokeWidth={1.8} />
         {title}
       </h2>
       <div className="mt-4 grid gap-3">
@@ -329,10 +327,10 @@ function RelatedLinks({
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                <h3 className="font-serif text-xl font-semibold leading-tight text-[#241f19]">
                   {link.label}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-[#625b51]">
+                <p className="mt-1.5 text-sm leading-6 text-[#625b51]">
                   {link.description}
                 </p>
               </div>
