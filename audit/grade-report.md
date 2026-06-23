@@ -44,5 +44,22 @@ Verdict: **Shippable.** No hard-gate failures. Technically excellent. The gap to
 5. **Thin pages.** `/bible/john` and `/contact` are under-built. Book pages need more (book intro, themes, why-read, full chapter list). Contact needs at least one real channel.
 6. **Monotone card grids.** Verses (16), prayer, bible: long runs of identical cards. Introduce rhythm — a featured row, size variation, or a quiet break — to fight scroll-boredom.
 
+## Round 2 — S-tier push (2026-06-23, shipped + verified)
+9 commits, all re-verified axe-CLEAN (0 WCAG violations) on every changed page.
+
+| Page | Before → After | What shipped |
+|---|---|---|
+| shop | B → **A** | Per-product engraved medallions (gold/steel by material, icon + shape variants) replace the single gem placeholder. e0ccd78 |
+| prayer index | B → **A** | Dropped redundant intro band, per-group count chips, lighter headings, more air. Fixed stale "18"→30. 1dba395 |
+| bible index | B → **A** | Same cluster rhythm (count chips, lighter headings, air). 806649f |
+| bible book /john | B− → **A** | Book subtitle, "what each reading includes" strip, theme-titled chapter cards. Whole [book] template. 970edf7 |
+| about | B+ → **A** | Warm "Selah = pause" lead band; folded a redundant trust card. 0aaf190 |
+| home | A− → **A** | Library-card info-scent eyebrows + contrast; gold hairline splitting trailing dark sections. e26c62d |
+| votd | A− → **A** | Flat mid-page → Read/Reflect/Carry daily rhythm. 2dd345e |
+| jewelry index | A− → **A−/A** | Symbol-grid medallions bumped for presence (twin dark surfaces kept — intentional). 3befcd9 |
+| verses index | A− → **A** | 16-card wall split into "facing" + "life's moments" groups. a4f9711 |
+
+Still open (lower leverage): contact (owner chose skip — needs real email), verse-topic / guides index / guide / start-result / terms polish, global de-formula of the dark CTA band. Tracked in `docs/STIER-PUSH.md`.
+
 ## Strong, keep as-is
 Chapter reading, prayer-path, symbol-meaning, and quiz pages are genuinely premium. Brand system (serif display + clean sans, cream/dark cadence, gold accents) is cohesive. Accessibility and layout stability are excellent (axe-clean, CLS 0). KJV/trust framing is consistent.

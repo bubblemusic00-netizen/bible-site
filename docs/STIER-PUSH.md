@@ -11,7 +11,7 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [ ] **contact** (C+→S) — BLOCKED: needs owner's real support email/contact channel (won't invent an address). Ask user, then wire a mailto/line.
 - [x] **about** (B+→S) — DONE (0aaf190). Warm "Selah = pause" lead band; folded redundant commerce-trust card.
 - [x] **home** (A−→S) — DONE (e26c62d). Library-card eyebrows + contrast, gold hairline separating trailing dark sections.
-- [ ] **verses index** (A−→S) — break 16-card monotony (featured row / size rhythm / quiet break).
+- [x] **verses index** (A−→S) — DONE (a4f9711). Split into "facing" + "life's moments" groups with count chips.
 - [ ] **verse-topic** (A−→S) — card-stack rhythm; enlarge/restyle refs.
 - [ ] **guides index** (A−→S) — vary closing CTA (de-formula).
 - [ ] **guide /who-is-jesus** (A−→S) — calm busy lower half (checklist + 3 related rows).
