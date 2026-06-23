@@ -21,16 +21,19 @@ export const metadata: Metadata = {
 
 const libraryLinks = [
   {
+    eyebrow: "Guided readings",
     title: "Bible",
     description: "Short guided readings — the passage, what it means, how to sit with it.",
     href: "/bible",
   },
   {
+    eyebrow: "Written prayers",
     title: "Prayer",
     description: "Words for when you don't have your own — grief, fear, waiting, thanks.",
     href: "/prayer",
   },
   {
+    eyebrow: "Plain-language starts",
     title: "Guides",
     description: "New to this? Plain-language starts on prayer, grace, and faith.",
     href: "/guides",
@@ -224,11 +227,14 @@ export default function Home() {
                 href={item.href}
                 className="group flex min-h-44 flex-col rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 p-6 text-[#241f19] shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
               >
-                <span className="block font-serif text-[1.7rem] font-semibold leading-[1.1] text-[#241f19]">
+                <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+                  {item.eyebrow}
+                </span>
+                <span className="mt-3 block font-serif text-[1.7rem] font-semibold leading-[1.1] text-[#241f19]">
                   {item.title}
                 </span>
                 <span className="mt-4 block h-px w-10 bg-[#d8c5a3] transition-all duration-200 group-hover:w-16 group-hover:bg-[#c49c52]" />
-                <span className="mt-4 block text-sm leading-6 text-[#625b51]">
+                <span className="mt-4 block text-[0.95rem] leading-6 text-[#5e574c]">
                   {item.description}
                 </span>
                 <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-[#254737]">
@@ -274,11 +280,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#0d120c] px-4 py-16 text-center sm:px-8">
+      <section className="border-t border-[#1d2a20] bg-[#0d120c] px-4 py-16 text-center sm:px-8">
         <div
           data-reveal
           className="mx-auto flex max-w-2xl flex-col items-center"
         >
+          <span className="mb-6 h-px w-12 bg-gradient-to-r from-transparent via-[#e9c985]/45 to-transparent" />
           <Image
             src="/selah-cream.png"
             alt="Selah"

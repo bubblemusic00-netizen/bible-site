@@ -9,7 +9,7 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [x] **bible index** (B→S) — DONE (806649f). Same cluster treatment as prayer: count chips, lighter headings, breathing room.
 - [x] **bible book /john** (B−→S) — DONE (970edf7). Book subtitle, "what each reading includes" strip, rich theme-titled chapter cards. Whole [book] template.
 - [ ] **contact** (C+→S) — BLOCKED: needs owner's real support email/contact channel (won't invent an address). Ask user, then wire a mailto/line.
-- [ ] **about** (B+→S) — add warmth; collapse near-identical disclaimer cards; lead with mission not legal.
+- [x] **about** (B+→S) — DONE (0aaf190). Warm "Selah = pause" lead band; folded redundant commerce-trust card.
 - [ ] **home** (A−→S) — strengthen library cards (contrast/weight); justify or trim the giant "Selah" lantern lockup; differentiate the 3 dark sections.
 - [ ] **verses index** (A−→S) — break 16-card monotony (featured row / size rhythm / quiet break).
 - [ ] **verse-topic** (A−→S) — card-stack rhythm; enlarge/restyle refs.
