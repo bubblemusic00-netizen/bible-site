@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Gem } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import {
   PageShell,
   SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
+import { ProductMedallion } from "./ProductMedallion";
 import { allProducts, formatPrice, productUrl, STORE_URL } from "@/lib/products";
 
 const STORE_LIVE = Boolean(STORE_URL);
@@ -80,8 +81,8 @@ export default function ShopPage() {
 
           const content = (
             <>
-              <div className="relative grid h-40 place-items-center border-b border-[#eadbc0] bg-[radial-gradient(circle_at_30%_25%,rgba(238,241,232,0.9),#f2f5ee)]">
-                <Gem size={34} strokeWidth={1.5} className="text-[#254737]/70" />
+              <div className="relative">
+                <ProductMedallion product={product} />
                 {href ? null : (
                   <span className="absolute right-3 top-3 rounded-full bg-[#233f31] px-3 py-1 text-xs font-semibold text-[#fff8e8]">
                     Coming soon
