@@ -46,7 +46,8 @@ export function LegalInfoPage({
             <h2 className="font-serif text-3xl font-semibold leading-tight text-[#241f19]">
               {section.title}
             </h2>
-            <div className="mt-3 text-base leading-7 text-[#625b51]">
+            <span className="mt-4 block h-px w-10 bg-[#d8c5a3]" />
+            <div className="mt-4 text-base leading-7 text-[#625b51]">
               {section.body}
             </div>
           </article>
