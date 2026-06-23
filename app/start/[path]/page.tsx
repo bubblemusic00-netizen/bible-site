@@ -79,37 +79,18 @@ export default async function StartPathPage({
         <StatusNote>{faithPath.carefulLine}</StatusNote>
       </div>
 
-      <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-6">
-        <p className="text-sm font-semibold uppercase text-[#8f6220]">
-          Full Faith Quiz result
-        </p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-          Scripture, prayer, reflection, and one careful next step.
+      <div className="mt-9 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h2 className="font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+          Your result, in four steps.
         </h2>
-        <div className="mt-6 grid gap-3 md:grid-cols-4">
-          {[
-            ["Scripture", "Read a reference slowly."],
-            ["Prayer", "Name the need honestly."],
-            ["Reflect", "Answer one careful prompt."],
-            ["Step", "Take one small faithful action."],
-          ].map(([title, description], index) => (
-            <article key={title} className="rounded-lg bg-[#fbf7ed] p-4">
-              <span className="grid size-9 place-items-center rounded-full bg-[#284737] text-sm font-semibold text-[#fffaf0]">
-                {index + 1}
-              </span>
-              <h3 className="mt-4 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
-                {title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-[#625b51]">
-                {description}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+          Scripture &middot; prayer &middot; reflection &middot; step
+        </span>
+      </div>
 
-      <div className="mt-8 grid gap-5 lg:grid-cols-2">
+      <div className="mt-6 grid gap-5 lg:grid-cols-2">
         <PathSection
+          step={1}
           icon={BookOpenText}
           eyebrow="Scripture to begin with"
           title={faithPath.scriptureReference}
@@ -118,6 +99,7 @@ export default async function StartPathPage({
           cta="Read related Scripture"
         />
         <PathSection
+          step={2}
           icon={Heart}
           eyebrow="Prayer for today"
           title="Pray honestly"
@@ -126,12 +108,14 @@ export default async function StartPathPage({
           cta="Open matching prayer"
         />
         <PathSection
+          step={3}
           icon={PenLine}
           eyebrow="Reflection prompt"
           title="Hold this with care"
           body={faithPath.reflectionPrompt}
         />
         <PathSection
+          step={4}
           icon={ShieldCheck}
           eyebrow="Small next step"
           title="One faithful action"
@@ -177,6 +161,7 @@ export default async function StartPathPage({
 }
 
 function PathSection({
+  step,
   icon: Icon,
   eyebrow,
   title,
@@ -184,6 +169,7 @@ function PathSection({
   href,
   cta,
 }: {
+  step: number;
   icon: typeof Leaf;
   eyebrow: string;
   title: string;
@@ -193,13 +179,16 @@ function PathSection({
 }) {
   return (
     <section className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-      <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
-        <Icon size={20} strokeWidth={1.8} />
-      </span>
-      <p className="mt-5 text-sm font-semibold uppercase text-[#8f6220]">
-        {eyebrow}
-      </p>
-      <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+      <div className="flex items-center gap-3">
+        <span className="grid size-11 place-items-center rounded-full bg-[#284737] font-serif text-lg font-semibold text-[#fffaf0]">
+          {step}
+        </span>
+        <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-[#8f6220]">
+          <Icon size={16} strokeWidth={1.8} />
+          {eyebrow}
+        </span>
+      </div>
+      <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
         {title}
       </h2>
       <p className="mt-3 text-base leading-7 text-[#625b51]">{body}</p>

@@ -12,8 +12,8 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [x] **about** (B+→S) — DONE (0aaf190). Warm "Selah = pause" lead band; folded redundant commerce-trust card.
 - [x] **home** (A−→S) — DONE (e26c62d). Library-card eyebrows + contrast, gold hairline separating trailing dark sections.
 - [x] **verses index** (A−→S) — DONE (a4f9711). Split into "facing" + "life's moments" groups with count chips.
-- [ ] **verse-topic** (A−→S) — card-stack rhythm; enlarge/restyle refs.
-- [ ] **guides index** (A−→S) — vary closing CTA (de-formula).
+- [x] **verse-topic** (A−→S) — DONE (2f509e9). Gold editorial numerals down the verse list.
+- [x] **guides index** (A−→S) — DONE (2f509e9). Count-chip headers consistent with other indexes.
 - [ ] **guide /who-is-jesus** (A−→S) — calm busy lower half (checklist + 3 related rows).
 - [x] **jewelry index** (A−→S) — DONE (3befcd9). Symbol-grid medallions bumped 46→54 for presence. Twin dark surfaces kept (intentional).
 - [x] **votd** (A−→S) — DONE (2dd345e). Flat mid-page now a Read/Reflect/Carry daily rhythm.
