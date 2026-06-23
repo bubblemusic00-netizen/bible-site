@@ -10,7 +10,7 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [x] **bible book /john** (B−→S) — DONE (970edf7). Book subtitle, "what each reading includes" strip, rich theme-titled chapter cards. Whole [book] template.
 - [ ] **contact** (C+→S) — BLOCKED: needs owner's real support email/contact channel (won't invent an address). Ask user, then wire a mailto/line.
 - [x] **about** (B+→S) — DONE (0aaf190). Warm "Selah = pause" lead band; folded redundant commerce-trust card.
-- [ ] **home** (A−→S) — strengthen library cards (contrast/weight); justify or trim the giant "Selah" lantern lockup; differentiate the 3 dark sections.
+- [x] **home** (A−→S) — DONE (e26c62d). Library-card eyebrows + contrast, gold hairline separating trailing dark sections.
 - [ ] **verses index** (A−→S) — break 16-card monotony (featured row / size rhythm / quiet break).
 - [ ] **verse-topic** (A−→S) — card-stack rhythm; enlarge/restyle refs.
 - [ ] **guides index** (A−→S) — vary closing CTA (de-formula).
@@ -34,4 +34,5 @@ chapter reading · prayer-path · symbol-meaning · quiz. Brand system, a11y (ax
 
 ---
 Progress log (newest first):
+- 2026-06-23: shipped 6 — shop medallions (e0ccd78), prayer de-pack (1dba395), bible-index rhythm (806649f), bible-book build-out (970edf7), about warmth (0aaf190), home polish (e26c62d). Contact blocked on owner email. Remaining: votd, verses, jewelry, guide cluster + globals.
 - 2026-06-23: list created from deep grade pass.

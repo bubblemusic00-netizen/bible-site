@@ -77,11 +77,34 @@ export default function VerseOfTheDayPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
           Come back tomorrow
         </p>
-        <p className="mt-2 text-base leading-7 text-[#625b51]">
-          A new verse is chosen each day. Make it a small daily habit: read
-          slowly, sit with the reflection, and carry one line into the hours
-          ahead.
+        <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+          Make it a small daily rhythm.
+        </h2>
+        <p className="mt-3 max-w-2xl text-base leading-7 text-[#625b51]">
+          A new verse is chosen each day. Three quiet steps are enough.
         </p>
+        <ol className="mt-6 grid gap-4 sm:grid-cols-3">
+          {[
+            { n: "1", t: "Read", d: "One verse, slowly — out loud if you can." },
+            { n: "2", t: "Reflect", d: "Sit with the one-line thought for a moment." },
+            { n: "3", t: "Carry", d: "Take a single line into the hours ahead." },
+          ].map((step) => (
+            <li
+              key={step.n}
+              className="rounded-lg border border-[#d3dac9] bg-[#fbfdf8] p-4"
+            >
+              <span className="grid size-8 place-items-center rounded-full bg-[#284737] font-serif text-sm font-semibold text-[#fffaf0]">
+                {step.n}
+              </span>
+              <span className="mt-3 block font-serif text-xl font-semibold text-[#241f19]">
+                {step.t}
+              </span>
+              <span className="mt-1 block text-sm leading-6 text-[#625b51]">
+                {step.d}
+              </span>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section className="mt-6 max-w-4xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 sm:p-8">
