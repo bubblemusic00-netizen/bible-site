@@ -14,11 +14,11 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [x] **verses index** (A−→S) — DONE (a4f9711). Split into "facing" + "life's moments" groups with count chips.
 - [x] **verse-topic** (A−→S) — DONE (2f509e9). Gold editorial numerals down the verse list.
 - [x] **guides index** (A−→S) — DONE (2f509e9). Count-chip headers consistent with other indexes.
-- [ ] **guide /who-is-jesus** (A−→S) — calm busy lower half (checklist + 3 related rows).
+- [x] **guide /who-is-jesus** (A−→S) — DONE (8f8c8f7). Related sections demoted to eyebrow headers; lower half calmed.
 - [x] **jewelry index** (A−→S) — DONE (3befcd9). Symbol-grid medallions bumped 46→54 for presence. Twin dark surfaces kept (intentional).
 - [x] **votd** (A−→S) — DONE (2dd345e). Flat mid-page now a Read/Reflect/Carry daily rhythm.
 - [x] **start-result /hope** (A−→S) — DONE (e30a2a8). Dropped duplicate preview strip; numbered the 4 path cards.
-- [ ] **terms/legal** (B+→S) — light memorability pass (low priority).
+- [x] **terms/legal** (B+→S) — DONE (a9aaf4d). Gold-divider accent on shared LegalInfoPage (lifts all 8 legal pages).
 
 ## Global (lifts the whole A− cluster)
 - [ ] **Formula fatigue** — vary the dark-green "Let X lead you back" CTA band across ~7 pages.

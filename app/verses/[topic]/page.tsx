@@ -91,7 +91,7 @@ export default async function VerseTopicPage({
           >
             <span
               aria-hidden
-              className="mt-1.5 font-serif text-base font-semibold leading-none text-[#c49c52]"
+              className="mt-1.5 font-serif text-base font-semibold leading-none text-[#8f6220]"
             >
               {String(i + 1).padStart(2, "0")}
             </span>
