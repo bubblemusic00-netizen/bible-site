@@ -84,17 +84,25 @@ export default async function VerseTopicPage({
       />
 
       <section className="mt-9 max-w-4xl space-y-0 overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1]">
-        {data.verses.map((verse) => (
+        {data.verses.map((verse, i) => (
           <div
             key={verse.reference}
-            className="border-b border-[#e2d4ba] px-5 py-6 last:border-b-0 sm:px-7"
+            className="flex gap-4 border-b border-[#e2d4ba] px-5 py-6 last:border-b-0 sm:gap-6 sm:px-7"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
-              {verse.reference}
-            </p>
-            <blockquote className="mt-3 font-serif text-[1.3rem] leading-[1.6] text-[#2b251d] sm:text-[1.55rem]">
-              &ldquo;{verse.text}&rdquo;
-            </blockquote>
+            <span
+              aria-hidden
+              className="mt-1.5 font-serif text-base font-semibold leading-none text-[#c49c52]"
+            >
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div className="min-w-0">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#8f6220]">
+                {verse.reference}
+              </p>
+              <blockquote className="mt-3 font-serif text-[1.3rem] leading-[1.6] text-[#2b251d] sm:text-[1.55rem]">
+                &ldquo;{verse.text}&rdquo;
+              </blockquote>
+            </div>
           </div>
         ))}
       </section>
