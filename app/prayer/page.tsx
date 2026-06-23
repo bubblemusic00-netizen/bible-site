@@ -4,8 +4,6 @@ import {
   ArrowRight,
   BookOpenText,
   Heart,
-  Library,
-  HandHeart,
 } from "lucide-react";
 import {
   PageIntro,
@@ -39,8 +37,9 @@ export default function PrayerPage() {
             A focused prayer library
           </p>
           <p className="mt-2 text-base leading-7 text-[#625b51]">
-            Prayer can be simple, honest, and rooted in Scripture. Start with
-            18 prayers organized by the needs people often bring to God.
+            Prayer can be simple, honest, and rooted in Scripture —{" "}
+            {prayerPathKeys.length} complete prayers, organized by the needs
+            people often bring to God.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <SecondaryButton href={`/prayer/${firstPrayer.slug}`}>
@@ -54,25 +53,7 @@ export default function PrayerPage() {
         </div>
       </div>
 
-      <section className="mt-9 border-y border-[#dfcfb2] py-6">
-        <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-[#8f6220]">
-              <Library size={16} strokeWidth={1.8} />
-              Prayer, reflection, and Scripture
-            </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
-              {prayerPathKeys.length} complete prayers, available now.
-            </h2>
-          </div>
-          <p className="text-base leading-7 text-[#625b51]">
-            Each prayer in this library is written to be read slowly, honestly,
-            and with room for reflection, Scripture, and a small next step.
-          </p>
-        </div>
-      </section>
-
-      <div className="mt-5 max-w-5xl">
+      <div className="mt-7 max-w-5xl">
         <StatusNote>
           Selah currently offers a focused library of {prayerPathKeys.length}{" "}
           prayers. Prayer guidance is for Scripture-rooted reflection and
@@ -82,22 +63,25 @@ export default function PrayerPage() {
         </StatusNote>
       </div>
 
-      <div data-reveal-stagger className="mt-9 grid gap-10">
+      <div data-reveal-stagger className="mt-10 grid gap-14">
         {groupedPrayerPaths.map((group) => (
           <section
             key={group.key}
             className="border-t border-[#dfcfb2] pt-7"
           >
-            <div>
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
                 {group.title}
               </p>
-              <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
-                {group.description}
-              </h2>
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+                {group.prayers.length} prayers
+              </span>
             </div>
+            <h2 className="mt-2 max-w-2xl font-serif text-[1.7rem] font-semibold leading-tight text-[#241f19] sm:text-[1.95rem]">
+              {group.description}
+            </h2>
 
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2">
               {group.prayers.map((prayer) => (
                 <Link
                   key={prayer.slug}
