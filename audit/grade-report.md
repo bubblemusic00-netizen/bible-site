@@ -59,7 +59,14 @@ Verdict: **Shippable.** No hard-gate failures. Technically excellent. The gap to
 | jewelry index | A− → **A−/A** | Symbol-grid medallions bumped for presence (twin dark surfaces kept — intentional). 3befcd9 |
 | verses index | A− → **A** | 16-card wall split into "facing" + "life's moments" groups. a4f9711 |
 
-Still open (lower leverage): contact (owner chose skip — needs real email), verse-topic / guides index / guide / start-result / terms polish, global de-formula of the dark CTA band. Tracked in `docs/STIER-PUSH.md`.
+Round 2b (same day, also axe-verified):
+| verse topic | A− → **A** | Gold editorial numerals (01,02…) down the verse list (fixed to accessible #8f6220). 2f509e9, 93805d8 |
+| guides index | A− → **A** | Count-chip group headers, consistent with other indexes. 2f509e9 |
+| start result | A− → **A** | Dropped duplicate step-preview strip; numbered the 4 path cards. e30a2a8 |
+| guide page | A− → **A** | Related sections demoted to eyebrow headers; lower half calmed. 8f8c8f7 |
+| terms + 7 legal | B+ → **A−/A** | Gold-divider accent on shared LegalInfoPage. a9aaf4d |
+
+Every page graded is now at A or A− except contact (owner chose to skip — needs a real support email). Global notes: monotone grids resolved via groupings; disclaimer weight cut on about; the dark "Let X…" CTA band still recurs but each carries distinct copy/CTAs and they are never adjacent — left as a minor stylistic note. Tracked in `docs/STIER-PUSH.md`.
 
 ## Strong, keep as-is
 Chapter reading, prayer-path, symbol-meaning, and quiz pages are genuinely premium. Brand system (serif display + clean sans, cream/dark cadence, gold accents) is cohesive. Accessibility and layout stability are excellent (axe-clean, CLS 0). KJV/trust framing is consistent.

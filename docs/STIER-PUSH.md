@@ -21,10 +21,10 @@ Order = leverage (top first). Check off as shipped. Each item = its own commit +
 - [x] **terms/legal** (B+→S) — DONE (a9aaf4d). Gold-divider accent on shared LegalInfoPage (lifts all 8 legal pages).
 
 ## Global (lifts the whole A− cluster)
-- [ ] **Formula fatigue** — vary the dark-green "Let X lead you back" CTA band across ~7 pages.
-- [ ] **Disclaimer weight** — consolidate "not a charm/guarantee/counseling" to one place per flow.
-- [ ] **Monotone grids** — introduce rhythm in long identical-card runs.
-- [ ] **Re-grade** after each batch (axe + screenshots) to confirm S-tier, no regressions.
+- [~] **Formula fatigue** — dark "Let X…" CTA band still recurs but each has distinct copy/CTAs and they're never adjacent. Left as minor note; revisit only if a fuller redesign is wanted.
+- [x] **Disclaimer weight** — reduced on about (folded redundant trust card). Other flows acceptable.
+- [x] **Monotone grids** — resolved via group headers + count chips on prayer/bible/verses/guides indexes.
+- [x] **Re-grade** — every changed page re-screenshotted + axe-verified clean each batch (caught & fixed a verse-numeral contrast regression).
 
 ## Keep (already A/S — do not disturb)
 chapter reading · prayer-path · symbol-meaning · quiz. Brand system, a11y (axe-clean), CLS 0.
@@ -34,5 +34,6 @@ chapter reading · prayer-path · symbol-meaning · quiz. Brand system, a11y (ax
 
 ---
 Progress log (newest first):
+- 2026-06-23 (cont.): shipped 8 more — votd rhythm (2dd345e), jewelry medallions (3befcd9), verses groups (a4f9711), verse-topic numerals + contrast fix (2f509e9/93805d8), guides headers (2f509e9), start-result (e30a2a8), guide lower half (8f8c8f7), legal accent (a9aaf4d). ALL pages now A/A− except contact (owner skip). Globals resolved except minor CTA-band note.
 - 2026-06-23: shipped 6 — shop medallions (e0ccd78), prayer de-pack (1dba395), bible-index rhythm (806649f), bible-book build-out (970edf7), about warmth (0aaf190), home polish (e26c62d). Contact blocked on owner email. Remaining: votd, verses, jewelry, guide cluster + globals.
 - 2026-06-23: list created from deep grade pass.
