@@ -26,6 +26,7 @@ const footerResourceLinks = [
 ];
 
 const trustLinks = [
+  { label: "What We Believe", href: "/beliefs" },
   { label: "Editorial Principles", href: "/editorial-principles" },
   { label: "Content Boundaries", href: "/content-boundaries" },
   { label: "Disclosures", href: "/disclosures" },

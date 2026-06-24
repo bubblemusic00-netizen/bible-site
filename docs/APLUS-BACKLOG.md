@@ -109,3 +109,22 @@ Last updated: 2026-06-17.
 6. 🟢 layout/card variety + imagery (P1–P2 visual)
 7. 🟡 deploy fix + analytics + email service (need your decisions)
 8. 🔵 commerce design system (when products arrive)
+
+---
+
+## 11. Christian-perspective audit (2026-06-24)
+
+Deep read of every page through a devout Christian's eyes. Site passed
+theological review (verbatim KJV, strong anti-superstition / anti-prosperity
+guardrails). Gaps below.
+
+**Shipped this round:**
+- [x] **Statement of faith** — new `/beliefs` page (broad-but-clear essentials, each with a verbatim-verified KJV verse); linked in footer Trust nav, About, homepage.
+- [x] **"Finding a Church" bridge** — site said "go to church" everywhere with no next step; added `finding-a-church` guide + links from beliefs + content-boundaries.
+- [x] **Gospel front-door** — surfaced `what-is-the-gospel` from homepage + About (was buried in /guides).
+- [x] **Catholic medals framed with respect** — San Judas + Guadalupe no longer use the generic keepsake boundary; new `CATHOLIC_KEEPSAKE_NOTE` honors the sacramental tradition.
+
+**Still flagged:**
+- [ ] **P3 · 🟡 Modern translation** — KJV-only is archaic for the stated beginner audience. (See §10 "Translation breadth.")
+- [ ] **P2 · 🟡 Thin Bible** — ~16 guided readings, not a full Bible; the name "Bible" sets a bigger expectation. Decide scope (full reader vs. clearly framed "guided readings").
+- [ ] **P3 · 🟡 Trust / identity** — site is anonymous; consider a short "who's behind Selah" line. Luxury aesthetic (marble/gold/"small batches") may read as lifestyle brand vs. humble ministry.

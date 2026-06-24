@@ -10,7 +10,8 @@ export type GuideSlug =
   | "who-is-the-holy-spirit"
   | "what-is-sin-and-forgiveness"
   | "starting-a-daily-quiet-time"
-  | "handling-doubt";
+  | "handling-doubt"
+  | "finding-a-church";
 
 export type GuideGroupKey =
   | "start"
@@ -1173,6 +1174,100 @@ export const guides = {
     boundaryNote:
       "This is encouragement, not a complete set of answers — some questions deserve unhurried time with a wise pastor, mentor, or counselor. If doubt comes wrapped in lasting despair or hopelessness, please also reach out for mental-health support; tending your mind and tending your faith are not separate.",
   },
+  "finding-a-church": {
+    slug: "finding-a-church",
+    title: "Finding a Church and a Christian Community",
+    shortTitle: "Finding a Church",
+    description:
+      "A gentle, practical guide to finding a healthy local church — what to look for, how to begin, and how to take the first step if you feel nervous.",
+    audience:
+      "For anyone who senses they were not meant to walk faith alone, but feels unsure how to find a church or step back through the door.",
+    group: "growing",
+    intro:
+      "Selah keeps pointing you toward a local church and trusted Christian community — and that is on purpose. Faith was never meant to be carried entirely alone. But “just find a church” can feel easier said than done. This guide offers a few honest, unhurried ways to begin, whether you are starting fresh or finding your way back after a long time away.",
+    sections: [
+      {
+        heading: "Why a church, not only a website",
+        body: [
+          "A site like this one can hand you Scripture, a prayer, and a next step. What it cannot give you is people — those who know your name, pray with you, bring a meal when life caves in, and gently tell you the truth. The New Testament assumes faith is lived together, not as a private hobby.",
+          "Scripture pictures believers as one body with many parts, needing each other (1 Corinthians 12), and warns against drifting into isolation, urging us not to forsake “the assembling of ourselves together” (Hebrews 10:25). A church is simply where that shared life happens — ordinary people learning to follow Jesus side by side.",
+        ],
+      },
+      {
+        heading: "What a healthy church looks like",
+        body: [
+          "Churches differ in style, music, and tradition, and that variety is fine. What matters more is the center. Look for a church where the Bible is opened and taught honestly, where Jesus and his grace are clearly the focus, and where ordinary people are loved and welcomed rather than performed at.",
+          "Watch, too, for healthy signs around the edges: leaders who are accountable rather than untouchable, money handled openly, questions welcomed, and the vulnerable protected. A good church will point you to Christ and to community — never only to a leader, a building, or a giving envelope.",
+        ],
+      },
+      {
+        heading: "If you feel nervous or are coming back",
+        body: [
+          "Plenty of people stand in a parking lot, or hover over a service-time webpage, and almost turn around. If that is you, you are in good company. You do not have to have your beliefs sorted, your past tidy, or the right clothes on to walk in. Most churches are glad you came and will not expect you to perform.",
+          "Give a church more than one visit before you decide — a single Sunday rarely tells the whole story. And if a previous church wounded you, it is understandable to be cautious. Take your time, bring a friend if you can, and let trust rebuild slowly. Looking for a safe community is wisdom, not weakness.",
+        ],
+      },
+      {
+        heading: "How to actually begin this week",
+        body: [
+          "Start small and concrete. Search for churches near you, read a couple of their websites, and notice whether they talk plainly about Jesus, the Bible, and welcoming newcomers. Many list a service time and a friendly “what to expect on your first visit” page.",
+          "If you already know one believer you trust, ask where they gather and whether you could come along once. Going with someone removes most of the awkwardness. If you go alone, arrive a few minutes early, tell someone it is your first time, and let them help — that one sentence often opens a warm door.",
+        ],
+      },
+    ],
+    practicalSteps: [
+      "Search “churches near me” and pick two or three to look at this week.",
+      "Read their sites for clear talk about Jesus, the Bible, and welcoming visitors.",
+      "Ask one Christian you trust where they gather, and whether you could join them once.",
+      "Plan a specific service to attend, and give any church at least two visits.",
+      "On your first visit, tell one person it is your first time and let them help.",
+    ],
+    relatedBible: [
+      {
+        label: "Psalm 23",
+        href: "/bible/psalms/23",
+        description: "The Shepherd who leads and stays close along the way.",
+      },
+      {
+        label: "Romans 8",
+        href: "/bible/romans/8",
+        description: "Belonging to God's family, held and never alone.",
+      },
+      {
+        label: "Luke 15",
+        href: "/bible/luke/15",
+        description: "The welcome home for anyone returning after time away.",
+      },
+    ],
+    relatedPrayers: [
+      {
+        label: "Prayer Library",
+        href: "/prayer",
+        description: "Honest prayers for courage and new beginnings.",
+      },
+    ],
+    relatedFaithPaths: [
+      {
+        label: "A path toward hope",
+        href: "/start/hope",
+        description: "Scripture and prayer for taking a hopeful next step.",
+      },
+      {
+        label: "A path for family",
+        href: "/start/family",
+        description: "Prayer and Scripture for the people you gather with.",
+      },
+    ],
+    relatedSymbols: [
+      {
+        label: "What We Believe",
+        href: "/beliefs",
+        description: "The simple Christian center a healthy church shares.",
+      },
+    ],
+    boundaryNote:
+      "Selah cannot vet or recommend specific churches, and being a church does not by itself make a place safe or healthy. Use wisdom, take your time, and trust your sense if something feels wrong. For any situation involving abuse, coercion, or danger, step back and seek help from trusted people and, where needed, the authorities.",
+  },
 } as const satisfies Record<GuideSlug, Guide>;
 
 export const guideKeys = Object.keys(guides) as GuideSlug[];
@@ -1188,7 +1283,7 @@ const guideGroupOrder = {
     "who-is-the-holy-spirit",
     "what-is-sin-and-forgiveness",
   ],
-  growing: ["starting-a-daily-quiet-time", "handling-doubt"],
+  growing: ["starting-a-daily-quiet-time", "handling-doubt", "finding-a-church"],
   symbols: ["christian-symbols"],
 } as const satisfies Record<GuideGroupKey, readonly GuideSlug[]>;
 

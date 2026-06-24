@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BookOpenText, Gem, Heart, ShieldCheck } from "lucide-react";
 import {
   PageIntro,
@@ -107,6 +108,24 @@ export default function AboutPage() {
               Its role is to organize guidance in a way that stays humble about
               its limits.
             </p>
+            <p className="mt-3 text-base leading-7 text-[#625b51]">
+              If you are new to the Christian faith, two pages say plainly where
+              the site stands:{" "}
+              <Link
+                href="/guides/what-is-the-gospel"
+                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-[#8f6220] hover:underline"
+              >
+                the good news
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/beliefs"
+                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-[#8f6220] hover:underline"
+              >
+                what we believe
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
@@ -156,6 +175,7 @@ export default function AboutPage() {
           and support without pretending to be more than it is.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <SecondaryButton href="/beliefs">What We Believe</SecondaryButton>
           <SecondaryButton href="/editorial-principles">
             Editorial Principles
           </SecondaryButton>

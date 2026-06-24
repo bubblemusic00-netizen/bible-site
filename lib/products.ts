@@ -83,6 +83,12 @@ export function productUrl(product: Product): string | null {
 const KEEPSAKE_BOUNDARY =
   "An optional keepsake meant to point back to Scripture and prayer. It is not a charm and carries no power or guarantee.";
 
+// Catholic devotional medals carry real meaning within Catholic tradition, where
+// a blessed medal is a sacramental, not a trinket. We honor that rather than
+// flattening it — while keeping Selah's core line that hope rests in Christ.
+const CATHOLIC_KEEPSAKE_NOTE =
+  "A devotional medal offered with respect for Catholic tradition, where a blessed medal is a meaningful sacramental that encourages prayer and trust in God. As with every keepsake here, it is a reminder that points to Christ and prayer — not a charm, and not a guarantee of any outcome.";
+
 export const products = {
   "cross-necklace": {
     slug: "cross-necklace",
@@ -223,7 +229,7 @@ export const products = {
       notes:
         "Verify 316L grade + PVD wear with sample. Do NOT market as 'waterproof / 10-year' (refuted). Confirm correct iconography.",
     },
-    boundaryNote: KEEPSAKE_BOUNDARY,
+    boundaryNote: CATHOLIC_KEEPSAKE_NOTE,
   },
   "guadalupe-medal": {
     slug: "guadalupe-medal",
@@ -247,7 +253,7 @@ export const products = {
       notes:
         "Confirm approved Guadalupe iconography for a devout audience. Sample-verify plating.",
     },
-    boundaryNote: KEEPSAKE_BOUNDARY,
+    boundaryNote: CATHOLIC_KEEPSAKE_NOTE,
   },
 } as const satisfies Record<string, Product>;
 

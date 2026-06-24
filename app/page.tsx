@@ -199,6 +199,34 @@ export default function Home() {
               the right words. Tell us what you&rsquo;re carrying, and we&rsquo;ll
               hand you something small and true to hold onto.
             </p>
+            <p className="mt-3 text-base leading-7 text-[#f1eadf]/78">
+              New here, or wondering what Christians actually believe? Start with
+              the good news at the center of it all.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+              <Link
+                href="/guides/what-is-the-gospel"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#e9c985] transition hover:text-[#f3dfb6]"
+              >
+                Start here: the good news
+                <ArrowRight
+                  size={15}
+                  strokeWidth={1.8}
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                />
+              </Link>
+              <Link
+                href="/beliefs"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#f1eadf]/80 transition hover:text-[#fffaf0]"
+              >
+                What we believe
+                <ArrowRight
+                  size={15}
+                  strokeWidth={1.8}
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
