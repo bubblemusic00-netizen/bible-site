@@ -14,6 +14,7 @@ import {
   PageIntro,
   PageShell,
   SecondaryButton,
+  pillSolid,
 } from "../../components/site-ui";
 import { getBibleBook, supportedBibleChapters } from "../bible-data";
 
@@ -135,9 +136,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
                 {chapter.title}
               </span>
-              <span className="rounded-full bg-[#284737] px-3 py-1 text-xs font-semibold text-[#fffaf0]">
-                Guided reading
-              </span>
+              <span className={pillSolid}>Guided reading</span>
             </div>
             <span className="mt-3 block font-serif text-[1.55rem] font-semibold leading-[1.12] text-[#241f19]">
               {chapter.theme}

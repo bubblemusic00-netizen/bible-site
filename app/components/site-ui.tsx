@@ -396,3 +396,46 @@ export function StatusNote({
     </p>
   );
 }
+
+/**
+ * Premium pill / tag system. One consistent geometry across the site, with a
+ * hairline inset ring (not a hard 1px border), a top inset highlight for
+ * physical depth, and a soft ambient shadow — instead of the old flat
+ * cream-with-tan-border chips. Apply the variant string to a span, a, or Link.
+ */
+export const pillBase =
+  "inline-flex items-center gap-1.5 rounded-full px-3 py-[5px] text-[0.68rem] font-semibold uppercase tracking-[0.12em] leading-none";
+
+/** Light pill on cream surfaces (meta chips, tags). */
+export const pillLight = `${pillBase} bg-[#fbf5e8] text-[#7b561b] ring-1 ring-inset ring-[#e6d5b3] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_1px_2px_rgba(71,55,35,0.05)]`;
+
+/** Light pill that is interactive (anchors/links). */
+export const pillLightLink = `${pillLight} transition duration-200 hover:bg-[#fdfaf2] hover:ring-[#cdab6e] hover:text-[#5f441a]`;
+
+/** Gold-tinted pill for emphasis tags. */
+export const pillGold = `${pillBase} bg-[#f6ead0] text-[#7a5816] ring-1 ring-inset ring-[#e6cb88] shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_1px_2px_rgba(122,88,22,0.08)]`;
+
+/** Solid evergreen pill (status badges, numbers). */
+export const pillSolid = `${pillBase} bg-[#284737] text-[#fdf6e6] shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_6px_16px_rgba(40,71,55,0.22)]`;
+
+/** Glass pill on dark / photographic surfaces. */
+export const pillDark = `${pillBase} bg-[#fffaf0]/[0.08] text-[#f3dfb6] ring-1 ring-inset ring-[#f4dfb5]/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)] backdrop-blur-md`;
+
+export function Pill({
+  children,
+  icon: Icon,
+  variant = pillLight,
+  className = "",
+}: {
+  children: ReactNode;
+  icon?: LucideIcon;
+  variant?: string;
+  className?: string;
+}) {
+  return (
+    <span className={`${variant} ${className}`}>
+      {Icon ? <Icon size={13} strokeWidth={1.9} /> : null}
+      {children}
+    </span>
+  );
+}

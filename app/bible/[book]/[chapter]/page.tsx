@@ -8,6 +8,8 @@ import {
   PrimaryButton,
   SecondaryButton,
   StatusNote,
+  pillLight,
+  pillLightLink,
 } from "../../../components/site-ui";
 import {
   availableBibleChapterParams,
@@ -106,15 +108,12 @@ export default async function BibleChapterPage({
             <ArrowLeft size={16} strokeWidth={1.8} />
             Guided Bible Readings
           </Link>
-          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
-            <span className="inline-flex min-h-8 items-center gap-2 rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-3">
-              <BookOpenText size={14} strokeWidth={1.8} />
+          <div className="flex flex-wrap items-center gap-2">
+            <span className={pillLight}>
+              <BookOpenText size={13} strokeWidth={1.9} />
               Guided Reading
             </span>
-            <a
-              href="#after-reading"
-              className="inline-flex min-h-8 items-center rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-3 transition hover:border-[#bd9247] hover:text-[#254737]"
-            >
+            <a href="#after-reading" className={pillLightLink}>
               Reflection
             </a>
           </div>

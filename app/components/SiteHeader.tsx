@@ -95,8 +95,8 @@ export function SiteHeader({
             const isActive = active === item.key;
             const className = isActive
               ? transparent
-                ? "rounded-full bg-[#fffaf0]/15 px-3.5 py-2 text-[#fffaf0] backdrop-blur-md"
-                : "rounded-full bg-[#203d30] px-3.5 py-2 text-[#fffaf0] shadow-[0_10px_24px_rgba(32,61,48,0.14)]"
+                ? "rounded-full bg-[#fffaf0]/15 px-3.5 py-2 text-[#fffaf0] ring-1 ring-inset ring-[#fffaf0]/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-md"
+                : "rounded-full bg-[#203d30] px-3.5 py-2 text-[#fffaf0] shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_10px_24px_rgba(32,61,48,0.2)]"
               : transparent
                 ? "rounded-full px-3.5 py-2 text-[#f1eadf]/90 transition hover:bg-[#fffaf0]/10 hover:text-white"
                 : "rounded-full px-3.5 py-2 text-[#655d53] transition hover:bg-[#f3eadb]/72 hover:text-[#254737]";

@@ -18,6 +18,8 @@ import {
   PrimaryButton,
   SecondaryButton,
   StatusNote,
+  pillLight,
+  pillLightLink,
 } from "../../components/site-ui";
 import {
   getGuide,
@@ -115,15 +117,12 @@ export default async function GuidePage({
             <ArrowLeft size={16} strokeWidth={1.8} />
             Beginner Guides
           </Link>
-          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
-            <span className="inline-flex min-h-8 items-center gap-2 rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-3">
-              <Compass size={14} strokeWidth={1.8} />
+          <div className="flex flex-wrap items-center gap-2">
+            <span className={pillLight}>
+              <Compass size={13} strokeWidth={1.9} />
               Finished Guide
             </span>
-            <a
-              href="#try-this-today"
-              className="inline-flex min-h-8 items-center rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-3 transition hover:border-[#bd9247] hover:text-[#254737]"
-            >
+            <a href="#try-this-today" className={pillLightLink}>
               Try this today
             </a>
           </div>

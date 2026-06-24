@@ -14,6 +14,8 @@ import {
   PrimaryButton,
   SecondaryButton,
   StatusNote,
+  pillLight,
+  pillLightLink,
 } from "../../components/site-ui";
 import { getPrayerPath, prayerPathKeys } from "../prayer-paths";
 import { JsonLd } from "../../components/JsonLd";
@@ -95,15 +97,12 @@ export default async function PrayerPathPage({
             <ArrowLeft size={16} strokeWidth={1.8} />
             Prayer Library
           </Link>
-          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
-            <span className="inline-flex min-h-8 items-center gap-2 rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-3">
-              <Heart size={14} strokeWidth={1.8} />
+          <div className="flex flex-wrap items-center gap-2">
+            <span className={pillLight}>
+              <Heart size={13} strokeWidth={1.9} />
               Guided Prayer
             </span>
-            <a
-              href="#after-prayer"
-              className="inline-flex min-h-8 items-center rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-3 transition hover:border-[#bd9247] hover:text-[#254737]"
-            >
+            <a href="#after-prayer" className={pillLightLink}>
               Reflection
             </a>
           </div>
