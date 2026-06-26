@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   useEffect,
-  useId,
   useMemo,
   useRef,
   useState,
@@ -62,17 +61,17 @@ const beginOptions: Array<{
 }> = [
   {
     value: "Scripture",
-    description: "Open the related guided Bible reading first.",
+    description: "Open the guided Bible reading first.",
     icon: BookOpenText,
   },
   {
     value: "Prayer",
-    description: "Open honest words to pray for what you carry.",
+    description: "Pray honest words for what you carry.",
     icon: Heart,
   },
   {
     value: "Reflection",
-    description: "Name the moment first, then read and pray.",
+    description: "Name the moment, then read and pray.",
     icon: PenLine,
   },
 ];
@@ -93,6 +92,13 @@ const concernGuidance: Record<CarryingChoice, string> = {
 };
 
 const STORAGE_KEY = "selah-faith-quiz-v1";
+
+const steps = [
+  { label: "Need" },
+  { label: "Begin" },
+  { label: "Carry" },
+  { label: "Path" },
+] as const;
 
 function isStartSlug(value: unknown): value is StartFaithPathSlug {
   return (
@@ -205,240 +211,208 @@ export function FaithQuiz() {
   return (
     <section
       aria-labelledby="faith-quiz-title"
-      className="relative isolate mt-8 overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_18%_18%,rgba(239,204,139,0.18),transparent_32%),radial-gradient(circle_at_82%_16%,rgba(255,250,240,0.08),transparent_30%),linear-gradient(135deg,#17251d_0%,#203d30_48%,#121711_100%)] p-2 text-[#fffaf0] shadow-[0_34px_100px_rgba(25,45,34,0.22)] ring-1 ring-[#e9c985]/18 sm:p-4"
+      className="relative isolate mx-auto mt-6 max-w-3xl overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_15%_0%,rgba(239,204,139,0.16),transparent_38%),linear-gradient(135deg,#17251d_0%,#203d30_52%,#141a13_100%)] p-1.5 text-[#fffaf0] shadow-[0_28px_80px_rgba(25,45,34,0.2)] ring-1 ring-[#e9c985]/18 sm:p-2"
     >
-      <div className="relative z-10 grid gap-5 p-2 sm:p-3 lg:grid-cols-[0.34fr_1fr] lg:gap-7">
-        <aside className="order-1 lg:py-4">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#e9c985]">
-            Faith Quiz
-          </p>
-          <h2
-            id="faith-quiz-title"
-            className="mt-2 max-w-sm font-serif text-3xl font-semibold leading-tight sm:text-4xl"
-          >
-            A quiet path, shaped by three answers.
-          </h2>
-          <p className="mt-3 max-w-sm text-sm leading-6 text-[#fff8e8]/78 sm:text-base sm:leading-7">
-            Choose what you need, where to begin, and what you are carrying. Each
-            answer shapes the Scripture, prayer, and first doorway you receive.
-          </p>
+      {/* Header strip: brand mark + horizontal stepper (replaces the old
+          tall side rail and the duplicate page-level intro). */}
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3 sm:px-5">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#e9c985]">
+          Faith Quiz
+        </p>
+        <ol className="flex items-center gap-1" aria-label="Quiz progress">
+          {steps.map(({ label }, index) => {
+            const target = index + 1;
+            const isActive = step === target;
+            const isComplete = step > target && reaches(target);
+            const isReachable = reaches(target);
+            const isResult = target === 4;
 
-          <ol
-            className="mt-7 grid grid-cols-4 gap-2 border-y border-[#fff8e8]/12 py-4 lg:grid-cols-1 lg:gap-0 lg:border-y-0 lg:py-0"
-            aria-label="Quiz progress"
-          >
-            {[
-              ["1", "Need"],
-              ["2", "Begin"],
-              ["3", "Carry"],
-              ["Result", "Path"],
-            ].map(([number, label], index) => {
-              const target = index + 1;
-              const isActive = step === target;
-              const isComplete = step > target && reaches(target);
-              const isReachable = reaches(target);
-
-              return (
-                <li key={label} className="min-w-0">
-                  <button
-                    type="button"
-                    onClick={() => isReachable && setStep(target)}
-                    disabled={!isReachable}
-                    aria-current={isActive ? "step" : undefined}
+            return (
+              <li key={label} className="flex items-center">
+                {index > 0 ? (
+                  <span
+                    aria-hidden
+                    className={`mx-0.5 h-px w-3 sm:w-5 ${
+                      step > index ? "bg-[#e9c985]/70" : "bg-[#fff8e8]/20"
+                    }`}
+                  />
+                ) : null}
+                <button
+                  type="button"
+                  onClick={() => isReachable && setStep(target)}
+                  disabled={!isReachable}
+                  aria-current={isActive ? "step" : undefined}
+                  className={
+                    isActive
+                      ? "flex min-h-9 items-center gap-1.5 rounded-full bg-[#e9c985] px-2.5 text-xs font-semibold text-[#1f392c] shadow-[0_6px_16px_rgba(0,0,0,0.18)]"
+                      : isComplete
+                        ? "flex min-h-9 items-center gap-1.5 rounded-full bg-[#fff8e8]/12 px-2.5 text-xs font-semibold text-[#fffaf0] transition hover:bg-[#fff8e8]/20"
+                        : "flex min-h-9 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold text-[#fff8e8]/55 transition enabled:hover:text-[#fff8e8]/80 disabled:cursor-not-allowed disabled:opacity-50"
+                  }
+                >
+                  <span
                     className={
-                      isActive || isComplete
-                        ? "flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-[#e9c985]/70 bg-[#fffaf0] px-3 text-sm font-semibold text-[#244336] shadow-[0_12px_26px_rgba(0,0,0,0.14)] lg:justify-start lg:rounded-none lg:border-x-0 lg:border-b lg:border-t-0 lg:bg-transparent lg:px-0 lg:text-[#fffaf0] lg:shadow-none"
-                        : "flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-[#fff8e8]/16 bg-[#fff8e8]/7 px-3 text-sm font-semibold text-[#fff8e8]/72 transition enabled:hover:border-[#e9c985]/60 enabled:hover:bg-[#fff8e8]/12 disabled:cursor-not-allowed disabled:opacity-55 lg:justify-start lg:rounded-none lg:border-x-0 lg:border-b lg:border-t-0 lg:bg-transparent lg:px-0"
+                      isActive
+                        ? "grid size-5 place-items-center rounded-full bg-[#1f392c]/15 text-[0.65rem]"
+                        : "grid size-5 place-items-center rounded-full bg-[#fff8e8]/12 text-[0.65rem]"
                     }
                   >
-                    <span
-                      className={
-                        isActive || isComplete
-                          ? "grid size-7 shrink-0 place-items-center rounded-full bg-[#e9c985] text-xs text-[#1f392c]"
-                          : "grid size-7 shrink-0 place-items-center rounded-full bg-[#fff8e8]/10 text-xs text-[#fff8e8]"
-                      }
-                    >
-                      {isComplete ? <Check size={15} strokeWidth={2} /> : number}
-                    </span>
-                    <span className="hidden sm:inline lg:inline">{label}</span>
-                  </button>
-                </li>
-              );
-            })}
-          </ol>
+                    {isComplete ? (
+                      <Check size={12} strokeWidth={2.4} />
+                    ) : isResult ? (
+                      <Leaf size={11} strokeWidth={2} />
+                    ) : (
+                      target
+                    )}
+                  </span>
+                  <span className="hidden sm:inline">{label}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
 
-          <p className="mt-6 border-l border-[#e9c985]/55 pl-4 text-sm font-semibold leading-6 text-[#fff8e8]/82">
-            No login or email needed. Your answers stay on this device so you can
-            return to your path.
-          </p>
-        </aside>
+      <div className="overflow-hidden rounded-[1.4rem] bg-[#fffaf1] text-[#241f19] shadow-[0_18px_50px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60">
+        <div className="p-5 sm:p-7">
+          {step === 1 ? (
+            <QuizStep
+              eyebrow="Step 1 of 3 · What you need"
+              title="What do you need today?"
+              headingRef={headingRef}
+              actionLabel="Continue"
+              canAdvance={intention !== null}
+              onNext={() => setStep(2)}
+            >
+              <ChoiceRadioGroup
+                label="What do you need today?"
+                columns="grid-cols-2 lg:grid-cols-3"
+                variant="iconchip"
+                value={intention}
+                onChange={(v) => setIntention(v as StartFaithPathSlug)}
+                options={featuredStartFaithPathSlugs.map((slug) => ({
+                  value: slug,
+                  title: startFaithPaths[slug].title,
+                  icon: pathIcons[slug],
+                }))}
+              />
+            </QuizStep>
+          ) : null}
 
-        <div className="order-2 min-w-0 overflow-hidden rounded-[1.65rem] bg-[#fffaf1] text-[#241f19] shadow-[0_24px_70px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60 lg:order-2">
-          <div className="border-b border-[#eadbc0] bg-[linear-gradient(135deg,#fffdf7,#f3eadb)] px-5 py-4 sm:px-7">
-            <p className="text-sm font-semibold text-[#355242]">
-              Start small. Read slowly. Pray honestly.
-            </p>
-          </div>
-          <div className="p-5 sm:p-7 lg:p-8">
-            {step === 1 ? (
-              <QuizStep
-                eyebrow="Step 1 of 3"
-                title="What do you need today?"
-                description="Choose the intention that best names this moment. Nothing here promises an outcome; it guides your next reading, prayer, and reflection."
-                headingRef={headingRef}
-                actionLabel="Continue"
-                canAdvance={intention !== null}
-                onNext={() => setStep(2)}
-              >
-                <ChoiceRadioGroup
-                  label="What do you need today?"
-                  columns="sm:grid-cols-2 xl:grid-cols-3"
-                  value={intention}
-                  onChange={(v) => setIntention(v as StartFaithPathSlug)}
-                  options={featuredStartFaithPathSlugs.map((slug) => ({
-                    value: slug,
-                    title: startFaithPaths[slug].title,
-                    description: startFaithPaths[slug].description,
-                    icon: pathIcons[slug],
-                  }))}
-                />
-              </QuizStep>
-            ) : null}
+          {step === 2 ? (
+            <QuizStep
+              eyebrow="Step 2 of 3 · Where to begin"
+              title="How would you like to begin?"
+              description="This decides which doorway opens first. The full path still includes all three."
+              headingRef={headingRef}
+              actionLabel="Continue"
+              canAdvance={beginWith !== null}
+              onBack={() => setStep(1)}
+              onNext={() => setStep(3)}
+            >
+              <ChoiceRadioGroup
+                label="How would you like to begin?"
+                columns="sm:grid-cols-3"
+                variant="card"
+                value={beginWith}
+                onChange={(v) => setBeginWith(v as BeginChoice)}
+                options={beginOptions.map((o) => ({
+                  value: o.value,
+                  title: o.value,
+                  description: o.description,
+                  icon: o.icon,
+                }))}
+              />
+            </QuizStep>
+          ) : null}
 
-            {step === 2 ? (
-              <QuizStep
-                eyebrow="Step 2 of 3"
-                title="How would you like to begin?"
-                description="This decides which doorway opens first — the Bible reading, the prayer, or a reflection. The full path still includes all three."
-                headingRef={headingRef}
-                actionLabel="Continue"
-                canAdvance={beginWith !== null}
-                onBack={() => setStep(1)}
-                onNext={() => setStep(3)}
-              >
-                <ChoiceRadioGroup
-                  label="How would you like to begin?"
-                  columns="md:grid-cols-3"
-                  value={beginWith}
-                  onChange={(v) => setBeginWith(v as BeginChoice)}
-                  options={beginOptions.map((o) => ({
-                    value: o.value,
-                    title: o.value,
-                    description: o.description,
-                    icon: o.icon,
-                  }))}
-                />
-              </QuizStep>
-            ) : null}
+          {step === 3 ? (
+            <QuizStep
+              eyebrow="Step 3 of 3 · What you carry"
+              title="What are you carrying right now?"
+              headingRef={headingRef}
+              actionLabel="Show my path"
+              canAdvance={carrying !== null}
+              onBack={() => setStep(2)}
+              onNext={() => setStep(4)}
+            >
+              <ChoiceRadioGroup
+                label="What are you carrying right now?"
+                columns="grid-cols-1 sm:grid-cols-2"
+                variant="chip"
+                value={carrying}
+                onChange={(v) => setCarrying(v as CarryingChoice)}
+                options={carryingOptions.map((o) => ({ value: o, title: o }))}
+              />
+            </QuizStep>
+          ) : null}
 
-            {step === 3 ? (
-              <QuizStep
-                eyebrow="Step 3 of 3"
-                title="What are you carrying right now?"
-                description="Choose the phrase closest to your current season. It shapes the guidance and the small next step you receive."
-                headingRef={headingRef}
-                actionLabel="Show my path"
-                canAdvance={carrying !== null}
-                onBack={() => setStep(2)}
-                onNext={() => setStep(4)}
-              >
-                <ChoiceRadioGroup
-                  label="What are you carrying right now?"
-                  columns="sm:grid-cols-2"
-                  variant="chip"
-                  value={carrying}
-                  onChange={(v) => setCarrying(v as CarryingChoice)}
-                  options={carryingOptions.map((o) => ({ value: o, title: o }))}
-                />
-              </QuizStep>
-            ) : null}
-
-            {step === 4 && path && beginWith && carrying && doorway ? (
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
-                  Your Faith Path
-                </p>
-                <div className="mt-3 overflow-hidden rounded-[1.35rem] bg-[#f2f5ee]">
-                  <div className="flex flex-col gap-4 bg-[radial-gradient(circle_at_top_right,rgba(233,201,133,0.18),transparent_42%),linear-gradient(135deg,#203d30,#182a21)] p-5 text-[#fffaf0] sm:flex-row sm:items-start sm:justify-between sm:p-6">
-                    <div className="min-w-0">
-                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#e9c985]">
-                        {beginWith} first
-                      </p>
-                      <h2
-                        ref={headingRef}
-                        tabIndex={-1}
-                        className="mt-2 font-serif text-4xl font-semibold leading-tight text-[#fffaf0] outline-none"
-                      >
-                        {path.title} Faith Path
-                      </h2>
-                      <p className="mt-3 text-base leading-7 text-[#fff8e8]/82">
-                        Because you are carrying {carrying.toLowerCase()}:{" "}
-                        {concernGuidance[carrying]}
-                      </p>
-                    </div>
-                    <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#fff8e8]/12 text-[#fffaf0]">
-                      <Icon size={22} strokeWidth={1.8} />
-                    </span>
-                  </div>
-
-                  <div className="border-b border-[#d8ddcf] bg-[#fffaf1] p-5 sm:p-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
-                      You chose
-                    </p>
-                    <div className="mt-3 grid gap-3 sm:grid-cols-3">
-                      <ChosenAnswer label="Need" value={path.title} />
-                      <ChosenAnswer label="Begin with" value={beginWith} />
-                      <ChosenAnswer label="Carrying" value={carrying} />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-3 p-5 sm:p-6 lg:grid-cols-2">
-                    {orderedResults.map((result, index) => (
-                      <ResultItem
-                        key={result.key}
-                        title={
-                          index === 0 ? `${result.title} first` : result.title
-                        }
-                        body={result.body}
-                        primary={index === 0}
-                      />
-                    ))}
-                    <ResultItem
-                      title="A small next step"
-                      body={path.smallNextStep}
-                    />
-                    <ResultItem
-                      title="Optional faith-symbol reminder"
-                      body={path.symbolReminder}
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-3 border-t border-[#d8ddcf] bg-[#fffaf1] p-5 sm:flex-row sm:flex-wrap sm:p-6">
-                    <Link
-                      href={doorway.href}
-                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition hover:bg-[#1f392c]"
-                    >
-                      {doorway.label}
-                      <ArrowRight size={16} strokeWidth={1.8} />
-                    </Link>
-                    <Link
-                      href={path.startRoute}
-                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#284737]/30 bg-[#fffaf0] px-5 py-3 text-sm font-semibold text-[#284737] transition hover:border-[#284737]/60 hover:bg-[#fffdf7]"
-                    >
-                      See the full Faith Path
-                    </Link>
-                    <button
-                      type="button"
-                      onClick={() => setStep(1)}
-                      className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-5 py-3 text-sm font-semibold text-[#355242] transition hover:border-[#bd9247] hover:bg-[#fffdf7]"
-                    >
-                      Adjust answers
-                    </button>
-                  </div>
+          {step === 4 && path && beginWith && carrying && doorway ? (
+            <div>
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+                    {beginWith} first · {path.title} Faith Path
+                  </p>
+                  <h2
+                    id="faith-quiz-title"
+                    ref={headingRef}
+                    tabIndex={-1}
+                    className="mt-1.5 font-serif text-2xl font-semibold leading-tight text-[#241f19] outline-none sm:text-3xl"
+                  >
+                    {path.title} Faith Path
+                  </h2>
                 </div>
+                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#244336] text-[#fffaf0]">
+                  <Icon size={19} strokeWidth={1.8} />
+                </span>
               </div>
-            ) : null}
-          </div>
+
+              <p className="mt-2.5 text-sm leading-6 text-[#5c5347]">
+                Because you are carrying {carrying.toLowerCase()}:{" "}
+                {concernGuidance[carrying]}
+              </p>
+
+              <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
+                {orderedResults.map((result, index) => (
+                  <ResultItem
+                    key={result.key}
+                    title={index === 0 ? `${result.title} first` : result.title}
+                    body={result.body}
+                    primary={index === 0}
+                  />
+                ))}
+                <ResultItem title="A small next step" body={path.smallNextStep} />
+                <ResultItem
+                  title="Faith-symbol reminder"
+                  body={path.symbolReminder}
+                />
+              </div>
+
+              <div className="mt-5 flex flex-col gap-2.5 border-t border-[#e7decb] pt-5 sm:flex-row sm:flex-wrap">
+                <Link
+                  href={doorway.href}
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition hover:bg-[#1f392c]"
+                >
+                  {doorway.label}
+                  <ArrowRight size={16} strokeWidth={1.8} />
+                </Link>
+                <Link
+                  href={path.startRoute}
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#284737]/30 bg-[#fffaf0] px-5 py-3 text-sm font-semibold text-[#284737] transition hover:border-[#284737]/60 hover:bg-[#fffdf7]"
+                >
+                  See the full Faith Path
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setStep(1)}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-5 py-3 text-sm font-semibold text-[#355242] transition hover:border-[#bd9247] hover:bg-[#fffdf7] sm:ml-auto"
+                >
+                  Adjust answers
+                </button>
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </section>
@@ -458,7 +432,7 @@ function QuizStep({
 }: {
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   actionLabel: string;
   children: ReactNode;
   canAdvance: boolean;
@@ -468,28 +442,29 @@ function QuizStep({
 }) {
   return (
     <div>
-      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
         {eyebrow}
       </p>
       <h2
+        id="faith-quiz-title"
         ref={headingRef}
         tabIndex={-1}
-        className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] outline-none sm:text-4xl"
+        className="mt-1.5 font-serif text-2xl font-semibold leading-tight text-[#241f19] outline-none sm:text-3xl"
       >
         {title}
       </h2>
-      <p className="mt-3 max-w-3xl text-base leading-7 text-[#625b51]">
-        {description}
-      </p>
-      <div className="mt-6 border-y border-[#dfcfb2]/86 bg-[#fffdf7]/46">
-        {children}
-      </div>
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+      {description ? (
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#5c5347]">
+          {description}
+        </p>
+      ) : null}
+      <div className="mt-4">{children}</div>
+      <div className="mt-5 flex items-center gap-2.5">
         {onBack ? (
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-5 py-3 text-sm font-semibold text-[#355242] transition hover:border-[#bd9247] hover:bg-[#fffdf7]"
+            className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-4 py-2.5 text-sm font-semibold text-[#355242] transition hover:border-[#bd9247] hover:bg-[#fffdf7]"
           >
             <ArrowLeft size={16} strokeWidth={1.8} />
             Back
@@ -499,16 +474,11 @@ function QuizStep({
           type="button"
           onClick={onNext}
           disabled={!canAdvance}
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-[#1f392c] disabled:cursor-not-allowed disabled:bg-[#e7decb] disabled:text-[#9c8f79] disabled:shadow-none"
+          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-2.5 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-[#1f392c] disabled:cursor-not-allowed disabled:bg-[#e7decb] disabled:text-[#9c8f79] disabled:shadow-none sm:ml-auto"
         >
           {actionLabel}
           <ArrowRight size={16} strokeWidth={1.8} />
         </button>
-        {!canAdvance ? (
-          <p className="text-sm font-semibold text-[#6a5f4d]" aria-hidden>
-            Choose one to continue.
-          </p>
-        ) : null}
       </div>
     </div>
   );
@@ -534,7 +504,7 @@ function ChoiceRadioGroup({
   value: string | null;
   onChange: (value: string) => void;
   columns: string;
-  variant?: "card" | "chip";
+  variant?: "card" | "chip" | "iconchip";
 }) {
   const refs = useRef<Array<HTMLButtonElement | null>>([]);
   const selectedIndex = options.findIndex((o) => o.value === value);
@@ -557,7 +527,7 @@ function ChoiceRadioGroup({
   }
 
   return (
-    <div role="radiogroup" aria-label={label} className={`grid gap-3 ${columns}`}>
+    <div role="radiogroup" aria-label={label} className={`grid gap-2.5 ${columns}`}>
       {options.map((option, index) => {
         const selected = value === option.value;
         // Roving tabindex: the checked radio (or the first when none chosen)
@@ -565,23 +535,27 @@ function ChoiceRadioGroup({
         const tabbable = selected || (selectedIndex === -1 && index === 0);
         const OptionIcon = option.icon;
 
+        const common = {
+          ref: (el: HTMLButtonElement | null) => {
+            refs.current[index] = el;
+          },
+          type: "button" as const,
+          role: "radio" as const,
+          "aria-checked": selected,
+          tabIndex: tabbable ? 0 : -1,
+          onClick: () => onChange(option.value),
+          onKeyDown: (e: KeyboardEvent<HTMLButtonElement>) => onKeyDown(e, index),
+        };
+
         if (variant === "chip") {
           return (
             <button
               key={option.value}
-              ref={(el) => {
-                refs.current[index] = el;
-              }}
-              type="button"
-              role="radio"
-              aria-checked={selected}
-              tabIndex={tabbable ? 0 : -1}
-              onClick={() => onChange(option.value)}
-              onKeyDown={(e) => onKeyDown(e, index)}
+              {...common}
               className={
                 selected
-                  ? "min-h-14 rounded-lg border border-[#244336] bg-[#eef1e8] px-4 py-3 text-left text-sm font-semibold leading-6 text-[#244336] shadow-[0_12px_28px_rgba(40,71,55,0.08)]"
-                  : "min-h-14 rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] px-4 py-3 text-left text-sm font-semibold leading-6 text-[#625b51] transition hover:border-[#c49c52] hover:text-[#244336]"
+                  ? "min-h-12 rounded-xl border border-[#244336] bg-[#eef1e8] px-4 py-3 text-left text-sm font-semibold leading-6 text-[#244336] shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
+                  : "min-h-12 rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] px-4 py-3 text-left text-sm font-semibold leading-6 text-[#625b51] transition hover:border-[#c49c52] hover:text-[#244336]"
               }
             >
               {option.title}
@@ -589,62 +563,86 @@ function ChoiceRadioGroup({
           );
         }
 
+        if (variant === "iconchip") {
+          return (
+            <button
+              key={option.value}
+              {...common}
+              className={
+                selected
+                  ? "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-[#244336] bg-[#eef1e8] px-3 py-2.5 text-left shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
+                  : "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] px-3 py-2.5 text-left transition hover:border-[#c49c52]"
+              }
+            >
+              {OptionIcon ? (
+                <span
+                  className={
+                    selected
+                      ? "grid size-9 shrink-0 place-items-center rounded-full bg-[#244336] text-[#fffaf1]"
+                      : "grid size-9 shrink-0 place-items-center rounded-full bg-[#fffaf1] text-[#254737] ring-1 ring-[#e3d4b6]"
+                  }
+                >
+                  <OptionIcon size={17} strokeWidth={1.8} />
+                </span>
+              ) : null}
+              <span
+                className={`font-serif text-base font-semibold leading-tight ${
+                  selected ? "text-[#244336]" : "text-[#241f19]"
+                }`}
+              >
+                {option.title}
+              </span>
+              {selected ? (
+                <span className="ml-auto grid size-5 shrink-0 place-items-center rounded-full bg-[#284737] text-[#fffaf0]">
+                  <Check size={12} strokeWidth={2.4} />
+                </span>
+              ) : null}
+            </button>
+          );
+        }
+
+        // variant === "card"
         return (
           <button
             key={option.value}
-            ref={(el) => {
-              refs.current[index] = el;
-            }}
-            type="button"
-            role="radio"
-            aria-checked={selected}
-            tabIndex={tabbable ? 0 : -1}
-            onClick={() => onChange(option.value)}
-            onKeyDown={(e) => onKeyDown(e, index)}
+            {...common}
             className={
               selected
-                ? "min-h-32 border-y border-[#244336] bg-[#eef1e8] p-4 text-left shadow-[inset_4px_0_0_#244336,0_14px_34px_rgba(40,71,55,0.08)]"
-                : "min-h-32 border-y border-transparent p-4 text-left transition hover:bg-[#fffdf7]"
+                ? "flex min-h-[92px] flex-col rounded-xl border border-[#244336] bg-[#eef1e8] p-4 text-left shadow-[0_10px_26px_rgba(40,71,55,0.08)]"
+                : "flex min-h-[92px] flex-col rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] p-4 text-left transition hover:border-[#c49c52]"
             }
           >
-            <span className="flex items-start justify-between gap-3">
+            <span className="flex items-center justify-between">
               {OptionIcon ? (
-                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#fffaf1] text-[#254737]">
-                  <OptionIcon size={19} strokeWidth={1.8} />
+                <span
+                  className={
+                    selected
+                      ? "grid size-9 place-items-center rounded-full bg-[#244336] text-[#fffaf1]"
+                      : "grid size-9 place-items-center rounded-full bg-[#fffaf1] text-[#254737] ring-1 ring-[#e3d4b6]"
+                  }
+                >
+                  <OptionIcon size={17} strokeWidth={1.8} />
                 </span>
               ) : (
                 <span />
               )}
               {selected ? (
-                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#284737] text-[#fffaf0]">
-                  <Check size={15} strokeWidth={2} />
+                <span className="grid size-5 place-items-center rounded-full bg-[#284737] text-[#fffaf0]">
+                  <Check size={12} strokeWidth={2.4} />
                 </span>
               ) : null}
             </span>
-            <span className="mt-4 block font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+            <span className="mt-2.5 block font-serif text-lg font-semibold leading-tight text-[#241f19]">
               {option.title}
             </span>
             {option.description ? (
-              <span className="mt-2 block text-sm leading-6 text-[#625b51]">
+              <span className="mt-1 block text-xs leading-5 text-[#625b51]">
                 {option.description}
               </span>
             ) : null}
           </button>
         );
       })}
-    </div>
-  );
-}
-
-function ChosenAnswer({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
-        {label}
-      </p>
-      <p className="mt-1 break-words text-sm font-semibold leading-6 text-[#244336]">
-        {value}
-      </p>
     </div>
   );
 }
@@ -662,14 +660,14 @@ function ResultItem({
     <div
       className={
         primary
-          ? "border border-[#d7b56d] bg-[#fffaf1] p-4 shadow-[0_14px_34px_rgba(71,55,35,0.06)] lg:col-span-2"
-          : "border border-[#d8ddcf] bg-[#fffdf7]/68 p-4"
+          ? "rounded-xl border border-[#d7b56d] bg-[#fffaf1] p-3.5 shadow-[0_10px_26px_rgba(71,55,35,0.06)] sm:col-span-2"
+          : "rounded-xl border border-[#d8ddcf] bg-[#fffdf7]/70 p-3.5"
       }
     >
-      <h3 className="text-sm font-semibold uppercase tracking-[0.04em] text-[#8f6220]">
+      <h3 className="text-xs font-semibold uppercase tracking-[0.04em] text-[#8f6220]">
         {title}
       </h3>
-      <p className="mt-2 text-sm leading-6 text-[#625b51]">{body}</p>
+      <p className="mt-1.5 text-sm leading-6 text-[#5c5347]">{body}</p>
     </div>
   );
 }
