@@ -213,12 +213,9 @@ export function FaithQuiz() {
       aria-labelledby="faith-quiz-title"
       className="relative isolate mx-auto mt-6 max-w-3xl overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_15%_0%,rgba(239,204,139,0.16),transparent_38%),linear-gradient(135deg,#17251d_0%,#203d30_52%,#141a13_100%)] p-1.5 text-[#fffaf0] shadow-[0_28px_80px_rgba(25,45,34,0.2)] ring-1 ring-[#e9c985]/18 sm:p-2"
     >
-      {/* Header strip: brand mark + horizontal stepper (replaces the old
-          tall side rail and the duplicate page-level intro). */}
-      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3 sm:px-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#e9c985]">
-          Faith Quiz
-        </p>
+      {/* Header strip: horizontal stepper only. The page-level intro already
+          carries the "Faith Quiz" label, so the old duplicate is gone. */}
+      <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 px-4 py-3 sm:px-5">
         <ol className="flex items-center gap-1" aria-label="Quiz progress">
           {steps.map(({ label }, index) => {
             const target = index + 1;
