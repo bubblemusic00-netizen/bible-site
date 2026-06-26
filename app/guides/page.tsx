@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpenText, Heart, Library } from "lucide-react";
 import {
-  PageIntro,
+  HeroPrimary,
+  HeroSecondary,
+  PageHero,
   PageShell,
-  PrimaryButton,
   SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
@@ -21,34 +22,29 @@ export default function GuidesPage() {
   const firstGuide = guides[guideKeys[0]];
 
   return (
-    <PageShell active="guides">
-      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      active="guides"
+      hero={
+        <PageHero
           icon={Library}
           eyebrow="Beginner guides"
           title="Beginner Christian Guides"
           subtitle="Simple, careful guides for people who want to begin with Scripture, prayer, reflection, and Christian faith basics."
-        />
-        <div className="border-l border-[#d8c5a3] pl-5">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
-            {guideKeys.length} beginner guides
-          </p>
-          <p className="mt-2 text-base leading-7 text-[#625b51]">
-            These guides are beginner-friendly, non-denominational, and written
-            to help visitors read Scripture, pray honestly, and use Selah
-            with clear boundaries.
-          </p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <PrimaryButton href={`/guides/${firstGuide.slug}`}>
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <HeroPrimary href={`/guides/${firstGuide.slug}`}>
               Start with a guide
               <ArrowRight size={16} strokeWidth={1.8} />
-            </PrimaryButton>
-            <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
+            </HeroPrimary>
+            <HeroSecondary href="/start">Take the Faith Quiz</HeroSecondary>
           </div>
-        </div>
-      </div>
-
-      <div className="mt-8 max-w-5xl">
+          <p className="mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/72">
+            {guideKeys.length} beginner-friendly, non-denominational guides.
+          </p>
+        </PageHero>
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>
           These guides help a beginner start with humility and attention. They
           are not a substitute for Scripture, church community, pastoral care,

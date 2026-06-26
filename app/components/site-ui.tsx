@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
@@ -42,9 +43,17 @@ const legalLinks = [
 
 export function PageShell({
   active,
+  hero,
   children,
 }: {
   active?: NavKey;
+  /**
+   * Optional full-bleed dark hero band (see {@link PageHero}). When present the
+   * header goes transparent-over-hero (like the homepage) and the cream content
+   * begins immediately below — giving every page the homepage's dark-hero /
+   * cream-body rhythm from one shared place.
+   */
+  hero?: ReactNode;
   children: ReactNode;
 }) {
   return (
@@ -53,7 +62,8 @@ export function PageShell({
       className="flex min-h-screen w-full flex-col bg-[linear-gradient(180deg,#faf7f0_0%,#f3eee3_100%)] text-[#27231d]"
     >
       <ReadingProgress />
-      <SiteHeader active={active} />
+      <SiteHeader active={active} overHero={Boolean(hero)} />
+      {hero}
       <section
         data-page-shell
         className="relative mx-auto w-full min-w-0 max-w-7xl flex-1 px-4 py-9 sm:px-8 lg:py-12"
@@ -63,6 +73,121 @@ export function PageShell({
       <BackToTop />
       <SiteFooter />
     </main>
+  );
+}
+
+/**
+ * Full-bleed dark hero band, distilled from the homepage hero so every interior
+ * page opens with the same cinematic evergreen + Carrara-marble look: the
+ * gold eyebrow flanked by a hairline rule, a Cormorant display title, and a
+ * staggered `fade-rise` entrance. Pass action links (use {@link HeroPrimary} /
+ * {@link HeroSecondary}) and/or a meta line as children. Render it via the
+ * `hero` prop of {@link PageShell} so it sits full-width above the cream body.
+ */
+export function PageHero({
+  icon: Icon,
+  eyebrow,
+  title,
+  subtitle,
+  children,
+}: {
+  icon: LucideIcon;
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  children?: ReactNode;
+}) {
+  return (
+    <section className="relative isolate overflow-hidden bg-[radial-gradient(125%_60%_at_50%_0%,#1b271e_0%,#131a12_55%,#0e130d_100%)] text-[#fffaf0]">
+      <Image
+        src="/hero-marble.jpg"
+        alt=""
+        aria-hidden
+        fill
+        sizes="100vw"
+        className="pointer-events-none select-none object-cover object-[50%_36%] opacity-[0.16] saturate-[1.05]"
+      />
+      {/* Scrims: deepen top-and-bottom for legibility, warm gold glow for depth,
+          and a gold hairline seam where the band meets the cream body. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(12,17,13,0.58)_0%,rgba(12,17,13,0.32)_46%,rgba(12,17,13,0.93)_100%)]"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[radial-gradient(62%_60%_at_50%_2%,rgba(233,201,133,0.13),transparent_64%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#e9c985]/45 to-transparent"
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-12 pt-12 sm:px-8 sm:pb-14 sm:pt-16 lg:pb-16 lg:pt-20">
+        <p
+          className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-[#f3dfb6]/90"
+          style={{ animationDelay: "0ms" }}
+        >
+          <span className="h-px w-8 bg-[#f3dfb6]/40" />
+          <Icon size={15} strokeWidth={1.8} />
+          {eyebrow}
+        </p>
+        <h1
+          className="fade-rise mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] tracking-[-0.012em] text-[#fffaf0] sm:text-6xl"
+          style={{ animationDelay: "90ms" }}
+        >
+          {title}
+        </h1>
+        {subtitle ? (
+          <p
+            className="fade-rise mt-5 max-w-2xl text-base leading-7 text-[#f1eadf]/85 sm:text-lg sm:leading-8"
+            style={{ animationDelay: "170ms" }}
+          >
+            {subtitle}
+          </p>
+        ) : null}
+        {children ? (
+          <div className="fade-rise mt-8" style={{ animationDelay: "250ms" }}>
+            {children}
+          </div>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+/** Cream solid action link for use on the dark {@link PageHero}. */
+export function HeroPrimary({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-6 py-3 text-sm font-semibold text-[#203d30] shadow-[0_16px_44px_rgba(0,0,0,0.28)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#fffaf0] hover:shadow-[0_20px_54px_rgba(233,201,133,0.3)]"
+    >
+      {children}
+    </Link>
+  );
+}
+
+/** Ghost / glass action link for use on the dark {@link PageHero}. */
+export function HeroSecondary({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/40 bg-[#fffaf0]/[0.08] px-5 py-3 text-sm font-semibold text-[#f6ecd8] backdrop-blur-md transition duration-200 ease-out hover:border-[#f4dfb5]/70 hover:bg-[#fffaf0]/15"
+    >
+      {children}
+    </Link>
   );
 }
 

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpenText, Gem, Heart, ShieldCheck } from "lucide-react";
 import {
-  PageIntro,
+  HeroPrimary,
+  HeroSecondary,
+  PageHero,
   PageShell,
   PrimaryButton,
   SecondaryButton,
@@ -51,21 +53,30 @@ const principles = [
 
 export default function AboutPage() {
   return (
-    <PageShell active="about">
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      active="about"
+      hero={
+        <PageHero
           icon={ShieldCheck}
           eyebrow="About Selah"
           title="An independent Christian faith-inspired platform."
           subtitle="Selah helps visitors explore Bible wisdom, prayer, reflection, and meaningful Christian symbols with honesty, care, and respect."
-        />
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <HeroPrimary href="/start">Find your Faith Path</HeroPrimary>
+            <HeroSecondary href="/beliefs">What We Believe</HeroSecondary>
+          </div>
+        </PageHero>
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>
           This site is independent and is not an official church, ministry,
           denomination, Bible publisher, or religious authority.
         </StatusNote>
       </div>
 
-      <section className="mt-9 max-w-5xl overflow-hidden rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.05)] sm:p-8">
+      <section className="mt-6 max-w-5xl overflow-hidden rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.05)] sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
           The name
         </p>

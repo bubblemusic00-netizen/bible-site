@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BookOpenText } from "lucide-react";
-import { CardLink, PageIntro, PageShell, StatusNote } from "../components/site-ui";
+import { CardLink, PageHero, PageShell, StatusNote } from "../components/site-ui";
 import { JsonLd } from "../components/JsonLd";
 import { itemListSchema } from "@/lib/seo";
 import { allVerseTopics } from "./verse-topics";
@@ -32,7 +32,16 @@ export default function VersesPage() {
   ].filter((g) => g.topics.length > 0);
 
   return (
-    <PageShell>
+    <PageShell
+      hero={
+        <PageHero
+          icon={BookOpenText}
+          eyebrow="Topical Scripture"
+          title="Bible verses for what you are facing."
+          subtitle="Short, gathered passages for real moments — each with a quiet reflection and a prayer to carry it further."
+        />
+      }
+    >
       <JsonLd
         data={itemListSchema(
           "Bible Verses by Topic",
@@ -42,14 +51,8 @@ export default function VersesPage() {
           })),
         )}
       />
-      <PageIntro
-        icon={BookOpenText}
-        eyebrow="Topical Scripture"
-        title="Bible verses for what you are facing."
-        subtitle="Short, gathered passages for real moments — each with a quiet reflection and a prayer to carry it further."
-      />
 
-      <div data-reveal-stagger className="mt-9 grid gap-14">
+      <div data-reveal-stagger className="grid gap-14">
         {groups.map((group) => (
           <section key={group.title} className="border-t border-[#dfcfb2] pt-7">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">

@@ -6,9 +6,10 @@ import {
   Heart,
 } from "lucide-react";
 import {
-  PageIntro,
+  HeroPrimary,
+  HeroSecondary,
+  PageHero,
   PageShell,
-  SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
 import { groupedPrayerPaths, prayerPathKeys, prayerPaths } from "./prayer-paths";
@@ -24,36 +25,30 @@ export default function PrayerPage() {
   const firstPrayer = prayerPaths[prayerPathKeys[0]];
 
   return (
-    <PageShell active="prayer">
-      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      active="prayer"
+      hero={
+        <PageHero
           icon={Heart}
           eyebrow="Prayer library"
           title="Prayer Library"
-          subtitle="Choose a prayer for what you are carrying today, with Scripture, reflection, and one simple next step."
-        />
-        <div className="border-l border-[#d8c5a3] pl-5">
-          <p className="text-sm font-semibold uppercase text-[#8f6220]">
-            A focused prayer library
-          </p>
-          <p className="mt-2 text-base leading-7 text-[#625b51]">
-            Prayer can be simple, honest, and rooted in Scripture —{" "}
-            {prayerPathKeys.length} complete prayers, organized by the needs
-            people often bring to God.
-          </p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <SecondaryButton href={`/prayer/${firstPrayer.slug}`}>
+          subtitle="Choose a prayer for what you are carrying today — each with Scripture, reflection, and one simple next step."
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <HeroPrimary href={`/prayer/${firstPrayer.slug}`}>
               Start praying
-            </SecondaryButton>
-            <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
-            <SecondaryButton href="/guides/how-to-pray">
-              How to Pray
-            </SecondaryButton>
+            </HeroPrimary>
+            <HeroSecondary href="/start">Take the Faith Quiz</HeroSecondary>
+            <HeroSecondary href="/guides/how-to-pray">How to Pray</HeroSecondary>
           </div>
-        </div>
-      </div>
-
-      <div className="mt-7 max-w-5xl">
+          <p className="mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/72">
+            {prayerPathKeys.length} complete prayers, organized by the needs
+            people bring to God.
+          </p>
+        </PageHero>
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>
           Selah currently offers a focused library of {prayerPathKeys.length}{" "}
           prayers. Prayer guidance is for Scripture-rooted reflection and

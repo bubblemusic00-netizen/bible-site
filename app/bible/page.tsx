@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpenText } from "lucide-react";
 import {
-  PageIntro,
+  HeroPrimary,
+  HeroSecondary,
+  PageHero,
   PageShell,
-  PrimaryButton,
-  SecondaryButton,
   StatusNote,
 } from "../components/site-ui";
 import { groupedBibleReadings, supportedBibleChapters } from "./bible-data";
@@ -21,37 +21,32 @@ export default function BiblePage() {
   const readingCount = supportedBibleChapters.length;
 
   return (
-    <PageShell active="bible">
-      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      active="bible"
+      hero={
+        <PageHero
           icon={BookOpenText}
-          eyebrow="Guided Bible readings"
+          eyebrow="Guided readings"
           title="Guided Bible Readings"
-          subtitle="A focused library of finished Scripture readings with context, reflection, prayer, and a simple next step."
-        />
-        <div className="border-l border-[#d8c5a3] pl-5">
-          <p className="text-sm font-semibold uppercase text-[#8f6220]">
-            A focused reading library
-          </p>
-          <p className="mt-2 text-base leading-7 text-[#625b51]">
-            Start with {readingCount} complete guided readings organized by
-            theme. Each one includes Scripture, context, reflection, prayer, and
-            a simple next step.
-          </p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <PrimaryButton href={supportedBibleChapters[0].href}>
+          subtitle="A focused library of finished Scripture readings — each with context, reflection, prayer, and one simple next step."
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <HeroPrimary href={supportedBibleChapters[0].href}>
               Start reading
               <ArrowRight size={16} strokeWidth={1.8} />
-            </PrimaryButton>
-            <SecondaryButton href="/start">Take the Faith Quiz</SecondaryButton>
-            <SecondaryButton href="/guides/start-reading-the-bible">
+            </HeroPrimary>
+            <HeroSecondary href="/start">Take the Faith Quiz</HeroSecondary>
+            <HeroSecondary href="/guides/start-reading-the-bible">
               How to Start Reading
-            </SecondaryButton>
+            </HeroSecondary>
           </div>
-        </div>
-      </div>
-
-      <div className="mt-9 max-w-5xl">
+          <p className="mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/72">
+            {readingCount} complete guided readings, organized by theme.
+          </p>
+        </PageHero>
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>
           Selah currently offers a focused library of finished guided
           readings rather than a full Bible database. Full Scripture text is
