@@ -13,7 +13,8 @@ import {
 import { SaveSelectedFaithPath } from "@/app/components/ContinueFaithPath";
 import {
   BackButton,
-  PageIntro,
+  Breadcrumbs,
+  PageHero,
   PageShell,
   SecondaryButton,
   StatusNote,
@@ -66,20 +67,37 @@ export default async function StartPathPage({
   const linkedFaithPathSlug = faithPath.linkedFaithPathSlug as FaithPathSlug;
 
   return (
-    <PageShell active="start">
-      <SaveSelectedFaithPath pathSlug={linkedFaithPathSlug} />
-
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      active="start"
+      hero={
+        <PageHero
           icon={Leaf}
           eyebrow="Faith Quiz Result"
           title={`${faithPath.title} Faith Path`}
           subtitle={faithPath.pastoralIntro}
+          breadcrumbs={
+            <Breadcrumbs
+              tone="dark"
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Faith Quiz", path: "/start" },
+                {
+                  name: `${faithPath.title} Faith Path`,
+                  path: `/start/${path}`,
+                },
+              ]}
+            />
+          }
         />
+      }
+    >
+      <SaveSelectedFaithPath pathSlug={linkedFaithPathSlug} />
+
+      <div className="max-w-5xl">
         <StatusNote>{faithPath.carefulLine}</StatusNote>
       </div>
 
-      <div className="mt-9 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+      <div className="mt-8 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h2 className="font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
           Your result, in four steps.
         </h2>

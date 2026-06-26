@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { ArrowRight, BookOpenText, Feather, Heart } from "lucide-react";
 import {
   Breadcrumbs,
-  PageIntro,
+  PageHero,
   PageShell,
   PrimaryButton,
   SecondaryButton,
@@ -52,7 +52,27 @@ export default async function VerseTopicPage({
   const prayer = getPrayerPath(data.relatedPrayerSlug);
 
   return (
-    <PageShell>
+    <PageShell
+      active="verse"
+      hero={
+        <PageHero
+          icon={BookOpenText}
+          eyebrow="Topical Scripture"
+          title={data.title}
+          subtitle={data.intro}
+          breadcrumbs={
+            <Breadcrumbs
+              tone="dark"
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Bible Verses", path: "/verses" },
+                { name: data.shortTitle, path: `/verses/${topic}` },
+              ]}
+            />
+          }
+        />
+      }
+    >
       <JsonLd
         data={[
           breadcrumbSchema([
@@ -68,22 +88,7 @@ export default async function VerseTopicPage({
         ]}
       />
 
-      <Breadcrumbs
-        items={[
-          { name: "Home", path: "/" },
-          { name: "Bible Verses", path: "/verses" },
-          { name: data.shortTitle, path: `/verses/${topic}` },
-        ]}
-      />
-
-      <PageIntro
-        icon={BookOpenText}
-        eyebrow="Topical Scripture"
-        title={data.title}
-        subtitle={data.intro}
-      />
-
-      <section className="mt-9 max-w-4xl space-y-0 overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1]">
+      <section className="max-w-4xl space-y-0 overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1]">
         {data.verses.map((verse, i) => (
           <div
             key={verse.reference}

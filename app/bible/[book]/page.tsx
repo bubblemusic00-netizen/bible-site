@@ -11,7 +11,8 @@ import {
 import { redirect } from "next/navigation";
 import {
   BackButton,
-  PageIntro,
+  Breadcrumbs,
+  PageHero,
   PageShell,
   SecondaryButton,
   pillSolid,
@@ -83,17 +84,30 @@ function AvailableBookOverview({ slug }: { slug: string }) {
   const readingCount = chapters.length;
 
   return (
-    <PageShell active="bible">
-      <PageIntro
-        icon={BookOpenText}
-        eyebrow="Bible book"
-        title={details.name}
-        subtitle={`${readingCount} finished guided ${
-          readingCount === 1 ? "reading" : "readings"
-        } from ${details.name}, each pairing the full King James Version passage with context, reflection, and prayer.`}
-      />
-
-      <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
+    <PageShell
+      active="bible"
+      hero={
+        <PageHero
+          icon={BookOpenText}
+          eyebrow="Bible book"
+          title={details.name}
+          subtitle={`${readingCount} finished guided ${
+            readingCount === 1 ? "reading" : "readings"
+          } from ${details.name}, each pairing the full King James Version passage with context, reflection, and prayer.`}
+          breadcrumbs={
+            <Breadcrumbs
+              tone="dark"
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Guided Bible Readings", path: "/bible" },
+                { name: details.name, path: `/bible/${slug}` },
+              ]}
+            />
+          }
+        />
+      }
+    >
+      <section className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
           What each reading includes
         </p>

@@ -1,15 +1,13 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, BookOpenText, Feather } from "lucide-react";
+import { ArrowRight, BookOpenText, Feather } from "lucide-react";
 import { redirect } from "next/navigation";
 import {
   Breadcrumbs,
+  PageHero,
   PageShell,
   PrimaryButton,
   SecondaryButton,
   StatusNote,
-  pillLight,
-  pillLightLink,
 } from "../../../components/site-ui";
 import {
   availableBibleChapterParams,
@@ -72,7 +70,28 @@ export default async function BibleChapterPage({
   const canonicalPath = `/bible/${book}/${chapter}`;
 
   return (
-    <PageShell active="bible">
+    <PageShell
+      active="bible"
+      hero={
+        <PageHero
+          icon={BookOpenText}
+          eyebrow={chapterData.theme}
+          title={reference}
+          subtitle={chapterData.title}
+          breadcrumbs={
+            <Breadcrumbs
+              tone="dark"
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Guided Bible Readings", path: "/bible" },
+                { name: bookDetails.name, path: `/bible/${book}` },
+                { name: reference, path: canonicalPath },
+              ]}
+            />
+          }
+        />
+      }
+    >
       <JsonLd
         data={[
           breadcrumbSchema([
@@ -89,54 +108,13 @@ export default async function BibleChapterPage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
-        <Breadcrumbs
-          items={[
-            { name: "Home", path: "/" },
-            { name: "Guided Bible Readings", path: "/bible" },
-            { name: bookDetails.name, path: `/bible/${book}` },
-            { name: reference, path: canonicalPath },
-          ]}
-        />
-        <nav
-          aria-label="Reading navigation"
-          className="flex flex-col gap-3 rounded-lg border border-[#dfcfb2] bg-[#fffaf1]/86 px-4 py-3 shadow-[0_18px_42px_rgba(71,55,35,0.06)] sm:flex-row sm:items-center sm:justify-between sm:px-5"
-        >
-          <Link
-            href="/bible"
-            className="inline-flex min-h-10 w-fit items-center gap-2 rounded-full px-2 text-sm font-semibold text-[#355242] transition hover:bg-[#f3eadb] hover:text-[#204636]"
-          >
-            <ArrowLeft size={16} strokeWidth={1.8} />
-            Guided Bible Readings
-          </Link>
-          <div className="flex flex-wrap items-center gap-2">
-            <span className={pillLight}>
-              <BookOpenText size={13} strokeWidth={1.9} />
-              Guided Reading
-            </span>
-            <a href="#after-reading" className={pillLightLink}>
-              Reflection
-            </a>
-          </div>
-        </nav>
-
-        <section className="relative mt-7 overflow-hidden rounded-lg border border-[#ded1ba] bg-[#f7f0e3] px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-14 lg:px-12">
+        <section className="relative overflow-hidden rounded-lg border border-[#ded1ba] bg-[#f7f0e3] px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.18),transparent_66%)]" />
           <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto w-full max-w-[760px] text-center">
-            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-[#8f6220]">
-              <span className="h-px w-8 bg-[#d8c5a3]" />
-              {chapterData.theme}
-              <span className="h-px w-8 bg-[#d8c5a3]" />
-            </p>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.02] text-[#241f19] sm:text-7xl">
-              {reference}
-            </h1>
-            <p className="mt-3 font-serif text-2xl font-semibold leading-tight text-[#5d4630] sm:text-3xl">
-              {chapterData.title}
-            </p>
-            <p className="mx-auto mt-5 max-w-[690px] text-base leading-8 text-[#625b51] sm:text-lg">
+            <p className="mx-auto max-w-[690px] text-base leading-8 text-[#625b51] sm:text-lg">
               {chapterData.contextIntro}
             </p>
             {chapterData.readingNote ? (
@@ -146,7 +124,7 @@ export default async function BibleChapterPage({
             ) : null}
           </div>
 
-          <article className="relative mx-auto mt-10 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
+          <article className="relative mx-auto mt-8 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
             <div className="flex items-center justify-between gap-4 border-b border-[#e2d2b6] pb-5">
               <h2 className="font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-[1.75rem]">
                 The Reading

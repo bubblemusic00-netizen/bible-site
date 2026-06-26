@@ -89,12 +89,15 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
+  breadcrumbs,
   children,
 }: {
   icon: LucideIcon;
   eyebrow: string;
   title: string;
   subtitle?: string;
+  /** Optional breadcrumb trail rendered above the eyebrow (pass tone="dark"). */
+  breadcrumbs?: ReactNode;
   children?: ReactNode;
 }) {
   return (
@@ -123,6 +126,11 @@ export function PageHero({
       />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-12 pt-12 sm:px-8 sm:pb-14 sm:pt-16 lg:pb-16 lg:pt-20">
+        {breadcrumbs ? (
+          <div className="fade-rise" style={{ animationDelay: "0ms" }}>
+            {breadcrumbs}
+          </div>
+        ) : null}
         <p
           className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-[#f3dfb6]/90"
           style={{ animationDelay: "0ms" }}
@@ -460,12 +468,20 @@ export function BackButton({ href, label }: { href: string; label: string }) {
 
 export function Breadcrumbs({
   items,
+  tone = "light",
 }: {
   items: { name: string; path: string }[];
+  /** "dark" recolors the trail to sit on the dark {@link PageHero}. */
+  tone?: "light" | "dark";
 }) {
+  const isDark = tone === "dark";
   return (
     <nav aria-label="Breadcrumb" className="mb-5 w-full min-w-0">
-      <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-[#6a5f4d]">
+      <ol
+        className={`flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm ${
+          isDark ? "text-[#e3d9c4]/80" : "text-[#6a5f4d]"
+        }`}
+      >
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
@@ -473,7 +489,11 @@ export function Breadcrumbs({
               {isLast ? (
                 <span
                   aria-current="page"
-                  className="font-semibold text-[#2f5140]"
+                  className={
+                    isDark
+                      ? "font-semibold text-[#f3dfb6]"
+                      : "font-semibold text-[#2f5140]"
+                  }
                 >
                   {item.name}
                 </span>
@@ -481,14 +501,18 @@ export function Breadcrumbs({
                 <>
                   <Link
                     href={item.path}
-                    className="font-semibold underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-[#9a7322]/50"
+                    className={
+                      isDark
+                        ? "font-semibold underline-offset-4 transition hover:text-[#fffaf0] hover:underline hover:decoration-[#e9c985]/60"
+                        : "font-semibold underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-[#9a7322]/50"
+                    }
                   >
                     {item.name}
                   </Link>
                   <ChevronRight
                     size={14}
                     strokeWidth={1.8}
-                    className="shrink-0 text-[#94886f]"
+                    className={`shrink-0 ${isDark ? "text-[#b7a98c]" : "text-[#94886f]"}`}
                   />
                 </>
               )}
