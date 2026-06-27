@@ -20,8 +20,10 @@ const coreRoutes = [
   { path: "/guides", priority: 0.84 },
   { path: "/verses", priority: 0.84 },
   { path: "/start", priority: 0.9 },
+  { path: "/verse-of-the-day", priority: 0.82 },
   { path: "/jewelry", priority: 0.8 },
   { path: "/about", priority: 0.7 },
+  { path: "/beliefs", priority: 0.7 },
   { path: "/editorial-principles", priority: 0.64 },
   { path: "/content-boundaries", priority: 0.64 },
   { path: "/contact", priority: 0.6 },
@@ -42,6 +44,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     path: chapter.href,
     priority: 0.74,
   }));
+
+  // Book-overview pages (e.g. /bible/genesis) — one per book that has readings.
+  const bibleBookRoutes = Array.from(
+    new Set(supportedBibleChapters.map((chapter) => chapter.bookSlug)),
+  ).map((slug) => ({ path: `/bible/${slug}`, priority: 0.68 }));
 
   const prayerRoutes = prayerPathKeys.map((slug) => ({
     path: `/prayer/${slug}`,
@@ -70,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...coreRoutes,
+    ...bibleBookRoutes,
     ...bibleReadingRoutes,
     ...prayerRoutes,
     ...guideRoutes,
