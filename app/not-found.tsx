@@ -1,6 +1,6 @@
 import { Compass } from "lucide-react";
 import {
-  PageIntro,
+  PageHero,
   PageShell,
   PrimaryButton,
   SecondaryButton,
@@ -9,15 +9,17 @@ import {
 
 export default function NotFound() {
   return (
-    <PageShell>
-      <PageIntro
-        icon={Compass}
-        eyebrow="Page not found"
-        title="We could not find that page."
-        subtitle="Return to a finished starting point for Scripture, prayer, or the Faith Quiz."
-      />
-
-      <div className="mt-8 max-w-3xl">
+    <PageShell
+      hero={
+        <PageHero
+          icon={Compass}
+          eyebrow="Page not found"
+          title="We could not find that page."
+          subtitle="Return to a finished starting point for Scripture, prayer, or the Faith Quiz."
+        />
+      }
+    >
+      <div className="max-w-3xl">
         <StatusNote>
           Selah offers free Scripture, prayer, reflection, and
           faith-symbol guidance. Use the links below to find your way back.

@@ -15,7 +15,7 @@ import { getFaithPathBySlug } from "@/lib/faith-paths";
 import {
   BackButton,
   Breadcrumbs,
-  PageIntro,
+  PageHero,
   PageShell,
   SecondaryButton,
   StatusNote,
@@ -81,7 +81,27 @@ export default async function JewelryIntentionPage({
   }
 
   return (
-    <PageShell active="jewelry">
+    <PageShell
+      active="jewelry"
+      hero={
+        <PageHero
+          icon={Gem}
+          eyebrow="Faith symbol reminder"
+          title={details.pageTitle}
+          subtitle={details.intro}
+          breadcrumbs={
+            <Breadcrumbs
+              tone="dark"
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Faith Symbols", path: "/jewelry" },
+                { name: details.relatedTheme, path: `/jewelry/${intention}` },
+              ]}
+            />
+          }
+        />
+      }
+    >
       <JsonLd
         data={[
           breadcrumbSchema([
@@ -96,20 +116,7 @@ export default async function JewelryIntentionPage({
           }),
         ]}
       />
-      <Breadcrumbs
-        items={[
-          { name: "Home", path: "/" },
-          { name: "Faith Symbols", path: "/jewelry" },
-          { name: details.relatedTheme, path: `/jewelry/${intention}` },
-        ]}
-      />
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <PageIntro
-          icon={Gem}
-          eyebrow="Faith symbol reminder"
-          title={details.pageTitle}
-          subtitle={details.intro}
-        />
+      <div className="max-w-5xl">
         <StatusNote>
           A symbol can help you remember to pray and return to Scripture — a
           reminder, not a charm or a guarantee.

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CalendarDays } from "lucide-react";
 import {
-  PageIntro,
+  PageHero,
   PageShell,
   PrimaryButton,
   SecondaryButton,
@@ -33,15 +33,18 @@ export default function VerseOfTheDayPage() {
   });
 
   return (
-    <PageShell active="verse">
-      <PageIntro
-        icon={CalendarDays}
-        eyebrow="Daily Scripture"
-        title="Verse of the Day"
-        subtitle="Take a quiet moment with Scripture before the day gets loud."
-      />
-
-      <section className="relative mt-9 max-w-4xl overflow-hidden rounded-lg border border-[#e0cfa8] bg-[linear-gradient(160deg,#fffdf7,#fdf6e6)] p-7 shadow-[0_28px_64px_rgba(71,55,35,0.1)] sm:p-10">
+    <PageShell
+      active="verse"
+      hero={
+        <PageHero
+          icon={CalendarDays}
+          eyebrow="Daily Scripture"
+          title="Verse of the Day"
+          subtitle="Take a quiet moment with Scripture before the day gets loud."
+        />
+      }
+    >
+      <section className="relative max-w-4xl overflow-hidden rounded-lg border border-[#e0cfa8] bg-[linear-gradient(160deg,#fffdf7,#fdf6e6)] p-7 shadow-[0_28px_64px_rgba(71,55,35,0.1)] sm:p-10">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#c49c52,#e9c985)]" />
         <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#8f6220]">
           <CalendarDays size={15} strokeWidth={1.8} />

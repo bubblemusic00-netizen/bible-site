@@ -1,0 +1,30 @@
+/* brand-tokens.css — canonical Selah colour ramp (single source of truth).
+   tokens.css is generated (WCAG-gated) and must not be hand-edited; this is the
+   hand-maintained brand layer that names the full evergreen/gold ramp the design
+   actually uses. The greens and golds are a deliberate ramp (deep hero base,
+   button hover, brand accent, mid-green pills — not duplicates), so they are
+   named by role. New components/pages should reference these instead of ad-hoc
+   hexes to keep the palette from drifting. */
+:root {
+  /* Evergreen ramp (deepest → mid green) */
+  --selah-evergreen-950: #0d120c; /* homepage base, deepest band */
+  --selah-evergreen-900: #141a13; /* hero gradient bottom */
+  --selah-evergreen-800: #17251d; /* hero gradient mid */
+  --selah-evergreen-700: #1f392c; /* primary button hover */
+  --selah-evergreen-600: #203d30; /* brand accent (mirrors --accent) */
+  --selah-evergreen-500: #284737; /* solid pills, step numbers */
+  --selah-evergreen-400: #355242; /* secondary green text on cream */
+
+  /* Gold / brass ramp (readable on cream → decorative → on dark) */
+  --selah-gold-800: #7b561b; /* dark gold-brown, AA on cream */
+  --selah-gold-700: #8f6220; /* eyebrows / labels on cream (AA) */
+  --selah-gold-600: #9a7322;
+  --selah-gold-500: #c49c52; /* decorative gold (mirrors --gold) */
+  --selah-gold-300: #e9c985; /* gold accent on dark surfaces */
+  --selah-gold-200: #f3dfb6; /* lightest gold on dark */
+
+  /* Parchment surfaces */
+  --selah-cream: #fbf7ed; /* page surface (mirrors --bg) */
+  --selah-cream-card: #fffaf1; /* card surface */
+  --selah-cream-fg: #fffaf0; /* text/icons on dark (mirrors --accent-fg) */
+}

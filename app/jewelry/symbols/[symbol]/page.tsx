@@ -22,7 +22,7 @@ import {
 import {
   BackButton,
   Breadcrumbs,
-  PageIntro,
+  PageHero,
   PageShell,
   SecondaryButton,
   StatusNote,
@@ -97,7 +97,27 @@ export default async function SymbolPage({
   const Icon = iconMap[details.icon];
 
   return (
-    <PageShell active="jewelry">
+    <PageShell
+      active="jewelry"
+      hero={
+        <PageHero
+          icon={Icon}
+          eyebrow="Christian symbol meaning"
+          title={`${details.name} Symbol Meaning`}
+          subtitle={details.meaning}
+          breadcrumbs={
+            <Breadcrumbs
+              tone="dark"
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Faith Symbols", path: "/jewelry" },
+                { name: details.name, path: `/jewelry/symbols/${symbol}` },
+              ]}
+            />
+          }
+        />
+      }
+    >
       <JsonLd
         data={[
           breadcrumbSchema([
@@ -112,20 +132,7 @@ export default async function SymbolPage({
           }),
         ]}
       />
-      <Breadcrumbs
-        items={[
-          { name: "Home", path: "/" },
-          { name: "Faith Symbols", path: "/jewelry" },
-          { name: details.name, path: `/jewelry/symbols/${symbol}` },
-        ]}
-      />
-      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
-        <PageIntro
-          icon={Icon}
-          eyebrow="Christian symbol meaning"
-          title={`${details.name} Symbol Meaning`}
-          subtitle={details.meaning}
-        />
+      <div className="max-w-5xl">
         <StatusNote>
           This symbol is explained as a reminder of faith and practice. It is
           not a charm, guarantee, or source of spiritual power.

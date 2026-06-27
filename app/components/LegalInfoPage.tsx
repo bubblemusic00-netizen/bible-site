@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
-import { PageIntro, PageShell, StatusNote } from "./site-ui";
+import { PageHero, PageShell, StatusNote } from "./site-ui";
 
 type LegalSection = {
   title: string;
@@ -25,9 +25,17 @@ export function LegalInfoPage({
   sections: LegalSection[];
 }) {
   return (
-    <PageShell>
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <PageIntro icon={Icon} eyebrow={eyebrow} title={title} subtitle={subtitle} />
+    <PageShell
+      hero={
+        <PageHero
+          icon={Icon}
+          eyebrow={eyebrow}
+          title={title}
+          subtitle={subtitle}
+        />
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>{note}</StatusNote>
       </div>
 

@@ -8,7 +8,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import {
-  PageIntro,
+  PageHero,
   PageShell,
   SecondaryButton,
   StatusNote,
@@ -74,14 +74,17 @@ const beliefs: Belief[] = [
 
 export default function BeliefsPage() {
   return (
-    <PageShell>
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      hero={
+        <PageHero
           icon={Cross}
           eyebrow="What we believe"
           title="What We Believe"
           subtitle="Selah is built on the historic Christian faith. These are the simple beliefs at its center — shared across Christian traditions, held with humility."
         />
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>
           Selah is non-denominational and beginner-friendly. You do not have to
           believe anything to read here — this simply names where the site
@@ -89,7 +92,7 @@ export default function BeliefsPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-9 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase text-[#8f6220]">
             The center, not the edges

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 /* Design tokens — generated + WCAG-gated from the design-kit. Source of truth for the visual system. */
 @import "./tokens.css";
+/* Hand-maintained Selah brand colour ramp (named greens/golds). */
+@import "./brand-tokens.css";
 
 :root {
   /* Bridged to generated tokens so the whole site shares one verified palette. */

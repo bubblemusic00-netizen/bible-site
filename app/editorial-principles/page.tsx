@@ -8,7 +8,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import {
-  PageIntro,
+  PageHero,
   PageShell,
   StatusNote,
 } from "../components/site-ui";
@@ -49,14 +49,17 @@ const principles = [
 
 export default function EditorialPrinciplesPage() {
   return (
-    <PageShell>
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      hero={
+        <PageHero
           icon={PenLine}
           eyebrow="Editorial trust"
           title="Editorial Principles"
           subtitle="How Selah approaches Scripture, prayer, reflection, and Christian symbols with care, humility, and clear boundaries."
         />
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>
           Selah is an independent Christian faith-inspired resource. It is
           not an official church, ministry, denomination, or religious
@@ -64,7 +67,7 @@ export default function EditorialPrinciplesPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-9 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase text-[#8f6220]">
             Content posture

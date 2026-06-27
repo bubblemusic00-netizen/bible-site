@@ -9,7 +9,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import {
-  PageIntro,
+  PageHero,
   PageShell,
   SecondaryButton,
   StatusNote,
@@ -57,14 +57,17 @@ const boundaries = [
 
 export default function ContentBoundariesPage() {
   return (
-    <PageShell>
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <PageIntro
+    <PageShell
+      hero={
+        <PageHero
           icon={ShieldCheck}
           eyebrow="Content boundaries"
           title="Content Boundaries"
           subtitle="What Selah can offer, what it cannot replace, and when visitors should seek church, community, professional, or emergency support."
         />
+      }
+    >
+      <div className="max-w-5xl">
         <StatusNote>
           These boundaries are here to keep the site honest and useful. They
           are not meant to discourage prayer, Scripture reading, or seeking wise
@@ -72,7 +75,7 @@ export default function ContentBoundariesPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-9 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase text-[#8f6220]">
             Clear limits
