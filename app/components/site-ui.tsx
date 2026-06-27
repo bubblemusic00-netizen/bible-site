@@ -102,12 +102,16 @@ export function PageHero({
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-[radial-gradient(125%_60%_at_50%_0%,#1b271e_0%,#131a12_55%,#0e130d_100%)] text-[#fffaf0]">
+      {/* Decorative texture at 16% opacity behind a scrim — it never needs to
+          be sharp, so cap the variant (no 3840 retina fetch) and drop quality.
+          Non-priority: it loads after the text LCP and is cached site-wide. */}
       <Image
         src="/hero-marble.jpg"
         alt=""
         aria-hidden
         fill
-        sizes="100vw"
+        quality={40}
+        sizes="(max-width: 768px) 100vw, 1200px"
         className="pointer-events-none select-none object-cover object-[50%_36%] opacity-[0.16] saturate-[1.05]"
       />
       {/* Scrims: deepen top-and-bottom for legibility, warm gold glow for depth,
