@@ -75,15 +75,15 @@ export default function ContentBoundariesPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-6 rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase text-[#8f6220]">
+          <p className="text-sm font-semibold uppercase text-gold-700">
             Clear limits
           </p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
             Spiritual encouragement should not pretend to be authority.
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
+          <p className="mt-3 text-base leading-7 text-ink-600">
             Selah is designed to help people begin with Bible reading,
             prayer, reflection, and meaningful reminders. It should be used with
             humility, wisdom, and honest awareness of what an independent
@@ -99,15 +99,15 @@ export default function ContentBoundariesPage() {
           return (
             <article
               key={boundary.title}
-              className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
+              className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
             >
               <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
                 <Icon size={20} strokeWidth={1.8} />
               </span>
-              <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+              <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight text-ink-900">
                 {boundary.title}
               </h2>
-              <p className="mt-3 text-base leading-7 text-[#625b51]">
+              <p className="mt-3 text-base leading-7 text-ink-600">
                 {boundary.body}
               </p>
             </article>
@@ -115,9 +115,9 @@ export default function ContentBoundariesPage() {
         })}
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase text-[#e9c985]">
+          <p className="text-sm font-semibold uppercase text-gold-300">
             Compassionate caution
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -143,18 +143,18 @@ export default function ContentBoundariesPage() {
         <SecondaryButton href="/disclosures">Disclosures</SecondaryButton>
       </div>
 
-      <p className="mt-6 max-w-3xl text-sm leading-6 text-[#625b51]">
+      <p className="mt-6 max-w-3xl text-sm leading-6 text-ink-600">
         For Scripture and prayer resources, return to{" "}
         <Link
           href="/bible"
-          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#8f6220]"
+          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-gold-700"
         >
           Guided Bible Readings
         </Link>{" "}
         or the{" "}
         <Link
           href="/prayer"
-          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-[#8f6220]"
+          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-gold-700"
         >
           Prayer Library
         </Link>

@@ -67,15 +67,15 @@ export default function EditorialPrinciplesPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-6 rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase text-[#8f6220]">
+          <p className="text-sm font-semibold uppercase text-gold-700">
             Content posture
           </p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
             Begin with Scripture, then move carefully.
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
+          <p className="mt-3 text-base leading-7 text-ink-600">
             The purpose of Selah is to help people take a simple next step:
             read Scripture, pray honestly, reflect with care, and remember faith
             in ordinary life. The site should never pretend to be a pastor, a
@@ -89,22 +89,22 @@ export default function EditorialPrinciplesPage() {
         {principles.map((principle) => (
           <article
             key={principle.title}
-            className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
+            className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
           >
-            <h2 className="font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+            <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900">
               {principle.title}
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
+            <p className="mt-3 text-base leading-7 text-ink-600">
               {principle.body}
             </p>
           </article>
         ))}
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#e9c985]">
+            <p className="text-sm font-semibold uppercase text-gold-300">
               Future review
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -117,7 +117,7 @@ export default function EditorialPrinciplesPage() {
               especially around faith symbols and product language.
             </p>
           </div>
-          <ShieldCheck className="size-10 text-[#e9c985]" strokeWidth={1.8} />
+          <ShieldCheck className="size-10 text-gold-300" strokeWidth={1.8} />
         </div>
       </section>
 
@@ -159,15 +159,15 @@ function TrustLink({
   return (
     <Link
       href={href}
-      className="group rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] transition hover:border-[#c49c52] hover:bg-[#fffdf7]"
+      className="group rounded-lg border border-line-300 bg-cream-200 p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] transition hover:border-gold-500 hover:bg-cream-100"
     >
       <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
         <Icon size={20} strokeWidth={1.8} />
       </span>
-      <h2 className="mt-5 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+      <h2 className="mt-5 font-serif text-2xl font-semibold leading-tight text-ink-900">
         {title}
       </h2>
-      <p className="mt-2 text-sm leading-6 text-[#625b51]">{body}</p>
+      <p className="mt-2 text-sm leading-6 text-ink-600">{body}</p>
       <p className="mt-5 text-sm font-semibold text-[#254737]">
         Read more
       </p>

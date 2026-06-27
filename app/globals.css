@@ -1,8 +1,6 @@
 @import "tailwindcss";
 /* Design tokens — generated + WCAG-gated from the design-kit. Source of truth for the visual system. */
 @import "./tokens.css";
-/* Hand-maintained Selah brand colour ramp (named greens/golds). */
-@import "./brand-tokens.css";
 
 :root {
   /* Bridged to generated tokens so the whole site shares one verified palette. */
@@ -15,6 +13,90 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-cormorant);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Selah design tokens — single source of truth (see docs/DESIGN-TOKENS-AUDIT.md).
+   Named by ROLE, not value. Generates Tailwind utilities: bg-green-700,
+   text-gold-700, border-line-300, shadow-elev-3, text-card, tracking-label,
+   leading-display, rounded-card, etc. The deliberate green/gold ramps are
+   perceptual tiers (~6 greens, ~8 golds), not duplicates.
+   ───────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Evergreen ramp */
+  --color-green-950: #0d120c; /* deepest base, footer, hero bottom */
+  --color-green-900: #16271d; /* very dark band */
+  --color-green-800: #1f392c; /* primary button hover */
+  --color-green-700: #203d30; /* brand accent, button fill, logo tile */
+  --color-green-600: #284737; /* solid pills, step numbers, link text */
+  --color-green-500: #355242; /* secondary green text on cream */
+
+  /* Gold / brass ramp */
+  --color-gold-900: #5f441a;
+  --color-gold-800: #7b561b; /* dark gold-brown, AA on cream */
+  --color-gold-700: #8f6220; /* eyebrows / labels on cream (AA) */
+  --color-gold-600: #9a7322;
+  --color-gold-500: #c49c52; /* decorative gold, hover border */
+  --color-gold-400: #d7b56d;
+  --color-gold-300: #e9c985; /* gold accent on dark */
+  --color-gold-200: #f3dfb6; /* lightest gold on dark */
+
+  /* Cream / parchment surfaces */
+  --color-cream-50: #ffffff;
+  --color-cream-100: #fffdf7; /* hover card surface */
+  --color-cream-200: #fffaf1; /* card surface */
+  --color-cream-300: #fbf7ed; /* page background */
+  --color-cream-400: #f4ecdb; /* recessed surface */
+  --color-cream-fg: #fffaf0; /* text/icons on dark */
+
+  /* Ink / warm-neutral text */
+  --color-ink-900: #241f19; /* headings */
+  --color-ink-800: #27231d; /* strong body */
+  --color-ink-600: #625b51; /* body muted */
+  --color-ink-500: #6a5f4d; /* muted / labels */
+  --color-ink-400: #94886f; /* faint / disabled */
+
+  /* Hairline / border */
+  --color-line-200: #e4d6bd; /* card border */
+  --color-line-300: #dfcfb2; /* standard border */
+  --color-line-400: #d8c5a3; /* gold-ish divider */
+
+  /* Semantic (StatusNote tones + form states) */
+  --color-success: #2f5140;
+  --color-success-bg: #eef5ee;
+  --color-success-line: #cfe0d0;
+  --color-info: #34566b;
+  --color-info-bg: #eef4f8;
+  --color-info-line: #cfdce6;
+  --color-error: #9b3434;
+  --color-error-soft: #c08a8a;
+
+  /* Elevation scale (brown ambient) + green-surface + inset highlight */
+  --shadow-elev-1: 0 1px 2px rgba(71, 55, 35, 0.05);
+  --shadow-elev-2: 0 14px 36px rgba(71, 55, 35, 0.05);
+  --shadow-elev-3: 0 18px 38px rgba(71, 55, 35, 0.055);
+  --shadow-elev-4: 0 22px 52px rgba(71, 55, 35, 0.08);
+  --shadow-elev-5: 0 28px 90px rgba(71, 55, 35, 0.09);
+  --shadow-elev-green-3: 0 18px 50px rgba(40, 71, 55, 0.16);
+  --shadow-elev-green-4: 0 24px 70px rgba(40, 71, 55, 0.16);
+
+  /* Display font-sizes beyond the standard text-* scale */
+  --text-card: 1.7rem; /* card title — between 2xl and 3xl */
+  --text-quote: 1.3rem; /* scripture / prayer body */
+  --text-quote-lg: 1.5rem;
+
+  /* Tracking tiers (uppercase eyebrows + display optical) */
+  --tracking-tight2: -0.015em;
+  --tracking-label: 0.16em;
+  --tracking-wide2: 0.22em;
+
+  /* Leading tiers */
+  --leading-display: 1.04;
+  --leading-snug2: 1.28;
+
+  /* Radius tiers */
+  --radius-card: 1.4rem;
+  --radius-xl2: 1.75rem;
 }
 
 * {

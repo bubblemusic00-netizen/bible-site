@@ -16,14 +16,14 @@ export default function StartPage() {
       {/* Compact on mobile so the quiz stages fit the viewport without scrolling;
           full intro presence returns at sm+. h1 kept for SEO/a11y. */}
       <div className="w-full max-w-3xl">
-        <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#8f6220] sm:text-sm">
+        <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-700 sm:text-sm">
           <Leaf size={14} strokeWidth={1.8} />
           Faith Quiz
         </p>
-        <h1 className="mt-1.5 font-serif text-[1.75rem] font-semibold leading-[1.05] text-[#241f19] sm:mt-5 sm:text-6xl">
+        <h1 className="mt-1.5 font-serif text-[1.75rem] font-semibold leading-[1.05] text-ink-900 sm:mt-5 sm:text-6xl">
           Find Your Faith Path
         </h1>
-        <p className="mt-1.5 max-w-2xl text-sm leading-6 text-[#625b51] sm:mt-5 sm:text-lg sm:leading-8">
+        <p className="mt-1.5 max-w-2xl text-sm leading-6 text-ink-600 sm:mt-5 sm:text-lg sm:leading-8">
           Answer a few simple questions and receive Scripture, prayer, reflection, and an optional faith-symbol reminder.
         </p>
       </div>

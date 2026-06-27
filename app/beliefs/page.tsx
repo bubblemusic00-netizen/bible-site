@@ -92,15 +92,15 @@ export default function BeliefsPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-6 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-6 rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase text-[#8f6220]">
+          <p className="text-sm font-semibold uppercase text-gold-700">
             The center, not the edges
           </p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
             Christian faith, kept simple and honest.
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
+          <p className="mt-3 text-base leading-7 text-ink-600">
             Christians belong to many traditions and disagree about real things.
             Selah does not take sides on those debates. Instead it stays near the
             center that Christians have shared for two thousand years: Jesus,
@@ -114,20 +114,20 @@ export default function BeliefsPage() {
         {beliefs.map((belief) => (
           <article
             key={belief.title}
-            className="flex flex-col rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
+            className="flex flex-col rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
           >
-            <h2 className="font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+            <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900">
               {belief.title}
             </h2>
-            <span className="mt-4 block h-px w-10 bg-[#d8c5a3]" />
-            <p className="mt-4 text-base leading-7 text-[#625b51]">
+            <span className="mt-4 block h-px w-10 bg-line-400" />
+            <p className="mt-4 text-base leading-7 text-ink-600">
               {belief.body}
             </p>
-            <blockquote className="mt-5 border-l-2 border-[#d8c5a3] pl-4">
+            <blockquote className="mt-5 border-l-2 border-line-400 pl-4">
               <p className="font-serif text-lg italic leading-7 text-[#3f4a40]">
                 &ldquo;{belief.verse}&rdquo;
               </p>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#8f6220]">
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
                 {belief.reference} &middot; KJV
               </p>
             </blockquote>
@@ -135,10 +135,10 @@ export default function BeliefsPage() {
         ))}
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#e9c985]">
+            <p className="text-sm font-semibold uppercase text-gold-300">
               Faith is meant to be shared
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -154,13 +154,13 @@ export default function BeliefsPage() {
             <div className="mt-5">
               <Link
                 href="/guides/finding-a-church"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/45 bg-[#fffaf0]/8 px-5 py-3 text-sm font-semibold text-[#fffaf0] backdrop-blur-md transition hover:bg-[#fffaf0]/14"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/45 bg-cream-fg/8 px-5 py-3 text-sm font-semibold text-cream-fg backdrop-blur-md transition hover:bg-cream-fg/14"
               >
                 Finding a Church
               </Link>
             </div>
           </div>
-          <Church className="size-10 text-[#e9c985]" strokeWidth={1.8} />
+          <Church className="size-10 text-gold-300" strokeWidth={1.8} />
         </div>
       </section>
 
@@ -210,15 +210,15 @@ function TrustLink({
   return (
     <Link
       href={href}
-      className="group rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] transition hover:border-[#c49c52] hover:bg-[#fffdf7]"
+      className="group rounded-lg border border-line-300 bg-cream-200 p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] transition hover:border-gold-500 hover:bg-cream-100"
     >
       <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
         <Icon size={20} strokeWidth={1.8} />
       </span>
-      <h2 className="mt-5 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+      <h2 className="mt-5 font-serif text-2xl font-semibold leading-tight text-ink-900">
         {title}
       </h2>
-      <p className="mt-2 text-sm leading-6 text-[#625b51]">{body}</p>
+      <p className="mt-2 text-sm leading-6 text-ink-600">{body}</p>
       <p className="mt-5 text-sm font-semibold text-[#254737]">Read more</p>
     </Link>
   );

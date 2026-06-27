@@ -42,7 +42,7 @@ const intentionLabels: Record<string, string> = {
 export default function ShopPage() {
   return (
     <PageShell>
-      <section className="relative isolate overflow-hidden rounded-[2rem] px-5 py-12 text-[#fffaf0] shadow-[0_28px_90px_rgba(37,65,50,0.22)] sm:px-8 sm:py-16 lg:px-10">
+      <section className="relative isolate overflow-hidden rounded-[2rem] px-5 py-12 text-cream-fg shadow-[0_28px_90px_rgba(37,65,50,0.22)] sm:px-8 sm:py-16 lg:px-10">
         <Image
           src="/hero-marble.jpg"
           alt="Carrara marble with warm gold veining"
@@ -67,7 +67,7 @@ export default function ShopPage() {
           <div className="mt-7">
             <Link
               href="/start"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:-translate-y-0.5 hover:bg-cream-fg"
             >
               Find the one for what you carry
               <ArrowRight size={16} strokeWidth={1.8} />
@@ -80,7 +80,7 @@ export default function ShopPage() {
         {allProducts.map((product) => {
           const href = productUrl(product);
           const cardClass =
-            "flex h-full flex-col overflow-hidden rounded-lg border border-[#eadbc0] bg-[#fffaf1]/78 shadow-[0_18px_42px_rgba(71,55,35,0.045)]";
+            "flex h-full flex-col overflow-hidden rounded-lg border border-[#eadbc0] bg-cream-200/78 shadow-[0_18px_42px_rgba(71,55,35,0.045)]";
 
           const content = (
             <>
@@ -93,15 +93,15 @@ export default function ShopPage() {
                 )}
               </div>
               <div className="flex flex-1 flex-col p-5">
-                <h2 className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                <h2 className="font-serif text-2xl font-semibold leading-tight text-ink-900">
                   {product.name}
                 </h2>
-                <p className="mt-1 text-sm leading-6 text-[#625b51]">
+                <p className="mt-1 text-sm leading-6 text-ink-600">
                   {product.tagline}
                 </p>
-                <p className="mt-3 text-sm font-semibold text-[#2f5140]">
+                <p className="mt-3 text-sm font-semibold text-success">
                   From {formatPrice(product.priceCents)}
-                  <span className="ml-2 font-normal text-[#6a5f4d]">
+                  <span className="ml-2 font-normal text-ink-500">
                     {product.material}
                   </span>
                 </p>
@@ -126,7 +126,7 @@ export default function ShopPage() {
             <Link
               key={product.slug}
               href={href}
-              className={`group transition hover:-translate-y-0.5 hover:border-[#c49c52] hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)] ${cardClass}`}
+              className={`group transition hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)] ${cardClass}`}
             >
               {content}
             </Link>

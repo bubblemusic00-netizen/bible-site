@@ -139,29 +139,29 @@ export default async function SymbolPage({
         </StatusNote>
       </div>
 
-      <section className="mt-9 overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1] shadow-[0_24px_70px_rgba(71,55,35,0.08)]">
+      <section className="mt-9 overflow-hidden rounded-lg border border-line-300 bg-cream-200 shadow-[0_24px_70px_rgba(71,55,35,0.08)]">
         <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
-          <div className="relative grid place-items-center overflow-hidden border-b border-[#dfcfb2] bg-[radial-gradient(circle_at_center,#fbf7ed,#eef1e8)] p-10 lg:border-b-0 lg:border-r">
+          <div className="relative grid place-items-center overflow-hidden border-b border-line-300 bg-[radial-gradient(circle_at_center,#fbf7ed,#eef1e8)] p-10 lg:border-b-0 lg:border-r">
             <div className="pointer-events-none absolute size-60 rounded-full bg-[radial-gradient(circle,rgba(196,156,82,0.16),transparent_70%)]" />
             <div className="pointer-events-none absolute size-44 rounded-full border border-[#d8ddcf]/60" />
-            <div className="relative grid size-32 place-items-center rounded-full border border-[#d8ddcf] bg-[#fffaf1] text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_20px_45px_rgba(40,71,55,0.1)]">
+            <div className="relative grid size-32 place-items-center rounded-full border border-[#d8ddcf] bg-cream-200 text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_20px_45px_rgba(40,71,55,0.1)]">
               <Icon size={52} strokeWidth={1.4} />
             </div>
           </div>
           <div className="p-6 sm:p-8 lg:p-9">
-            <p className="text-sm font-semibold uppercase text-[#8f6220]">
+            <p className="text-sm font-semibold uppercase text-gold-700">
               What it can remind someone of
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
               What the {details.name} points to.
             </h2>
-            <p className="mt-4 text-base leading-7 text-[#625b51]">
+            <p className="mt-4 text-base leading-7 text-ink-600">
               {details.reminder}
             </p>
-            <p className="mt-4 text-sm font-semibold uppercase text-[#8f6220]">
+            <p className="mt-4 text-sm font-semibold uppercase text-gold-700">
               Scripture reference
             </p>
-            <p className="mt-2 text-base leading-7 text-[#625b51]">
+            <p className="mt-2 text-base leading-7 text-ink-600">
               {details.scriptureReference}
             </p>
           </div>
@@ -189,14 +189,14 @@ export default async function SymbolPage({
       <section className="mt-8 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase text-[#8f6220]">
+            <p className="text-sm font-semibold uppercase text-gold-700">
               An honest note
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
               Meaningful, never magic.
             </h2>
           </div>
-          <div className="space-y-3 text-base leading-7 text-[#625b51]">
+          <div className="space-y-3 text-base leading-7 text-ink-600">
             <p>{details.boundaryNote}</p>
             <p>
               Worn or kept close, it can gently call you back to prayer,
@@ -207,9 +207,9 @@ export default async function SymbolPage({
         </div>
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase text-[#e9c985]">
+          <p className="text-sm font-semibold uppercase text-gold-300">
             Keeping it close
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -245,22 +245,22 @@ function RelatedPanel({
   link: FaithSymbol["relatedBible"];
 }) {
   return (
-    <section className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
+    <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
       <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
         <Icon size={20} strokeWidth={1.8} />
       </span>
-      <p className="mt-5 text-sm font-semibold uppercase text-[#8f6220]">
+      <p className="mt-5 text-sm font-semibold uppercase text-gold-700">
         {eyebrow}
       </p>
-      <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+      <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight text-ink-900">
         {link.label}
       </h2>
-      <p className="mt-3 text-sm leading-6 text-[#625b51]">
+      <p className="mt-3 text-sm leading-6 text-ink-600">
         {link.description}
       </p>
       <Link
         href={link.href}
-        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#8f6220]"
+        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-gold-700"
       >
         Open
         <ArrowRight size={15} strokeWidth={1.8} />

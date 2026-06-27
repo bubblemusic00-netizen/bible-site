@@ -110,15 +110,15 @@ export default async function BibleChapterPage({
       <div className="mx-auto w-full max-w-6xl">
         <section className="relative overflow-hidden rounded-lg border border-[#ded1ba] bg-[#f7f0e3] px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.18),transparent_66%)]" />
-          <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
-          <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-[#d8c5a3] to-transparent opacity-70 lg:block" />
+          <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
+          <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto w-full max-w-[760px] text-center">
-            <p className="mx-auto max-w-[690px] text-base leading-8 text-[#625b51] sm:text-lg">
+            <p className="mx-auto max-w-[690px] text-base leading-8 text-ink-600 sm:text-lg">
               {chapterData.contextIntro}
             </p>
             {chapterData.readingNote ? (
-              <p className="mx-auto mt-5 max-w-[690px] rounded-lg border border-[#d8c5a3] bg-[#fffaf0]/82 px-4 py-3 text-sm font-semibold leading-6 text-[#6a563f]">
+              <p className="mx-auto mt-5 max-w-[690px] rounded-lg border border-line-400 bg-cream-fg/82 px-4 py-3 text-sm font-semibold leading-6 text-[#6a563f]">
                 {chapterData.readingNote}
               </p>
             ) : null}
@@ -126,10 +126,10 @@ export default async function BibleChapterPage({
 
           <article className="relative mx-auto mt-8 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
             <div className="flex items-center justify-between gap-4 border-b border-[#e2d2b6] pb-5">
-              <h2 className="font-serif text-2xl font-semibold leading-tight text-[#241f19] sm:text-[1.75rem]">
+              <h2 className="font-serif text-2xl font-semibold leading-tight text-ink-900 sm:text-[1.75rem]">
                 The Reading
               </h2>
-              <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+              <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
                 {reference} &middot; {chapterData.translation}
               </p>
             </div>
@@ -140,13 +140,13 @@ export default async function BibleChapterPage({
                   key={verse.number}
                   className="grid w-full min-w-0 grid-cols-[1.5rem_minmax(0,1fr)] gap-3 font-serif text-[1.3rem] leading-[1.7] text-[#2b251d] sm:grid-cols-[2rem_minmax(0,1fr)] sm:text-[1.5rem] sm:leading-[1.72]"
                 >
-                  <span className="select-none pt-[0.55rem] text-right font-sans text-[0.7rem] font-semibold leading-none text-[#8f6220] sm:text-xs">
+                  <span className="select-none pt-[0.55rem] text-right font-sans text-[0.7rem] font-semibold leading-none text-gold-700 sm:text-xs">
                     {verse.number}
                   </span>
                   <span
                     className={
                       i === 0
-                        ? "block min-w-0 whitespace-normal break-words first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-serif first-letter:text-[3.6rem] first-letter:font-semibold first-letter:leading-[0.72] first-letter:text-[#8f6220] sm:first-letter:text-[4.4rem]"
+                        ? "block min-w-0 whitespace-normal break-words first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-serif first-letter:text-[3.6rem] first-letter:font-semibold first-letter:leading-[0.72] first-letter:text-gold-700 sm:first-letter:text-[4.4rem]"
                         : "block min-w-0 whitespace-normal break-words"
                     }
                   >
@@ -163,45 +163,45 @@ export default async function BibleChapterPage({
           className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
         >
           <div className="mx-auto max-w-[760px]">
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
+            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
               <Feather size={15} strokeWidth={1.8} />
               After you read
             </p>
-            <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+            <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
               Let the reading become prayer and attention.
             </h2>
             <div className="mt-6 grid gap-4">
-              <div className="rounded-lg border border-[#d0d9c8] bg-[#fbf7ed] p-5">
-                <h3 className="font-serif text-2xl font-semibold text-[#241f19]">
+              <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                <h3 className="font-serif text-2xl font-semibold text-ink-900">
                   Reflection question
                 </h3>
-                <p className="mt-2 text-base leading-7 text-[#625b51]">
+                <p className="mt-2 text-base leading-7 text-ink-600">
                   {chapterData.reflectionQuestion}
                 </p>
               </div>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-lg border border-[#d0d9c8] bg-[#fbf7ed] p-5">
-                  <h3 className="font-serif text-2xl font-semibold text-[#241f19]">
+                <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                  <h3 className="font-serif text-2xl font-semibold text-ink-900">
                     Prayer starter
                   </h3>
-                  <p className="mt-2 text-base leading-7 text-[#625b51]">
+                  <p className="mt-2 text-base leading-7 text-ink-600">
                     {chapterData.prayerStarter}
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#d0d9c8] bg-[#fbf7ed] p-5">
-                  <h3 className="font-serif text-2xl font-semibold text-[#241f19]">
+                <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                  <h3 className="font-serif text-2xl font-semibold text-ink-900">
                     Small next step
                   </h3>
-                  <p className="mt-2 text-base leading-7 text-[#625b51]">
+                  <p className="mt-2 text-base leading-7 text-ink-600">
                     {chapterData.smallNextStep}
                   </p>
                 </div>
               </div>
-              <div className="rounded-lg border border-[#d0d9c8] bg-[#fbf7ed] p-5">
-                <h3 className="font-serif text-2xl font-semibold text-[#241f19]">
+              <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                <h3 className="font-serif text-2xl font-semibold text-ink-900">
                   Optional faith-symbol reminder
                 </h3>
-                <p className="mt-2 text-base leading-7 text-[#625b51]">
+                <p className="mt-2 text-base leading-7 text-ink-600">
                   A faith symbol can serve as a quiet reminder of prayer and
                   Scripture, but it is never a promise, charm, source of power,
                   or guarantee.

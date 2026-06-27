@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <main
       id="main-content"
-      className="flex min-h-screen w-full flex-col bg-[radial-gradient(125%_55%_at_50%_0%,#1b271e_0%,#11170f_48%,#0c110b_100%)] text-[#fffaf0]"
+      className="flex min-h-screen w-full flex-col bg-[radial-gradient(125%_55%_at_50%_0%,#1b271e_0%,#11170f_48%,#0c110b_100%)] text-cream-fg"
     >
       <SiteHeader active="home" overHero />
 
@@ -72,16 +72,16 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-8 lg:py-20">
           <p
-            className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#f3dfb6]/90"
+            className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-gold-200/90"
             style={{ animationDelay: "0ms" }}
           >
-            <span className="h-px w-8 bg-[#f3dfb6]/40" />
+            <span className="h-px w-8 bg-gold-200/40" />
             <Cross size={15} strokeWidth={1.8} />
             Scripture &amp; Prayer
-            <span className="h-px w-8 bg-[#f3dfb6]/40" />
+            <span className="h-px w-8 bg-gold-200/40" />
           </p>
           <h1
-            className="fade-rise mt-7 max-w-[15ch] font-serif text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.015em] text-[#fffaf0] sm:text-7xl sm:leading-[0.98] lg:text-[6rem]"
+            className="fade-rise mt-7 max-w-[15ch] font-serif text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.015em] text-cream-fg sm:text-7xl sm:leading-[0.98] lg:text-[6rem]"
             style={{ animationDelay: "90ms" }}
           >
             Find Scripture and prayer for what you are{" "}
@@ -101,7 +101,7 @@ export default function Home() {
           >
             <Link
               href="/start"
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-7 py-3 text-sm font-semibold text-[#203d30] shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-[#fffaf0] hover:shadow-[0_24px_64px_rgba(233,201,133,0.32)]"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-7 py-3 text-sm font-semibold text-green-700 shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-cream-fg hover:shadow-[0_24px_64px_rgba(233,201,133,0.32)]"
             >
               Take the Faith Quiz
               <ArrowRight
@@ -112,10 +112,10 @@ export default function Home() {
             </Link>
             <Link
               href="#library"
-              className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-[#f1eadf] transition hover:text-[#fffaf0]"
+              className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-[#f1eadf] transition hover:text-cream-fg"
             >
               <BookOpenText size={17} strokeWidth={1.8} />
-              <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-[#f3dfb6]/70">
+              <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-gold-200/70">
                 Explore Bible &amp; Prayer
               </span>
             </Link>
@@ -132,7 +132,7 @@ export default function Home() {
             className="fade-rise mt-7 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1"
             style={{ animationDelay: "400ms" }}
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f3dfb6]/75">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-200/75">
               For moments of
             </span>
             <span className="font-serif text-lg italic text-[#f1eadf]/90">
@@ -149,26 +149,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-[#fbf7ed] px-4 py-20 text-center text-[#2b251d] sm:px-8">
+      <section className="relative bg-cream-300 px-4 py-20 text-center text-[#2b251d] sm:px-8">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.14),transparent_70%)]"
           aria-hidden
         />
         <div data-reveal className="relative mx-auto max-w-3xl">
-          <p className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#8f6220]">
-            <span className="h-px w-8 bg-[#d8c5a3]" />
+          <p className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.26em] text-gold-700">
+            <span className="h-px w-8 bg-line-400" />
             Today&rsquo;s verse
-            <span className="h-px w-8 bg-[#d8c5a3]" />
+            <span className="h-px w-8 bg-line-400" />
           </p>
           <blockquote className="mt-7 font-serif text-3xl font-medium leading-[1.3] text-[#2b251d] sm:text-[2.6rem] sm:leading-[1.24]">
             &ldquo;{verse.text}&rdquo;
           </blockquote>
-          <p className="mt-7 text-sm font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+          <p className="mt-7 text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
             {verse.reference} &middot; KJV
           </p>
           <Link
             href="/verse-of-the-day"
-            className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#254737] transition hover:text-[#203d30]"
+            className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#254737] transition hover:text-green-700"
           >
             A new verse each morning
             <ArrowRight
@@ -185,11 +185,11 @@ export default function Home() {
           data-reveal
           className="mx-auto grid w-full max-w-7xl gap-5 lg:grid-cols-[0.32fr_1fr] lg:items-start"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#e9c985]">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-300">
             Why this exists
           </p>
           <div className="max-w-3xl">
-            <h2 className="font-serif text-3xl font-semibold leading-tight text-[#fffaf0] sm:text-4xl">
+            <h2 className="font-serif text-3xl font-semibold leading-tight text-cream-fg sm:text-4xl">
               A quiet place to begin when life feels heavy.
             </h2>
             <p className="mt-3 text-base leading-7 text-[#f1eadf]/78">
@@ -206,7 +206,7 @@ export default function Home() {
             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
               <Link
                 href="/guides/what-is-the-gospel"
-                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#e9c985] transition hover:text-[#f3dfb6]"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 transition hover:text-gold-200"
               >
                 Start here: the good news
                 <ArrowRight
@@ -217,7 +217,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/beliefs"
-                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#f1eadf]/80 transition hover:text-[#fffaf0]"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#f1eadf]/80 transition hover:text-cream-fg"
               >
                 What we believe
                 <ArrowRight
@@ -233,17 +233,17 @@ export default function Home() {
 
       <section
         id="library"
-        className="relative z-10 bg-[#fbf7ed] px-4 py-16 text-[#241f19] sm:px-8 lg:py-20"
+        className="relative z-10 bg-cream-300 px-4 py-16 text-ink-900 sm:px-8 lg:py-20"
       >
         <div
           data-reveal
           className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[0.32fr_1fr] lg:items-start"
         >
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
               Explore quietly
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
               A library for the next step, not a wall of choices.
             </h2>
           </div>
@@ -253,15 +253,15 @@ export default function Home() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex min-h-44 flex-col rounded-xl border border-[#e4d6bd] bg-[#fffaf1]/70 p-6 text-[#241f19] shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#c49c52] hover:bg-[#fffdf7] hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
+                className="group flex min-h-44 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-6 text-ink-900 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
               >
-                <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+                <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
                   {item.eyebrow}
                 </span>
-                <span className="mt-3 block font-serif text-[1.7rem] font-semibold leading-[1.1] text-[#241f19]">
+                <span className="mt-3 block font-serif text-[1.7rem] font-semibold leading-[1.1] text-ink-900">
                   {item.title}
                 </span>
-                <span className="mt-4 block h-px w-10 bg-[#d8c5a3] transition-all duration-200 group-hover:w-16 group-hover:bg-[#c49c52]" />
+                <span className="mt-4 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />
                 <span className="mt-4 block text-[0.95rem] leading-6 text-[#5e574c]">
                   {item.description}
                 </span>
@@ -280,16 +280,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-10 px-4 py-16 text-[#fffaf0] sm:px-8 lg:py-20">
+      <section className="relative z-10 px-4 py-16 text-cream-fg sm:px-8 lg:py-20">
         <div
           data-reveal
           className="mx-auto grid w-full max-w-7xl gap-5 lg:grid-cols-[1fr_auto] lg:items-center"
         >
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#e9c985]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-300">
               Faith Symbols
             </p>
-            <p className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#fffaf0] sm:text-4xl">
+            <p className="mt-2 font-serif text-3xl font-semibold leading-tight text-cream-fg sm:text-4xl">
               Some prayers you want to keep close.
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-[#f1eadf]/72">
@@ -300,7 +300,7 @@ export default function Home() {
           </div>
           <Link
             href="/jewelry"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/45 bg-[#fffaf0]/8 px-5 py-3 text-sm font-semibold text-[#fffaf0] backdrop-blur-md transition hover:bg-[#fffaf0]/14"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/45 bg-cream-fg/8 px-5 py-3 text-sm font-semibold text-cream-fg backdrop-blur-md transition hover:bg-cream-fg/14"
           >
             Explore Faith Symbols
             <ArrowRight size={16} strokeWidth={1.8} />
@@ -308,12 +308,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-[#1d2a20] bg-[#0d120c] px-4 py-16 text-center sm:px-8">
+      <section className="border-t border-[#1d2a20] bg-green-950 px-4 py-16 text-center sm:px-8">
         <div
           data-reveal
           className="mx-auto flex max-w-2xl flex-col items-center"
         >
-          <span className="mb-6 h-px w-12 bg-gradient-to-r from-transparent via-[#e9c985]/45 to-transparent" />
+          <span className="mb-6 h-px w-12 bg-gradient-to-r from-transparent via-gold-300/45 to-transparent" />
           <Image
             src="/selah-cream.png"
             alt="Selah"

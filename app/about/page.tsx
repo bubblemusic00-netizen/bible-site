@@ -77,14 +77,14 @@ export default function AboutPage() {
       </div>
 
       <section className="mt-6 max-w-5xl overflow-hidden rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.05)] sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
           The name
         </p>
-        <h2 className="mt-2 max-w-3xl font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+        <h2 className="mt-2 max-w-3xl font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
           &ldquo;Selah&rdquo; is an invitation to pause.
         </h2>
-        <p className="mt-4 max-w-3xl text-base leading-7 text-[#625b51]">
-          <span className="font-semibold text-[#241f19]">Selah</span> appears
+        <p className="mt-4 max-w-3xl text-base leading-7 text-ink-600">
+          <span className="font-semibold text-ink-900">Selah</span> appears
           more than seventy times in the Psalms &mdash; a small word that is
           often understood as a pause: a breath between lines, a moment to stop
           and let the words settle before moving on. That is the whole idea
@@ -93,25 +93,25 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:items-start">
           <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
             <Heart size={22} strokeWidth={1.8} />
           </span>
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#8f6220]">
+            <p className="text-sm font-semibold uppercase text-gold-700">
               Why this exists
             </p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+          <h2 className="mt-2 font-serif text-3xl font-semibold text-ink-900">
               Built from a need for hope, not authority.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
+            <p className="mt-3 text-base leading-7 text-ink-600">
               Selah was shaped by a personal awareness that people often
               look toward faith, prayer, and hope during painful seasons. The
               goal is not to exploit that need, but to offer a respectful,
               free place to begin with Scripture, prayer, and reflection.
             </p>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
+            <p className="mt-3 text-base leading-7 text-ink-600">
               The Faith Path system helps a person choose a simple spiritual
               direction, then continue through prayer, Scripture, reflection,
               and an optional symbolic reminder. Selah does not claim
@@ -119,19 +119,19 @@ export default function AboutPage() {
               Its role is to organize guidance in a way that stays humble about
               its limits.
             </p>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
+            <p className="mt-3 text-base leading-7 text-ink-600">
               If you are new to the Christian faith, two pages say plainly where
               the site stands:{" "}
               <Link
                 href="/guides/what-is-the-gospel"
-                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-[#8f6220] hover:underline"
+                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-gold-700 hover:underline"
               >
                 the good news
               </Link>{" "}
               and{" "}
               <Link
                 href="/beliefs"
-                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-[#8f6220] hover:underline"
+                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-gold-700 hover:underline"
               >
                 what we believe
               </Link>
@@ -142,14 +142,14 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-6 grid max-w-5xl gap-5 lg:grid-cols-2">
-        <article className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+        <article className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
           <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
             <BookOpenText size={20} strokeWidth={1.8} />
           </span>
-          <h2 className="mt-5 font-serif text-3xl font-semibold text-[#241f19]">
+          <h2 className="mt-5 font-serif text-3xl font-semibold text-ink-900">
             Scripture, prayer, and reflection
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
+          <p className="mt-3 text-base leading-7 text-ink-600">
             Selah is a free Christian place to read the Bible, begin a prayer,
             consider a reflection, and take one grounded step of faith. Free
             guidance is the center of the site.
@@ -157,13 +157,13 @@ export default function AboutPage() {
         </article>
 
         <article className="rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
-          <span className="grid size-11 place-items-center rounded-full bg-[#fffaf1] text-[#254737]">
+          <span className="grid size-11 place-items-center rounded-full bg-cream-200 text-[#254737]">
             <Gem size={20} strokeWidth={1.8} />
           </span>
-          <h2 className="mt-5 font-serif text-3xl font-semibold text-[#241f19]">
+          <h2 className="mt-5 font-serif text-3xl font-semibold text-ink-900">
             Faith symbols with clear boundaries
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
+          <p className="mt-3 text-base leading-7 text-ink-600">
             Christian faith symbols are explained as tasteful reminders of
             prayer and belief. They are not presented as magical objects or
             guarantees of blessing, protection, or healing. Free guidance does
@@ -172,14 +172,14 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <p className="text-sm font-semibold uppercase text-[#8f6220]">
+      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+        <p className="text-sm font-semibold uppercase text-gold-700">
           Read the boundaries
         </p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-ink-900">
           Trust depends on clear limits.
         </h2>
-        <p className="mt-3 max-w-3xl text-base leading-7 text-[#625b51]">
+        <p className="mt-3 max-w-3xl text-base leading-7 text-ink-600">
           Selah is content-first and independent. Free Scripture, prayer, and
           reflection stay separate from any future shop, and the pages below
           explain how the site approaches Scripture, prayer, symbols, commerce,
@@ -199,23 +199,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-6 max-w-5xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-        <p className="text-sm font-semibold uppercase text-[#8f6220]">
+      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+        <p className="text-sm font-semibold uppercase text-gold-700">
           Trust principles
         </p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-[#241f19]">
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-ink-900">
           Built to stay honest.
         </h2>
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {principles.map((principle) => (
             <div
               key={principle.title}
-              className="rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] p-4"
+              className="rounded-lg border border-line-300 bg-cream-300 p-4"
             >
-              <h3 className="font-serif text-2xl font-semibold text-[#241f19]">
+              <h3 className="font-serif text-2xl font-semibold text-ink-900">
                 {principle.title}
               </h3>
-              <p className="mt-2 text-sm leading-6 text-[#625b51]">
+              <p className="mt-2 text-sm leading-6 text-ink-600">
                 {principle.description}
               </p>
             </div>

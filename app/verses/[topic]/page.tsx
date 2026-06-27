@@ -88,7 +88,7 @@ export default async function VerseTopicPage({
         ]}
       />
 
-      <section className="max-w-4xl space-y-0 overflow-hidden rounded-lg border border-[#dfcfb2] bg-[#fffaf1]">
+      <section className="max-w-4xl space-y-0 overflow-hidden rounded-lg border border-line-300 bg-cream-200">
         {data.verses.map((verse, i) => (
           <div
             key={verse.reference}
@@ -96,12 +96,12 @@ export default async function VerseTopicPage({
           >
             <span
               aria-hidden
-              className="mt-1.5 font-serif text-base font-semibold leading-none text-[#8f6220]"
+              className="mt-1.5 font-serif text-base font-semibold leading-none text-gold-700"
             >
               {String(i + 1).padStart(2, "0")}
             </span>
             <div className="min-w-0">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#8f6220]">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
                 {verse.reference}
               </p>
               <blockquote className="mt-3 font-serif text-[1.3rem] leading-[1.6] text-[#2b251d] sm:text-[1.55rem]">
@@ -113,7 +113,7 @@ export default async function VerseTopicPage({
       </section>
 
       <section data-reveal className="mt-6 max-w-4xl rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-6 sm:p-8">
-        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7b561b]">
+        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
           <Feather size={15} strokeWidth={1.8} />
           A quiet reflection
         </p>

@@ -7,7 +7,7 @@ import { ArrowRight, Check, Loader2 } from "lucide-react";
 // Built ahead of email/checkout wiring so capture features drop in cleanly.
 
 const fieldBase =
-  "w-full rounded-lg border border-[#d8c5a3] bg-[#fffaf0] px-4 py-3 text-base text-[#241f19] placeholder:text-[#756a59] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition focus:border-[#bd9247] focus:outline-none focus:ring-2 focus:ring-[#c49c52]/45 disabled:cursor-not-allowed disabled:opacity-60";
+  "w-full rounded-lg border border-line-400 bg-cream-fg px-4 py-3 text-base text-ink-900 placeholder:text-[#756a59] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition focus:border-[#bd9247] focus:outline-none focus:ring-2 focus:ring-gold-500/45 disabled:cursor-not-allowed disabled:opacity-60";
 
 export function FormField({
   label,
@@ -26,17 +26,17 @@ export function FormField({
     <div className="grid gap-1.5">
       <label
         htmlFor={htmlFor}
-        className="text-sm font-semibold text-[#2f5140]"
+        className="text-sm font-semibold text-success"
       >
         {label}
       </label>
       {children}
       {error ? (
-        <p className="text-sm font-semibold text-[#9b3434]" role="alert">
+        <p className="text-sm font-semibold text-error" role="alert">
           {error}
         </p>
       ) : hint ? (
-        <p className="text-sm leading-5 text-[#625b51]">{hint}</p>
+        <p className="text-sm leading-5 text-ink-600">{hint}</p>
       ) : null}
     </div>
   );
@@ -51,7 +51,7 @@ export function TextInput({
     <input
       {...props}
       aria-invalid={invalid || undefined}
-      className={`${fieldBase} ${invalid ? "border-[#c08a8a] focus:ring-[#c08a8a]/45" : ""} ${className}`}
+      className={`${fieldBase} ${invalid ? "border-error-soft focus:ring-error-soft/45" : ""} ${className}`}
     />
   );
 }
@@ -65,7 +65,7 @@ export function Textarea({
     <textarea
       {...props}
       aria-invalid={invalid || undefined}
-      className={`${fieldBase} min-h-28 resize-y ${invalid ? "border-[#c08a8a] focus:ring-[#c08a8a]/45" : ""} ${className}`}
+      className={`${fieldBase} min-h-28 resize-y ${invalid ? "border-error-soft focus:ring-error-soft/45" : ""} ${className}`}
     />
   );
 }
@@ -131,7 +131,7 @@ export function NewsletterSignup({
 
   if (status === "success") {
     return (
-      <div className="flex items-center gap-3 rounded-lg border border-[#cfe0d0] bg-[#eef5ee] px-4 py-4 text-[#2f5140]">
+      <div className="flex items-center gap-3 rounded-lg border border-success-line bg-success-bg px-4 py-4 text-success">
         <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#dcebdc]">
           <Check size={18} strokeWidth={2} />
         </span>
@@ -145,10 +145,10 @@ export function NewsletterSignup({
   return (
     <form onSubmit={onSubmit} noValidate className="grid gap-3">
       <div>
-        <p className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+        <p className="font-serif text-2xl font-semibold leading-tight text-ink-900">
           {heading}
         </p>
-        <p className="mt-1 text-sm leading-6 text-[#625b51]">{description}</p>
+        <p className="mt-1 text-sm leading-6 text-ink-600">{description}</p>
       </div>
       <FormField label="Email address" htmlFor={id} error={error}>
         <TextInput
@@ -166,7 +166,7 @@ export function NewsletterSignup({
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#203d30] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-[#183326] disabled:translate-y-0 disabled:opacity-70"
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-700 px-5 py-3 text-sm font-semibold text-cream-fg shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-[#183326] disabled:translate-y-0 disabled:opacity-70"
       >
         {status === "loading" ? (
           <>

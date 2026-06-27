@@ -54,9 +54,9 @@ export default function VersesPage() {
 
       <div data-reveal-stagger className="grid gap-14">
         {groups.map((group) => (
-          <section key={group.title} className="border-t border-[#dfcfb2] pt-7">
+          <section key={group.title} className="border-t border-line-300 pt-7">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8f6220]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
                 {group.title}
               </p>
               <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">

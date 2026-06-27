@@ -214,7 +214,7 @@ export function FaithQuiz() {
   return (
     <section
       aria-labelledby="faith-quiz-title"
-      className="relative isolate mx-auto mt-4 max-w-3xl overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_15%_0%,rgba(239,204,139,0.16),transparent_38%),linear-gradient(135deg,#17251d_0%,#203d30_52%,#141a13_100%)] p-1.5 text-[#fffaf0] shadow-[0_28px_80px_rgba(25,45,34,0.2)] ring-1 ring-[#e9c985]/18 sm:p-2"
+      className="relative isolate mx-auto mt-4 max-w-3xl overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_15%_0%,rgba(239,204,139,0.16),transparent_38%),linear-gradient(135deg,#17251d_0%,#203d30_52%,#141a13_100%)] p-1.5 text-cream-fg shadow-[0_28px_80px_rgba(25,45,34,0.2)] ring-1 ring-gold-300/18 sm:p-2"
     >
       {/* Header strip: horizontal stepper only. The page-level intro already
           carries the "Faith Quiz" label, so the old duplicate is gone. */}
@@ -233,7 +233,7 @@ export function FaithQuiz() {
                   <span
                     aria-hidden
                     className={`mx-0.5 h-px w-3 sm:w-5 ${
-                      step > index ? "bg-[#e9c985]/70" : "bg-[#fff8e8]/20"
+                      step > index ? "bg-gold-300/70" : "bg-[#fff8e8]/20"
                     }`}
                   />
                 ) : null}
@@ -244,16 +244,16 @@ export function FaithQuiz() {
                   aria-current={isActive ? "step" : undefined}
                   className={
                     isActive
-                      ? "flex min-h-9 items-center gap-1.5 rounded-full bg-[#e9c985] px-2.5 text-xs font-semibold text-[#1f392c] shadow-[0_6px_16px_rgba(0,0,0,0.18)]"
+                      ? "flex min-h-9 items-center gap-1.5 rounded-full bg-gold-300 px-2.5 text-xs font-semibold text-green-800 shadow-[0_6px_16px_rgba(0,0,0,0.18)]"
                       : isComplete
-                        ? "flex min-h-9 items-center gap-1.5 rounded-full bg-[#fff8e8]/12 px-2.5 text-xs font-semibold text-[#fffaf0] transition hover:bg-[#fff8e8]/20"
+                        ? "flex min-h-9 items-center gap-1.5 rounded-full bg-[#fff8e8]/12 px-2.5 text-xs font-semibold text-cream-fg transition hover:bg-[#fff8e8]/20"
                         : "flex min-h-9 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold text-[#fff8e8]/55 transition enabled:hover:text-[#fff8e8]/80 disabled:cursor-not-allowed disabled:opacity-50"
                   }
                 >
                   <span
                     className={
                       isActive
-                        ? "grid size-5 place-items-center rounded-full bg-[#1f392c]/15 text-[0.65rem]"
+                        ? "grid size-5 place-items-center rounded-full bg-green-800/15 text-[0.65rem]"
                         : "grid size-5 place-items-center rounded-full bg-[#fff8e8]/12 text-[0.65rem]"
                     }
                   >
@@ -273,7 +273,7 @@ export function FaithQuiz() {
         </ol>
       </div>
 
-      <div className="overflow-hidden rounded-[1.4rem] bg-[#fffaf1] text-[#241f19] shadow-[0_18px_50px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60">
+      <div className="overflow-hidden rounded-[1.4rem] bg-cream-200 text-ink-900 shadow-[0_18px_50px_rgba(0,0,0,0.16)] ring-1 ring-cream-fg/60">
         {/* min-height keeps the question steps a steady size on mobile so the
             card doesn't resize and jump between steps; result step grows past it. */}
         <div key={step} className="min-h-[19rem] p-4 quiz-step-fade sm:min-h-0 sm:p-7">
@@ -353,19 +353,19 @@ export function FaithQuiz() {
             <div>
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
                     {beginWith} first · {path.title} Faith Path
                   </p>
                   <h2
                     id="faith-quiz-title"
                     ref={headingRef}
                     tabIndex={-1}
-                    className="mt-1 font-serif text-xl font-semibold leading-tight text-[#241f19] outline-none sm:mt-1.5 sm:text-3xl"
+                    className="mt-1 font-serif text-xl font-semibold leading-tight text-ink-900 outline-none sm:mt-1.5 sm:text-3xl"
                   >
                     {path.title} Faith Path
                   </h2>
                 </div>
-                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#244336] text-[#fffaf0]">
+                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#244336] text-cream-fg">
                   <Icon size={19} strokeWidth={1.8} />
                 </span>
               </div>
@@ -394,21 +394,21 @@ export function FaithQuiz() {
               <div className="mt-5 flex flex-col gap-2.5 border-t border-[#e7decb] pt-5 sm:flex-row sm:flex-wrap">
                 <Link
                   href={doorway.href}
-                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-3 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition hover:bg-[#1f392c]"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-cream-fg shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition hover:bg-green-800"
                 >
                   {doorway.label}
                   <ArrowRight size={16} strokeWidth={1.8} />
                 </Link>
                 <Link
                   href={path.startRoute}
-                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#284737]/30 bg-[#fffaf0] px-5 py-3 text-sm font-semibold text-[#284737] transition hover:border-[#284737]/60 hover:bg-[#fffdf7]"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-green-600/30 bg-cream-fg px-5 py-3 text-sm font-semibold text-green-600 transition hover:border-green-600/60 hover:bg-cream-100"
                 >
                   See the full Faith Path
                 </Link>
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-5 py-3 text-sm font-semibold text-[#355242] transition hover:border-[#bd9247] hover:bg-[#fffdf7] sm:ml-auto"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line-400 bg-cream-fg px-5 py-3 text-sm font-semibold text-green-500 transition hover:border-[#bd9247] hover:bg-cream-100 sm:ml-auto"
                 >
                   Adjust answers
                 </button>
@@ -452,14 +452,14 @@ function QuizStep({
 }) {
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8f6220]">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
         {eyebrow}
       </p>
       <h2
         id="faith-quiz-title"
         ref={headingRef}
         tabIndex={-1}
-        className="mt-1 font-serif text-xl font-semibold leading-tight text-[#241f19] outline-none sm:mt-1.5 sm:text-3xl"
+        className="mt-1 font-serif text-xl font-semibold leading-tight text-ink-900 outline-none sm:mt-1.5 sm:text-3xl"
       >
         {title}
       </h2>
@@ -474,7 +474,7 @@ function QuizStep({
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full border border-[#d8c5a3] bg-[#fffaf0] px-4 py-2.5 text-sm font-semibold text-[#355242] transition hover:border-[#bd9247] hover:bg-[#fffdf7]"
+            className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full border border-line-400 bg-cream-fg px-4 py-2.5 text-sm font-semibold text-green-500 transition hover:border-[#bd9247] hover:bg-cream-100"
           >
             <ArrowLeft size={16} strokeWidth={1.8} />
             Back
@@ -484,7 +484,7 @@ function QuizStep({
           type="button"
           onClick={onNext}
           disabled={!canAdvance}
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#284737] px-5 py-2.5 text-sm font-semibold text-[#fffaf0] shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-[#1f392c] disabled:cursor-not-allowed disabled:bg-[#e7decb] disabled:text-[#9c8f79] disabled:shadow-none sm:ml-auto"
+          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-2.5 text-sm font-semibold text-cream-fg shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-green-800 disabled:cursor-not-allowed disabled:bg-[#e7decb] disabled:text-[#9c8f79] disabled:shadow-none sm:ml-auto"
         >
           {actionLabel}
           <ArrowRight size={16} strokeWidth={1.8} />
@@ -565,7 +565,7 @@ function ChoiceRadioGroup({
               className={
                 selected
                   ? "min-h-12 rounded-xl border border-[#244336] bg-[#eef1e8] px-4 py-3 text-left text-sm font-semibold leading-6 text-[#244336] shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
-                  : "min-h-12 rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] px-4 py-3 text-left text-sm font-semibold leading-6 text-[#625b51] transition hover:border-[#c49c52] hover:text-[#244336]"
+                  : "min-h-12 rounded-xl border border-line-300 bg-cream-300 px-4 py-3 text-left text-sm font-semibold leading-6 text-ink-600 transition hover:border-gold-500 hover:text-[#244336]"
               }
             >
               {option.title}
@@ -581,15 +581,15 @@ function ChoiceRadioGroup({
               className={
                 selected
                   ? "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-[#244336] bg-[#eef1e8] px-3 py-2.5 text-left shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
-                  : "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] px-3 py-2.5 text-left transition hover:border-[#c49c52]"
+                  : "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-line-300 bg-cream-300 px-3 py-2.5 text-left transition hover:border-gold-500"
               }
             >
               {OptionIcon ? (
                 <span
                   className={
                     selected
-                      ? "grid size-9 shrink-0 place-items-center rounded-full bg-[#244336] text-[#fffaf1]"
-                      : "grid size-9 shrink-0 place-items-center rounded-full bg-[#fffaf1] text-[#254737] ring-1 ring-[#e3d4b6]"
+                      ? "grid size-9 shrink-0 place-items-center rounded-full bg-[#244336] text-cream-200"
+                      : "grid size-9 shrink-0 place-items-center rounded-full bg-cream-200 text-[#254737] ring-1 ring-[#e3d4b6]"
                   }
                 >
                   <OptionIcon size={17} strokeWidth={1.8} />
@@ -597,13 +597,13 @@ function ChoiceRadioGroup({
               ) : null}
               <span
                 className={`font-serif text-base font-semibold leading-tight ${
-                  selected ? "text-[#244336]" : "text-[#241f19]"
+                  selected ? "text-[#244336]" : "text-ink-900"
                 }`}
               >
                 {option.title}
               </span>
               {selected ? (
-                <span className="ml-auto grid size-5 shrink-0 place-items-center rounded-full bg-[#284737] text-[#fffaf0]">
+                <span className="ml-auto grid size-5 shrink-0 place-items-center rounded-full bg-green-600 text-cream-fg">
                   <Check size={12} strokeWidth={2.4} />
                 </span>
               ) : null}
@@ -619,7 +619,7 @@ function ChoiceRadioGroup({
             className={
               selected
                 ? "flex min-h-[60px] flex-col rounded-xl border border-[#244336] bg-[#eef1e8] p-3 text-left shadow-[0_10px_26px_rgba(40,71,55,0.08)]"
-                : "flex min-h-[60px] flex-col rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] p-3 text-left transition hover:border-[#c49c52]"
+                : "flex min-h-[60px] flex-col rounded-xl border border-line-300 bg-cream-300 p-3 text-left transition hover:border-gold-500"
             }
           >
             <span className="flex items-center justify-between">
@@ -627,8 +627,8 @@ function ChoiceRadioGroup({
                 <span
                   className={
                     selected
-                      ? "grid size-9 place-items-center rounded-full bg-[#244336] text-[#fffaf1]"
-                      : "grid size-9 place-items-center rounded-full bg-[#fffaf1] text-[#254737] ring-1 ring-[#e3d4b6]"
+                      ? "grid size-9 place-items-center rounded-full bg-[#244336] text-cream-200"
+                      : "grid size-9 place-items-center rounded-full bg-cream-200 text-[#254737] ring-1 ring-[#e3d4b6]"
                   }
                 >
                   <OptionIcon size={17} strokeWidth={1.8} />
@@ -637,16 +637,16 @@ function ChoiceRadioGroup({
                 <span />
               )}
               {selected ? (
-                <span className="grid size-5 place-items-center rounded-full bg-[#284737] text-[#fffaf0]">
+                <span className="grid size-5 place-items-center rounded-full bg-green-600 text-cream-fg">
                   <Check size={12} strokeWidth={2.4} />
                 </span>
               ) : null}
             </span>
-            <span className="mt-2 block font-serif text-base font-semibold leading-tight text-[#241f19] sm:text-lg">
+            <span className="mt-2 block font-serif text-base font-semibold leading-tight text-ink-900 sm:text-lg">
               {option.title}
             </span>
             {option.description ? (
-              <span className="mt-1 hidden text-xs leading-5 text-[#625b51] sm:block">
+              <span className="mt-1 hidden text-xs leading-5 text-ink-600 sm:block">
                 {option.description}
               </span>
             ) : null}
@@ -670,11 +670,11 @@ function ResultItem({
     <div
       className={
         primary
-          ? "rounded-xl border border-[#d7b56d] bg-[#fffaf1] p-3.5 shadow-[0_10px_26px_rgba(71,55,35,0.06)] sm:col-span-2"
-          : "rounded-xl border border-[#d8ddcf] bg-[#fffdf7]/70 p-3.5"
+          ? "rounded-xl border border-gold-400 bg-cream-200 p-3.5 shadow-[0_10px_26px_rgba(71,55,35,0.06)] sm:col-span-2"
+          : "rounded-xl border border-[#d8ddcf] bg-cream-100/70 p-3.5"
       }
     >
-      <h3 className="text-xs font-semibold uppercase tracking-[0.04em] text-[#8f6220]">
+      <h3 className="text-xs font-semibold uppercase tracking-[0.04em] text-gold-700">
         {title}
       </h3>
       <p className="mt-1.5 text-sm leading-6 text-[#5c5347]">{body}</p>

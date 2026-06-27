@@ -99,7 +99,7 @@ export default async function StartPathPage({
       </div>
 
       <div className="mt-8 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h2 className="font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+        <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
           Your result, in four steps.
         </h2>
         <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
@@ -142,10 +142,10 @@ export default async function StartPathPage({
         />
       </div>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#e9c985]">
+            <p className="text-sm font-semibold uppercase text-gold-300">
               Optional faith symbol reminder
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -159,7 +159,7 @@ export default async function StartPathPage({
           </div>
           <Link
             href={faithPath.jewelryRoute}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-cream-fg"
           >
             Explore Faith Symbols
             <Gem size={16} strokeWidth={1.8} />
@@ -167,7 +167,7 @@ export default async function StartPathPage({
         </div>
       </section>
 
-      <section className="mt-8 max-w-3xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-8 max-w-3xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
         <NewsletterSignup
           heading="Carry this past today"
           description="One short email each morning — a verse, a reflection, and a prayer to return to. No spam, unsubscribe anytime."
@@ -205,24 +205,24 @@ function PathSection({
   cta?: string;
 }) {
   return (
-    <section className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+    <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
       <div className="flex items-center gap-3">
-        <span className="grid size-11 place-items-center rounded-full bg-[#284737] font-serif text-lg font-semibold text-[#fffaf0]">
+        <span className="grid size-11 place-items-center rounded-full bg-green-600 font-serif text-lg font-semibold text-cream-fg">
           {step}
         </span>
-        <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-[#8f6220]">
+        <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-gold-700">
           <Icon size={16} strokeWidth={1.8} />
           {eyebrow}
         </span>
       </div>
-      <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight text-[#241f19]">
+      <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight text-ink-900">
         {title}
       </h2>
-      <p className="mt-3 text-base leading-7 text-[#625b51]">{body}</p>
+      <p className="mt-3 text-base leading-7 text-ink-600">{body}</p>
       {href && cta ? (
         <Link
           href={href}
-          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#8f6220]"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-gold-700"
         >
           {cta}
           <ArrowRight size={15} strokeWidth={1.8} />

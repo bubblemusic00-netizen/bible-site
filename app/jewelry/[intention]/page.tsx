@@ -127,18 +127,18 @@ export default async function JewelryIntentionPage({
         <FaithJourneyNav pathSlug={linkedFaithPath.slug} currentStep="carry" />
       ) : null}
 
-      <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-8 rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase text-[#8f6220]">
+          <p className="text-sm font-semibold uppercase text-gold-700">
             Symbol reminder explanation
           </p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
             {details.reminderDirection}
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
+          <p className="mt-3 text-base leading-7 text-ink-600">
             {details.represents}
           </p>
-          <p className="mt-3 text-base leading-7 text-[#625b51]">
+          <p className="mt-3 text-base leading-7 text-ink-600">
             In ordinary moments, this kind of reminder can gently point back to
             prayer, Scripture, and one faithful next step. The meaning belongs
             to faith and practice, not to the object itself.
@@ -173,10 +173,10 @@ export default async function JewelryIntentionPage({
         />
       </div>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-[#fffaf0] shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#e9c985]">
+            <p className="text-sm font-semibold uppercase text-gold-300">
               A gentle reminder
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -189,7 +189,7 @@ export default async function JewelryIntentionPage({
           </div>
           <Link
             href="/jewelry"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-[#fffaf0]"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-cream-fg"
           >
             Main Faith Symbols page
             <Gem size={16} strokeWidth={1.8} />
@@ -197,16 +197,16 @@ export default async function JewelryIntentionPage({
         </div>
       </section>
 
-      <section className="mt-8 rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_22px_52px_rgba(71,55,35,0.06)] sm:p-8">
+      <section className="mt-8 rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_22px_52px_rgba(71,55,35,0.06)] sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase text-[#8f6220]">
+            <p className="text-sm font-semibold uppercase text-gold-700">
               Related symbols
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
               Learn the reminders behind this path.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
+            <p className="mt-3 text-base leading-7 text-ink-600">
               These symbols are educational reminders only. Let them point back
               to Scripture, prayer, reflection, and wise care.
             </p>
@@ -217,12 +217,12 @@ export default async function JewelryIntentionPage({
               <Link
                 key={symbol.slug}
                 href={`/jewelry/symbols/${symbol.slug}`}
-                className="group rounded-lg border border-[#dfcfb2] bg-[#fbf7ed] p-4 transition hover:border-[#c49c52] hover:bg-[#fffdf7]"
+                className="group rounded-lg border border-line-300 bg-cream-300 p-4 transition hover:border-gold-500 hover:bg-cream-100"
               >
-                <h3 className="font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+                <h3 className="font-serif text-2xl font-semibold leading-tight text-ink-900">
                   {symbol.name}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-[#625b51]">
+                <p className="mt-2 text-sm leading-6 text-ink-600">
                   {symbol.reminder}
                 </p>
                 <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#254737]">
@@ -238,13 +238,13 @@ export default async function JewelryIntentionPage({
       <section className="mt-8 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-[#8f6220]">
+            <p className="text-sm font-semibold uppercase text-gold-700">
               Free first, always
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#241f19] sm:text-4xl">
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
               The guidance is always free.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#625b51]">
+            <p className="mt-3 text-base leading-7 text-ink-600">
               The Scripture, prayer, and reflection here stand on their own and
               stay free. A keepsake is simply an optional way to keep the
               reminder close — it points to faith, never replaces it.
@@ -284,20 +284,20 @@ function InfoPanel({
   cta: string;
 }) {
   return (
-    <section className="rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
+    <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
       <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
         <Icon size={20} strokeWidth={1.8} />
       </span>
-      <p className="mt-5 text-sm font-semibold uppercase text-[#8f6220]">
+      <p className="mt-5 text-sm font-semibold uppercase text-gold-700">
         {eyebrow}
       </p>
-      <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight text-[#241f19]">
+      <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight text-ink-900">
         {title}
       </h2>
-      <p className="mt-3 text-sm leading-6 text-[#625b51]">{body}</p>
+      <p className="mt-3 text-sm leading-6 text-ink-600">{body}</p>
       <Link
         href={href}
-        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-[#8f6220]"
+        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-gold-700"
       >
         {cta}
         <ArrowRight size={15} strokeWidth={1.8} />
