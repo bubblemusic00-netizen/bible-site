@@ -107,7 +107,20 @@ export function NewsletterSignup({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      if (!res.ok) throw new Error("request failed");
+      if (!res.ok) {
+        // Surface the endpoint's own message (e.g. the 503 "not configured yet"
+        // before Resend is wired) instead of a generic, broken-looking error.
+        const data = (await res.json().catch(() => null)) as {
+          error?: string;
+        } | null;
+        setError(
+          res.status === 503
+            ? (data?.error ?? "Email signups aren't open yet — check back soon.")
+            : (data?.error ?? "Something went wrong. Please try again."),
+        );
+        setStatus("error");
+        return;
+      }
       setStatus("success");
       setEmail("");
     } catch {

@@ -11,6 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { SaveSelectedFaithPath } from "@/app/components/ContinueFaithPath";
+import { NewsletterSignup } from "../../components/forms";
 import {
   BackButton,
   Breadcrumbs,
@@ -164,6 +165,14 @@ export default async function StartPathPage({
             <Gem size={16} strokeWidth={1.8} />
           </Link>
         </div>
+      </section>
+
+      <section className="mt-8 max-w-3xl rounded-lg border border-[#dfcfb2] bg-[#fffaf1] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+        <NewsletterSignup
+          heading="Carry this past today"
+          description="One short email each morning — a verse, a reflection, and a prayer to return to. No spam, unsubscribe anytime."
+          cta="Send me the daily verse"
+        />
       </section>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

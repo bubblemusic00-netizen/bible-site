@@ -28,6 +28,7 @@ import {
   startFaithPaths,
   type StartFaithPathSlug,
 } from "@/lib/faith-paths";
+import { NewsletterSignup } from "../components/forms";
 
 type BeginChoice = "Scripture" | "Prayer" | "Reflection";
 
@@ -411,6 +412,14 @@ export function FaithQuiz() {
                 >
                   Adjust answers
                 </button>
+              </div>
+
+              <div className="mt-5 border-t border-[#e7decb] pt-5">
+                <NewsletterSignup
+                  heading="Want this to come back to you?"
+                  description="Get a short morning verse, reflection, and prayer to keep this rhythm going. No spam, unsubscribe anytime."
+                  cta="Send me the daily verse"
+                />
               </div>
             </div>
           ) : null}
