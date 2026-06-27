@@ -233,7 +233,7 @@ export function FaithQuiz() {
                   <span
                     aria-hidden
                     className={`mx-0.5 h-px w-3 sm:w-5 ${
-                      step > index ? "bg-gold-300/70" : "bg-[#fff8e8]/20"
+                      step > index ? "bg-gold-300/70" : "bg-cream-fg/20"
                     }`}
                   />
                 ) : null}
@@ -246,15 +246,15 @@ export function FaithQuiz() {
                     isActive
                       ? "flex min-h-9 items-center gap-1.5 rounded-full bg-gold-300 px-2.5 text-xs font-semibold text-green-800 shadow-[0_6px_16px_rgba(0,0,0,0.18)]"
                       : isComplete
-                        ? "flex min-h-9 items-center gap-1.5 rounded-full bg-[#fff8e8]/12 px-2.5 text-xs font-semibold text-cream-fg transition hover:bg-[#fff8e8]/20"
-                        : "flex min-h-9 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold text-[#fff8e8]/55 transition enabled:hover:text-[#fff8e8]/80 disabled:cursor-not-allowed disabled:opacity-50"
+                        ? "flex min-h-9 items-center gap-1.5 rounded-full bg-cream-fg/12 px-2.5 text-xs font-semibold text-cream-fg transition hover:bg-cream-fg/20"
+                        : "flex min-h-9 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold text-cream-fg/55 transition enabled:hover:text-cream-fg/80 disabled:cursor-not-allowed disabled:opacity-50"
                   }
                 >
                   <span
                     className={
                       isActive
                         ? "grid size-5 place-items-center rounded-full bg-green-800/15 text-[0.65rem]"
-                        : "grid size-5 place-items-center rounded-full bg-[#fff8e8]/12 text-[0.65rem]"
+                        : "grid size-5 place-items-center rounded-full bg-cream-fg/12 text-[0.65rem]"
                     }
                   >
                     {isComplete ? (
@@ -365,12 +365,12 @@ export function FaithQuiz() {
                     {path.title} Faith Path
                   </h2>
                 </div>
-                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#244336] text-cream-fg">
+                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-green-600 text-cream-fg">
                   <Icon size={19} strokeWidth={1.8} />
                 </span>
               </div>
 
-              <p className="mt-2.5 text-sm leading-6 text-[#5c5347]">
+              <p className="mt-2.5 text-sm leading-6 text-ink-600">
                 Because you are carrying {carrying.toLowerCase()}:{" "}
                 {concernGuidance[carrying]}
               </p>
@@ -391,7 +391,7 @@ export function FaithQuiz() {
                 />
               </div>
 
-              <div className="mt-5 flex flex-col gap-2.5 border-t border-[#e7decb] pt-5 sm:flex-row sm:flex-wrap">
+              <div className="mt-5 flex flex-col gap-2.5 border-t border-line-200 pt-5 sm:flex-row sm:flex-wrap">
                 <Link
                   href={doorway.href}
                   className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-cream-fg shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition hover:bg-green-800"
@@ -408,13 +408,13 @@ export function FaithQuiz() {
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line-400 bg-cream-fg px-5 py-3 text-sm font-semibold text-green-500 transition hover:border-[#bd9247] hover:bg-cream-100 sm:ml-auto"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line-400 bg-cream-fg px-5 py-3 text-sm font-semibold text-green-500 transition hover:border-gold-500 hover:bg-cream-100 sm:ml-auto"
                 >
                   Adjust answers
                 </button>
               </div>
 
-              <div className="mt-5 border-t border-[#e7decb] pt-5">
+              <div className="mt-5 border-t border-line-200 pt-5">
                 <NewsletterSignup
                   heading="Want this to come back to you?"
                   description="Get a short morning verse, reflection, and prayer to keep this rhythm going. No spam, unsubscribe anytime."
@@ -464,7 +464,7 @@ function QuizStep({
         {title}
       </h2>
       {description ? (
-        <p className="mt-1.5 max-w-2xl text-xs leading-5 text-[#5c5347] sm:mt-2 sm:text-sm sm:leading-6">
+        <p className="mt-1.5 max-w-2xl text-xs leading-5 text-ink-600 sm:mt-2 sm:text-sm sm:leading-6">
           {description}
         </p>
       ) : null}
@@ -474,7 +474,7 @@ function QuizStep({
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full border border-line-400 bg-cream-fg px-4 py-2.5 text-sm font-semibold text-green-500 transition hover:border-[#bd9247] hover:bg-cream-100"
+            className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full border border-line-400 bg-cream-fg px-4 py-2.5 text-sm font-semibold text-green-500 transition hover:border-gold-500 hover:bg-cream-100"
           >
             <ArrowLeft size={16} strokeWidth={1.8} />
             Back
@@ -484,7 +484,7 @@ function QuizStep({
           type="button"
           onClick={onNext}
           disabled={!canAdvance}
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-2.5 text-sm font-semibold text-cream-fg shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-green-800 disabled:cursor-not-allowed disabled:bg-[#e7decb] disabled:text-[#9c8f79] disabled:shadow-none sm:ml-auto"
+          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-2.5 text-sm font-semibold text-cream-fg shadow-[0_12px_28px_rgba(40,71,55,0.18)] transition enabled:hover:bg-green-800 disabled:cursor-not-allowed disabled:bg-line-200 disabled:text-ink-600 disabled:shadow-none sm:ml-auto"
         >
           {actionLabel}
           <ArrowRight size={16} strokeWidth={1.8} />
@@ -564,8 +564,8 @@ function ChoiceRadioGroup({
               {...common}
               className={
                 selected
-                  ? "min-h-12 rounded-xl border border-[#244336] bg-[#eef1e8] px-4 py-3 text-left text-sm font-semibold leading-6 text-[#244336] shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
-                  : "min-h-12 rounded-xl border border-line-300 bg-cream-300 px-4 py-3 text-left text-sm font-semibold leading-6 text-ink-600 transition hover:border-gold-500 hover:text-[#244336]"
+                  ? "min-h-12 rounded-xl border border-green-600 bg-mist-200 px-4 py-3 text-left text-sm font-semibold leading-6 text-green-600 shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
+                  : "min-h-12 rounded-xl border border-line-300 bg-cream-300 px-4 py-3 text-left text-sm font-semibold leading-6 text-ink-600 transition hover:border-gold-500 hover:text-green-600"
               }
             >
               {option.title}
@@ -580,7 +580,7 @@ function ChoiceRadioGroup({
               {...common}
               className={
                 selected
-                  ? "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-[#244336] bg-[#eef1e8] px-3 py-2.5 text-left shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
+                  ? "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-green-600 bg-mist-200 px-3 py-2.5 text-left shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
                   : "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-line-300 bg-cream-300 px-3 py-2.5 text-left transition hover:border-gold-500"
               }
             >
@@ -588,8 +588,8 @@ function ChoiceRadioGroup({
                 <span
                   className={
                     selected
-                      ? "grid size-9 shrink-0 place-items-center rounded-full bg-[#244336] text-cream-200"
-                      : "grid size-9 shrink-0 place-items-center rounded-full bg-cream-200 text-[#254737] ring-1 ring-[#e3d4b6]"
+                      ? "grid size-9 shrink-0 place-items-center rounded-full bg-green-600 text-cream-200"
+                      : "grid size-9 shrink-0 place-items-center rounded-full bg-cream-200 text-green-600 ring-1 ring-line-200"
                   }
                 >
                   <OptionIcon size={17} strokeWidth={1.8} />
@@ -597,7 +597,7 @@ function ChoiceRadioGroup({
               ) : null}
               <span
                 className={`font-serif text-base font-semibold leading-tight ${
-                  selected ? "text-[#244336]" : "text-ink-900"
+                  selected ? "text-green-600" : "text-ink-900"
                 }`}
               >
                 {option.title}
@@ -618,7 +618,7 @@ function ChoiceRadioGroup({
             {...common}
             className={
               selected
-                ? "flex min-h-[60px] flex-col rounded-xl border border-[#244336] bg-[#eef1e8] p-3 text-left shadow-[0_10px_26px_rgba(40,71,55,0.08)]"
+                ? "flex min-h-[60px] flex-col rounded-xl border border-green-600 bg-mist-200 p-3 text-left shadow-[0_10px_26px_rgba(40,71,55,0.08)]"
                 : "flex min-h-[60px] flex-col rounded-xl border border-line-300 bg-cream-300 p-3 text-left transition hover:border-gold-500"
             }
           >
@@ -627,8 +627,8 @@ function ChoiceRadioGroup({
                 <span
                   className={
                     selected
-                      ? "grid size-9 place-items-center rounded-full bg-[#244336] text-cream-200"
-                      : "grid size-9 place-items-center rounded-full bg-cream-200 text-[#254737] ring-1 ring-[#e3d4b6]"
+                      ? "grid size-9 place-items-center rounded-full bg-green-600 text-cream-200"
+                      : "grid size-9 place-items-center rounded-full bg-cream-200 text-green-600 ring-1 ring-line-200"
                   }
                 >
                   <OptionIcon size={17} strokeWidth={1.8} />
@@ -671,13 +671,13 @@ function ResultItem({
       className={
         primary
           ? "rounded-xl border border-gold-400 bg-cream-200 p-3.5 shadow-[0_10px_26px_rgba(71,55,35,0.06)] sm:col-span-2"
-          : "rounded-xl border border-[#d8ddcf] bg-cream-100/70 p-3.5"
+          : "rounded-xl border border-note-line bg-cream-100/70 p-3.5"
       }
     >
       <h3 className="text-xs font-semibold uppercase tracking-[0.04em] text-gold-700">
         {title}
       </h3>
-      <p className="mt-1.5 text-sm leading-6 text-[#5c5347]">{body}</p>
+      <p className="mt-1.5 text-sm leading-6 text-ink-600">{body}</p>
     </div>
   );
 }

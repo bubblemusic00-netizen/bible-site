@@ -76,7 +76,7 @@ export default function AboutPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-6 max-w-5xl overflow-hidden rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 shadow-[0_18px_38px_rgba(71,55,35,0.05)] sm:p-8">
+      <section className="mt-6 max-w-5xl overflow-hidden rounded-lg border border-note-line bg-note-bg p-6 shadow-[0_18px_38px_rgba(71,55,35,0.05)] sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
           The name
         </p>
@@ -95,7 +95,7 @@ export default function AboutPage() {
 
       <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:items-start">
-          <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+          <span className="grid size-12 shrink-0 place-items-center rounded-full bg-mist-200 text-green-600">
             <Heart size={22} strokeWidth={1.8} />
           </span>
           <div className="max-w-3xl">
@@ -124,14 +124,14 @@ export default function AboutPage() {
               the site stands:{" "}
               <Link
                 href="/guides/what-is-the-gospel"
-                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-gold-700 hover:underline"
+                className="font-semibold text-green-600 underline-offset-4 transition hover:text-gold-700 hover:underline"
               >
                 the good news
               </Link>{" "}
               and{" "}
               <Link
                 href="/beliefs"
-                className="font-semibold text-[#254737] underline-offset-4 transition hover:text-gold-700 hover:underline"
+                className="font-semibold text-green-600 underline-offset-4 transition hover:text-gold-700 hover:underline"
               >
                 what we believe
               </Link>
@@ -143,7 +143,7 @@ export default function AboutPage() {
 
       <section className="mt-6 grid max-w-5xl gap-5 lg:grid-cols-2">
         <article className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
-          <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+          <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
             <BookOpenText size={20} strokeWidth={1.8} />
           </span>
           <h2 className="mt-5 font-serif text-3xl font-semibold text-ink-900">
@@ -156,8 +156,8 @@ export default function AboutPage() {
           </p>
         </article>
 
-        <article className="rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
-          <span className="grid size-11 place-items-center rounded-full bg-cream-200 text-[#254737]">
+        <article className="rounded-lg border border-note-line bg-note-bg p-6 sm:p-8">
+          <span className="grid size-11 place-items-center rounded-full bg-cream-200 text-green-600">
             <Gem size={20} strokeWidth={1.8} />
           </span>
           <h2 className="mt-5 font-serif text-3xl font-semibold text-ink-900">

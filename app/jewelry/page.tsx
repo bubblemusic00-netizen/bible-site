@@ -122,7 +122,7 @@ export default function JewelryPage() {
           <h1 className="mt-5 font-serif text-5xl font-medium leading-[1.0] tracking-[-0.02em] text-cream-fg sm:text-7xl">
             Keep what steadies you close.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#f1eadf]/88 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-cream-fg-muted/88 sm:text-lg">
             A verse worn at the collarbone. A small thing you can hold when the
             day gets loud. Not a charm — a reminder that brings your heart back
             to prayer in the middle of ordinary hours.
@@ -130,7 +130,7 @@ export default function JewelryPage() {
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
             <Link
               href="/start"
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-7 py-3 text-sm font-semibold text-green-700 shadow-[0_18px_44px_rgba(0,0,0,0.24)] transition hover:-translate-y-0.5 hover:bg-cream-fg hover:shadow-[0_22px_56px_rgba(233,201,133,0.3)]"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-cream-fg px-7 py-3 text-sm font-semibold text-green-700 shadow-[0_18px_44px_rgba(0,0,0,0.24)] transition hover:-translate-y-0.5 hover:bg-cream-fg hover:shadow-[0_22px_56px_rgba(233,201,133,0.3)]"
             >
               Find the verse you would keep close
               <ArrowRight
@@ -141,7 +141,7 @@ export default function JewelryPage() {
             </Link>
             <a
               href="#symbols"
-              className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-[#f1eadf] transition hover:text-cream-fg"
+              className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-cream-fg-muted transition hover:text-cream-fg"
             >
               <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-gold-200/70">
                 Explore the symbols
@@ -162,7 +162,7 @@ export default function JewelryPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
             Why a reminder
           </p>
-          <p className="mt-5 font-serif text-2xl leading-[1.45] text-[#2b251d] sm:text-[2rem] sm:leading-[1.4]">
+          <p className="mt-5 font-serif text-2xl leading-[1.45] text-ink-800 sm:text-[2rem] sm:leading-[1.4]">
             The verse you keep forgetting. The prayer you mean to carry. One
             small thing to hold on the hard afternoons — so faith is not only
             something you believe, but something you can reach for.
@@ -188,19 +188,19 @@ export default function JewelryPage() {
       </section>
 
       {/* Integrity as a brand creed, not a buried disclaimer. */}
-      <section className="mt-14 rounded-[1.5rem] border border-[#e6d8bd] bg-[#fbf6ea] p-8 text-center shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_40px_-18px_rgba(60,45,25,0.18),inset_0_1px_0_rgba(255,255,255,0.7)] sm:mt-16 sm:p-12">
+      <section className="mt-14 rounded-[1.5rem] border border-line-200 bg-cream-200 p-8 text-center shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_40px_-18px_rgba(60,45,25,0.18),inset_0_1px_0_rgba(255,255,255,0.7)] sm:mt-16 sm:p-12">
         <div className="mx-auto max-w-2xl">
           <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold-700">
             <span className="h-px w-8 bg-line-400" />
             A reminder, never a charm
             <span className="h-px w-8 bg-line-400" />
           </p>
-          <p className="mt-6 font-serif text-2xl font-medium leading-[1.45] text-[#2b251d] sm:text-[1.85rem]">
+          <p className="mt-6 font-serif text-2xl font-medium leading-[1.45] text-ink-800 sm:text-[1.85rem]">
             A symbol points to faith; it never replaces it. Nothing we make will
             ever promise protection, healing, luck, or spiritual power — and we
             will always say so plainly.
           </p>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#5f574a]">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-ink-600">
             The meaning is never in the object. It is in the Scripture, the
             prayer, and the God it quietly points you back to.
           </p>
@@ -230,7 +230,7 @@ export default function JewelryPage() {
           <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
             Be the first to keep one close.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[#fff8e8]/85">
+          <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-cream-fg/85">
             We are crafting the first faith-symbol keepsakes in small batches —
             solid, simple, made to last a lifetime of ordinary days. Leave your
             email to be the first to know when they are ready. No spam, ever.
@@ -306,15 +306,15 @@ export default function JewelryPage() {
               <Link
                 key={intention.slug}
                 href={`/jewelry/${intention.slug}`}
-                className="group rounded-xl border-t border-line-200 px-4 py-5 transition duration-200 hover:border-transparent hover:bg-[#fbf6ea]"
+                className="group rounded-xl border-t border-line-200 px-4 py-5 transition duration-200 hover:border-transparent hover:bg-cream-200"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-serif text-xl font-semibold leading-tight text-ink-900 transition-colors group-hover:text-[#7a5113]">
+                  <h3 className="font-serif text-xl font-semibold leading-tight text-ink-900 transition-colors group-hover:text-gold-800">
                     {intention.relatedTheme}
                   </h3>
                   <ArrowRight
                     size={16}
-                    className="mt-1 shrink-0 text-[#c9b79a] transition group-hover:translate-x-1 group-hover:text-gold-700"
+                    className="mt-1 shrink-0 text-line-400 transition group-hover:translate-x-1 group-hover:text-gold-700"
                   />
                 </div>
                 <p className="mt-2 text-sm leading-6 text-ink-600">
@@ -366,7 +366,7 @@ function Medallion({
       }}
     >
       <span
-        className={`relative grid size-full place-items-center overflow-hidden rounded-full ${tone === "dark" ? "text-[#f0dca6]" : "text-[#6a5526]"} shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.8),inset_0_-2px_5px_rgba(120,95,45,0.3)]`}
+        className={`relative grid size-full place-items-center overflow-hidden rounded-full ${tone === "dark" ? "text-gold-400" : "text-gold-800"} shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.8),inset_0_-2px_5px_rgba(120,95,45,0.3)]`}
         style={{ background: face }}
       >
         <Icon
@@ -398,20 +398,20 @@ function MomentCard({
   return (
     <Link
       href={`/jewelry/symbols/${symbol.slug}`}
-      className="group relative flex flex-col rounded-[12px] border border-[#e6d8bd] bg-[#fbf6ea] p-7 shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_38px_-16px_rgba(60,45,25,0.2),inset_0_1px_0_rgba(255,255,255,0.75)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#c9a86a] hover:shadow-[0_1px_2px_rgba(60,45,25,0.06),0_30px_56px_-18px_rgba(60,45,25,0.28),inset_0_1px_0_rgba(255,255,255,0.85)] sm:p-9"
+      className="group relative flex flex-col rounded-[12px] border border-line-200 bg-cream-200 p-7 shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_38px_-16px_rgba(60,45,25,0.2),inset_0_1px_0_rgba(255,255,255,0.75)] transition duration-300 ease-out hover:-translate-y-1 hover:border-gold-500 hover:shadow-[0_1px_2px_rgba(60,45,25,0.06),0_30px_56px_-18px_rgba(60,45,25,0.28),inset_0_1px_0_rgba(255,255,255,0.85)] sm:p-9"
     >
       <Medallion icon={symbol.icon} size={78} />
       <h3 className="mt-7 font-serif text-[1.85rem] font-medium leading-[1.1] text-ink-900">
         {symbol.moment}
       </h3>
-      <p className="mt-3 max-w-[34ch] text-base leading-7 text-[#5f574a]">
+      <p className="mt-3 max-w-[34ch] text-base leading-7 text-ink-600">
         {symbol.craft}
       </p>
-      <div className="mt-7 flex items-center justify-between gap-3 border-t border-[#e0cfa8]/0 pt-5 [border-image:linear-gradient(90deg,transparent,#d8c5a3,transparent)_1]">
+      <div className="mt-7 flex items-center justify-between gap-3 border-t border-line-200/0 pt-5 [border-image:linear-gradient(90deg,transparent,#d8c5a3,transparent)_1]">
         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
           {symbol.name} &middot; {symbol.verse}
         </span>
-        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#254737]">
+        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-600">
           Read its meaning
           <ArrowRight
             size={14}
@@ -444,7 +444,7 @@ function SymbolIndexLink({ symbol }: { symbol: FaithSymbol }) {
       <ArrowRight
         size={15}
         strokeWidth={1.8}
-        className="ml-auto shrink-0 text-[#c9b79a] transition group-hover:translate-x-0.5 group-hover:text-gold-700"
+        className="ml-auto shrink-0 text-line-400 transition group-hover:translate-x-0.5 group-hover:text-gold-700"
       />
     </Link>
   );

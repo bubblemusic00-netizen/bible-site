@@ -38,7 +38,7 @@ export default function GuidesPage() {
             </HeroPrimary>
             <HeroSecondary href="/start">Take the Faith Quiz</HeroSecondary>
           </div>
-          <p className="mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/72">
+          <p className="mt-5 text-sm font-semibold leading-6 text-cream-fg-muted/72">
             {guideKeys.length} beginner-friendly, non-denominational guides.
           </p>
         </PageHero>
@@ -64,7 +64,7 @@ export default function GuidesPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
                 {group.title}
               </p>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
                 {group.guides.length} {group.guides.length === 1 ? "guide" : "guides"}
               </span>
             </div>
@@ -83,7 +83,7 @@ export default function GuidesPage() {
                   href={`/guides/${guide.slug}`}
                   className={`group flex min-w-0 flex-col rounded-xl border border-line-200 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)] ${
                     group.key === "start"
-                      ? "bg-[#fbf6ea] p-7 sm:p-8"
+                      ? "bg-cream-200 p-7 sm:p-8"
                       : "bg-cream-200/70 p-5 hover:bg-cream-100"
                   }`}
                 >
@@ -100,7 +100,7 @@ export default function GuidesPage() {
                   <span className="mt-4 block text-base leading-7 text-ink-600">
                     {guide.description}
                   </span>
-                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#254737]">
+                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-green-600">
                     Read
                     <ArrowRight
                       size={15}
@@ -115,7 +115,7 @@ export default function GuidesPage() {
         ))}
       </div>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -124,7 +124,7 @@ export default function GuidesPage() {
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
               Let a guide lead you back to Scripture and prayer.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+            <p className="mt-3 text-base leading-7 text-cream-fg/84">
               These pages are meant to orient beginners, not replace Scripture,
               wise Christian community, pastoral care, or qualified help.
             </p>
@@ -132,14 +132,14 @@ export default function GuidesPage() {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Link
               href="/bible"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-cream-fg"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-fg px-5 py-3 text-sm font-semibold text-green-600 transition hover:bg-cream-fg"
             >
               Guided Bible Readings
               <BookOpenText size={16} strokeWidth={1.8} />
             </Link>
             <Link
               href="/prayer"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/60 bg-[#fff8eb]/10 px-5 py-3 text-sm font-semibold text-cream-fg transition hover:bg-[#fff8eb]/16"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-gold-200/60 bg-cream-fg/10 px-5 py-3 text-sm font-semibold text-cream-fg transition hover:bg-cream-fg/16"
             >
               Prayer Library
               <Heart size={16} strokeWidth={1.8} />

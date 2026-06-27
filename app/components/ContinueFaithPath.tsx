@@ -81,7 +81,7 @@ export function ContinueFaithPath() {
       className="group mb-8 block max-w-xl rounded-lg border border-line-300 bg-cream-200 p-4 text-ink-900 shadow-[0_14px_34px_rgba(71,55,35,0.075)] transition hover:-translate-y-0.5 hover:bg-cream-100 hover:shadow-[0_18px_42px_rgba(71,55,35,0.11)]"
     >
       <span className="flex items-start justify-between gap-4">
-        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-mist-200 text-green-600">
           <Heart size={17} strokeWidth={1.8} />
         </span>
         <ArrowRight
@@ -95,7 +95,7 @@ export function ContinueFaithPath() {
       <span className="mt-2 block text-sm leading-6 text-ink-600">
         Return to prayer, Scripture, and an optional reminder for this intention.
       </span>
-      <span className="mt-3 block text-sm font-semibold text-[#254737]">
+      <span className="mt-3 block text-sm font-semibold text-green-600">
         Continue path
       </span>
     </Link>

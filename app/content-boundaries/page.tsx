@@ -101,7 +101,7 @@ export default function ContentBoundariesPage() {
               key={boundary.title}
               className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
             >
-              <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+              <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
                 <Icon size={20} strokeWidth={1.8} />
               </span>
               <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight text-ink-900">
@@ -115,7 +115,7 @@ export default function ContentBoundariesPage() {
         })}
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-gold-300">
             Compassionate caution
@@ -123,7 +123,7 @@ export default function ContentBoundariesPage() {
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
             Get help from real people when the situation needs it.
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+          <p className="mt-3 text-base leading-7 text-cream-fg/84">
             Prayer can be honest and meaningful, but urgent danger, abuse,
             medical emergencies, severe distress, or self-harm risk should be
             met with immediate local help from emergency services, qualified
@@ -147,14 +147,14 @@ export default function ContentBoundariesPage() {
         For Scripture and prayer resources, return to{" "}
         <Link
           href="/bible"
-          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-gold-700"
+          className="inline-flex min-h-10 items-center font-semibold text-green-600 transition hover:text-gold-700"
         >
           Guided Bible Readings
         </Link>{" "}
         or the{" "}
         <Link
           href="/prayer"
-          className="inline-flex min-h-10 items-center font-semibold text-[#254737] transition hover:text-gold-700"
+          className="inline-flex min-h-10 items-center font-semibold text-green-600 transition hover:text-gold-700"
         >
           Prayer Library
         </Link>

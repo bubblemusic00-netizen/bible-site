@@ -117,13 +117,13 @@ export default async function GuidePage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
-        <section className="relative overflow-hidden rounded-lg border border-[#ded1ba] bg-[#f7f0e3] px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
+        <section className="relative overflow-hidden rounded-lg border border-line-200 bg-cream-300 px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.18),transparent_66%)]" />
           <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto grid w-full max-w-[920px] gap-5 lg:grid-cols-[0.74fr_1.26fr]">
-            <aside className="h-fit rounded-lg border border-[#d9c59d] bg-[#fffdf8] p-5 shadow-[0_22px_70px_rgba(71,55,35,0.07)] sm:p-6 lg:sticky lg:top-8">
+            <aside className="h-fit rounded-lg border border-line-300 bg-cream-100 p-5 shadow-[0_22px_70px_rgba(71,55,35,0.07)] sm:p-6 lg:sticky lg:top-8">
               <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
                 In this guide
               </p>
@@ -154,7 +154,7 @@ export default async function GuidePage({
                 <section
                   id={toSectionId(section.heading)}
                   key={section.heading}
-                  className="scroll-mt-24 rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-7 shadow-[0_22px_70px_rgba(71,55,35,0.07)] sm:px-8"
+                  className="scroll-mt-24 rounded-lg border border-line-300 bg-cream-100 px-5 py-7 shadow-[0_22px_70px_rgba(71,55,35,0.07)] sm:px-8"
                 >
                   <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
                     {section.heading}
@@ -172,7 +172,7 @@ export default async function GuidePage({
 
         <section
           id="try-this-today"
-          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
+          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
         >
           <div className="mx-auto max-w-[780px]">
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
@@ -186,7 +186,7 @@ export default async function GuidePage({
               {guide.practicalSteps.map((step, index) => (
                 <li
                   key={step}
-                  className="grid grid-cols-[2.25rem_1fr] gap-3 rounded-lg border border-[#d0d9c8] bg-cream-300 p-4 text-base leading-7 text-ink-600"
+                  className="grid grid-cols-[2.25rem_1fr] gap-3 rounded-lg border border-note-line bg-cream-300 p-4 text-base leading-7 text-ink-600"
                 >
                   <span className="grid size-9 place-items-center rounded-full bg-green-600 text-sm font-semibold text-cream-fg">
                     {index + 1}
@@ -246,7 +246,7 @@ export default async function GuidePage({
                   <span className="mt-3 block text-sm leading-6 text-ink-600">
                     {sibling.description}
                   </span>
-                  <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-[#254737]">
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-green-600">
                     Read
                     <ArrowRight
                       size={14}

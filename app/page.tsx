@@ -68,7 +68,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,12,0.5)_0%,rgba(11,16,12,0.2)_38%,rgba(12,17,13,0.9)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,rgba(11,16,12,0.82)_0%,rgba(11,16,12,0.4)_44%,transparent_74%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(60%_42%_at_50%_8%,rgba(233,201,133,0.14),transparent_64%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#111711] via-[#111711]/84 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-green-950 via-green-950/84 to-transparent" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-8 lg:py-20">
           <p
@@ -88,7 +88,7 @@ export default function Home() {
             <span className="italic">carrying</span>.
           </h1>
           <p
-            className="fade-rise mt-7 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-xl sm:leading-8"
+            className="fade-rise mt-7 max-w-2xl text-base leading-7 text-cream-fg-muted/88 sm:text-xl sm:leading-8"
             style={{ animationDelay: "170ms" }}
           >
             Answer three quiet questions. In a minute, you&rsquo;ll have a
@@ -101,7 +101,7 @@ export default function Home() {
           >
             <Link
               href="/start"
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-7 py-3 text-sm font-semibold text-green-700 shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-cream-fg hover:shadow-[0_24px_64px_rgba(233,201,133,0.32)]"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-cream-fg px-7 py-3 text-sm font-semibold text-green-700 shadow-[0_20px_54px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-cream-fg hover:shadow-[0_24px_64px_rgba(233,201,133,0.32)]"
             >
               Take the Faith Quiz
               <ArrowRight
@@ -112,7 +112,7 @@ export default function Home() {
             </Link>
             <Link
               href="#library"
-              className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-[#f1eadf] transition hover:text-cream-fg"
+              className="group inline-flex min-h-12 items-center gap-2 px-2 text-sm font-semibold text-cream-fg-muted transition hover:text-cream-fg"
             >
               <BookOpenText size={17} strokeWidth={1.8} />
               <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-gold-200/70">
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
 
           <p
-            className="fade-rise mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/76"
+            className="fade-rise mt-5 text-sm font-semibold leading-6 text-cream-fg-muted/76"
             style={{ animationDelay: "330ms" }}
           >
             Free to begin. No login, no pressure.
@@ -135,13 +135,13 @@ export default function Home() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-200/75">
               For moments of
             </span>
-            <span className="font-serif text-lg italic text-[#f1eadf]/90">
+            <span className="font-serif text-lg italic text-cream-fg-muted/90">
               {momentWords.map((w) => w.toLowerCase()).join(" · ")}
             </span>
           </p>
         </div>
 
-        <div className="pointer-events-none absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[#f1eadf]/70 lg:flex">
+        <div className="pointer-events-none absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-cream-fg-muted/70 lg:flex">
           <span className="text-[11px] font-semibold uppercase tracking-[0.28em]">
             Scroll
           </span>
@@ -149,7 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-cream-300 px-4 py-20 text-center text-[#2b251d] sm:px-8">
+      <section className="relative bg-cream-300 px-4 py-20 text-center text-ink-800 sm:px-8">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.14),transparent_70%)]"
           aria-hidden
@@ -160,7 +160,7 @@ export default function Home() {
             Today&rsquo;s verse
             <span className="h-px w-8 bg-line-400" />
           </p>
-          <blockquote className="mt-7 font-serif text-3xl font-medium leading-[1.3] text-[#2b251d] sm:text-[2.6rem] sm:leading-[1.24]">
+          <blockquote className="mt-7 font-serif text-3xl font-medium leading-[1.3] text-ink-800 sm:text-[2.6rem] sm:leading-[1.24]">
             &ldquo;{verse.text}&rdquo;
           </blockquote>
           <p className="mt-7 text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
@@ -168,7 +168,7 @@ export default function Home() {
           </p>
           <Link
             href="/verse-of-the-day"
-            className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#254737] transition hover:text-green-700"
+            className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-green-600 transition hover:text-green-700"
           >
             A new verse each morning
             <ArrowRight
@@ -192,14 +192,14 @@ export default function Home() {
             <h2 className="font-serif text-3xl font-semibold leading-tight text-cream-fg sm:text-4xl">
               A quiet place to begin when life feels heavy.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#f1eadf]/78">
+            <p className="mt-3 text-base leading-7 text-cream-fg-muted/78">
               Most faith sites are loud — pop-ups, sign-ups, ten things to
               click. Selah is the opposite. When you&rsquo;re grieving, anxious,
               or just worn out, you shouldn&rsquo;t have to dig for a verse or
               the right words. Tell us what you&rsquo;re carrying, and we&rsquo;ll
               hand you something small and true to hold onto.
             </p>
-            <p className="mt-3 text-base leading-7 text-[#f1eadf]/78">
+            <p className="mt-3 text-base leading-7 text-cream-fg-muted/78">
               New here, or wondering what Christians actually believe? Start with
               the good news at the center of it all.
             </p>
@@ -217,7 +217,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/beliefs"
-                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#f1eadf]/80 transition hover:text-cream-fg"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-cream-fg-muted/80 transition hover:text-cream-fg"
               >
                 What we believe
                 <ArrowRight
@@ -262,10 +262,10 @@ export default function Home() {
                   {item.title}
                 </span>
                 <span className="mt-4 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />
-                <span className="mt-4 block text-[0.95rem] leading-6 text-[#5e574c]">
+                <span className="mt-4 block text-[0.95rem] leading-6 text-ink-600">
                   {item.description}
                 </span>
-                <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-[#254737]">
+                <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-green-600">
                   Open
                   <ArrowRight
                     size={14}
@@ -292,7 +292,7 @@ export default function Home() {
             <p className="mt-2 font-serif text-3xl font-semibold leading-tight text-cream-fg sm:text-4xl">
               Some prayers you want to keep close.
             </p>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-[#f1eadf]/72">
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-cream-fg-muted/72">
               A cross, an anchor, a verse worn at the collarbone — a small
               keepsake that brings you back to what you&rsquo;re praying through.
               A reminder, never a charm.
@@ -300,7 +300,7 @@ export default function Home() {
           </div>
           <Link
             href="/jewelry"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/45 bg-cream-fg/8 px-5 py-3 text-sm font-semibold text-cream-fg backdrop-blur-md transition hover:bg-cream-fg/14"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-gold-200/45 bg-cream-fg/8 px-5 py-3 text-sm font-semibold text-cream-fg backdrop-blur-md transition hover:bg-cream-fg/14"
           >
             Explore Faith Symbols
             <ArrowRight size={16} strokeWidth={1.8} />
@@ -308,7 +308,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-[#1d2a20] bg-green-950 px-4 py-16 text-center sm:px-8">
+      <section className="border-t border-green-900 bg-green-950 px-4 py-16 text-center sm:px-8">
         <div
           data-reveal
           className="mx-auto flex max-w-2xl flex-col items-center"
@@ -322,7 +322,7 @@ export default function Home() {
             sizes="(max-width: 640px) 280px, 460px"
             className="h-auto w-[clamp(260px,44vw,460px)]"
           />
-          <p className="mt-4 font-serif text-xl italic text-[#f1eadf]/80">
+          <p className="mt-4 font-serif text-xl italic text-cream-fg-muted/80">
             Pause. Be still. Carry it with you.
           </p>
         </div>

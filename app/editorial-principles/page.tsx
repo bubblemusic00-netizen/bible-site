@@ -101,7 +101,7 @@ export default function EditorialPrinciplesPage() {
         ))}
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -110,7 +110,7 @@ export default function EditorialPrinciplesPage() {
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
               Content should keep becoming clearer and more careful.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+            <p className="mt-3 text-base leading-7 text-cream-fg/84">
               Selah content may be improved over time for clarity,
               accuracy, attribution, and care. Before any public commerce
               launch, content and claims should be reviewed carefully,
@@ -161,14 +161,14 @@ function TrustLink({
       href={href}
       className="group rounded-lg border border-line-300 bg-cream-200 p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] transition hover:border-gold-500 hover:bg-cream-100"
     >
-      <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+      <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
         <Icon size={20} strokeWidth={1.8} />
       </span>
       <h2 className="mt-5 font-serif text-2xl font-semibold leading-tight text-ink-900">
         {title}
       </h2>
       <p className="mt-2 text-sm leading-6 text-ink-600">{body}</p>
-      <p className="mt-5 text-sm font-semibold text-[#254737]">
+      <p className="mt-5 text-sm font-semibold text-green-600">
         Read more
       </p>
     </Link>

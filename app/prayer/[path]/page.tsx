@@ -97,12 +97,12 @@ export default async function PrayerPathPage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
-        <section className="relative overflow-hidden rounded-lg border border-[#ded1ba] bg-[#f7f0e3] px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
+        <section className="relative overflow-hidden rounded-lg border border-line-200 bg-cream-300 px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.18),transparent_66%)]" />
           <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
 
-          <section className="relative mx-auto w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-7 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-9">
+          <section className="relative mx-auto w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-7 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-9">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
               Before you pray
             </p>
@@ -114,8 +114,8 @@ export default async function PrayerPathPage({
             </p>
           </section>
 
-          <article className="relative mx-auto mt-6 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
-            <div className="border-b border-[#e2d2b6] pb-6">
+          <article className="relative mx-auto mt-6 w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
+            <div className="border-b border-line-200 pb-6">
               <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
                 The prayer
               </p>
@@ -124,7 +124,7 @@ export default async function PrayerPathPage({
               </h2>
             </div>
 
-            <div className="mt-8 space-y-5 font-serif text-[1.3rem] leading-[1.7] text-[#2b251d] sm:space-y-6 sm:text-[1.5rem] sm:leading-[1.72]">
+            <div className="mt-8 space-y-5 font-serif text-[1.3rem] leading-[1.7] text-ink-800 sm:space-y-6 sm:text-[1.5rem] sm:leading-[1.72]">
               {prayer.prayer.map((paragraph, i) => (
                 <p
                   key={paragraph}
@@ -143,7 +143,7 @@ export default async function PrayerPathPage({
 
         <section
           id="after-prayer" data-reveal
-          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
+          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
         >
           <div className="mx-auto max-w-[760px]">
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
@@ -156,7 +156,7 @@ export default async function PrayerPathPage({
             <div className="mt-6 grid gap-4">
               <Link
                 href={prayer.relatedBible.href}
-                className="group rounded-lg border border-[#d0d9c8] bg-cream-300 p-5 transition hover:border-[#bd9247] hover:bg-cream-100"
+                className="group rounded-lg border border-note-line bg-cream-300 p-5 transition hover:border-gold-500 hover:bg-cream-100"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -169,7 +169,7 @@ export default async function PrayerPathPage({
                   </div>
                   <BookOpenText
                     size={18}
-                    className="shrink-0 text-[#254737] transition group-hover:translate-x-1"
+                    className="shrink-0 text-green-600 transition group-hover:translate-x-1"
                     strokeWidth={1.8}
                   />
                 </div>
@@ -178,7 +178,7 @@ export default async function PrayerPathPage({
                 </p>
               </Link>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                <div className="rounded-lg border border-note-line bg-cream-300 p-5">
                   <h3 className="font-serif text-2xl font-semibold text-ink-900">
                     Reflection prompt
                   </h3>
@@ -186,7 +186,7 @@ export default async function PrayerPathPage({
                     {prayer.reflectionPrompt}
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                <div className="rounded-lg border border-note-line bg-cream-300 p-5">
                   <h3 className="font-serif text-2xl font-semibold text-ink-900">
                     Small next step
                   </h3>
@@ -195,7 +195,7 @@ export default async function PrayerPathPage({
                   </p>
                 </div>
               </div>
-              <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+              <div className="rounded-lg border border-note-line bg-cream-300 p-5">
                 <h3 className="font-serif text-2xl font-semibold text-ink-900">
                   Optional faith-symbol reminder
                 </h3>

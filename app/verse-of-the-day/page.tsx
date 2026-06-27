@@ -44,13 +44,13 @@ export default function VerseOfTheDayPage() {
         />
       }
     >
-      <section className="relative max-w-4xl overflow-hidden rounded-lg border border-[#e0cfa8] bg-[linear-gradient(160deg,#fffdf7,#fdf6e6)] p-7 shadow-[0_28px_64px_rgba(71,55,35,0.1)] sm:p-10">
+      <section className="relative max-w-4xl overflow-hidden rounded-lg border border-line-200 bg-[linear-gradient(160deg,#fffdf7,#fdf6e6)] p-7 shadow-[0_28px_64px_rgba(71,55,35,0.1)] sm:p-10">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#c49c52,#e9c985)]" />
         <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
           <CalendarDays size={15} strokeWidth={1.8} />
           {today}
         </p>
-        <blockquote className="mt-5 font-serif text-3xl font-medium leading-[1.3] text-[#2b251d] sm:text-[2.6rem] sm:leading-[1.24]">
+        <blockquote className="mt-5 font-serif text-3xl font-medium leading-[1.3] text-ink-800 sm:text-[2.6rem] sm:leading-[1.24]">
           &ldquo;{verse.text}&rdquo;
         </blockquote>
         <p className="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
@@ -76,7 +76,7 @@ export default function VerseOfTheDayPage() {
         </div>
       </section>
 
-      <section className="mt-6 max-w-4xl rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
+      <section className="mt-6 max-w-4xl rounded-lg border border-note-line bg-note-bg p-6 sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
           Come back tomorrow
         </p>
@@ -94,7 +94,7 @@ export default function VerseOfTheDayPage() {
           ].map((step) => (
             <li
               key={step.n}
-              className="rounded-lg border border-[#d3dac9] bg-[#fbfdf8] p-4"
+              className="rounded-lg border border-note-line bg-cream-100 p-4"
             >
               <span className="grid size-8 place-items-center rounded-full bg-green-600 font-serif text-sm font-semibold text-cream-fg">
                 {step.n}

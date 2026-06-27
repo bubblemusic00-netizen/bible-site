@@ -68,8 +68,8 @@ export function SiteHeader({
     <header
       className={`sticky top-0 z-50 transition-colors duration-300 ${
         transparent
-          ? "border-b border-transparent bg-gradient-to-b from-[#0b100c]/55 via-[#0b100c]/25 to-transparent"
-          : "border-b border-[#eadfcb]/70 bg-cream-300/88 shadow-[0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-2xl"
+          ? "border-b border-transparent bg-gradient-to-b from-green-950/55 via-green-950/25 to-transparent"
+          : "border-b border-line-200/70 bg-cream-300/88 shadow-[0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-2xl"
       }`}
     >
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
@@ -83,7 +83,7 @@ export function SiteHeader({
           </span>
           <span
             className={`truncate font-serif text-[1.4rem] font-semibold tracking-[0.005em] transition-colors ${
-              transparent ? "text-[#fff8e8]" : "text-[#24362c]"
+              transparent ? "text-cream-fg" : "text-green-600"
             }`}
           >
             Selah
@@ -98,8 +98,8 @@ export function SiteHeader({
                 ? "rounded-full bg-cream-fg/15 px-3.5 py-2 text-cream-fg ring-1 ring-inset ring-cream-fg/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-md"
                 : "rounded-full bg-green-700 px-3.5 py-2 text-cream-fg shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_10px_24px_rgba(32,61,48,0.2)]"
               : transparent
-                ? "rounded-full px-3.5 py-2 text-[#f1eadf]/90 transition hover:bg-cream-fg/10 hover:text-white"
-                : "rounded-full px-3.5 py-2 text-[#655d53] transition hover:bg-[#f3eadb]/72 hover:text-[#254737]";
+                ? "rounded-full px-3.5 py-2 text-cream-fg-muted/90 transition hover:bg-cream-fg/10 hover:text-white"
+                : "rounded-full px-3.5 py-2 text-ink-600 transition hover:bg-cream-300/72 hover:text-green-600";
             return (
               <Link
                 key={item.key}

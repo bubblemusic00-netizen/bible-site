@@ -41,7 +41,7 @@ export default function Error({
         <button
           type="button"
           onClick={reset}
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-700 px-5 py-3 text-sm font-semibold text-cream-fg shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-[#183326]"
+          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-700 px-5 py-3 text-sm font-semibold text-cream-fg shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-green-800"
         >
           <RefreshCw size={16} strokeWidth={1.8} />
           Try again

@@ -7,7 +7,7 @@ import { ArrowRight, Check, Loader2 } from "lucide-react";
 // Built ahead of email/checkout wiring so capture features drop in cleanly.
 
 const fieldBase =
-  "w-full rounded-lg border border-line-400 bg-cream-fg px-4 py-3 text-base text-ink-900 placeholder:text-[#756a59] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition focus:border-[#bd9247] focus:outline-none focus:ring-2 focus:ring-gold-500/45 disabled:cursor-not-allowed disabled:opacity-60";
+  "w-full rounded-lg border border-line-400 bg-cream-fg px-4 py-3 text-base text-ink-900 placeholder:text-ink-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/45 disabled:cursor-not-allowed disabled:opacity-60";
 
 export function FormField({
   label,
@@ -132,7 +132,7 @@ export function NewsletterSignup({
   if (status === "success") {
     return (
       <div className="flex items-center gap-3 rounded-lg border border-success-line bg-success-bg px-4 py-4 text-success">
-        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#dcebdc]">
+        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-success-bg">
           <Check size={18} strokeWidth={2} />
         </span>
         <p className="text-sm font-semibold leading-6">
@@ -166,7 +166,7 @@ export function NewsletterSignup({
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-700 px-5 py-3 text-sm font-semibold text-cream-fg shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-[#183326] disabled:translate-y-0 disabled:opacity-70"
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-green-700 px-5 py-3 text-sm font-semibold text-cream-fg shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition hover:-translate-y-0.5 hover:bg-green-800 disabled:translate-y-0 disabled:opacity-70"
       >
         {status === "loading" ? (
           <>

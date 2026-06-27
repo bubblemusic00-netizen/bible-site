@@ -124,7 +124,7 @@ export default function BeliefsPage() {
               {belief.body}
             </p>
             <blockquote className="mt-5 border-l-2 border-line-400 pl-4">
-              <p className="font-serif text-lg italic leading-7 text-[#3f4a40]">
+              <p className="font-serif text-lg italic leading-7 text-green-500">
                 &ldquo;{belief.verse}&rdquo;
               </p>
               <p className="mt-2 text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
@@ -135,7 +135,7 @@ export default function BeliefsPage() {
         ))}
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -144,7 +144,7 @@ export default function BeliefsPage() {
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
               We were never meant to walk it alone.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+            <p className="mt-3 text-base leading-7 text-cream-fg/84">
               The Christian life grows in community — in a local church, among
               people who read Scripture, pray, and carry one another. Selah is a
               quiet place to begin, not a substitute for that. If you are looking
@@ -154,7 +154,7 @@ export default function BeliefsPage() {
             <div className="mt-5">
               <Link
                 href="/guides/finding-a-church"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/45 bg-cream-fg/8 px-5 py-3 text-sm font-semibold text-cream-fg backdrop-blur-md transition hover:bg-cream-fg/14"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-gold-200/45 bg-cream-fg/8 px-5 py-3 text-sm font-semibold text-cream-fg backdrop-blur-md transition hover:bg-cream-fg/14"
               >
                 Finding a Church
               </Link>
@@ -212,14 +212,14 @@ function TrustLink({
       href={href}
       className="group rounded-lg border border-line-300 bg-cream-200 p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] transition hover:border-gold-500 hover:bg-cream-100"
     >
-      <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+      <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
         <Icon size={20} strokeWidth={1.8} />
       </span>
       <h2 className="mt-5 font-serif text-2xl font-semibold leading-tight text-ink-900">
         {title}
       </h2>
       <p className="mt-2 text-sm leading-6 text-ink-600">{body}</p>
-      <p className="mt-5 text-sm font-semibold text-[#254737]">Read more</p>
+      <p className="mt-5 text-sm font-semibold text-green-600">Read more</p>
     </Link>
   );
 }

@@ -108,7 +108,7 @@ export default async function BibleChapterPage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
-        <section className="relative overflow-hidden rounded-lg border border-[#ded1ba] bg-[#f7f0e3] px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
+        <section className="relative overflow-hidden rounded-lg border border-line-200 bg-cream-300 px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.18),transparent_66%)]" />
           <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
@@ -118,14 +118,14 @@ export default async function BibleChapterPage({
               {chapterData.contextIntro}
             </p>
             {chapterData.readingNote ? (
-              <p className="mx-auto mt-5 max-w-[690px] rounded-lg border border-line-400 bg-cream-fg/82 px-4 py-3 text-sm font-semibold leading-6 text-[#6a563f]">
+              <p className="mx-auto mt-5 max-w-[690px] rounded-lg border border-line-400 bg-cream-fg/82 px-4 py-3 text-sm font-semibold leading-6 text-ink-600">
                 {chapterData.readingNote}
               </p>
             ) : null}
           </div>
 
-          <article className="relative mx-auto mt-8 w-full max-w-[760px] rounded-lg border border-[#d9c59d] bg-[#fffdf8] px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
-            <div className="flex items-center justify-between gap-4 border-b border-[#e2d2b6] pb-5">
+          <article className="relative mx-auto mt-8 w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
+            <div className="flex items-center justify-between gap-4 border-b border-line-200 pb-5">
               <h2 className="font-serif text-2xl font-semibold leading-tight text-ink-900 sm:text-[1.75rem]">
                 The Reading
               </h2>
@@ -138,7 +138,7 @@ export default async function BibleChapterPage({
               {chapterData.verses.map((verse, i) => (
                 <p
                   key={verse.number}
-                  className="grid w-full min-w-0 grid-cols-[1.5rem_minmax(0,1fr)] gap-3 font-serif text-[1.3rem] leading-[1.7] text-[#2b251d] sm:grid-cols-[2rem_minmax(0,1fr)] sm:text-[1.5rem] sm:leading-[1.72]"
+                  className="grid w-full min-w-0 grid-cols-[1.5rem_minmax(0,1fr)] gap-3 font-serif text-[1.3rem] leading-[1.7] text-ink-800 sm:grid-cols-[2rem_minmax(0,1fr)] sm:text-[1.5rem] sm:leading-[1.72]"
                 >
                   <span className="select-none pt-[0.55rem] text-right font-sans text-[0.7rem] font-semibold leading-none text-gold-700 sm:text-xs">
                     {verse.number}
@@ -160,7 +160,7 @@ export default async function BibleChapterPage({
 
         <section
           id="after-reading" data-reveal
-          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
+          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
         >
           <div className="mx-auto max-w-[760px]">
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
@@ -171,7 +171,7 @@ export default async function BibleChapterPage({
               Let the reading become prayer and attention.
             </h2>
             <div className="mt-6 grid gap-4">
-              <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+              <div className="rounded-lg border border-note-line bg-cream-300 p-5">
                 <h3 className="font-serif text-2xl font-semibold text-ink-900">
                   Reflection question
                 </h3>
@@ -180,7 +180,7 @@ export default async function BibleChapterPage({
                 </p>
               </div>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                <div className="rounded-lg border border-note-line bg-cream-300 p-5">
                   <h3 className="font-serif text-2xl font-semibold text-ink-900">
                     Prayer starter
                   </h3>
@@ -188,7 +188,7 @@ export default async function BibleChapterPage({
                     {chapterData.prayerStarter}
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+                <div className="rounded-lg border border-note-line bg-cream-300 p-5">
                   <h3 className="font-serif text-2xl font-semibold text-ink-900">
                     Small next step
                   </h3>
@@ -197,7 +197,7 @@ export default async function BibleChapterPage({
                   </p>
                 </div>
               </div>
-              <div className="rounded-lg border border-[#d0d9c8] bg-cream-300 p-5">
+              <div className="rounded-lg border border-note-line bg-cream-300 p-5">
                 <h3 className="font-serif text-2xl font-semibold text-ink-900">
                   Optional faith-symbol reminder
                 </h3>

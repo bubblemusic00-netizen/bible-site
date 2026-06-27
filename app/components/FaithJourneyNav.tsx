@@ -66,8 +66,8 @@ export function FaithJourneyNav({
                 aria-current={isCurrent ? "page" : undefined}
                 className={
                   isCurrent
-                    ? "flex min-h-12 min-w-0 items-center gap-2 rounded-md border border-[#b88735] bg-green-600 px-3 py-2 text-sm font-semibold text-cream-fg shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
-                    : "flex min-h-12 min-w-0 items-center gap-2 rounded-md border border-transparent px-3 py-2 text-sm font-semibold text-ink-600 transition hover:border-line-400 hover:bg-cream-100 hover:text-[#254737]"
+                    ? "flex min-h-12 min-w-0 items-center gap-2 rounded-md border border-gold-600 bg-green-600 px-3 py-2 text-sm font-semibold text-cream-fg shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
+                    : "flex min-h-12 min-w-0 items-center gap-2 rounded-md border border-transparent px-3 py-2 text-sm font-semibold text-ink-600 transition hover:border-line-400 hover:bg-cream-100 hover:text-green-600"
                 }
               >
                 <Icon className="size-4 shrink-0" strokeWidth={1.8} />

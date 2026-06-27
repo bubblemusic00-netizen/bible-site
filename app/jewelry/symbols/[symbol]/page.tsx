@@ -143,8 +143,8 @@ export default async function SymbolPage({
         <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="relative grid place-items-center overflow-hidden border-b border-line-300 bg-[radial-gradient(circle_at_center,#fbf7ed,#eef1e8)] p-10 lg:border-b-0 lg:border-r">
             <div className="pointer-events-none absolute size-60 rounded-full bg-[radial-gradient(circle,rgba(196,156,82,0.16),transparent_70%)]" />
-            <div className="pointer-events-none absolute size-44 rounded-full border border-[#d8ddcf]/60" />
-            <div className="relative grid size-32 place-items-center rounded-full border border-[#d8ddcf] bg-cream-200 text-[#254737] shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_20px_45px_rgba(40,71,55,0.1)]">
+            <div className="pointer-events-none absolute size-44 rounded-full border border-note-line/60" />
+            <div className="relative grid size-32 place-items-center rounded-full border border-note-line bg-cream-200 text-green-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_20px_45px_rgba(40,71,55,0.1)]">
               <Icon size={52} strokeWidth={1.4} />
             </div>
           </div>
@@ -186,7 +186,7 @@ export default async function SymbolPage({
         />
       </div>
 
-      <section className="mt-8 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
+      <section className="mt-8 rounded-lg border border-note-line bg-note-bg p-6 sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase text-gold-700">
@@ -207,7 +207,7 @@ export default async function SymbolPage({
         </div>
       </section>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-gold-300">
             Keeping it close
@@ -215,7 +215,7 @@ export default async function SymbolPage({
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
             A keepsake that keeps faith close.
           </h2>
-          <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+          <p className="mt-3 text-base leading-7 text-cream-fg/84">
             {details.futureReminderUse} Worn close, it becomes a small daily cue
             to pause, pray, and return to Scripture.
           </p>
@@ -246,7 +246,7 @@ function RelatedPanel({
 }) {
   return (
     <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
-      <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+      <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
         <Icon size={20} strokeWidth={1.8} />
       </span>
       <p className="mt-5 text-sm font-semibold uppercase text-gold-700">
@@ -260,7 +260,7 @@ function RelatedPanel({
       </p>
       <Link
         href={link.href}
-        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-gold-700"
+        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-green-600 transition hover:text-gold-700"
       >
         Open
         <ArrowRight size={15} strokeWidth={1.8} />

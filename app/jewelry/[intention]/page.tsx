@@ -173,7 +173,7 @@ export default async function JewelryIntentionPage({
         />
       </div>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -182,14 +182,14 @@ export default async function JewelryIntentionPage({
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
               A reminder, kept close.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+            <p className="mt-3 text-base leading-7 text-cream-fg/84">
               {details.symbolReminder} Meaningful as a cue to pray and return to
               Scripture — never a charm or a guarantee of an outcome.
             </p>
           </div>
           <Link
             href="/jewelry"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-cream-fg"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-fg px-5 py-3 text-sm font-semibold text-green-600 transition hover:bg-cream-fg"
           >
             Main Faith Symbols page
             <Gem size={16} strokeWidth={1.8} />
@@ -225,7 +225,7 @@ export default async function JewelryIntentionPage({
                 <p className="mt-2 text-sm leading-6 text-ink-600">
                   {symbol.reminder}
                 </p>
-                <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#254737]">
+                <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-green-600">
                   Read meaning
                   <ArrowRight size={15} strokeWidth={1.8} />
                 </p>
@@ -235,7 +235,7 @@ export default async function JewelryIntentionPage({
         </div>
       </section>
 
-      <section className="mt-8 rounded-lg border border-[#d8ddcf] bg-[#f2f5ee] p-6 sm:p-8">
+      <section className="mt-8 rounded-lg border border-note-line bg-note-bg p-6 sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-700">
@@ -250,7 +250,7 @@ export default async function JewelryIntentionPage({
               reminder close — it points to faith, never replaces it.
             </p>
           </div>
-          <ShieldCheck className="size-10 text-[#254737]" strokeWidth={1.8} />
+          <ShieldCheck className="size-10 text-green-600" strokeWidth={1.8} />
         </div>
       </section>
 
@@ -285,7 +285,7 @@ function InfoPanel({
 }) {
   return (
     <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
-      <span className="grid size-11 place-items-center rounded-full bg-[#eef1e8] text-[#254737]">
+      <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
         <Icon size={20} strokeWidth={1.8} />
       </span>
       <p className="mt-5 text-sm font-semibold uppercase text-gold-700">
@@ -297,7 +297,7 @@ function InfoPanel({
       <p className="mt-3 text-sm leading-6 text-ink-600">{body}</p>
       <Link
         href={href}
-        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-gold-700"
+        className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-green-600 transition hover:text-gold-700"
       >
         {cta}
         <ArrowRight size={15} strokeWidth={1.8} />

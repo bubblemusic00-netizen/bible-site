@@ -59,7 +59,7 @@ export default function ShopPage() {
           <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] sm:text-6xl">
             Faith reminders you can keep close.
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[#f1eadf]/88 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-cream-fg-muted/88 sm:text-lg">
             A small, carefully chosen collection of keepsakes — each one a quiet
             cue to return to Scripture and prayer. The Bible readings, prayers,
             and Faith Quiz stay free, always.
@@ -67,7 +67,7 @@ export default function ShopPage() {
           <div className="mt-7">
             <Link
               href="/start"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:-translate-y-0.5 hover:bg-cream-fg"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-fg px-5 py-3 text-sm font-semibold text-green-600 transition hover:-translate-y-0.5 hover:bg-cream-fg"
             >
               Find the one for what you carry
               <ArrowRight size={16} strokeWidth={1.8} />
@@ -80,7 +80,7 @@ export default function ShopPage() {
         {allProducts.map((product) => {
           const href = productUrl(product);
           const cardClass =
-            "flex h-full flex-col overflow-hidden rounded-lg border border-[#eadbc0] bg-cream-200/78 shadow-[0_18px_42px_rgba(71,55,35,0.045)]";
+            "flex h-full flex-col overflow-hidden rounded-lg border border-line-200 bg-cream-200/78 shadow-[0_18px_42px_rgba(71,55,35,0.045)]";
 
           const content = (
             <>
@@ -113,7 +113,7 @@ export default function ShopPage() {
                   ))}
                 </div>
                 {href ? (
-                  <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#254737]">
+                  <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-green-600">
                     Shop now
                     <ArrowRight size={15} strokeWidth={1.8} />
                   </p>

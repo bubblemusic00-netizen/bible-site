@@ -92,7 +92,7 @@ export default async function VerseTopicPage({
         {data.verses.map((verse, i) => (
           <div
             key={verse.reference}
-            className="flex gap-4 border-b border-[#e2d4ba] px-5 py-6 last:border-b-0 sm:gap-6 sm:px-7"
+            className="flex gap-4 border-b border-line-200 px-5 py-6 last:border-b-0 sm:gap-6 sm:px-7"
           >
             <span
               aria-hidden
@@ -104,7 +104,7 @@ export default async function VerseTopicPage({
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
                 {verse.reference}
               </p>
-              <blockquote className="mt-3 font-serif text-[1.3rem] leading-[1.6] text-[#2b251d] sm:text-[1.55rem]">
+              <blockquote className="mt-3 font-serif text-[1.3rem] leading-[1.6] text-ink-800 sm:text-[1.55rem]">
                 &ldquo;{verse.text}&rdquo;
               </blockquote>
             </div>
@@ -112,12 +112,12 @@ export default async function VerseTopicPage({
         ))}
       </section>
 
-      <section data-reveal className="mt-6 max-w-4xl rounded-lg border border-[#d8ddcf] bg-[#eef1e8] p-6 sm:p-8">
+      <section data-reveal className="mt-6 max-w-4xl rounded-lg border border-note-line bg-mist-200 p-6 sm:p-8">
         <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
           <Feather size={15} strokeWidth={1.8} />
           A quiet reflection
         </p>
-        <p className="mt-3 text-base leading-7 text-[#3f4a40]">
+        <p className="mt-3 text-base leading-7 text-green-500">
           {data.reflection}
         </p>
       </section>

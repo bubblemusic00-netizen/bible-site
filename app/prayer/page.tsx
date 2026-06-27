@@ -41,7 +41,7 @@ export default function PrayerPage() {
             <HeroSecondary href="/start">Take the Faith Quiz</HeroSecondary>
             <HeroSecondary href="/guides/how-to-pray">How to Pray</HeroSecondary>
           </div>
-          <p className="mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/72">
+          <p className="mt-5 text-sm font-semibold leading-6 text-cream-fg-muted/72">
             {prayerPathKeys.length} complete prayers, organized by the needs
             people bring to God.
           </p>
@@ -68,7 +68,7 @@ export default function PrayerPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
                 {group.title}
               </p>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
                 {group.prayers.length} prayers
               </span>
             </div>
@@ -93,7 +93,7 @@ export default function PrayerPage() {
                   <span className="mt-4 block text-base leading-7 text-ink-600">
                     {prayer.description}
                   </span>
-                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#254737]">
+                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-green-600">
                     Read
                     <ArrowRight
                       size={15}
@@ -108,7 +108,7 @@ export default function PrayerPage() {
         ))}
       </div>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -117,7 +117,7 @@ export default function PrayerPage() {
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
               Let prayer become honest attention before God.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+            <p className="mt-3 text-base leading-7 text-cream-fg/84">
               These prayers are written to help you slow down, name what is
               true, and continue into Scripture. Faith symbols are optional
               reminders of prayer and Scripture, not promises or guarantees.
@@ -125,7 +125,7 @@ export default function PrayerPage() {
           </div>
           <Link
             href="/bible"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-cream-fg"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-fg px-5 py-3 text-sm font-semibold text-green-600 transition hover:bg-cream-fg"
           >
             Guided Bible Readings
             <BookOpenText size={16} strokeWidth={1.8} />

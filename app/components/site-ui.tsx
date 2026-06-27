@@ -151,7 +151,7 @@ export function PageHero({
         </h1>
         {subtitle ? (
           <p
-            className="fade-rise mt-5 max-w-2xl text-base leading-7 text-[#f1eadf]/85 sm:text-lg sm:leading-8"
+            className="fade-rise mt-5 max-w-2xl text-base leading-7 text-cream-fg-muted/85 sm:text-lg sm:leading-8"
             style={{ animationDelay: "170ms" }}
           >
             {subtitle}
@@ -178,7 +178,7 @@ export function HeroPrimary({
   return (
     <Link
       href={href}
-      className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-6 py-3 text-sm font-semibold text-green-700 shadow-[0_16px_44px_rgba(0,0,0,0.28)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-cream-fg hover:shadow-[0_20px_54px_rgba(233,201,133,0.3)]"
+      className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-cream-fg px-6 py-3 text-sm font-semibold text-green-700 shadow-[0_16px_44px_rgba(0,0,0,0.28)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-cream-fg hover:shadow-[0_20px_54px_rgba(233,201,133,0.3)]"
     >
       {children}
     </Link>
@@ -196,7 +196,7 @@ export function HeroSecondary({
   return (
     <Link
       href={href}
-      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#f4dfb5]/40 bg-cream-fg/[0.08] px-5 py-3 text-sm font-semibold text-[#f6ecd8] backdrop-blur-md transition duration-200 ease-out hover:border-[#f4dfb5]/70 hover:bg-cream-fg/15"
+      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-gold-200/40 bg-cream-fg/[0.08] px-5 py-3 text-sm font-semibold text-cream-fg backdrop-blur-md transition duration-200 ease-out hover:border-gold-200/70 hover:bg-cream-fg/15"
     >
       {children}
     </Link>
@@ -211,8 +211,8 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
     <footer
       className={
         isDark
-          ? "mt-7 max-w-5xl text-[#fff8e8]/82"
-          : "border-t border-[#eadfcb] bg-[#f6efe1] text-ink-600"
+          ? "mt-7 max-w-5xl text-cream-fg/82"
+          : "border-t border-line-200 bg-cream-300 text-ink-600"
       }
     >
       <div
@@ -247,7 +247,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
                 <rect x="8.1" y="23.2" width="11.8" height="1.7" rx="0.85" fill="#9a7322" />
                 <rect x="6.9" y="26.2" width="14.2" height="1.7" rx="0.85" fill="#9a7322" />
               </svg>
-              <p className="font-serif text-2xl font-semibold leading-tight text-[#24362c]">
+              <p className="font-serif text-2xl font-semibold leading-tight text-green-600">
                 Selah
               </p>
             </div>
@@ -293,7 +293,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               className={
                 isDark
                   ? "inline-flex min-h-10 items-center transition hover:text-cream-fg"
-                  : "inline-flex min-h-10 items-center transition hover:text-[#204636]"
+                  : "inline-flex min-h-10 items-center transition hover:text-green-700"
               }
             >
               {item.label}
@@ -315,7 +315,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="inline-flex min-h-10 items-center underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-gold-600/60"
+                className="inline-flex min-h-10 items-center underline-offset-4 transition hover:text-green-700 hover:underline hover:decoration-gold-600/60"
               >
                 {item.label}
               </Link>
@@ -337,7 +337,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="inline-flex min-h-10 items-center underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-gold-600/60"
+                className="inline-flex min-h-10 items-center underline-offset-4 transition hover:text-green-700 hover:underline hover:decoration-gold-600/60"
               >
                 {item.label}
               </Link>
@@ -347,12 +347,12 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
         ) : null}
       </div>
       {!isDark ? (
-        <div className="border-t border-[#eadfcb]">
+        <div className="border-t border-line-200">
           <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-sm text-ink-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <p>
               © {year} Selah. Free Scripture, prayer, and reflection.
             </p>
-            <p className="font-serif italic text-[#3f4a40]">
+            <p className="font-serif italic text-green-500">
               &ldquo;Cast thy burden upon the LORD, and he shall sustain
               thee.&rdquo; — Psalm 55:22
             </p>
@@ -405,9 +405,9 @@ export function CardLink({
   return (
     <Link
       href={href}
-      className="group relative flex h-full min-w-0 flex-col overflow-hidden rounded-lg border border-[#eadbc0] bg-cream-200/78 p-5 shadow-[0_18px_42px_rgba(71,55,35,0.045)] transition duration-200 hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)]"
+      className="group relative flex h-full min-w-0 flex-col overflow-hidden rounded-lg border border-line-200 bg-cream-200/78 p-5 shadow-[0_18px_42px_rgba(71,55,35,0.045)] transition duration-200 hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)]"
     >
-      <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#ffffff]" />
+      <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-cream-50" />
       <h2 className="break-words font-serif text-[1.7rem] font-semibold leading-[1.1] text-ink-900">
         {title}
       </h2>
@@ -415,7 +415,7 @@ export function CardLink({
       <p className="mt-4 break-words text-base leading-7 text-ink-600">
         {description}
       </p>
-      <p className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#254737]">
+      <p className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-green-600">
         {cta}
         <ArrowRight
           size={15}
@@ -437,7 +437,7 @@ export function PrimaryButton({
   return (
     <Link
       href={href}
-      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full bg-green-700 px-5 py-3 text-center text-sm font-semibold text-cream-fg shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#183326] hover:shadow-[0_18px_42px_rgba(40,71,55,0.22)] active:translate-y-0 active:scale-[0.98]"
+      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full bg-green-700 px-5 py-3 text-center text-sm font-semibold text-cream-fg shadow-[0_14px_34px_rgba(40,71,55,0.18)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-[0_18px_42px_rgba(40,71,55,0.22)] active:translate-y-0 active:scale-[0.98]"
     >
       {children}
     </Link>
@@ -454,7 +454,7 @@ export function SecondaryButton({
   return (
     <Link
       href={href}
-      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full border border-[#dcc8a5] bg-cream-fg/82 px-5 py-3 text-center text-sm font-semibold text-green-500 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#bd9247] hover:bg-cream-100 active:translate-y-0 active:scale-[0.98]"
+      className="inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full border border-line-200 bg-cream-fg/82 px-5 py-3 text-center text-sm font-semibold text-green-500 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 active:translate-y-0 active:scale-[0.98]"
     >
       {children}
     </Link>
@@ -483,7 +483,7 @@ export function Breadcrumbs({
     <nav aria-label="Breadcrumb" className="mb-5 w-full min-w-0">
       <ol
         className={`flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm ${
-          isDark ? "text-[#e3d9c4]/80" : "text-ink-500"
+          isDark ? "text-cream-fg-muted/80" : "text-ink-500"
         }`}
       >
         {items.map((item, index) => {
@@ -508,7 +508,7 @@ export function Breadcrumbs({
                     className={
                       isDark
                         ? "font-semibold underline-offset-4 transition hover:text-cream-fg hover:underline hover:decoration-gold-300/60"
-                        : "font-semibold underline-offset-4 transition hover:text-[#204636] hover:underline hover:decoration-gold-600/50"
+                        : "font-semibold underline-offset-4 transition hover:text-green-700 hover:underline hover:decoration-gold-600/50"
                     }
                   >
                     {item.name}
@@ -516,7 +516,7 @@ export function Breadcrumbs({
                   <ChevronRight
                     size={14}
                     strokeWidth={1.8}
-                    className={`shrink-0 ${isDark ? "text-[#b7a98c]" : "text-ink-400"}`}
+                    className={`shrink-0 ${isDark ? "text-line-400" : "text-ink-400"}`}
                   />
                 </>
               )}
@@ -536,8 +536,8 @@ export function StatusNote({
   tone?: "default" | "boundary" | "info";
 }) {
   const toneStyles = {
-    default: "border-[#d8ddcf] bg-[#f2f5ee]/76 text-success",
-    boundary: "border-[#e3d3b0] bg-[#fbf3e3]/80 text-gold-800",
+    default: "border-note-line bg-note-bg/76 text-success",
+    boundary: "border-line-200 bg-cream-200/80 text-gold-800",
     info: "border-info-line bg-info-bg/80 text-info",
   }[tone];
 
@@ -560,19 +560,19 @@ export const pillBase =
   "inline-flex items-center gap-1.5 rounded-full px-3 py-[5px] text-[0.68rem] font-semibold uppercase tracking-[0.12em] leading-none";
 
 /** Light pill on cream surfaces (meta chips, tags). */
-export const pillLight = `${pillBase} bg-[#fbf5e8] text-gold-800 ring-1 ring-inset ring-[#e6d5b3] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_1px_2px_rgba(71,55,35,0.05)]`;
+export const pillLight = `${pillBase} bg-cream-200 text-gold-800 ring-1 ring-inset ring-line-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_1px_2px_rgba(71,55,35,0.05)]`;
 
 /** Light pill that is interactive (anchors/links). */
-export const pillLightLink = `${pillLight} transition duration-200 hover:bg-[#fdfaf2] hover:ring-[#cdab6e] hover:text-gold-900`;
+export const pillLightLink = `${pillLight} transition duration-200 hover:bg-cream-fg hover:ring-gold-500 hover:text-gold-900`;
 
 /** Gold-tinted pill for emphasis tags. */
-export const pillGold = `${pillBase} bg-[#f6ead0] text-[#7a5816] ring-1 ring-inset ring-[#e6cb88] shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_1px_2px_rgba(122,88,22,0.08)]`;
+export const pillGold = `${pillBase} bg-gold-200 text-gold-800 ring-1 ring-inset ring-gold-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_1px_2px_rgba(122,88,22,0.08)]`;
 
 /** Solid evergreen pill (status badges, numbers). */
-export const pillSolid = `${pillBase} bg-green-600 text-[#fdf6e6] shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_6px_16px_rgba(40,71,55,0.22)]`;
+export const pillSolid = `${pillBase} bg-green-600 text-cream-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_6px_16px_rgba(40,71,55,0.22)]`;
 
 /** Glass pill on dark / photographic surfaces. */
-export const pillDark = `${pillBase} bg-cream-fg/[0.08] text-gold-200 ring-1 ring-inset ring-[#f4dfb5]/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)] backdrop-blur-md`;
+export const pillDark = `${pillBase} bg-cream-fg/[0.08] text-gold-200 ring-1 ring-inset ring-gold-200/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)] backdrop-blur-md`;
 
 export function Pill({
   children,

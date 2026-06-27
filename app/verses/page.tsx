@@ -59,7 +59,7 @@ export default function VersesPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
                 {group.title}
               </p>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
                 {group.topics.length} topics
               </span>
             </div>

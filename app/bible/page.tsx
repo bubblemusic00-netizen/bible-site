@@ -40,7 +40,7 @@ export default function BiblePage() {
               How to Start Reading
             </HeroSecondary>
           </div>
-          <p className="mt-5 text-sm font-semibold leading-6 text-[#f1eadf]/72">
+          <p className="mt-5 text-sm font-semibold leading-6 text-cream-fg-muted/72">
             {readingCount} complete guided readings, organized by theme.
           </p>
         </PageHero>
@@ -66,7 +66,7 @@ export default function BiblePage() {
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
                 {group.title}
               </p>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
                 {group.readings.length} readings
               </span>
             </div>
@@ -91,7 +91,7 @@ export default function BiblePage() {
                   <span className="mt-4 block text-base leading-7 text-ink-600">
                     {reading.description}
                   </span>
-                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#254737]">
+                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-green-600">
                     Read
                     <ArrowRight
                       size={15}
@@ -106,7 +106,7 @@ export default function BiblePage() {
         ))}
       </div>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -115,7 +115,7 @@ export default function BiblePage() {
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
               Scripture, context, reflection, and prayer belong together.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+            <p className="mt-3 text-base leading-7 text-cream-fg/84">
               These readings use the King James Version and pair the text with
               non-denominational reflection guidance. The site is independent
               and is not an official church, Bible publisher, or religious
@@ -124,7 +124,7 @@ export default function BiblePage() {
           </div>
           <Link
             href={supportedBibleChapters[0].href}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-cream-fg"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-fg px-5 py-3 text-sm font-semibold text-green-600 transition hover:bg-cream-fg"
           >
             Start first reading
             <ArrowRight size={16} strokeWidth={1.8} />

@@ -60,14 +60,14 @@ export function ProductMedallion({ product }: { product: Product }) {
   } as const;
 
   return (
-    <div className="relative grid h-44 place-items-center overflow-hidden border-b border-[#eadbc0] bg-[radial-gradient(circle_at_30%_22%,#fbf8f0,#eef1e8)]">
+    <div className="relative grid h-44 place-items-center overflow-hidden border-b border-line-200 bg-[radial-gradient(circle_at_30%_22%,#fbf8f0,#eef1e8)]">
       {/* ambient finish glow */}
       <div
         className="pointer-events-none absolute size-52 rounded-full"
         style={{ background: glow }}
       />
       {/* guide ring */}
-      <div className="pointer-events-none absolute size-36 rounded-full border border-[#d8ddcf]/55" />
+      <div className="pointer-events-none absolute size-36 rounded-full border border-note-line/55" />
 
       {/* bail loop (necklaces + medals only) */}
       {shape !== "ring" ? (

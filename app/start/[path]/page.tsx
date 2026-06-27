@@ -102,7 +102,7 @@ export default async function StartPathPage({
         <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
           Your result, in four steps.
         </h2>
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
           Scripture &middot; prayer &middot; reflection &middot; step
         </span>
       </div>
@@ -142,7 +142,7 @@ export default async function StartPathPage({
         />
       </div>
 
-      <section className="mt-8 rounded-lg bg-[#233f31] p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -151,7 +151,7 @@ export default async function StartPathPage({
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
               A reminder, not a promise.
             </h2>
-            <p className="mt-3 text-base leading-7 text-[#fff8e8]/84">
+            <p className="mt-3 text-base leading-7 text-cream-fg/84">
               {faithPath.symbolReminder} A symbol should never be treated as a
               source of power, luck, promised protection, healing, or
               spiritual results.
@@ -159,7 +159,7 @@ export default async function StartPathPage({
           </div>
           <Link
             href={faithPath.jewelryRoute}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#fff8eb] px-5 py-3 text-sm font-semibold text-[#244336] transition hover:bg-cream-fg"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-fg px-5 py-3 text-sm font-semibold text-green-600 transition hover:bg-cream-fg"
           >
             Explore Faith Symbols
             <Gem size={16} strokeWidth={1.8} />
@@ -222,7 +222,7 @@ function PathSection({
       {href && cta ? (
         <Link
           href={href}
-          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#254737] transition hover:text-gold-700"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-green-600 transition hover:text-gold-700"
         >
           {cta}
           <ArrowRight size={15} strokeWidth={1.8} />

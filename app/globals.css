@@ -48,6 +48,7 @@
   --color-cream-300: #fbf7ed; /* page background */
   --color-cream-400: #f4ecdb; /* recessed surface */
   --color-cream-fg: #fffaf0; /* text/icons on dark */
+  --color-cream-fg-muted: #f1eadf; /* muted text on dark heroes */
 
   /* Ink / warm-neutral text */
   --color-ink-900: #241f19; /* headings */
@@ -70,6 +71,11 @@
   --color-info-line: #cfdce6;
   --color-error: #9b3434;
   --color-error-soft: #c08a8a;
+
+  /* Tinted surfaces with a specific role (not entropy) */
+  --color-mist-200: #eef1e8; /* selected chip / soft green surface */
+  --color-note-bg: #f2f5ee; /* default StatusNote surface */
+  --color-note-line: #d8ddcf; /* default StatusNote border */
 
   /* Elevation scale (brown ambient) + green-surface + inset highlight */
   --shadow-elev-1: 0 1px 2px rgba(71, 55, 35, 0.05);

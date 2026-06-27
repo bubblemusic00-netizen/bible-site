@@ -114,14 +114,14 @@ function AvailableBookOverview({ slug }: { slug: string }) {
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {readingIncludes.map(({ icon: Icon, label, note }) => (
             <div key={label} className="flex items-start gap-3">
-              <span className="mt-0.5 grid size-9 shrink-0 place-items-center rounded-full border border-line-300 bg-cream-300 text-[#254737]">
+              <span className="mt-0.5 grid size-9 shrink-0 place-items-center rounded-full border border-line-300 bg-cream-300 text-green-600">
                 <Icon size={17} strokeWidth={1.6} />
               </span>
               <span className="min-w-0">
                 <span className="block text-sm font-semibold text-ink-900">
                   {label}
                 </span>
-                <span className="block text-xs leading-5 text-[#6a6258]">
+                <span className="block text-xs leading-5 text-ink-600">
                   {note}
                 </span>
               </span>
@@ -134,7 +134,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
         <h2 className="font-serif text-3xl font-semibold text-ink-900">
           Read {details.name}
         </h2>
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ac9061]">
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
           {readingCount} {readingCount === 1 ? "chapter" : "chapters"}
         </span>
       </div>
@@ -159,7 +159,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
             <span className="mt-3 block text-base leading-7 text-ink-600">
               {chapter.description}
             </span>
-            <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#254737]">
+            <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-green-600">
               Read this chapter
               <ArrowRight
                 size={15}

@@ -25,7 +25,7 @@ export function BackToTop() {
       onClick={toTop}
       aria-label="Back to top"
       tabIndex={show ? 0 : -1}
-      className={`fixed bottom-6 right-6 z-[55] grid size-11 place-items-center rounded-full border border-line-400 bg-cream-fg/95 text-[#254737] shadow-[0_10px_28px_rgba(71,55,35,0.18)] backdrop-blur transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-cream-100 hover:shadow-[0_14px_34px_rgba(71,55,35,0.22)] ${
+      className={`fixed bottom-6 right-6 z-[60] grid size-11 place-items-center rounded-full border border-line-400 bg-cream-fg/95 text-green-600 shadow-[0_10px_28px_rgba(71,55,35,0.18)] backdrop-blur transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-cream-100 hover:shadow-[0_14px_34px_rgba(71,55,35,0.22)] ${
         show
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0"
