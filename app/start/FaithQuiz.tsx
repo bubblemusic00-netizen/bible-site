@@ -156,12 +156,14 @@ export function FaithQuiz() {
 
   // Move focus to the new step's heading so keyboard and screen-reader users
   // hear the question; skip the initial mount so we don't steal focus/scroll.
+  // preventScroll keeps the card from jumping the viewport on mobile when the
+  // step changes — the quiz stays put instead of scroll-snapping to the title.
   useEffect(() => {
     if (skipFocus.current) {
       skipFocus.current = false;
       return;
     }
-    headingRef.current?.focus();
+    headingRef.current?.focus({ preventScroll: true });
   }, [step]);
 
   const path = intention ? startFaithPaths[intention] : null;
@@ -271,7 +273,9 @@ export function FaithQuiz() {
       </div>
 
       <div className="overflow-hidden rounded-[1.4rem] bg-[#fffaf1] text-[#241f19] shadow-[0_18px_50px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60">
-        <div className="p-5 sm:p-7">
+        {/* min-height keeps the question steps a steady size on mobile so the
+            card doesn't resize and jump between steps; result step grows past it. */}
+        <div className="min-h-[26rem] p-5 sm:min-h-0 sm:p-7">
           {step === 1 ? (
             <QuizStep
               eyebrow="Step 1 of 3 · What you need"
