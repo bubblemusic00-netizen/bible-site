@@ -253,12 +253,12 @@ export default function Home() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex min-h-44 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-6 text-ink-900 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
+                className="group flex min-h-44 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-6 text-ink-900 shadow-elev-2 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
               >
                 <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
                   {item.eyebrow}
                 </span>
-                <span className="mt-3 block font-serif text-[1.7rem] font-semibold leading-[1.1] text-ink-900">
+                <span className="mt-3 block font-serif text-card font-semibold leading-[1.1] text-ink-900">
                   {item.title}
                 </span>
                 <span className="mt-4 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />

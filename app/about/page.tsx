@@ -76,7 +76,7 @@ export default function AboutPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-6 max-w-5xl overflow-hidden rounded-lg border border-note-line bg-note-bg p-6 shadow-[0_18px_38px_rgba(71,55,35,0.05)] sm:p-8">
+      <section className="mt-6 max-w-5xl overflow-hidden rounded-lg border border-note-line bg-note-bg p-6 shadow-elev-3 sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
           The name
         </p>
@@ -93,7 +93,7 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-8">
         <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:items-start">
           <span className="grid size-12 shrink-0 place-items-center rounded-full bg-mist-200 text-green-600">
             <Heart size={22} strokeWidth={1.8} />
@@ -142,7 +142,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-6 grid max-w-5xl gap-5 lg:grid-cols-2">
-        <article className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+        <article className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-8">
           <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
             <BookOpenText size={20} strokeWidth={1.8} />
           </span>
@@ -172,7 +172,7 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-8">
         <p className="text-sm font-semibold uppercase text-gold-700">
           Read the boundaries
         </p>
@@ -199,7 +199,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-6 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-8">
         <p className="text-sm font-semibold uppercase text-gold-700">
           Trust principles
         </p>

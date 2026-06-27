@@ -430,7 +430,7 @@ function SymbolIndexLink({ symbol }: { symbol: FaithSymbol }) {
   return (
     <Link
       href={`/jewelry/symbols/${symbol.slug}`}
-      className="group flex min-w-0 items-center gap-4 rounded-xl border border-line-200 bg-cream-200/70 px-4 py-4 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_14px_30px_rgba(71,55,35,0.08)]"
+      className="group flex min-w-0 items-center gap-4 rounded-xl border border-line-200 bg-cream-200/70 px-4 py-4 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-2"
     >
       <Medallion icon={Icon} size={54} />
       <span className="min-w-0">

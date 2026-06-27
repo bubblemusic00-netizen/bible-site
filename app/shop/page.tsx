@@ -80,7 +80,7 @@ export default function ShopPage() {
         {allProducts.map((product) => {
           const href = productUrl(product);
           const cardClass =
-            "flex h-full flex-col overflow-hidden rounded-lg border border-line-200 bg-cream-200/78 shadow-[0_18px_42px_rgba(71,55,35,0.045)]";
+            "flex h-full flex-col overflow-hidden rounded-lg border border-line-200 bg-cream-200/78 shadow-elev-3";
 
           const content = (
             <>
@@ -126,7 +126,7 @@ export default function ShopPage() {
             <Link
               key={product.slug}
               href={href}
-              className={`group transition hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)] ${cardClass}`}
+              className={`group transition hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-elev-4 ${cardClass}`}
             >
               {content}
             </Link>

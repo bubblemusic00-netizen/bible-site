@@ -564,7 +564,7 @@ function ChoiceRadioGroup({
               {...common}
               className={
                 selected
-                  ? "min-h-12 rounded-xl border border-green-600 bg-mist-200 px-4 py-3 text-left text-sm font-semibold leading-6 text-green-600 shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
+                  ? "min-h-12 rounded-xl border border-green-600 bg-mist-200 px-4 py-3 text-left text-sm font-semibold leading-6 text-green-600 shadow-elev-green-3"
                   : "min-h-12 rounded-xl border border-line-300 bg-cream-300 px-4 py-3 text-left text-sm font-semibold leading-6 text-ink-600 transition hover:border-gold-500 hover:text-green-600"
               }
             >
@@ -580,7 +580,7 @@ function ChoiceRadioGroup({
               {...common}
               className={
                 selected
-                  ? "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-green-600 bg-mist-200 px-3 py-2.5 text-left shadow-[0_8px_20px_rgba(40,71,55,0.08)]"
+                  ? "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-green-600 bg-mist-200 px-3 py-2.5 text-left shadow-elev-green-3"
                   : "flex min-h-[58px] items-center gap-2.5 rounded-xl border border-line-300 bg-cream-300 px-3 py-2.5 text-left transition hover:border-gold-500"
               }
             >
@@ -618,7 +618,7 @@ function ChoiceRadioGroup({
             {...common}
             className={
               selected
-                ? "flex min-h-[60px] flex-col rounded-xl border border-green-600 bg-mist-200 p-3 text-left shadow-[0_10px_26px_rgba(40,71,55,0.08)]"
+                ? "flex min-h-[60px] flex-col rounded-xl border border-green-600 bg-mist-200 p-3 text-left shadow-elev-green-3"
                 : "flex min-h-[60px] flex-col rounded-xl border border-line-300 bg-cream-300 p-3 text-left transition hover:border-gold-500"
             }
           >
@@ -670,7 +670,7 @@ function ResultItem({
     <div
       className={
         primary
-          ? "rounded-xl border border-gold-400 bg-cream-200 p-3.5 shadow-[0_10px_26px_rgba(71,55,35,0.06)] sm:col-span-2"
+          ? "rounded-xl border border-gold-400 bg-cream-200 p-3.5 shadow-elev-2 sm:col-span-2"
           : "rounded-xl border border-note-line bg-cream-100/70 p-3.5"
       }
     >

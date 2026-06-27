@@ -142,7 +142,7 @@ export default async function StartPathPage({
         />
       </div>
 
-      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-elev-green-4 sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">
@@ -167,7 +167,7 @@ export default async function StartPathPage({
         </div>
       </section>
 
-      <section className="mt-8 max-w-3xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+      <section className="mt-8 max-w-3xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-8">
         <NewsletterSignup
           heading="Carry this past today"
           description="One short email each morning — a verse, a reflection, and a prayer to return to. No spam, unsubscribe anytime."
@@ -205,7 +205,7 @@ function PathSection({
   cta?: string;
 }) {
   return (
-    <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-8">
+    <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-8">
       <div className="flex items-center gap-3">
         <span className="grid size-11 place-items-center rounded-full bg-green-600 font-serif text-lg font-semibold text-cream-fg">
           {step}

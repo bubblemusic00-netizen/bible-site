@@ -27,7 +27,7 @@ export function MobileSiteMenu({
         aria-controls="mobile-site-menu"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-line-400 bg-cream-fg px-4 py-2 text-sm font-semibold text-green-600 shadow-[0_8px_20px_rgba(71,55,35,0.06)] transition hover:border-gold-500 hover:bg-cream-100"
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-line-400 bg-cream-fg px-4 py-2 text-sm font-semibold text-green-600 shadow-elev-2 transition hover:border-gold-500 hover:bg-cream-100"
       >
         {isOpen ? <X size={18} strokeWidth={1.8} /> : <Menu size={18} strokeWidth={1.8} />}
         Menu

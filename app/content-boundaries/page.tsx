@@ -75,7 +75,7 @@ export default function ContentBoundariesPage() {
         </StatusNote>
       </div>
 
-      <section className="mt-6 rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_22px_52px_rgba(71,55,35,0.07)] sm:p-8">
+      <section className="mt-6 rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-4 sm:p-8">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase text-gold-700">
             Clear limits
@@ -99,7 +99,7 @@ export default function ContentBoundariesPage() {
           return (
             <article
               key={boundary.title}
-              className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
+              className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-7"
             >
               <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
                 <Icon size={20} strokeWidth={1.8} />
@@ -115,7 +115,7 @@ export default function ContentBoundariesPage() {
         })}
       </section>
 
-      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-elev-green-4 sm:p-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-gold-300">
             Compassionate caution

@@ -49,7 +49,7 @@ export function LegalInfoPage({
         {sections.map((section) => (
           <article
             key={section.title}
-            className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-7"
+            className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-7"
           >
             <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900">
               {section.title}

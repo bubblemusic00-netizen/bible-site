@@ -107,7 +107,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
         />
       }
     >
-      <section className="rounded-lg border border-line-300 bg-cream-200 p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
+      <section className="rounded-lg border border-line-300 bg-cream-200 p-5 shadow-elev-3 sm:p-6">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
           What each reading includes
         </p>
@@ -144,7 +144,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
           <Link
             key={chapter.href}
             href={chapter.href}
-            className="group flex min-w-0 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-5 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
+            className="group flex min-w-0 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-5 shadow-elev-2 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
           >
             <div className="flex items-center justify-between gap-3">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">

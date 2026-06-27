@@ -97,12 +97,12 @@ export default async function PrayerPathPage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
-        <section className="relative overflow-hidden rounded-lg border border-line-200 bg-cream-300 px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
+        <section className="relative overflow-hidden rounded-lg border border-line-200 bg-cream-300 px-4 py-10 shadow-elev-5 sm:px-8 sm:py-12 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.18),transparent_66%)]" />
           <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
 
-          <section className="relative mx-auto w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-7 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-9">
+          <section className="relative mx-auto w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-7 shadow-elev-4 sm:px-9 sm:py-9">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
               Before you pray
             </p>
@@ -114,7 +114,7 @@ export default async function PrayerPathPage({
             </p>
           </section>
 
-          <article className="relative mx-auto mt-6 w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-8 shadow-[0_22px_70px_rgba(71,55,35,0.08)] sm:px-9 sm:py-11">
+          <article className="relative mx-auto mt-6 w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-8 shadow-elev-4 sm:px-9 sm:py-11">
             <div className="border-b border-line-200 pb-6">
               <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
                 The prayer
@@ -143,7 +143,7 @@ export default async function PrayerPathPage({
 
         <section
           id="after-prayer" data-reveal
-          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
+          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-elev-green-3 sm:p-8"
         >
           <div className="mx-auto max-w-[760px]">
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">

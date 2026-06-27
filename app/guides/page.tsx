@@ -68,7 +68,7 @@ export default function GuidesPage() {
                 {group.guides.length} {group.guides.length === 1 ? "guide" : "guides"}
               </span>
             </div>
-            <h2 className="mt-2 max-w-2xl font-serif text-[1.7rem] font-semibold leading-tight text-ink-900 sm:text-[1.95rem]">
+            <h2 className="mt-2 max-w-2xl font-serif text-card font-semibold leading-tight text-ink-900 sm:text-[1.95rem]">
               {group.description}
             </h2>
 
@@ -81,7 +81,7 @@ export default function GuidesPage() {
                 <Link
                   key={guide.slug}
                   href={`/guides/${guide.slug}`}
-                  className={`group flex min-w-0 flex-col rounded-xl border border-line-200 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)] ${
+                  className={`group flex min-w-0 flex-col rounded-xl border border-line-200 shadow-elev-2 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-elev-4 ${
                     group.key === "start"
                       ? "bg-cream-200 p-7 sm:p-8"
                       : "bg-cream-200/70 p-5 hover:bg-cream-100"
@@ -91,7 +91,7 @@ export default function GuidesPage() {
                     className={`block font-serif font-semibold leading-[1.1] text-ink-900 ${
                       group.key === "start"
                         ? "text-[2rem] sm:text-[2.3rem]"
-                        : "text-[1.7rem]"
+                        : "text-card"
                     }`}
                   >
                     {guide.title}
@@ -115,7 +115,7 @@ export default function GuidesPage() {
         ))}
       </div>
 
-      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-elev-green-4 sm:p-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-gold-300">

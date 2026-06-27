@@ -52,7 +52,7 @@ export function FaithJourneyNav({
   return (
     <nav
       aria-label={`${faithPath.title} Faith Path journey`}
-      className="mt-7 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-2 shadow-[0_16px_34px_rgba(71,55,35,0.055)]"
+      className="mt-7 max-w-5xl rounded-lg border border-line-300 bg-cream-200 p-2 shadow-elev-3"
     >
       <ol className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-4">
         {steps.map((step) => {

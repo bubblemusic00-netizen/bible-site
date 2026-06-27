@@ -405,10 +405,10 @@ export function CardLink({
   return (
     <Link
       href={href}
-      className="group relative flex h-full min-w-0 flex-col overflow-hidden rounded-lg border border-line-200 bg-cream-200/78 p-5 shadow-[0_18px_42px_rgba(71,55,35,0.045)] transition duration-200 hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_22px_52px_rgba(71,55,35,0.08)]"
+      className="group relative flex h-full min-w-0 flex-col overflow-hidden rounded-lg border border-line-200 bg-cream-200/78 p-5 shadow-elev-3 transition duration-200 hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
     >
       <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-cream-50" />
-      <h2 className="break-words font-serif text-[1.7rem] font-semibold leading-[1.1] text-ink-900">
+      <h2 className="break-words font-serif text-card font-semibold leading-[1.1] text-ink-900">
         {title}
       </h2>
       <span className="mt-4 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />

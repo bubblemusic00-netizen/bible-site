@@ -117,13 +117,13 @@ export default async function GuidePage({
         ]}
       />
       <div className="mx-auto w-full max-w-6xl">
-        <section className="relative overflow-hidden rounded-lg border border-line-200 bg-cream-300 px-4 py-10 shadow-[0_28px_90px_rgba(71,55,35,0.09)] sm:px-8 sm:py-12 lg:px-12">
+        <section className="relative overflow-hidden rounded-lg border border-line-200 bg-cream-300 px-4 py-10 shadow-elev-5 sm:px-8 sm:py-12 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(196,156,82,0.18),transparent_66%)]" />
           <div className="pointer-events-none absolute inset-y-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
 
           <div className="relative mx-auto grid w-full max-w-[920px] gap-5 lg:grid-cols-[0.74fr_1.26fr]">
-            <aside className="h-fit rounded-lg border border-line-300 bg-cream-100 p-5 shadow-[0_22px_70px_rgba(71,55,35,0.07)] sm:p-6 lg:sticky lg:top-8">
+            <aside className="h-fit rounded-lg border border-line-300 bg-cream-100 p-5 shadow-elev-4 sm:p-6 lg:sticky lg:top-8">
               <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
                 In this guide
               </p>
@@ -154,7 +154,7 @@ export default async function GuidePage({
                 <section
                   id={toSectionId(section.heading)}
                   key={section.heading}
-                  className="scroll-mt-24 rounded-lg border border-line-300 bg-cream-100 px-5 py-7 shadow-[0_22px_70px_rgba(71,55,35,0.07)] sm:px-8"
+                  className="scroll-mt-24 rounded-lg border border-line-300 bg-cream-100 px-5 py-7 shadow-elev-4 sm:px-8"
                 >
                   <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
                     {section.heading}
@@ -172,7 +172,7 @@ export default async function GuidePage({
 
         <section
           id="try-this-today"
-          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-[0_20px_50px_rgba(40,71,55,0.08)] sm:p-8"
+          className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-elev-green-3 sm:p-8"
         >
           <div className="mx-auto max-w-[780px]">
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
@@ -237,7 +237,7 @@ export default async function GuidePage({
                 <Link
                   key={sibling.slug}
                   href={`/guides/${sibling.slug}`}
-                  className="group flex min-w-0 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-5 shadow-[0_14px_36px_rgba(71,55,35,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-[0_20px_48px_rgba(71,55,35,0.09)]"
+                  className="group flex min-w-0 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-5 shadow-elev-2 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
                 >
                   <span className="block font-serif text-xl font-semibold leading-tight text-ink-900">
                     {sibling.title}
@@ -287,7 +287,7 @@ function RelatedLinks({
   links: readonly GuideLink[];
 }) {
   return (
-    <section className="rounded-lg border border-line-300 bg-cream-200 p-5 shadow-[0_18px_38px_rgba(71,55,35,0.055)] sm:p-6">
+    <section className="rounded-lg border border-line-300 bg-cream-200 p-5 shadow-elev-3 sm:p-6">
       <h2 className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
         <Icon size={16} strokeWidth={1.8} />
         {title}

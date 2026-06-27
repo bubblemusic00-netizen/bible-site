@@ -139,7 +139,7 @@ export default async function SymbolPage({
         </StatusNote>
       </div>
 
-      <section className="mt-9 overflow-hidden rounded-lg border border-line-300 bg-cream-200 shadow-[0_24px_70px_rgba(71,55,35,0.08)]">
+      <section className="mt-9 overflow-hidden rounded-lg border border-line-300 bg-cream-200 shadow-elev-4">
         <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="relative grid place-items-center overflow-hidden border-b border-line-300 bg-[radial-gradient(circle_at_center,#fbf7ed,#eef1e8)] p-10 lg:border-b-0 lg:border-r">
             <div className="pointer-events-none absolute size-60 rounded-full bg-[radial-gradient(circle,rgba(196,156,82,0.16),transparent_70%)]" />
@@ -207,7 +207,7 @@ export default async function SymbolPage({
         </div>
       </section>
 
-      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-[0_24px_70px_rgba(40,71,55,0.16)] sm:p-8">
+      <section className="mt-8 rounded-lg bg-green-700 p-6 text-cream-fg shadow-elev-green-4 sm:p-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-gold-300">
             Keeping it close
@@ -245,7 +245,7 @@ function RelatedPanel({
   link: FaithSymbol["relatedBible"];
 }) {
   return (
-    <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-[0_18px_38px_rgba(71,55,35,0.055)]">
+    <section className="rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3">
       <span className="grid size-11 place-items-center rounded-full bg-mist-200 text-green-600">
         <Icon size={20} strokeWidth={1.8} />
       </span>
