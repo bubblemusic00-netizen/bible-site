@@ -213,7 +213,7 @@ export function FaithQuiz() {
   return (
     <section
       aria-labelledby="faith-quiz-title"
-      className="relative isolate mx-auto mt-6 max-w-3xl overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_15%_0%,rgba(239,204,139,0.16),transparent_38%),linear-gradient(135deg,#17251d_0%,#203d30_52%,#141a13_100%)] p-1.5 text-[#fffaf0] shadow-[0_28px_80px_rgba(25,45,34,0.2)] ring-1 ring-[#e9c985]/18 sm:p-2"
+      className="relative isolate mx-auto mt-4 max-w-3xl overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_15%_0%,rgba(239,204,139,0.16),transparent_38%),linear-gradient(135deg,#17251d_0%,#203d30_52%,#141a13_100%)] p-1.5 text-[#fffaf0] shadow-[0_28px_80px_rgba(25,45,34,0.2)] ring-1 ring-[#e9c985]/18 sm:p-2"
     >
       {/* Header strip: horizontal stepper only. The page-level intro already
           carries the "Faith Quiz" label, so the old duplicate is gone. */}
@@ -275,7 +275,7 @@ export function FaithQuiz() {
       <div className="overflow-hidden rounded-[1.4rem] bg-[#fffaf1] text-[#241f19] shadow-[0_18px_50px_rgba(0,0,0,0.16)] ring-1 ring-[#fffaf0]/60">
         {/* min-height keeps the question steps a steady size on mobile so the
             card doesn't resize and jump between steps; result step grows past it. */}
-        <div className="min-h-[26rem] p-5 sm:min-h-0 sm:p-7">
+        <div key={step} className="min-h-[19rem] p-4 quiz-step-fade sm:min-h-0 sm:p-7">
           {step === 1 ? (
             <QuizStep
               eyebrow="Step 1 of 3 · What you need"
@@ -339,7 +339,7 @@ export function FaithQuiz() {
             >
               <ChoiceRadioGroup
                 label="What are you carrying right now?"
-                columns="grid-cols-1 sm:grid-cols-2"
+                columns="grid-cols-2"
                 variant="chip"
                 value={carrying}
                 onChange={(v) => setCarrying(v as CarryingChoice)}
@@ -359,7 +359,7 @@ export function FaithQuiz() {
                     id="faith-quiz-title"
                     ref={headingRef}
                     tabIndex={-1}
-                    className="mt-1.5 font-serif text-2xl font-semibold leading-tight text-[#241f19] outline-none sm:text-3xl"
+                    className="mt-1 font-serif text-xl font-semibold leading-tight text-[#241f19] outline-none sm:mt-1.5 sm:text-3xl"
                   >
                     {path.title} Faith Path
                   </h2>
@@ -450,17 +450,17 @@ function QuizStep({
         id="faith-quiz-title"
         ref={headingRef}
         tabIndex={-1}
-        className="mt-1.5 font-serif text-2xl font-semibold leading-tight text-[#241f19] outline-none sm:text-3xl"
+        className="mt-1 font-serif text-xl font-semibold leading-tight text-[#241f19] outline-none sm:mt-1.5 sm:text-3xl"
       >
         {title}
       </h2>
       {description ? (
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#5c5347]">
+        <p className="mt-1.5 max-w-2xl text-xs leading-5 text-[#5c5347] sm:mt-2 sm:text-sm sm:leading-6">
           {description}
         </p>
       ) : null}
-      <div className="mt-4">{children}</div>
-      <div className="mt-5 flex items-center gap-2.5">
+      <div className="mt-3.5">{children}</div>
+      <div className="mt-4 flex items-center gap-2.5">
         {onBack ? (
           <button
             type="button"
@@ -609,8 +609,8 @@ function ChoiceRadioGroup({
             {...common}
             className={
               selected
-                ? "flex min-h-[92px] flex-col rounded-xl border border-[#244336] bg-[#eef1e8] p-4 text-left shadow-[0_10px_26px_rgba(40,71,55,0.08)]"
-                : "flex min-h-[92px] flex-col rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] p-4 text-left transition hover:border-[#c49c52]"
+                ? "flex min-h-[60px] flex-col rounded-xl border border-[#244336] bg-[#eef1e8] p-3 text-left shadow-[0_10px_26px_rgba(40,71,55,0.08)]"
+                : "flex min-h-[60px] flex-col rounded-xl border border-[#dfcfb2] bg-[#fbf7ed] p-3 text-left transition hover:border-[#c49c52]"
             }
           >
             <span className="flex items-center justify-between">
@@ -633,11 +633,11 @@ function ChoiceRadioGroup({
                 </span>
               ) : null}
             </span>
-            <span className="mt-2.5 block font-serif text-lg font-semibold leading-tight text-[#241f19]">
+            <span className="mt-2 block font-serif text-base font-semibold leading-tight text-[#241f19] sm:text-lg">
               {option.title}
             </span>
             {option.description ? (
-              <span className="mt-1 block text-xs leading-5 text-[#625b51]">
+              <span className="mt-1 hidden text-xs leading-5 text-[#625b51] sm:block">
                 {option.description}
               </span>
             ) : null}

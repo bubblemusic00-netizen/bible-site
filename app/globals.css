@@ -105,6 +105,22 @@ a:focus-visible {
   animation: fade-rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
+/* Quiz step transition — a soft crossfade so stages flow into each other
+   instead of snapping. Keyed on the step so it replays each advance. */
+@keyframes quiz-step-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.quiz-step-fade {
+  animation: quiz-step-fade 0.38s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
 @keyframes scroll-cue {
   0%,
   100% {
