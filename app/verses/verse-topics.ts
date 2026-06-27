@@ -722,6 +722,126 @@ export const verseTopics = {
     relatedFaithPath: "guidance",
     translation: "King James Version",
   },
+  courage: {
+    slug: "courage",
+    title: "Bible Verses About Courage",
+    shortTitle: "Courage",
+    description:
+      "King James Version Bible verses about courage and facing fear, with a short reflection and a prayer for the next brave step.",
+    intro:
+      "Courage in Scripture is rarely the absence of fear — it is doing the next right thing because God goes with you. These verses steady the heart before a hard moment.",
+    verses: [
+      {
+        reference: "Joshua 1:9",
+        text: "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+      },
+      {
+        reference: "Deuteronomy 31:6",
+        text: "Be strong and of a good courage, fear not, nor be afraid of them: for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee.",
+      },
+      {
+        reference: "Psalm 27:1",
+        text: "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+      },
+      {
+        reference: "Isaiah 41:10",
+        text: "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      },
+      {
+        reference: "1 Corinthians 16:13",
+        text: "Watch ye, stand fast in the faith, quit you like men, be strong.",
+      },
+      {
+        reference: "Psalm 31:24",
+        text: "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD.",
+      },
+    ],
+    reflection:
+      "Courage is borrowed, not summoned — it comes from who is with you, not from how strong you feel. Name the one step in front of you and take it with God.",
+    relatedPrayerSlug: "courage",
+    relatedFaithPath: "strength",
+    translation: "King James Version",
+  },
+  patience: {
+    slug: "patience",
+    title: "Bible Verses About Patience",
+    shortTitle: "Patience",
+    description:
+      "King James Version Bible verses about patience and waiting on God, with a short reflection and a prayer for seasons that move slowly.",
+    intro:
+      "Waiting is hard, and Scripture does not rush it. These verses reframe patience as trust that keeps doing good while it waits, rather than a passive delay.",
+    verses: [
+      {
+        reference: "Romans 12:12",
+        text: "Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      },
+      {
+        reference: "James 1:3",
+        text: "Knowing this, that the trying of your faith worketh patience.",
+      },
+      {
+        reference: "Galatians 6:9",
+        text: "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+      },
+      {
+        reference: "Psalm 37:7",
+        text: "Rest in the LORD, and wait patiently for him: fret not thyself because of him who prospereth in his way, because of the man who bringeth wicked devices to pass.",
+      },
+      {
+        reference: "Romans 8:25",
+        text: "But if we hope for that we see not, then do we with patience wait for it.",
+      },
+      {
+        reference: "Isaiah 40:31",
+        text: "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      },
+    ],
+    reflection:
+      "Patience is not doing nothing; it is doing the next faithful thing without the timeline you wanted. Wait well, and keep doing good in the meantime.",
+    relatedPrayerSlug: "patience",
+    relatedFaithPath: "hope",
+    translation: "King James Version",
+  },
+  loneliness: {
+    slug: "loneliness",
+    title: "Bible Verses About Loneliness",
+    shortTitle: "Loneliness",
+    description:
+      "King James Version Bible verses about loneliness and feeling alone, with a short reflection and a prayer for the nearness of God.",
+    intro:
+      "Loneliness can feel like proof that no one is there. These verses meet the ache honestly and point to a God who stays close, and who sets the solitary in families.",
+    verses: [
+      {
+        reference: "Deuteronomy 31:6",
+        text: "Be strong and of a good courage, fear not, nor be afraid of them: for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee.",
+      },
+      {
+        reference: "Hebrews 13:5",
+        text: "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+      },
+      {
+        reference: "Psalm 68:6",
+        text: "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.",
+      },
+      {
+        reference: "Psalm 25:16",
+        text: "Turn thee unto me, and have mercy upon me; for I am desolate and afflicted.",
+      },
+      {
+        reference: "Matthew 28:20",
+        text: "Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen.",
+      },
+      {
+        reference: "Psalm 147:3",
+        text: "He healeth the broken in heart, and bindeth up their wounds.",
+      },
+    ],
+    reflection:
+      "Loneliness is real, and it is not the whole truth. Speak the ache to God, then take one small step toward people — a message, a prayer, a door opened.",
+    relatedPrayerSlug: "loneliness",
+    relatedFaithPath: "peace",
+    translation: "King James Version",
+  },
 } as const satisfies Record<string, VerseTopic>;
 
 export type VerseTopicSlug = keyof typeof verseTopics;
