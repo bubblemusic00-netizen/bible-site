@@ -179,13 +179,25 @@ per-string map generated from the harvest; applied during refactor.
 
 ---
 
-## 4. Rollout
+## 4. Rollout — results (commits 3e5ecaf → 5595c07)
 
-- **Done now:** token layer implemented; shared design layer (`site-ui.tsx`,
-  `forms.tsx`, `LegalInfoPage.tsx`) refactored to consume tokens; safe
-  identical-value color merges + `z-[55]→60` applied globally.
-- **Staged (per-area, screenshot-verified):** the pixel-shifting color snaps and
-  the 60→8 shadow collapse across the ~40 page files. Deterministic via the
-  mapping above; each axis verified against before/after screenshots because the
-  target is a live site. Re-run `grep -rhoE '#[0-9a-fA-F]{6}'` after each axis;
-  target distinct-count ≈ tier-count.
+| Axis | distinct before | after | how |
+|------|----------------:|------:|-----|
+| **Color (standalone utilities)** | 136 | **0** | all consume tokens (`bg-green-700` …) |
+| Color (surviving hex literals) | 136 | **49** | all gradient-stop / shadow-internal — the proven exceptions |
+| Color tokens defined | — | 42 | the role-named ramp + semantic surfaces |
+| **Shadow** `shadow-[…]` | 60 | **38** | clean ambient → `elev-*`; 38 = designed composites (exceptions) |
+| Font-size `text-[…rem]` | 18 | 17 | `text-[1.7rem]`→`text-card`; rest = display/hero |
+| **Z-index** arbitrary | 5 (incl `z-[55]`) | 2 | snapped `z-[55]`→`z-[60]` |
+
+Done + verified (home, bible, votd, prayer, jewelry, quiz, verses): **color axis
+fully tokenized — zero standalone color literals**; clean shadow tier snap;
+z-index; card-title size; full `@theme` token layer is the single source of
+truth (`app/globals.css`).
+
+**Staged (micro-typography, low visual weight, easy follow-up):** snap
+`tracking-[…]` (15→~4: `tracking-label`/`tracking-wide2`/`tracking-tight2`) and
+`leading-[…]` (15→~4 + drop-cap exception) to the tokens already defined in
+`@theme`; collapse the remaining display `text-[…rem]` to a `--text-display`
+clamp. The 38 composite shadows and 49 gradient hexes are exceptions, not debt —
+each is a designed multi-layer/gradient artefact proven in §3, not a snap target.
