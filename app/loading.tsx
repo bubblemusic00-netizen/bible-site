@@ -19,7 +19,7 @@ export default function Loading() {
             <rect x="6.9" y="26.2" width="14.2" height="1.7" rx="0.85" fill="#e6bf63" />
           </svg>
         </span>
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+        <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
           Loading
         </p>
       </div>

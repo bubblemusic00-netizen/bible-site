@@ -129,7 +129,7 @@ export default async function BibleChapterPage({
               <h2 className="font-serif text-2xl font-semibold leading-tight text-ink-900 sm:text-[1.75rem]">
                 The Reading
               </h2>
-              <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
+              <p className="shrink-0 text-xs font-semibold uppercase tracking-label text-gold-700">
                 {reference} &middot; {chapterData.translation}
               </p>
             </div>
@@ -138,7 +138,7 @@ export default async function BibleChapterPage({
               {chapterData.verses.map((verse, i) => (
                 <p
                   key={verse.number}
-                  className="grid w-full min-w-0 grid-cols-[1.5rem_minmax(0,1fr)] gap-3 font-serif text-[1.3rem] leading-[1.7] text-ink-800 sm:grid-cols-[2rem_minmax(0,1fr)] sm:text-[1.5rem] sm:leading-[1.72]"
+                  className="grid w-full min-w-0 grid-cols-[1.5rem_minmax(0,1fr)] gap-3 font-serif text-[1.3rem] leading-body text-ink-800 sm:grid-cols-[2rem_minmax(0,1fr)] sm:text-[1.5rem] sm:leading-body"
                 >
                   <span className="select-none pt-[0.55rem] text-right font-sans text-[0.7rem] font-semibold leading-none text-gold-700 sm:text-xs">
                     {verse.number}
@@ -163,7 +163,7 @@ export default async function BibleChapterPage({
           className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-elev-green-3 sm:p-8"
         >
           <div className="mx-auto max-w-[760px]">
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-800">
               <Feather size={15} strokeWidth={1.8} />
               After you read
             </p>

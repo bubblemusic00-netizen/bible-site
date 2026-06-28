@@ -98,7 +98,9 @@
 
   /* Leading tiers */
   --leading-display: 1.04;
+  --leading-heading: 1.1;
   --leading-snug2: 1.28;
+  --leading-body: 1.65;
 
   /* Radius tiers */
   --radius-card: 1.4rem;

@@ -82,7 +82,7 @@ export function SiteHeader({
             <SelahMark />
           </span>
           <span
-            className={`truncate font-serif text-[1.4rem] font-semibold tracking-[0.005em] transition-colors ${
+            className={`truncate font-serif text-[1.4rem] font-semibold tracking-normal transition-colors ${
               transparent ? "text-cream-fg" : "text-green-600"
             }`}
           >

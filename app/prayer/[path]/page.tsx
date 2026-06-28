@@ -103,7 +103,7 @@ export default async function PrayerPathPage({
           <div className="pointer-events-none absolute inset-y-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-line-400 to-transparent opacity-70 lg:block" />
 
           <section className="relative mx-auto w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-7 shadow-elev-4 sm:px-9 sm:py-9">
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
+            <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
               Before you pray
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900">
@@ -116,7 +116,7 @@ export default async function PrayerPathPage({
 
           <article className="relative mx-auto mt-6 w-full max-w-[760px] rounded-lg border border-line-300 bg-cream-100 px-5 py-8 shadow-elev-4 sm:px-9 sm:py-11">
             <div className="border-b border-line-200 pb-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
+              <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
                 The prayer
               </p>
               <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
@@ -124,7 +124,7 @@ export default async function PrayerPathPage({
               </h2>
             </div>
 
-            <div className="mt-8 space-y-5 font-serif text-[1.3rem] leading-[1.7] text-ink-800 sm:space-y-6 sm:text-[1.5rem] sm:leading-[1.72]">
+            <div className="mt-8 space-y-5 font-serif text-[1.3rem] leading-body text-ink-800 sm:space-y-6 sm:text-[1.5rem] sm:leading-body">
               {prayer.prayer.map((paragraph, i) => (
                 <p
                   key={paragraph}
@@ -146,7 +146,7 @@ export default async function PrayerPathPage({
           className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-elev-green-3 sm:p-8"
         >
           <div className="mx-auto max-w-[760px]">
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-800">
               <Feather size={15} strokeWidth={1.8} />
               After you pray
             </p>

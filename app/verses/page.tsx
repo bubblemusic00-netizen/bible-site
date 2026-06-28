@@ -56,10 +56,10 @@ export default function VersesPage() {
         {groups.map((group) => (
           <section key={group.title} className="border-t border-line-300 pt-7">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+              <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
                 {group.title}
               </p>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+              <span className="text-xs font-semibold uppercase tracking-label text-gold-600">
                 {group.topics.length} topics
               </span>
             </div>

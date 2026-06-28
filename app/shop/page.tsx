@@ -56,7 +56,7 @@ export default function ShopPage() {
           <p className={pillDark}>
             {STORE_LIVE ? "Faith Reminders" : "Coming soon"}
           </p>
-          <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] sm:text-6xl">
+          <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-display sm:text-6xl">
             Faith reminders you can keep close.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-cream-fg-muted/88 sm:text-lg">

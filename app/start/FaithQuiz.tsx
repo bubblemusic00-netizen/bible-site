@@ -353,7 +353,7 @@ export function FaithQuiz() {
             <div>
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
+                  <p className="text-xs font-semibold uppercase tracking-label text-gold-700">
                     {beginWith} first · {path.title} Faith Path
                   </p>
                   <h2
@@ -452,7 +452,7 @@ function QuizStep({
 }) {
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
+      <p className="text-xs font-semibold uppercase tracking-label text-gold-700">
         {eyebrow}
       </p>
       <h2
@@ -674,7 +674,7 @@ function ResultItem({
           : "rounded-xl border border-note-line bg-cream-100/70 p-3.5"
       }
     >
-      <h3 className="text-xs font-semibold uppercase tracking-[0.04em] text-gold-700">
+      <h3 className="text-xs font-semibold uppercase tracking-label text-gold-700">
         {title}
       </h3>
       <p className="mt-1.5 text-sm leading-6 text-ink-600">{body}</p>

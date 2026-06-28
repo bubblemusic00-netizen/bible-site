@@ -102,7 +102,7 @@ export default async function StartPathPage({
         <h2 className="font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
           Your result, in four steps.
         </h2>
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+        <span className="text-xs font-semibold uppercase tracking-label text-gold-600">
           Scripture &middot; prayer &middot; reflection &middot; step
         </span>
       </div>
@@ -210,7 +210,7 @@ function PathSection({
         <span className="grid size-11 place-items-center rounded-full bg-green-600 font-serif text-lg font-semibold text-cream-fg">
           {step}
         </span>
-        <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-gold-700">
+        <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-700">
           <Icon size={16} strokeWidth={1.8} />
           {eyebrow}
         </span>

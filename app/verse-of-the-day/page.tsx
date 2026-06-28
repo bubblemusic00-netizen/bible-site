@@ -46,20 +46,20 @@ export default function VerseOfTheDayPage() {
     >
       <section className="relative max-w-4xl overflow-hidden rounded-lg border border-line-200 bg-[linear-gradient(160deg,#fffdf7,#fdf6e6)] p-7 shadow-elev-5 sm:p-10">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#c49c52,#e9c985)]" />
-        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
+        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-700">
           <CalendarDays size={15} strokeWidth={1.8} />
           {today}
         </p>
-        <blockquote className="mt-5 font-serif text-3xl font-medium leading-[1.3] text-ink-800 sm:text-[2.6rem] sm:leading-[1.24]">
+        <blockquote className="mt-5 font-serif text-3xl font-medium leading-snug2 text-ink-800 sm:text-[2.6rem] sm:leading-snug2">
           &ldquo;{verse.text}&rdquo;
         </blockquote>
-        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
+        <p className="mt-6 text-sm font-semibold uppercase tracking-label text-gold-700">
           {verse.reference} &middot; {verse.translation}
         </p>
       </section>
 
       <section className="mt-5 max-w-4xl rounded-lg border border-line-300 bg-cream-200 p-6 shadow-elev-3 sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+        <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
           A quiet reflection
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900">
@@ -77,7 +77,7 @@ export default function VerseOfTheDayPage() {
       </section>
 
       <section className="mt-6 max-w-4xl rounded-lg border border-note-line bg-note-bg p-6 sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+        <p className="text-sm font-semibold uppercase tracking-label text-gold-800">
           Come back tomorrow
         </p>
         <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900">

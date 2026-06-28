@@ -127,7 +127,7 @@ export default function BeliefsPage() {
               <p className="font-serif text-lg italic leading-7 text-green-500">
                 &ldquo;{belief.verse}&rdquo;
               </p>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
+              <p className="mt-2 text-sm font-semibold uppercase tracking-label text-gold-700">
                 {belief.reference} &middot; KJV
               </p>
             </blockquote>

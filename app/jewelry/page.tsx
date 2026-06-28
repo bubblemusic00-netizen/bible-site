@@ -115,11 +115,11 @@ export default function JewelryPage() {
           <div className="flex justify-center">
             <Medallion icon={Cross} size={112} tone="dark" shimmer />
           </div>
-          <p className="mt-8 inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.24em] text-gold-300">
+          <p className="mt-8 inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-wide2 text-gold-300">
             <Gem size={15} strokeWidth={1.8} />
             Faith Symbols
           </p>
-          <h1 className="mt-5 font-serif text-5xl font-medium leading-[1.0] tracking-[-0.02em] text-cream-fg sm:text-7xl">
+          <h1 className="mt-5 font-serif text-5xl font-medium leading-display tracking-tight2 text-cream-fg sm:text-7xl">
             Keep what steadies you close.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-cream-fg-muted/88 sm:text-lg">
@@ -148,7 +148,7 @@ export default function JewelryPage() {
               </span>
             </a>
           </div>
-          <p className="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-200/80">
+          <p className="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide2 text-gold-200/80">
             <span className="h-px w-6 bg-gold-200/40" />
             Keepsakes crafted in small batches — coming soon
             <span className="h-px w-6 bg-gold-200/40" />
@@ -159,10 +159,10 @@ export default function JewelryPage() {
       {/* Felt need — make the need real before the object. */}
       <section className="mt-12 text-center sm:mt-16">
         <div data-reveal className="mx-auto max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
+          <p className="text-sm font-semibold uppercase tracking-wide2 text-gold-700">
             Why a reminder
           </p>
-          <p className="mt-5 font-serif text-2xl leading-[1.45] text-ink-800 sm:text-[2rem] sm:leading-[1.4]">
+          <p className="mt-5 font-serif text-2xl leading-body text-ink-800 sm:text-[2rem] sm:leading-body">
             The verse you keep forgetting. The prayer you mean to carry. One
             small thing to hold on the hard afternoons — so faith is not only
             something you believe, but something you can reach for.
@@ -173,7 +173,7 @@ export default function JewelryPage() {
       {/* Symbols as moments you are carrying — desire through specificity. */}
       <section className="mt-14 sm:mt-16">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
+          <p className="text-sm font-semibold uppercase tracking-wide2 text-gold-700">
             A reminder for the moment you are in
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
@@ -190,12 +190,12 @@ export default function JewelryPage() {
       {/* Integrity as a brand creed, not a buried disclaimer. */}
       <section className="mt-14 rounded-[1.5rem] border border-line-200 bg-cream-200 p-8 text-center shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_40px_-18px_rgba(60,45,25,0.18),inset_0_1px_0_rgba(255,255,255,0.7)] sm:mt-16 sm:p-12">
         <div className="mx-auto max-w-2xl">
-          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold-700">
+          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wide2 text-gold-700">
             <span className="h-px w-8 bg-line-400" />
             A reminder, never a charm
             <span className="h-px w-8 bg-line-400" />
           </p>
-          <p className="mt-6 font-serif text-2xl font-medium leading-[1.45] text-ink-800 sm:text-[1.85rem]">
+          <p className="mt-6 font-serif text-2xl font-medium leading-body text-ink-800 sm:text-[1.85rem]">
             A symbol points to faith; it never replaces it. Nothing we make will
             ever promise protection, healing, luck, or spiritual power — and we
             will always say so plainly.
@@ -224,7 +224,7 @@ export default function JewelryPage() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_44%_at_72%_4%,rgba(233,201,133,0.16),transparent_64%)]"
         />
         <div className="relative z-10 mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold-300">
+          <p className="text-sm font-semibold uppercase tracking-wide2 text-gold-300">
             The first pieces are being made
           </p>
           <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -249,7 +249,7 @@ export default function JewelryPage() {
       <section id="symbols" className="mt-14 scroll-mt-24 sm:mt-16">
         <div className="grid gap-5 lg:grid-cols-[0.4fr_1fr] lg:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+            <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
               The full library
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
@@ -267,7 +267,7 @@ export default function JewelryPage() {
           {groupedSymbols.map((group) => (
             <div key={group.key}>
               <div className="flex items-baseline gap-3">
-                <span className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+                <span className="text-sm font-semibold uppercase tracking-label text-gold-700">
                   {group.title}
                 </span>
                 <span className="h-px flex-1 bg-line-200" />
@@ -289,7 +289,7 @@ export default function JewelryPage() {
       <section className="mt-14 border-y border-line-300 py-8 sm:mt-16 sm:py-10">
         <div className="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+            <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
               Explore by Faith Path
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
@@ -401,14 +401,14 @@ function MomentCard({
       className="group relative flex flex-col rounded-[12px] border border-line-200 bg-cream-200 p-7 shadow-[0_1px_2px_rgba(60,45,25,0.05),0_18px_38px_-16px_rgba(60,45,25,0.2),inset_0_1px_0_rgba(255,255,255,0.75)] transition duration-300 ease-out hover:-translate-y-1 hover:border-gold-500 hover:shadow-[0_1px_2px_rgba(60,45,25,0.06),0_30px_56px_-18px_rgba(60,45,25,0.28),inset_0_1px_0_rgba(255,255,255,0.85)] sm:p-9"
     >
       <Medallion icon={symbol.icon} size={78} />
-      <h3 className="mt-7 font-serif text-[1.85rem] font-medium leading-[1.1] text-ink-900">
+      <h3 className="mt-7 font-serif text-[1.85rem] font-medium leading-heading text-ink-900">
         {symbol.moment}
       </h3>
       <p className="mt-3 max-w-[34ch] text-base leading-7 text-ink-600">
         {symbol.craft}
       </p>
       <div className="mt-7 flex items-center justify-between gap-3 border-t border-line-200/0 pt-5 [border-image:linear-gradient(90deg,transparent,#d8c5a3,transparent)_1]">
-        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
+        <span className="text-xs font-semibold uppercase tracking-label text-gold-700">
           {symbol.name} &middot; {symbol.verse}
         </span>
         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-600">
@@ -437,7 +437,7 @@ function SymbolIndexLink({ symbol }: { symbol: FaithSymbol }) {
         <span className="block break-words font-serif text-lg font-semibold leading-tight text-ink-900">
           {symbol.name}
         </span>
-        <span className="mt-0.5 block break-words text-xs font-semibold uppercase tracking-[0.08em] text-gold-700">
+        <span className="mt-0.5 block break-words text-xs font-semibold uppercase tracking-label text-gold-700">
           {symbol.scriptureReference}
         </span>
       </span>

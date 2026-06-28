@@ -188,6 +188,8 @@ per-string map generated from the harvest; applied during refactor.
 | Color tokens defined | — | 42 | the role-named ramp + semantic surfaces |
 | **Shadow** `shadow-[…]` | 60 | **38** | clean ambient → `elev-*`; 38 = designed composites (exceptions) |
 | Font-size `text-[…rem]` | 18 | 17 | `text-[1.7rem]`→`text-card`; rest = display/hero |
+| **Tracking** `tracking-[…]` | 15 | **0** | all snap to `tracking-label`/`tracking-wide2`/`tracking-tight2`/`tracking-normal` |
+| **Leading** `leading-[…]` | 15 | **1** | all snap to `leading-display`/`heading`/`snug2`/`body`; 1 survivor = `leading-[0.72]` drop-cap (exception) |
 | **Z-index** arbitrary | 5 (incl `z-[55]`) | 2 | snapped `z-[55]`→`z-[60]` |
 
 Done + verified (home, bible, votd, prayer, jewelry, quiz, verses): **color axis
@@ -195,9 +197,19 @@ fully tokenized — zero standalone color literals**; clean shadow tier snap;
 z-index; card-title size; full `@theme` token layer is the single source of
 truth (`app/globals.css`).
 
-**Staged (micro-typography, low visual weight, easy follow-up):** snap
-`tracking-[…]` (15→~4: `tracking-label`/`tracking-wide2`/`tracking-tight2`) and
-`leading-[…]` (15→~4 + drop-cap exception) to the tokens already defined in
-`@theme`; collapse the remaining display `text-[…rem]` to a `--text-display`
-clamp. The 38 composite shadows and 49 gradient hexes are exceptions, not debt —
-each is a designed multi-layer/gradient artefact proven in §3, not a snap target.
+**Done + verified (micro-typography):** `tracking-[…]` 15→**0** and
+`leading-[…]` 15→**1** (the `leading-[0.72]` drop-cap exception) snapped to the
+`@theme` tokens (`tracking-label`/`wide2`/`tight2`/`normal`,
+`leading-display`/`heading`/`snug2`/`body`). Build clean; home + prayer-detail
+(headings, drop-cap, body leading, eyebrow tracking) screenshot-verified — no
+visual regression.
+
+**Remaining staged (optional):** collapse the remaining display `text-[…rem]`
+to a `--text-display` clamp. The 38 composite shadows and 49 gradient hexes are
+exceptions, not debt — each is a designed multi-layer/gradient artefact proven
+in §3, not a snap target.
+
+Per-axis raw-literal count now sits at ≈ tier count on every axis except the
+proven exceptions (drop-cap leading, gradient-stop hexes, composite shadows).
+The audit rule holds: every survivor is a documented exception, not a stray
+style.

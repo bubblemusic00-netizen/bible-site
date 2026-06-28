@@ -72,7 +72,7 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-8 lg:py-20">
           <p
-            className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-gold-200/90"
+            className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wide2 text-gold-200/90"
             style={{ animationDelay: "0ms" }}
           >
             <span className="h-px w-8 bg-gold-200/40" />
@@ -81,7 +81,7 @@ export default function Home() {
             <span className="h-px w-8 bg-gold-200/40" />
           </p>
           <h1
-            className="fade-rise mt-7 max-w-[15ch] font-serif text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.015em] text-cream-fg sm:text-7xl sm:leading-[0.98] lg:text-[6rem]"
+            className="fade-rise mt-7 max-w-[15ch] font-serif text-[2.6rem] font-semibold leading-display tracking-tight2 text-cream-fg sm:text-7xl sm:leading-display lg:text-[6rem]"
             style={{ animationDelay: "90ms" }}
           >
             Find Scripture and prayer for what you are{" "}
@@ -132,7 +132,7 @@ export default function Home() {
             className="fade-rise mt-7 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1"
             style={{ animationDelay: "400ms" }}
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-200/75">
+            <span className="text-xs font-semibold uppercase tracking-wide2 text-gold-200/75">
               For moments of
             </span>
             <span className="font-serif text-lg italic text-cream-fg-muted/90">
@@ -142,7 +142,7 @@ export default function Home() {
         </div>
 
         <div className="pointer-events-none absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-cream-fg-muted/70 lg:flex">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.28em]">
+          <span className="text-[11px] font-semibold uppercase tracking-wide2">
             Scroll
           </span>
           <ChevronDown size={18} strokeWidth={1.8} className="scroll-cue" />
@@ -155,15 +155,15 @@ export default function Home() {
           aria-hidden
         />
         <div data-reveal className="relative mx-auto max-w-3xl">
-          <p className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.26em] text-gold-700">
+          <p className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-wide2 text-gold-700">
             <span className="h-px w-8 bg-line-400" />
             Today&rsquo;s verse
             <span className="h-px w-8 bg-line-400" />
           </p>
-          <blockquote className="mt-7 font-serif text-3xl font-medium leading-[1.3] text-ink-800 sm:text-[2.6rem] sm:leading-[1.24]">
+          <blockquote className="mt-7 font-serif text-3xl font-medium leading-snug2 text-ink-800 sm:text-[2.6rem] sm:leading-snug2">
             &ldquo;{verse.text}&rdquo;
           </blockquote>
-          <p className="mt-7 text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
+          <p className="mt-7 text-sm font-semibold uppercase tracking-label text-gold-700">
             {verse.reference} &middot; KJV
           </p>
           <Link
@@ -185,7 +185,7 @@ export default function Home() {
           data-reveal
           className="mx-auto grid w-full max-w-7xl gap-5 lg:grid-cols-[0.32fr_1fr] lg:items-start"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-300">
+          <p className="text-sm font-semibold uppercase tracking-label text-gold-300">
             Why this exists
           </p>
           <div className="max-w-3xl">
@@ -240,7 +240,7 @@ export default function Home() {
           className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[0.32fr_1fr] lg:items-start"
         >
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+            <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
               Explore quietly
             </p>
             <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
@@ -255,10 +255,10 @@ export default function Home() {
                 href={item.href}
                 className="group flex min-h-44 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-6 text-ink-900 shadow-elev-2 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
               >
-                <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
+                <span className="block text-xs font-semibold uppercase tracking-label text-gold-700">
                   {item.eyebrow}
                 </span>
-                <span className="mt-3 block font-serif text-card font-semibold leading-[1.1] text-ink-900">
+                <span className="mt-3 block font-serif text-card font-semibold leading-heading text-ink-900">
                   {item.title}
                 </span>
                 <span className="mt-4 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />
@@ -286,7 +286,7 @@ export default function Home() {
           className="mx-auto grid w-full max-w-7xl gap-5 lg:grid-cols-[1fr_auto] lg:items-center"
         >
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-300">
+            <p className="text-sm font-semibold uppercase tracking-label text-gold-300">
               Faith Symbols
             </p>
             <p className="mt-2 font-serif text-3xl font-semibold leading-tight text-cream-fg sm:text-4xl">

@@ -124,7 +124,7 @@ export default async function GuidePage({
 
           <div className="relative mx-auto grid w-full max-w-[920px] gap-5 lg:grid-cols-[0.74fr_1.26fr]">
             <aside className="h-fit rounded-lg border border-line-300 bg-cream-100 p-5 shadow-elev-4 sm:p-6 lg:sticky lg:top-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gold-700">
+              <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
                 In this guide
               </p>
               <ul className="mt-4 grid gap-3 text-sm font-semibold leading-6 text-green-500">
@@ -175,7 +175,7 @@ export default async function GuidePage({
           className="mx-auto mt-8 w-full max-w-[980px] rounded-lg border border-note-line bg-mist-200 p-5 shadow-elev-green-3 sm:p-8"
         >
           <div className="mx-auto max-w-[780px]">
-            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+            <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-800">
               <ListChecks size={15} strokeWidth={1.8} />
               Try this today
             </p>
@@ -229,7 +229,7 @@ export default async function GuidePage({
 
         {siblingGuides.length > 0 ? (
           <section className="mx-auto mt-10 w-full max-w-[980px] border-t border-line-300 pt-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+            <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
               Keep exploring &middot; {groupTitle}
             </p>
             <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -288,7 +288,7 @@ function RelatedLinks({
 }) {
   return (
     <section className="rounded-lg border border-line-300 bg-cream-200 p-5 shadow-elev-3 sm:p-6">
-      <h2 className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
+      <h2 className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-label text-gold-700">
         <Icon size={16} strokeWidth={1.8} />
         {title}
       </h2>

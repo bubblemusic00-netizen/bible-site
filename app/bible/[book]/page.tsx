@@ -108,7 +108,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
       }
     >
       <section className="rounded-lg border border-line-300 bg-cream-200 p-5 shadow-elev-3 sm:p-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
+        <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
           What each reading includes
         </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -134,7 +134,7 @@ function AvailableBookOverview({ slug }: { slug: string }) {
         <h2 className="font-serif text-3xl font-semibold text-ink-900">
           Read {details.name}
         </h2>
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+        <span className="text-xs font-semibold uppercase tracking-label text-gold-600">
           {readingCount} {readingCount === 1 ? "chapter" : "chapters"}
         </span>
       </div>
@@ -147,12 +147,12 @@ function AvailableBookOverview({ slug }: { slug: string }) {
             className="group flex min-w-0 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-5 shadow-elev-2 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
+              <span className="text-xs font-semibold uppercase tracking-label text-gold-700">
                 {chapter.title}
               </span>
               <span className={pillSolid}>Guided reading</span>
             </div>
-            <span className="mt-3 block font-serif text-[1.55rem] font-semibold leading-[1.12] text-ink-900">
+            <span className="mt-3 block font-serif text-[1.55rem] font-semibold leading-heading text-ink-900">
               {chapter.theme}
             </span>
             <span className="mt-3 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />

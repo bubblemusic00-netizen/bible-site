@@ -101,10 +101,10 @@ export default async function VerseTopicPage({
               {String(i + 1).padStart(2, "0")}
             </span>
             <div className="min-w-0">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-gold-700">
+              <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
                 {verse.reference}
               </p>
-              <blockquote className="mt-3 font-serif text-[1.3rem] leading-[1.6] text-ink-800 sm:text-[1.55rem]">
+              <blockquote className="mt-3 font-serif text-[1.3rem] leading-body text-ink-800 sm:text-[1.55rem]">
                 &ldquo;{verse.text}&rdquo;
               </blockquote>
             </div>
@@ -113,7 +113,7 @@ export default async function VerseTopicPage({
       </section>
 
       <section data-reveal className="mt-6 max-w-4xl rounded-lg border border-note-line bg-mist-200 p-6 sm:p-8">
-        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-800">
           <Feather size={15} strokeWidth={1.8} />
           A quiet reflection
         </p>

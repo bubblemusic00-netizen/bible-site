@@ -136,7 +136,7 @@ export function PageHero({
           </div>
         ) : null}
         <p
-          className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold-200/90"
+          className="fade-rise inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wide2 text-gold-200/90"
           style={{ animationDelay: "0ms" }}
         >
           <span className="h-px w-8 bg-gold-200/40" />
@@ -144,7 +144,7 @@ export function PageHero({
           {eyebrow}
         </p>
         <h1
-          className="fade-rise mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] tracking-[-0.012em] text-cream-fg sm:text-6xl"
+          className="fade-rise mt-5 max-w-3xl font-serif text-4xl font-semibold leading-display tracking-tight2 text-cream-fg sm:text-6xl"
           style={{ animationDelay: "90ms" }}
         >
           {title}
@@ -274,7 +274,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
           }
         >
           {!isDark ? (
-            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-800">
               <Compass size={14} strokeWidth={1.8} />
               Explore
             </h2>
@@ -306,7 +306,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
             aria-label="Footer trust navigation"
             className="min-w-0"
           >
-            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-800">
               <ShieldCheck size={14} strokeWidth={1.8} />
               Trust
             </h2>
@@ -328,7 +328,7 @@ export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
             aria-label="Footer legal navigation"
             className="min-w-0"
           >
-            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-800">
+            <h2 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-label text-gold-800">
               <Scale size={14} strokeWidth={1.8} />
               Policies
             </h2>
@@ -376,11 +376,11 @@ export function PageIntro({
 }) {
   return (
     <div className="w-full max-w-3xl">
-      <p className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
+      <p className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-wide2 text-gold-700">
         <Icon size={15} strokeWidth={1.8} />
         {eyebrow}
       </p>
-      <h1 className="mt-5 max-w-4xl break-words font-serif text-4xl font-semibold leading-[1.04] text-ink-900 sm:text-6xl">
+      <h1 className="mt-5 max-w-4xl break-words font-serif text-4xl font-semibold leading-display text-ink-900 sm:text-6xl">
         {title}
       </h1>
       <p className="mt-5 max-w-2xl break-words text-base leading-7 text-ink-600 sm:text-lg sm:leading-8">
@@ -408,7 +408,7 @@ export function CardLink({
       className="group relative flex h-full min-w-0 flex-col overflow-hidden rounded-lg border border-line-200 bg-cream-200/78 p-5 shadow-elev-3 transition duration-200 hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
     >
       <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-cream-50" />
-      <h2 className="break-words font-serif text-card font-semibold leading-[1.1] text-ink-900">
+      <h2 className="break-words font-serif text-card font-semibold leading-heading text-ink-900">
         {title}
       </h2>
       <span className="mt-4 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />
@@ -557,7 +557,7 @@ export function StatusNote({
  * cream-with-tan-border chips. Apply the variant string to a span, a, or Link.
  */
 export const pillBase =
-  "inline-flex items-center gap-1.5 rounded-full px-3 py-[5px] text-[0.68rem] font-semibold uppercase tracking-[0.12em] leading-none";
+  "inline-flex items-center gap-1.5 rounded-full px-3 py-[5px] text-[0.68rem] font-semibold uppercase tracking-label leading-none";
 
 /** Light pill on cream surfaces (meta chips, tags). */
 export const pillLight = `${pillBase} bg-cream-200 text-gold-800 ring-1 ring-inset ring-line-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_1px_2px_rgba(71,55,35,0.05)]`;

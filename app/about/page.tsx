@@ -77,7 +77,7 @@ export default function AboutPage() {
       </div>
 
       <section className="mt-6 max-w-5xl overflow-hidden rounded-lg border border-note-line bg-note-bg p-6 shadow-elev-3 sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-700">
+        <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
           The name
         </p>
         <h2 className="mt-2 max-w-3xl font-serif text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">

@@ -65,10 +65,10 @@ export default function PrayerPage() {
             className="border-t border-line-300 pt-7"
           >
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-700">
+              <p className="text-sm font-semibold uppercase tracking-label text-gold-700">
                 {group.title}
               </p>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+              <span className="text-xs font-semibold uppercase tracking-label text-gold-600">
                 {group.prayers.length} prayers
               </span>
             </div>
@@ -83,10 +83,10 @@ export default function PrayerPage() {
                   href={`/prayer/${prayer.slug}`}
                   className="group flex min-w-0 flex-col rounded-xl border border-line-200 bg-cream-200/70 p-5 shadow-elev-2 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-gold-500 hover:bg-cream-100 hover:shadow-elev-4"
                 >
-                  <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-gold-700">
+                  <span className="block text-xs font-semibold uppercase tracking-label text-gold-700">
                     {prayer.theme}
                   </span>
-                  <span className="mt-3 block font-serif text-card font-semibold leading-[1.1] text-ink-900">
+                  <span className="mt-3 block font-serif text-card font-semibold leading-heading text-ink-900">
                     {prayer.title}
                   </span>
                   <span className="mt-4 block h-px w-10 bg-line-400 transition-all duration-200 group-hover:w-16 group-hover:bg-gold-500" />
